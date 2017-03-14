@@ -11,7 +11,7 @@ Contact: apisupport@phone.com
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EF011590-24D8-430D-AB44-6C2E93875FF7}</ProjectGuid>
+    <ProjectGuid>{BEFBB983-684B-43D1-AE60-F38C77079810}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IO.Swagger</RootNamespace>
