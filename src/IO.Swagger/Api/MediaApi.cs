@@ -32,9 +32,34 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
+        /// <param name="json">Media extra parameters (optional)</param>
+        /// <param name="file">Media file (optional)</param>
+        /// <returns>MediaFull</returns>
+        MediaFull CreateAccountMediaFiles (int? accountId, string json = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="json">Media extra parameters (optional)</param>
+        /// <param name="file">Media file (optional)</param>
+        /// <returns>ApiResponse of MediaFull</returns>
+        ApiResponse<MediaFull> CreateAccountMediaFilesWithHttpInfo (int? accountId, string json = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
         /// <param name="data">Media data (optional)</param>
         /// <returns>MediaFull</returns>
-        MediaFull CreateAccountMedia (int? accountId, CreateMediaParams data = null);
+        MediaFull CreateAccountMediaTts (int? accountId, CreateMediaParams data = null);
 
         /// <summary>
         /// Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
@@ -46,7 +71,30 @@ namespace IO.Swagger.Api
         /// <param name="accountId">Account ID</param>
         /// <param name="data">Media data (optional)</param>
         /// <returns>ApiResponse of MediaFull</returns>
-        ApiResponse<MediaFull> CreateAccountMediaWithHttpInfo (int? accountId, CreateMediaParams data = null);
+        ApiResponse<MediaFull> CreateAccountMediaTtsWithHttpInfo (int? accountId, CreateMediaParams data = null);
+        /// <summary>
+        /// Delete an individual media record
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <returns>DeleteMedia</returns>
+        DeleteMedia DeleteAccountMedia (int? accountId, int? mediaId);
+
+        /// <summary>
+        /// Delete an individual media record
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <returns>ApiResponse of DeleteMedia</returns>
+        ApiResponse<DeleteMedia> DeleteAccountMediaWithHttpInfo (int? accountId, int? mediaId);
         /// <summary>
         /// Show details of an individual media recording (Greeting or Hold Music)
         /// </summary>
@@ -55,9 +103,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="recordingId">Recording ID</param>
+        /// <param name="mediaId">Media ID</param>
         /// <returns>MediaFull</returns>
-        MediaFull GetAccountMedia (int? accountId, int? recordingId);
+        MediaFull GetAccountMedia (int? accountId, int? mediaId);
 
         /// <summary>
         /// Show details of an individual media recording (Greeting or Hold Music)
@@ -67,9 +115,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="recordingId">Recording ID</param>
+        /// <param name="mediaId">Media ID</param>
         /// <returns>ApiResponse of MediaFull</returns>
-        ApiResponse<MediaFull> GetAccountMediaWithHttpInfo (int? accountId, int? recordingId);
+        ApiResponse<MediaFull> GetAccountMediaWithHttpInfo (int? accountId, int? mediaId);
         /// <summary>
         /// Get a list of media recordings for an account
         /// </summary>
@@ -105,6 +153,31 @@ namespace IO.Swagger.Api
         /// <param name="fields">Field set (optional)</param>
         /// <returns>ApiResponse of ListMedia</returns>
         ApiResponse<ListMedia> ListAccountMediaWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
+        /// <summary>
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <param name="data">Media data (optional)</param>
+        /// <returns>MediaFull</returns>
+        MediaFull ReplaceAccountMediaTts (int? accountId, int? mediaId, CreateMediaParams data = null);
+
+        /// <summary>
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <param name="data">Media data (optional)</param>
+        /// <returns>ApiResponse of MediaFull</returns>
+        ApiResponse<MediaFull> ReplaceAccountMediaTtsWithHttpInfo (int? accountId, int? mediaId, CreateMediaParams data = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -115,9 +188,34 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
+        /// <param name="json">Media extra parameters (optional)</param>
+        /// <param name="file">Media file (optional)</param>
+        /// <returns>Task of MediaFull</returns>
+        System.Threading.Tasks.Task<MediaFull> CreateAccountMediaFilesAsync (int? accountId, string json = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="json">Media extra parameters (optional)</param>
+        /// <param name="file">Media file (optional)</param>
+        /// <returns>Task of ApiResponse (MediaFull)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MediaFull>> CreateAccountMediaFilesAsyncWithHttpInfo (int? accountId, string json = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
         /// <param name="data">Media data (optional)</param>
         /// <returns>Task of MediaFull</returns>
-        System.Threading.Tasks.Task<MediaFull> CreateAccountMediaAsync (int? accountId, CreateMediaParams data = null);
+        System.Threading.Tasks.Task<MediaFull> CreateAccountMediaTtsAsync (int? accountId, CreateMediaParams data = null);
 
         /// <summary>
         /// Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
@@ -129,7 +227,30 @@ namespace IO.Swagger.Api
         /// <param name="accountId">Account ID</param>
         /// <param name="data">Media data (optional)</param>
         /// <returns>Task of ApiResponse (MediaFull)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MediaFull>> CreateAccountMediaAsyncWithHttpInfo (int? accountId, CreateMediaParams data = null);
+        System.Threading.Tasks.Task<ApiResponse<MediaFull>> CreateAccountMediaTtsAsyncWithHttpInfo (int? accountId, CreateMediaParams data = null);
+        /// <summary>
+        /// Delete an individual media record
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <returns>Task of DeleteMedia</returns>
+        System.Threading.Tasks.Task<DeleteMedia> DeleteAccountMediaAsync (int? accountId, int? mediaId);
+
+        /// <summary>
+        /// Delete an individual media record
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <returns>Task of ApiResponse (DeleteMedia)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteMedia>> DeleteAccountMediaAsyncWithHttpInfo (int? accountId, int? mediaId);
         /// <summary>
         /// Show details of an individual media recording (Greeting or Hold Music)
         /// </summary>
@@ -138,9 +259,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="recordingId">Recording ID</param>
+        /// <param name="mediaId">Media ID</param>
         /// <returns>Task of MediaFull</returns>
-        System.Threading.Tasks.Task<MediaFull> GetAccountMediaAsync (int? accountId, int? recordingId);
+        System.Threading.Tasks.Task<MediaFull> GetAccountMediaAsync (int? accountId, int? mediaId);
 
         /// <summary>
         /// Show details of an individual media recording (Greeting or Hold Music)
@@ -150,9 +271,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="recordingId">Recording ID</param>
+        /// <param name="mediaId">Media ID</param>
         /// <returns>Task of ApiResponse (MediaFull)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MediaFull>> GetAccountMediaAsyncWithHttpInfo (int? accountId, int? recordingId);
+        System.Threading.Tasks.Task<ApiResponse<MediaFull>> GetAccountMediaAsyncWithHttpInfo (int? accountId, int? mediaId);
         /// <summary>
         /// Get a list of media recordings for an account
         /// </summary>
@@ -188,6 +309,31 @@ namespace IO.Swagger.Api
         /// <param name="fields">Field set (optional)</param>
         /// <returns>Task of ApiResponse (ListMedia)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListMedia>> ListAccountMediaAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
+        /// <summary>
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <param name="data">Media data (optional)</param>
+        /// <returns>Task of MediaFull</returns>
+        System.Threading.Tasks.Task<MediaFull> ReplaceAccountMediaTtsAsync (int? accountId, int? mediaId, CreateMediaParams data = null);
+
+        /// <summary>
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        /// </summary>
+        /// <remarks>
+        /// See Account Media for more info on the properties.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <param name="data">Media data (optional)</param>
+        /// <returns>Task of ApiResponse (MediaFull)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MediaFull>> ReplaceAccountMediaTtsAsyncWithHttpInfo (int? accountId, int? mediaId, CreateMediaParams data = null);
         #endregion Asynchronous Operations
     }
 
@@ -305,11 +451,177 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
+        /// <param name="json">Media extra parameters (optional)</param>
+        /// <param name="file">Media file (optional)</param>
+        /// <returns>MediaFull</returns>
+        public MediaFull CreateAccountMediaFiles (int? accountId, string json = null, System.IO.Stream file = null)
+        {
+             ApiResponse<MediaFull> localVarResponse = CreateAccountMediaFilesWithHttpInfo(accountId, json, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB) See Account Media for more info on the properties.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="json">Media extra parameters (optional)</param>
+        /// <param name="file">Media file (optional)</param>
+        /// <returns>ApiResponse of MediaFull</returns>
+        public ApiResponse< MediaFull > CreateAccountMediaFilesWithHttpInfo (int? accountId, string json = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'accountId' is set
+            if (accountId == null)
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->CreateAccountMediaFiles");
+
+            var localVarPath = "/accounts/{account_id}/media/files";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
+            if (json != null) localVarFormParams.Add("json", Configuration.ApiClient.ParameterToString(json)); // form parameter
+            if (file != null) localVarFileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateAccountMediaFiles", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MediaFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
+            
+        }
+
+        /// <summary>
+        /// Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB) See Account Media for more info on the properties.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="json">Media extra parameters (optional)</param>
+        /// <param name="file">Media file (optional)</param>
+        /// <returns>Task of MediaFull</returns>
+        public async System.Threading.Tasks.Task<MediaFull> CreateAccountMediaFilesAsync (int? accountId, string json = null, System.IO.Stream file = null)
+        {
+             ApiResponse<MediaFull> localVarResponse = await CreateAccountMediaFilesAsyncWithHttpInfo(accountId, json, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB) See Account Media for more info on the properties.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="json">Media extra parameters (optional)</param>
+        /// <param name="file">Media file (optional)</param>
+        /// <returns>Task of ApiResponse (MediaFull)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MediaFull>> CreateAccountMediaFilesAsyncWithHttpInfo (int? accountId, string json = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'accountId' is set
+            if (accountId == null)
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->CreateAccountMediaFiles");
+
+            var localVarPath = "/accounts/{account_id}/media/files";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
+            if (json != null) localVarFormParams.Add("json", Configuration.ApiClient.ParameterToString(json)); // form parameter
+            if (file != null) localVarFileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateAccountMediaFiles", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MediaFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
+            
+        }
+
+        /// <summary>
+        /// Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB) See Account Media for more info on the properties.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
         /// <param name="data">Media data (optional)</param>
         /// <returns>MediaFull</returns>
-        public MediaFull CreateAccountMedia (int? accountId, CreateMediaParams data = null)
+        public MediaFull CreateAccountMediaTts (int? accountId, CreateMediaParams data = null)
         {
-             ApiResponse<MediaFull> localVarResponse = CreateAccountMediaWithHttpInfo(accountId, data);
+             ApiResponse<MediaFull> localVarResponse = CreateAccountMediaTtsWithHttpInfo(accountId, data);
              return localVarResponse.Data;
         }
 
@@ -320,13 +632,13 @@ namespace IO.Swagger.Api
         /// <param name="accountId">Account ID</param>
         /// <param name="data">Media data (optional)</param>
         /// <returns>ApiResponse of MediaFull</returns>
-        public ApiResponse< MediaFull > CreateAccountMediaWithHttpInfo (int? accountId, CreateMediaParams data = null)
+        public ApiResponse< MediaFull > CreateAccountMediaTtsWithHttpInfo (int? accountId, CreateMediaParams data = null)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
-                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->CreateAccountMedia");
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->CreateAccountMediaTts");
 
-            var localVarPath = "/accounts/{account_id}/media";
+            var localVarPath = "/accounts/{account_id}/media/tts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -377,7 +689,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CreateAccountMedia", localVarResponse);
+                Exception exception = ExceptionFactory("CreateAccountMediaTts", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -394,9 +706,9 @@ namespace IO.Swagger.Api
         /// <param name="accountId">Account ID</param>
         /// <param name="data">Media data (optional)</param>
         /// <returns>Task of MediaFull</returns>
-        public async System.Threading.Tasks.Task<MediaFull> CreateAccountMediaAsync (int? accountId, CreateMediaParams data = null)
+        public async System.Threading.Tasks.Task<MediaFull> CreateAccountMediaTtsAsync (int? accountId, CreateMediaParams data = null)
         {
-             ApiResponse<MediaFull> localVarResponse = await CreateAccountMediaAsyncWithHttpInfo(accountId, data);
+             ApiResponse<MediaFull> localVarResponse = await CreateAccountMediaTtsAsyncWithHttpInfo(accountId, data);
              return localVarResponse.Data;
 
         }
@@ -408,13 +720,13 @@ namespace IO.Swagger.Api
         /// <param name="accountId">Account ID</param>
         /// <param name="data">Media data (optional)</param>
         /// <returns>Task of ApiResponse (MediaFull)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MediaFull>> CreateAccountMediaAsyncWithHttpInfo (int? accountId, CreateMediaParams data = null)
+        public async System.Threading.Tasks.Task<ApiResponse<MediaFull>> CreateAccountMediaTtsAsyncWithHttpInfo (int? accountId, CreateMediaParams data = null)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
-                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->CreateAccountMedia");
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->CreateAccountMediaTts");
 
-            var localVarPath = "/accounts/{account_id}/media";
+            var localVarPath = "/accounts/{account_id}/media/tts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -464,7 +776,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CreateAccountMedia", localVarResponse);
+                Exception exception = ExceptionFactory("CreateAccountMediaTts", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -475,35 +787,35 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual media recording (Greeting or Hold Music) Get individual media recording
+        /// Delete an individual media record See Account Media for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <returns>MediaFull</returns>
-        public MediaFull GetAccountMedia (int? accountId, int? recordingId)
+        /// <param name="mediaId">Media ID</param>
+        /// <returns>DeleteMedia</returns>
+        public DeleteMedia DeleteAccountMedia (int? accountId, int? mediaId)
         {
-             ApiResponse<MediaFull> localVarResponse = GetAccountMediaWithHttpInfo(accountId, recordingId);
+             ApiResponse<DeleteMedia> localVarResponse = DeleteAccountMediaWithHttpInfo(accountId, mediaId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Show details of an individual media recording (Greeting or Hold Music) Get individual media recording
+        /// Delete an individual media record See Account Media for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <returns>ApiResponse of MediaFull</returns>
-        public ApiResponse< MediaFull > GetAccountMediaWithHttpInfo (int? accountId, int? recordingId)
+        /// <param name="mediaId">Media ID</param>
+        /// <returns>ApiResponse of DeleteMedia</returns>
+        public ApiResponse< DeleteMedia > DeleteAccountMediaWithHttpInfo (int? accountId, int? mediaId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
-                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->GetAccountMedia");
-            // verify the required parameter 'recordingId' is set
-            if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling MediaApi->GetAccountMedia");
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->DeleteAccountMedia");
+            // verify the required parameter 'mediaId' is set
+            if (mediaId == null)
+                throw new ApiException(400, "Missing required parameter 'mediaId' when calling MediaApi->DeleteAccountMedia");
 
-            var localVarPath = "/accounts/{account_id}/media/{recording_id}";
+            var localVarPath = "/accounts/{account_id}/media/{media_id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -529,7 +841,173 @@ namespace IO.Swagger.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
-            if (recordingId != null) localVarPathParams.Add("recording_id", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteAccountMedia", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DeleteMedia>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DeleteMedia) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteMedia)));
+            
+        }
+
+        /// <summary>
+        /// Delete an individual media record See Account Media for more info on the properties.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <returns>Task of DeleteMedia</returns>
+        public async System.Threading.Tasks.Task<DeleteMedia> DeleteAccountMediaAsync (int? accountId, int? mediaId)
+        {
+             ApiResponse<DeleteMedia> localVarResponse = await DeleteAccountMediaAsyncWithHttpInfo(accountId, mediaId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete an individual media record See Account Media for more info on the properties.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <returns>Task of ApiResponse (DeleteMedia)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteMedia>> DeleteAccountMediaAsyncWithHttpInfo (int? accountId, int? mediaId)
+        {
+            // verify the required parameter 'accountId' is set
+            if (accountId == null)
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->DeleteAccountMedia");
+            // verify the required parameter 'mediaId' is set
+            if (mediaId == null)
+                throw new ApiException(400, "Missing required parameter 'mediaId' when calling MediaApi->DeleteAccountMedia");
+
+            var localVarPath = "/accounts/{account_id}/media/{media_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
+            if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteAccountMedia", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DeleteMedia>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DeleteMedia) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteMedia)));
+            
+        }
+
+        /// <summary>
+        /// Show details of an individual media recording (Greeting or Hold Music) Get individual media recording
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <returns>MediaFull</returns>
+        public MediaFull GetAccountMedia (int? accountId, int? mediaId)
+        {
+             ApiResponse<MediaFull> localVarResponse = GetAccountMediaWithHttpInfo(accountId, mediaId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Show details of an individual media recording (Greeting or Hold Music) Get individual media recording
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <returns>ApiResponse of MediaFull</returns>
+        public ApiResponse< MediaFull > GetAccountMediaWithHttpInfo (int? accountId, int? mediaId)
+        {
+            // verify the required parameter 'accountId' is set
+            if (accountId == null)
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->GetAccountMedia");
+            // verify the required parameter 'mediaId' is set
+            if (mediaId == null)
+                throw new ApiException(400, "Missing required parameter 'mediaId' when calling MediaApi->GetAccountMedia");
+
+            var localVarPath = "/accounts/{account_id}/media/{media_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
+            if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -562,11 +1040,11 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="recordingId">Recording ID</param>
+        /// <param name="mediaId">Media ID</param>
         /// <returns>Task of MediaFull</returns>
-        public async System.Threading.Tasks.Task<MediaFull> GetAccountMediaAsync (int? accountId, int? recordingId)
+        public async System.Threading.Tasks.Task<MediaFull> GetAccountMediaAsync (int? accountId, int? mediaId)
         {
-             ApiResponse<MediaFull> localVarResponse = await GetAccountMediaAsyncWithHttpInfo(accountId, recordingId);
+             ApiResponse<MediaFull> localVarResponse = await GetAccountMediaAsyncWithHttpInfo(accountId, mediaId);
              return localVarResponse.Data;
 
         }
@@ -576,18 +1054,18 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="recordingId">Recording ID</param>
+        /// <param name="mediaId">Media ID</param>
         /// <returns>Task of ApiResponse (MediaFull)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MediaFull>> GetAccountMediaAsyncWithHttpInfo (int? accountId, int? recordingId)
+        public async System.Threading.Tasks.Task<ApiResponse<MediaFull>> GetAccountMediaAsyncWithHttpInfo (int? accountId, int? mediaId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
                 throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->GetAccountMedia");
-            // verify the required parameter 'recordingId' is set
-            if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling MediaApi->GetAccountMedia");
+            // verify the required parameter 'mediaId' is set
+            if (mediaId == null)
+                throw new ApiException(400, "Missing required parameter 'mediaId' when calling MediaApi->GetAccountMedia");
 
-            var localVarPath = "/accounts/{account_id}/media/{recording_id}";
+            var localVarPath = "/accounts/{account_id}/media/{media_id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -613,7 +1091,7 @@ namespace IO.Swagger.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
-            if (recordingId != null) localVarPathParams.Add("recording_id", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -833,6 +1311,192 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListMedia>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListMedia) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListMedia)));
+            
+        }
+
+        /// <summary>
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <param name="data">Media data (optional)</param>
+        /// <returns>MediaFull</returns>
+        public MediaFull ReplaceAccountMediaTts (int? accountId, int? mediaId, CreateMediaParams data = null)
+        {
+             ApiResponse<MediaFull> localVarResponse = ReplaceAccountMediaTtsWithHttpInfo(accountId, mediaId, data);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <param name="data">Media data (optional)</param>
+        /// <returns>ApiResponse of MediaFull</returns>
+        public ApiResponse< MediaFull > ReplaceAccountMediaTtsWithHttpInfo (int? accountId, int? mediaId, CreateMediaParams data = null)
+        {
+            // verify the required parameter 'accountId' is set
+            if (accountId == null)
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->ReplaceAccountMediaTts");
+            // verify the required parameter 'mediaId' is set
+            if (mediaId == null)
+                throw new ApiException(400, "Missing required parameter 'mediaId' when calling MediaApi->ReplaceAccountMediaTts");
+
+            var localVarPath = "/accounts/{account_id}/media/{media_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
+            if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReplaceAccountMediaTts", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MediaFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
+            
+        }
+
+        /// <summary>
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <param name="data">Media data (optional)</param>
+        /// <returns>Task of MediaFull</returns>
+        public async System.Threading.Tasks.Task<MediaFull> ReplaceAccountMediaTtsAsync (int? accountId, int? mediaId, CreateMediaParams data = null)
+        {
+             ApiResponse<MediaFull> localVarResponse = await ReplaceAccountMediaTtsAsyncWithHttpInfo(accountId, mediaId, data);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="mediaId">Media ID</param>
+        /// <param name="data">Media data (optional)</param>
+        /// <returns>Task of ApiResponse (MediaFull)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MediaFull>> ReplaceAccountMediaTtsAsyncWithHttpInfo (int? accountId, int? mediaId, CreateMediaParams data = null)
+        {
+            // verify the required parameter 'accountId' is set
+            if (accountId == null)
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling MediaApi->ReplaceAccountMediaTts");
+            // verify the required parameter 'mediaId' is set
+            if (mediaId == null)
+                throw new ApiException(400, "Missing required parameter 'mediaId' when calling MediaApi->ReplaceAccountMediaTts");
+
+            var localVarPath = "/accounts/{account_id}/media/{media_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
+            if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReplaceAccountMediaTts", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MediaFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
             
         }
 

@@ -65,16 +65,43 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
-        /// Test CreateAccountMedia
+        /// Test CreateAccountMediaFiles
         /// </summary>
         [Test]
-        public void CreateAccountMediaTest()
+        public void CreateAccountMediaFilesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? accountId = null;
+            //string json = null;
+            //System.IO.Stream file = null;
+            //var response = instance.CreateAccountMediaFiles(accountId, json, file);
+            //Assert.IsInstanceOf<MediaFull> (response, "response is MediaFull");
+        }
+        
+        /// <summary>
+        /// Test CreateAccountMediaTts
+        /// </summary>
+        [Test]
+        public void CreateAccountMediaTtsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? accountId = null;
             //CreateMediaParams data = null;
-            //var response = instance.CreateAccountMedia(accountId, data);
+            //var response = instance.CreateAccountMediaTts(accountId, data);
             //Assert.IsInstanceOf<MediaFull> (response, "response is MediaFull");
+        }
+        
+        /// <summary>
+        /// Test DeleteAccountMedia
+        /// </summary>
+        [Test]
+        public void DeleteAccountMediaTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? accountId = null;
+            //int? mediaId = null;
+            //var response = instance.DeleteAccountMedia(accountId, mediaId);
+            //Assert.IsInstanceOf<DeleteMedia> (response, "response is DeleteMedia");
         }
         
         /// <summary>
@@ -85,8 +112,8 @@ namespace IO.Swagger.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? accountId = null;
-            //int? recordingId = null;
-            //var response = instance.GetAccountMedia(accountId, recordingId);
+            //int? mediaId = null;
+            //var response = instance.GetAccountMedia(accountId, mediaId);
             //Assert.IsInstanceOf<MediaFull> (response, "response is MediaFull");
         }
         
@@ -107,6 +134,20 @@ namespace IO.Swagger.Test
             //string fields = null;
             //var response = instance.ListAccountMedia(accountId, filtersId, filtersName, sortId, sortName, limit, offset, fields);
             //Assert.IsInstanceOf<ListMedia> (response, "response is ListMedia");
+        }
+        
+        /// <summary>
+        /// Test ReplaceAccountMediaTts
+        /// </summary>
+        [Test]
+        public void ReplaceAccountMediaTtsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? accountId = null;
+            //int? mediaId = null;
+            //CreateMediaParams data = null;
+            //var response = instance.ReplaceAccountMediaTts(accountId, mediaId, data);
+            //Assert.IsInstanceOf<MediaFull> (response, "response is MediaFull");
         }
         
     }

@@ -51,7 +51,7 @@ namespace IO.Swagger.Api
         /// Delete an individual menu
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual menu.
+        /// See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -63,7 +63,7 @@ namespace IO.Swagger.Api
         /// Delete an individual menu
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual menu.
+        /// See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -132,7 +132,7 @@ namespace IO.Swagger.Api
         /// Replace an individual menu
         /// </summary>
         /// <remarks>
-        /// This service replaces the details of an individual Menu.
+        /// See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -145,7 +145,7 @@ namespace IO.Swagger.Api
         /// Replace an individual menu
         /// </summary>
         /// <remarks>
-        /// This service replaces the details of an individual Menu.
+        /// See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -182,7 +182,7 @@ namespace IO.Swagger.Api
         /// Delete an individual menu
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual menu.
+        /// See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -194,7 +194,7 @@ namespace IO.Swagger.Api
         /// Delete an individual menu
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual menu.
+        /// See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -263,7 +263,7 @@ namespace IO.Swagger.Api
         /// Replace an individual menu
         /// </summary>
         /// <remarks>
-        /// This service replaces the details of an individual Menu.
+        /// See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -276,7 +276,7 @@ namespace IO.Swagger.Api
         /// Replace an individual menu
         /// </summary>
         /// <remarks>
-        /// This service replaces the details of an individual Menu.
+        /// See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -571,7 +571,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Delete an individual menu This service shows the details of an individual menu.
+        /// Delete an individual menu See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -584,7 +584,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Delete an individual menu This service shows the details of an individual menu.
+        /// Delete an individual menu See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -654,7 +654,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Delete an individual menu This service shows the details of an individual menu.
+        /// Delete an individual menu See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -668,7 +668,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Delete an individual menu This service shows the details of an individual menu.
+        /// Delete an individual menu See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1099,7 +1099,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace an individual menu This service replaces the details of an individual Menu.
+        /// Replace an individual menu See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1113,7 +1113,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace an individual menu This service replaces the details of an individual Menu.
+        /// Replace an individual menu See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1192,7 +1192,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace an individual menu This service replaces the details of an individual Menu.
+        /// Replace an individual menu See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1207,7 +1207,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace an individual menu This service replaces the details of an individual Menu.
+        /// Replace an individual menu See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>

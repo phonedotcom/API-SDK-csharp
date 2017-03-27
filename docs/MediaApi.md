@@ -4,14 +4,17 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountMedia**](MediaApi.md#createaccountmedia) | **POST** /accounts/{account_id}/media | Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
-[**GetAccountMedia**](MediaApi.md#getaccountmedia) | **GET** /accounts/{account_id}/media/{recording_id} | Show details of an individual media recording (Greeting or Hold Music)
+[**CreateAccountMediaFiles**](MediaApi.md#createaccountmediafiles) | **POST** /accounts/{account_id}/media/files | Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+[**CreateAccountMediaTts**](MediaApi.md#createaccountmediatts) | **POST** /accounts/{account_id}/media/tts | Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+[**DeleteAccountMedia**](MediaApi.md#deleteaccountmedia) | **DELETE** /accounts/{account_id}/media/{media_id} | Delete an individual media record
+[**GetAccountMedia**](MediaApi.md#getaccountmedia) | **GET** /accounts/{account_id}/media/{media_id} | Show details of an individual media recording (Greeting or Hold Music)
 [**ListAccountMedia**](MediaApi.md#listaccountmedia) | **GET** /accounts/{account_id}/media | Get a list of media recordings for an account
+[**ReplaceAccountMediaTts**](MediaApi.md#replaceaccountmediatts) | **PUT** /accounts/{account_id}/media/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
 
 
-<a name="createaccountmedia"></a>
-# **CreateAccountMedia**
-> MediaFull CreateAccountMedia (int? accountId, CreateMediaParams data = null)
+<a name="createaccountmediafiles"></a>
+# **CreateAccountMediaFiles**
+> MediaFull CreateAccountMediaFiles (int? accountId, string json = null, System.IO.Stream file = null)
 
 Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
 
@@ -27,7 +30,78 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class CreateAccountMediaExample
+    public class CreateAccountMediaFilesExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: apiKey
+            Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("Authorization", "Bearer");
+
+            var apiInstance = new MediaApi();
+            var accountId = 56;  // int? | Account ID
+            var json = json_example;  // string | Media extra parameters (optional) 
+            var file = new System.IO.Stream(); // System.IO.Stream | Media file (optional) 
+
+            try
+            {
+                // Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+                MediaFull result = apiInstance.CreateAccountMediaFiles(accountId, json, file);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MediaApi.CreateAccountMediaFiles: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | **int?**| Account ID | 
+ **json** | **string**| Media extra parameters | [optional] 
+ **file** | **System.IO.Stream**| Media file | [optional] 
+
+### Return type
+
+[**MediaFull**](MediaFull.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="createaccountmediatts"></a>
+# **CreateAccountMediaTts**
+> MediaFull CreateAccountMediaTts (int? accountId, CreateMediaParams data = null)
+
+Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+
+See Account Media for more info on the properties.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class CreateAccountMediaTtsExample
     {
         public void main()
         {
@@ -44,12 +118,12 @@ namespace Example
             try
             {
                 // Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
-                MediaFull result = apiInstance.CreateAccountMedia(accountId, data);
+                MediaFull result = apiInstance.CreateAccountMediaTts(accountId, data);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MediaApi.CreateAccountMedia: " + e.Message );
+                Debug.Print("Exception when calling MediaApi.CreateAccountMediaTts: " + e.Message );
             }
         }
     }
@@ -78,9 +152,78 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="deleteaccountmedia"></a>
+# **DeleteAccountMedia**
+> DeleteMedia DeleteAccountMedia (int? accountId, int? mediaId)
+
+Delete an individual media record
+
+See Account Media for more info on the properties.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class DeleteAccountMediaExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: apiKey
+            Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("Authorization", "Bearer");
+
+            var apiInstance = new MediaApi();
+            var accountId = 56;  // int? | Account ID
+            var mediaId = 56;  // int? | Media ID
+
+            try
+            {
+                // Delete an individual media record
+                DeleteMedia result = apiInstance.DeleteAccountMedia(accountId, mediaId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MediaApi.DeleteAccountMedia: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | **int?**| Account ID | 
+ **mediaId** | **int?**| Media ID | 
+
+### Return type
+
+[**DeleteMedia**](DeleteMedia.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getaccountmedia"></a>
 # **GetAccountMedia**
-> MediaFull GetAccountMedia (int? accountId, int? recordingId)
+> MediaFull GetAccountMedia (int? accountId, int? mediaId)
 
 Show details of an individual media recording (Greeting or Hold Music)
 
@@ -108,12 +251,12 @@ namespace Example
 
             var apiInstance = new MediaApi();
             var accountId = 56;  // int? | Account ID
-            var recordingId = 56;  // int? | Recording ID
+            var mediaId = 56;  // int? | Media ID
 
             try
             {
                 // Show details of an individual media recording (Greeting or Hold Music)
-                MediaFull result = apiInstance.GetAccountMedia(accountId, recordingId);
+                MediaFull result = apiInstance.GetAccountMedia(accountId, mediaId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -130,7 +273,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountId** | **int?**| Account ID | 
- **recordingId** | **int?**| Recording ID | 
+ **mediaId** | **int?**| Media ID | 
 
 ### Return type
 
@@ -216,6 +359,77 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListMedia**](ListMedia.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="replaceaccountmediatts"></a>
+# **ReplaceAccountMediaTts**
+> MediaFull ReplaceAccountMediaTts (int? accountId, int? mediaId, CreateMediaParams data = null)
+
+Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+
+See Account Media for more info on the properties.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class ReplaceAccountMediaTtsExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: apiKey
+            Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("Authorization", "Bearer");
+
+            var apiInstance = new MediaApi();
+            var accountId = 56;  // int? | Account ID
+            var mediaId = 56;  // int? | Media ID
+            var data = new CreateMediaParams(); // CreateMediaParams | Media data (optional) 
+
+            try
+            {
+                // Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+                MediaFull result = apiInstance.ReplaceAccountMediaTts(accountId, mediaId, data);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MediaApi.ReplaceAccountMediaTts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | **int?**| Account ID | 
+ **mediaId** | **int?**| Media ID | 
+ **data** | [**CreateMediaParams**](CreateMediaParams.md)| Media data | [optional] 
+
+### Return type
+
+[**MediaFull**](MediaFull.md)
 
 ### Authorization
 

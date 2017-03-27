@@ -38,7 +38,7 @@ namespace IO.Swagger.Model
         /// <param name="Offset">Offset.</param>
         /// <param name="Limit">Limit.</param>
         /// <param name="Items">Array of Contact Phone Number Objects. See below for details..</param>
-        public ListPhoneNumbers(FilterIdNamePhoneNumberArray Filters = default(FilterIdNamePhoneNumberArray), SortIdNamePhoneNumber Sort = default(SortIdNamePhoneNumber), int? Total = default(int?), int? Offset = default(int?), int? Limit = default(int?), List<PhoneNumberContact> Items = default(List<PhoneNumberContact>))
+        public ListPhoneNumbers(FilterIdNamePhoneNumberArray Filters = default(FilterIdNamePhoneNumberArray), SortIdNamePhoneNumber Sort = default(SortIdNamePhoneNumber), int? Total = default(int?), int? Offset = default(int?), int? Limit = default(int?), List<PhoneNumberFull> Items = default(List<PhoneNumberFull>))
         {
             this.Filters = Filters;
             this.Sort = Sort;
@@ -78,7 +78,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <value>Array of Contact Phone Number Objects. See below for details.</value>
         [DataMember(Name="items", EmitDefaultValue=false)]
-        public List<PhoneNumberContact> Items { get; set; }
+        public List<PhoneNumberFull> Items { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
