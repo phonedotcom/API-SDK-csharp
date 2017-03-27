@@ -134,7 +134,8 @@ Class | Method | HTTP request | Description
 *MediaApi* | [**DeleteAccountMedia**](docs/MediaApi.md#deleteaccountmedia) | **DELETE** /accounts/{account_id}/media/{media_id} | Delete an individual media record
 *MediaApi* | [**GetAccountMedia**](docs/MediaApi.md#getaccountmedia) | **GET** /accounts/{account_id}/media/{media_id} | Show details of an individual media recording (Greeting or Hold Music)
 *MediaApi* | [**ListAccountMedia**](docs/MediaApi.md#listaccountmedia) | **GET** /accounts/{account_id}/media | Get a list of media recordings for an account
-*MediaApi* | [**ReplaceAccountMediaTts**](docs/MediaApi.md#replaceaccountmediatts) | **PUT** /accounts/{account_id}/media/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+*MediaApi* | [**ReplaceAccountMediaFiles**](docs/MediaApi.md#replaceaccountmediafiles) | **PUT** /accounts/{account_id}/media/files/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+*MediaApi* | [**ReplaceAccountMediaTts**](docs/MediaApi.md#replaceaccountmediatts) | **PUT** /accounts/{account_id}/media/tts/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
 *MenusApi* | [**CreateAccountMenu**](docs/MenusApi.md#createaccountmenu) | **POST** /accounts/{account_id}/menus | Create an individual menu
 *MenusApi* | [**DeleteAccountMenu**](docs/MenusApi.md#deleteaccountmenu) | **DELETE** /accounts/{account_id}/menus/{menu_id} | Delete an individual menu
 *MenusApi* | [**GetAccountMenu**](docs/MenusApi.md#getaccountmenu) | **GET** /accounts/{account_id}/menus/{menu_id} | Show details of an individual menu

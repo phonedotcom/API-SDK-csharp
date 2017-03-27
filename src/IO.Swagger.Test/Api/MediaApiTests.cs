@@ -137,6 +137,21 @@ namespace IO.Swagger.Test
         }
         
         /// <summary>
+        /// Test ReplaceAccountMediaFiles
+        /// </summary>
+        [Test]
+        public void ReplaceAccountMediaFilesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? accountId = null;
+            //int? mediaId = null;
+            //string json = null;
+            //System.IO.Stream file = null;
+            //var response = instance.ReplaceAccountMediaFiles(accountId, mediaId, json, file);
+            //Assert.IsInstanceOf<MediaFull> (response, "response is MediaFull");
+        }
+        
+        /// <summary>
         /// Test ReplaceAccountMediaTts
         /// </summary>
         [Test]

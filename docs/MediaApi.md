@@ -9,7 +9,8 @@ Method | HTTP request | Description
 [**DeleteAccountMedia**](MediaApi.md#deleteaccountmedia) | **DELETE** /accounts/{account_id}/media/{media_id} | Delete an individual media record
 [**GetAccountMedia**](MediaApi.md#getaccountmedia) | **GET** /accounts/{account_id}/media/{media_id} | Show details of an individual media recording (Greeting or Hold Music)
 [**ListAccountMedia**](MediaApi.md#listaccountmedia) | **GET** /accounts/{account_id}/media | Get a list of media recordings for an account
-[**ReplaceAccountMediaTts**](MediaApi.md#replaceaccountmediatts) | **PUT** /accounts/{account_id}/media/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+[**ReplaceAccountMediaFiles**](MediaApi.md#replaceaccountmediafiles) | **PUT** /accounts/{account_id}/media/files/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+[**ReplaceAccountMediaTts**](MediaApi.md#replaceaccountmediatts) | **PUT** /accounts/{account_id}/media/tts/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
 
 
 <a name="createaccountmediafiles"></a>
@@ -359,6 +360,79 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListMedia**](ListMedia.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="replaceaccountmediafiles"></a>
+# **ReplaceAccountMediaFiles**
+> MediaFull ReplaceAccountMediaFiles (int? accountId, int? mediaId, string json = null, System.IO.Stream file = null)
+
+Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+
+See Account Media for more info on the properties.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class ReplaceAccountMediaFilesExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: apiKey
+            Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("Authorization", "Bearer");
+
+            var apiInstance = new MediaApi();
+            var accountId = 56;  // int? | Account ID
+            var mediaId = 56;  // int? | Media ID
+            var json = json_example;  // string | Media extra parameters (optional) 
+            var file = new System.IO.Stream(); // System.IO.Stream | Media file (optional) 
+
+            try
+            {
+                // Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+                MediaFull result = apiInstance.ReplaceAccountMediaFiles(accountId, mediaId, json, file);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MediaApi.ReplaceAccountMediaFiles: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | **int?**| Account ID | 
+ **mediaId** | **int?**| Media ID | 
+ **json** | **string**| Media extra parameters | [optional] 
+ **file** | **System.IO.Stream**| Media file | [optional] 
+
+### Return type
+
+[**MediaFull**](MediaFull.md)
 
 ### Authorization
 
