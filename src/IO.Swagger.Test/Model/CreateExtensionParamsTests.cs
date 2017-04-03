@@ -65,6 +65,22 @@ namespace IO.Swagger.Test
         }
 
         /// <summary>
+        /// Test the property 'Voicemail'
+        /// </summary>
+        [Test]
+        public void VoicemailTest()
+        {
+            // TODO unit test for the property 'Voicemail'
+        }
+        /// <summary>
+        /// Test the property 'CallNotifications'
+        /// </summary>
+        [Test]
+        public void CallNotificationsTest()
+        {
+            // TODO unit test for the property 'CallNotifications'
+        }
+        /// <summary>
         /// Test the property 'CallerId'
         /// </summary>
         [Test]
@@ -137,36 +153,12 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'NameGreeting'
         }
         /// <summary>
-        /// Test the property 'VoicemailGreetingAlternate'
-        /// </summary>
-        [Test]
-        public void VoicemailGreetingAlternateTest()
-        {
-            // TODO unit test for the property 'VoicemailGreetingAlternate'
-        }
-        /// <summary>
         /// Test the property 'LocalAreaCode'
         /// </summary>
         [Test]
         public void LocalAreaCodeTest()
         {
             // TODO unit test for the property 'LocalAreaCode'
-        }
-        /// <summary>
-        /// Test the property 'VoicemailGreetingEnableLeaveMessagePrompt'
-        /// </summary>
-        [Test]
-        public void VoicemailGreetingEnableLeaveMessagePromptTest()
-        {
-            // TODO unit test for the property 'VoicemailGreetingEnableLeaveMessagePrompt'
-        }
-        /// <summary>
-        /// Test the property 'VoicemailEnabled'
-        /// </summary>
-        [Test]
-        public void VoicemailEnabledTest()
-        {
-            // TODO unit test for the property 'VoicemailEnabled'
         }
         /// <summary>
         /// Test the property 'EnableOutboundCalls'
@@ -183,70 +175,6 @@ namespace IO.Swagger.Test
         public void EnableCallWaitingTest()
         {
             // TODO unit test for the property 'EnableCallWaiting'
-        }
-        /// <summary>
-        /// Test the property 'VoicemailPassword'
-        /// </summary>
-        [Test]
-        public void VoicemailPasswordTest()
-        {
-            // TODO unit test for the property 'VoicemailPassword'
-        }
-        /// <summary>
-        /// Test the property 'VoicemailGreetingType'
-        /// </summary>
-        [Test]
-        public void VoicemailGreetingTypeTest()
-        {
-            // TODO unit test for the property 'VoicemailGreetingType'
-        }
-        /// <summary>
-        /// Test the property 'VoicemailGreetingStandard'
-        /// </summary>
-        [Test]
-        public void VoicemailGreetingStandardTest()
-        {
-            // TODO unit test for the property 'VoicemailGreetingStandard'
-        }
-        /// <summary>
-        /// Test the property 'VoicemailTranscription'
-        /// </summary>
-        [Test]
-        public void VoicemailTranscriptionTest()
-        {
-            // TODO unit test for the property 'VoicemailTranscription'
-        }
-        /// <summary>
-        /// Test the property 'VoicemailNotificationsEmails'
-        /// </summary>
-        [Test]
-        public void VoicemailNotificationsEmailsTest()
-        {
-            // TODO unit test for the property 'VoicemailNotificationsEmails'
-        }
-        /// <summary>
-        /// Test the property 'VoicemailNotificationsSms'
-        /// </summary>
-        [Test]
-        public void VoicemailNotificationsSmsTest()
-        {
-            // TODO unit test for the property 'VoicemailNotificationsSms'
-        }
-        /// <summary>
-        /// Test the property 'CallNotificationsEmails'
-        /// </summary>
-        [Test]
-        public void CallNotificationsEmailsTest()
-        {
-            // TODO unit test for the property 'CallNotificationsEmails'
-        }
-        /// <summary>
-        /// Test the property 'CallNotificationsSms'
-        /// </summary>
-        [Test]
-        public void CallNotificationsSmsTest()
-        {
-            // TODO unit test for the property 'CallNotificationsSms'
         }
 
     }

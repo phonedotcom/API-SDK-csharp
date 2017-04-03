@@ -32,6 +32,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateExtensionParams" /> class.
         /// </summary>
+        /// <param name="Voicemail">Voicemail object.</param>
+        /// <param name="CallNotifications">Call Notifications object.</param>
         /// <param name="CallerId">Caller ID.</param>
         /// <param name="UsageType">Extension type.</param>
         /// <param name="AllowsCallWaiting">Allows call waiting.</param>
@@ -41,22 +43,13 @@ namespace IO.Swagger.Model
         /// <param name="FullName">Contact name.</param>
         /// <param name="Timezone">Timezone.</param>
         /// <param name="NameGreeting">Recording lookup object.</param>
-        /// <param name="VoicemailGreetingAlternate">Recording lookup object.</param>
         /// <param name="LocalAreaCode">Local area code.</param>
-        /// <param name="VoicemailGreetingEnableLeaveMessagePrompt">Enable the \&quot;leave a message\&quot; prompt for voicemail.</param>
-        /// <param name="VoicemailEnabled">Voicemail enabled.</param>
         /// <param name="EnableOutboundCalls">Enable outgoing calls.</param>
         /// <param name="EnableCallWaiting">Enable Call Waiting.</param>
-        /// <param name="VoicemailPassword">Voicemail password.</param>
-        /// <param name="VoicemailGreetingType">Voicemail greeting type.</param>
-        /// <param name="VoicemailGreetingStandard">Recording lookup object.</param>
-        /// <param name="VoicemailTranscription">Voicemail transcription type.</param>
-        /// <param name="VoicemailNotificationsEmails">Email notifications for voicemails. Can be a single email or an array of emails.</param>
-        /// <param name="VoicemailNotificationsSms">SMS notifications for voicemails.</param>
-        /// <param name="CallNotificationsEmails">Email notifications for calls. Can be a single email or an array of emails.</param>
-        /// <param name="CallNotificationsSms">SMS notifications for calls.</param>
-        public CreateExtensionParams(string CallerId = default(string), string UsageType = default(string), bool? AllowsCallWaiting = default(bool?), int? Extension = default(int?), bool? IncludeInDirectory = default(bool?), string Name = default(string), string FullName = default(string), string Timezone = default(string), Object NameGreeting = default(Object), Object VoicemailGreetingAlternate = default(Object), int? LocalAreaCode = default(int?), bool? VoicemailGreetingEnableLeaveMessagePrompt = default(bool?), bool? VoicemailEnabled = default(bool?), bool? EnableOutboundCalls = default(bool?), bool? EnableCallWaiting = default(bool?), int? VoicemailPassword = default(int?), string VoicemailGreetingType = default(string), Object VoicemailGreetingStandard = default(Object), string VoicemailTranscription = default(string), List<string> VoicemailNotificationsEmails = default(List<string>), string VoicemailNotificationsSms = default(string), List<string> CallNotificationsEmails = default(List<string>), string CallNotificationsSms = default(string))
+        public CreateExtensionParams(Voicemail Voicemail = default(Voicemail), CallNotifications CallNotifications = default(CallNotifications), string CallerId = default(string), string UsageType = default(string), bool? AllowsCallWaiting = default(bool?), int? Extension = default(int?), bool? IncludeInDirectory = default(bool?), string Name = default(string), string FullName = default(string), string Timezone = default(string), Object NameGreeting = default(Object), int? LocalAreaCode = default(int?), bool? EnableOutboundCalls = default(bool?), bool? EnableCallWaiting = default(bool?))
         {
+            this.Voicemail = Voicemail;
+            this.CallNotifications = CallNotifications;
             this.CallerId = CallerId;
             this.UsageType = UsageType;
             this.AllowsCallWaiting = AllowsCallWaiting;
@@ -66,22 +59,23 @@ namespace IO.Swagger.Model
             this.FullName = FullName;
             this.Timezone = Timezone;
             this.NameGreeting = NameGreeting;
-            this.VoicemailGreetingAlternate = VoicemailGreetingAlternate;
             this.LocalAreaCode = LocalAreaCode;
-            this.VoicemailGreetingEnableLeaveMessagePrompt = VoicemailGreetingEnableLeaveMessagePrompt;
-            this.VoicemailEnabled = VoicemailEnabled;
             this.EnableOutboundCalls = EnableOutboundCalls;
             this.EnableCallWaiting = EnableCallWaiting;
-            this.VoicemailPassword = VoicemailPassword;
-            this.VoicemailGreetingType = VoicemailGreetingType;
-            this.VoicemailGreetingStandard = VoicemailGreetingStandard;
-            this.VoicemailTranscription = VoicemailTranscription;
-            this.VoicemailNotificationsEmails = VoicemailNotificationsEmails;
-            this.VoicemailNotificationsSms = VoicemailNotificationsSms;
-            this.CallNotificationsEmails = CallNotificationsEmails;
-            this.CallNotificationsSms = CallNotificationsSms;
         }
         
+        /// <summary>
+        /// Voicemail object
+        /// </summary>
+        /// <value>Voicemail object</value>
+        [DataMember(Name="voicemail", EmitDefaultValue=false)]
+        public Voicemail Voicemail { get; set; }
+        /// <summary>
+        /// Call Notifications object
+        /// </summary>
+        /// <value>Call Notifications object</value>
+        [DataMember(Name="call_notifications", EmitDefaultValue=false)]
+        public CallNotifications CallNotifications { get; set; }
         /// <summary>
         /// Caller ID
         /// </summary>
@@ -137,29 +131,11 @@ namespace IO.Swagger.Model
         [DataMember(Name="name_greeting", EmitDefaultValue=false)]
         public Object NameGreeting { get; set; }
         /// <summary>
-        /// Recording lookup object
-        /// </summary>
-        /// <value>Recording lookup object</value>
-        [DataMember(Name="voicemail[greeting][alternate]", EmitDefaultValue=false)]
-        public Object VoicemailGreetingAlternate { get; set; }
-        /// <summary>
         /// Local area code
         /// </summary>
         /// <value>Local area code</value>
         [DataMember(Name="local_area_code", EmitDefaultValue=false)]
         public int? LocalAreaCode { get; set; }
-        /// <summary>
-        /// Enable the \&quot;leave a message\&quot; prompt for voicemail
-        /// </summary>
-        /// <value>Enable the \&quot;leave a message\&quot; prompt for voicemail</value>
-        [DataMember(Name="voicemail[greeting][enable_leave_message_prompt]", EmitDefaultValue=false)]
-        public bool? VoicemailGreetingEnableLeaveMessagePrompt { get; set; }
-        /// <summary>
-        /// Voicemail enabled
-        /// </summary>
-        /// <value>Voicemail enabled</value>
-        [DataMember(Name="voicemail[enabled]", EmitDefaultValue=false)]
-        public bool? VoicemailEnabled { get; set; }
         /// <summary>
         /// Enable outgoing calls
         /// </summary>
@@ -173,54 +149,6 @@ namespace IO.Swagger.Model
         [DataMember(Name="enable_call_waiting", EmitDefaultValue=false)]
         public bool? EnableCallWaiting { get; set; }
         /// <summary>
-        /// Voicemail password
-        /// </summary>
-        /// <value>Voicemail password</value>
-        [DataMember(Name="voicemail[password]", EmitDefaultValue=false)]
-        public int? VoicemailPassword { get; set; }
-        /// <summary>
-        /// Voicemail greeting type
-        /// </summary>
-        /// <value>Voicemail greeting type</value>
-        [DataMember(Name="voicemail[greeting][type]", EmitDefaultValue=false)]
-        public string VoicemailGreetingType { get; set; }
-        /// <summary>
-        /// Recording lookup object
-        /// </summary>
-        /// <value>Recording lookup object</value>
-        [DataMember(Name="voicemail[greeting][standard]", EmitDefaultValue=false)]
-        public Object VoicemailGreetingStandard { get; set; }
-        /// <summary>
-        /// Voicemail transcription type
-        /// </summary>
-        /// <value>Voicemail transcription type</value>
-        [DataMember(Name="voicemail[transcription]", EmitDefaultValue=false)]
-        public string VoicemailTranscription { get; set; }
-        /// <summary>
-        /// Email notifications for voicemails. Can be a single email or an array of emails
-        /// </summary>
-        /// <value>Email notifications for voicemails. Can be a single email or an array of emails</value>
-        [DataMember(Name="voicemail[notifications][emails]", EmitDefaultValue=false)]
-        public List<string> VoicemailNotificationsEmails { get; set; }
-        /// <summary>
-        /// SMS notifications for voicemails
-        /// </summary>
-        /// <value>SMS notifications for voicemails</value>
-        [DataMember(Name="voicemail[notifications][sms]", EmitDefaultValue=false)]
-        public string VoicemailNotificationsSms { get; set; }
-        /// <summary>
-        /// Email notifications for calls. Can be a single email or an array of emails
-        /// </summary>
-        /// <value>Email notifications for calls. Can be a single email or an array of emails</value>
-        [DataMember(Name="call_notifications[emails]", EmitDefaultValue=false)]
-        public List<string> CallNotificationsEmails { get; set; }
-        /// <summary>
-        /// SMS notifications for calls
-        /// </summary>
-        /// <value>SMS notifications for calls</value>
-        [DataMember(Name="call_notifications[sms]", EmitDefaultValue=false)]
-        public string CallNotificationsSms { get; set; }
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -228,6 +156,8 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateExtensionParams {\n");
+            sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
+            sb.Append("  CallNotifications: ").Append(CallNotifications).Append("\n");
             sb.Append("  CallerId: ").Append(CallerId).Append("\n");
             sb.Append("  UsageType: ").Append(UsageType).Append("\n");
             sb.Append("  AllowsCallWaiting: ").Append(AllowsCallWaiting).Append("\n");
@@ -237,20 +167,9 @@ namespace IO.Swagger.Model
             sb.Append("  FullName: ").Append(FullName).Append("\n");
             sb.Append("  Timezone: ").Append(Timezone).Append("\n");
             sb.Append("  NameGreeting: ").Append(NameGreeting).Append("\n");
-            sb.Append("  VoicemailGreetingAlternate: ").Append(VoicemailGreetingAlternate).Append("\n");
             sb.Append("  LocalAreaCode: ").Append(LocalAreaCode).Append("\n");
-            sb.Append("  VoicemailGreetingEnableLeaveMessagePrompt: ").Append(VoicemailGreetingEnableLeaveMessagePrompt).Append("\n");
-            sb.Append("  VoicemailEnabled: ").Append(VoicemailEnabled).Append("\n");
             sb.Append("  EnableOutboundCalls: ").Append(EnableOutboundCalls).Append("\n");
             sb.Append("  EnableCallWaiting: ").Append(EnableCallWaiting).Append("\n");
-            sb.Append("  VoicemailPassword: ").Append(VoicemailPassword).Append("\n");
-            sb.Append("  VoicemailGreetingType: ").Append(VoicemailGreetingType).Append("\n");
-            sb.Append("  VoicemailGreetingStandard: ").Append(VoicemailGreetingStandard).Append("\n");
-            sb.Append("  VoicemailTranscription: ").Append(VoicemailTranscription).Append("\n");
-            sb.Append("  VoicemailNotificationsEmails: ").Append(VoicemailNotificationsEmails).Append("\n");
-            sb.Append("  VoicemailNotificationsSms: ").Append(VoicemailNotificationsSms).Append("\n");
-            sb.Append("  CallNotificationsEmails: ").Append(CallNotificationsEmails).Append("\n");
-            sb.Append("  CallNotificationsSms: ").Append(CallNotificationsSms).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -287,6 +206,16 @@ namespace IO.Swagger.Model
                 return false;
 
             return 
+                (
+                    this.Voicemail == other.Voicemail ||
+                    this.Voicemail != null &&
+                    this.Voicemail.Equals(other.Voicemail)
+                ) && 
+                (
+                    this.CallNotifications == other.CallNotifications ||
+                    this.CallNotifications != null &&
+                    this.CallNotifications.Equals(other.CallNotifications)
+                ) && 
                 (
                     this.CallerId == other.CallerId ||
                     this.CallerId != null &&
@@ -333,24 +262,9 @@ namespace IO.Swagger.Model
                     this.NameGreeting.Equals(other.NameGreeting)
                 ) && 
                 (
-                    this.VoicemailGreetingAlternate == other.VoicemailGreetingAlternate ||
-                    this.VoicemailGreetingAlternate != null &&
-                    this.VoicemailGreetingAlternate.Equals(other.VoicemailGreetingAlternate)
-                ) && 
-                (
                     this.LocalAreaCode == other.LocalAreaCode ||
                     this.LocalAreaCode != null &&
                     this.LocalAreaCode.Equals(other.LocalAreaCode)
-                ) && 
-                (
-                    this.VoicemailGreetingEnableLeaveMessagePrompt == other.VoicemailGreetingEnableLeaveMessagePrompt ||
-                    this.VoicemailGreetingEnableLeaveMessagePrompt != null &&
-                    this.VoicemailGreetingEnableLeaveMessagePrompt.Equals(other.VoicemailGreetingEnableLeaveMessagePrompt)
-                ) && 
-                (
-                    this.VoicemailEnabled == other.VoicemailEnabled ||
-                    this.VoicemailEnabled != null &&
-                    this.VoicemailEnabled.Equals(other.VoicemailEnabled)
                 ) && 
                 (
                     this.EnableOutboundCalls == other.EnableOutboundCalls ||
@@ -361,46 +275,6 @@ namespace IO.Swagger.Model
                     this.EnableCallWaiting == other.EnableCallWaiting ||
                     this.EnableCallWaiting != null &&
                     this.EnableCallWaiting.Equals(other.EnableCallWaiting)
-                ) && 
-                (
-                    this.VoicemailPassword == other.VoicemailPassword ||
-                    this.VoicemailPassword != null &&
-                    this.VoicemailPassword.Equals(other.VoicemailPassword)
-                ) && 
-                (
-                    this.VoicemailGreetingType == other.VoicemailGreetingType ||
-                    this.VoicemailGreetingType != null &&
-                    this.VoicemailGreetingType.Equals(other.VoicemailGreetingType)
-                ) && 
-                (
-                    this.VoicemailGreetingStandard == other.VoicemailGreetingStandard ||
-                    this.VoicemailGreetingStandard != null &&
-                    this.VoicemailGreetingStandard.Equals(other.VoicemailGreetingStandard)
-                ) && 
-                (
-                    this.VoicemailTranscription == other.VoicemailTranscription ||
-                    this.VoicemailTranscription != null &&
-                    this.VoicemailTranscription.Equals(other.VoicemailTranscription)
-                ) && 
-                (
-                    this.VoicemailNotificationsEmails == other.VoicemailNotificationsEmails ||
-                    this.VoicemailNotificationsEmails != null &&
-                    this.VoicemailNotificationsEmails.SequenceEqual(other.VoicemailNotificationsEmails)
-                ) && 
-                (
-                    this.VoicemailNotificationsSms == other.VoicemailNotificationsSms ||
-                    this.VoicemailNotificationsSms != null &&
-                    this.VoicemailNotificationsSms.Equals(other.VoicemailNotificationsSms)
-                ) && 
-                (
-                    this.CallNotificationsEmails == other.CallNotificationsEmails ||
-                    this.CallNotificationsEmails != null &&
-                    this.CallNotificationsEmails.SequenceEqual(other.CallNotificationsEmails)
-                ) && 
-                (
-                    this.CallNotificationsSms == other.CallNotificationsSms ||
-                    this.CallNotificationsSms != null &&
-                    this.CallNotificationsSms.Equals(other.CallNotificationsSms)
                 );
         }
 
@@ -415,6 +289,10 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Voicemail != null)
+                    hash = hash * 59 + this.Voicemail.GetHashCode();
+                if (this.CallNotifications != null)
+                    hash = hash * 59 + this.CallNotifications.GetHashCode();
                 if (this.CallerId != null)
                     hash = hash * 59 + this.CallerId.GetHashCode();
                 if (this.UsageType != null)
@@ -433,34 +311,12 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.Timezone.GetHashCode();
                 if (this.NameGreeting != null)
                     hash = hash * 59 + this.NameGreeting.GetHashCode();
-                if (this.VoicemailGreetingAlternate != null)
-                    hash = hash * 59 + this.VoicemailGreetingAlternate.GetHashCode();
                 if (this.LocalAreaCode != null)
                     hash = hash * 59 + this.LocalAreaCode.GetHashCode();
-                if (this.VoicemailGreetingEnableLeaveMessagePrompt != null)
-                    hash = hash * 59 + this.VoicemailGreetingEnableLeaveMessagePrompt.GetHashCode();
-                if (this.VoicemailEnabled != null)
-                    hash = hash * 59 + this.VoicemailEnabled.GetHashCode();
                 if (this.EnableOutboundCalls != null)
                     hash = hash * 59 + this.EnableOutboundCalls.GetHashCode();
                 if (this.EnableCallWaiting != null)
                     hash = hash * 59 + this.EnableCallWaiting.GetHashCode();
-                if (this.VoicemailPassword != null)
-                    hash = hash * 59 + this.VoicemailPassword.GetHashCode();
-                if (this.VoicemailGreetingType != null)
-                    hash = hash * 59 + this.VoicemailGreetingType.GetHashCode();
-                if (this.VoicemailGreetingStandard != null)
-                    hash = hash * 59 + this.VoicemailGreetingStandard.GetHashCode();
-                if (this.VoicemailTranscription != null)
-                    hash = hash * 59 + this.VoicemailTranscription.GetHashCode();
-                if (this.VoicemailNotificationsEmails != null)
-                    hash = hash * 59 + this.VoicemailNotificationsEmails.GetHashCode();
-                if (this.VoicemailNotificationsSms != null)
-                    hash = hash * 59 + this.VoicemailNotificationsSms.GetHashCode();
-                if (this.CallNotificationsEmails != null)
-                    hash = hash * 59 + this.CallNotificationsEmails.GetHashCode();
-                if (this.CallNotificationsSms != null)
-                    hash = hash * 59 + this.CallNotificationsSms.GetHashCode();
                 return hash;
             }
         }

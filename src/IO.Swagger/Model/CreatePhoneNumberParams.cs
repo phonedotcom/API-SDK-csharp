@@ -37,27 +37,19 @@ namespace IO.Swagger.Model
         /// <param name="Name">Phone Name.</param>
         /// <param name="BlockIncoming">Block incoming calls.</param>
         /// <param name="BlockAnonymous">Block anonymous calls.</param>
-        /// <param name="CallerIdName">Caller ID name.</param>
-        /// <param name="CallerIdType">Caller ID type.</param>
-        /// <param name="SmsForwardingType">&#39;application&#39; or &#39;extension&#39;.</param>
-        /// <param name="SmsForwardingApplication">Application lookup object.</param>
-        /// <param name="SmsForwardingExtension">Extension lookup object.</param>
-        /// <param name="CallNotificationsEmails">Call notifications for emails. Can be a single email or an array of emails.</param>
-        /// <param name="CallNotificationsSms">Call notification for SMS.</param>
-        public CreatePhoneNumberParams(Object PhoneNumber = default(Object), Object Route = default(Object), string Name = default(string), bool? BlockIncoming = default(bool?), bool? BlockAnonymous = default(bool?), string CallerIdName = default(string), string CallerIdType = default(string), string SmsForwardingType = default(string), Object SmsForwardingApplication = default(Object), Object SmsForwardingExtension = default(Object), List<string> CallNotificationsEmails = default(List<string>), string CallNotificationsSms = default(string))
+        /// <param name="CallerId">Caller ID object.</param>
+        /// <param name="SmsForwarding">SMS Forwarding Object, or NULL.</param>
+        /// <param name="CallNotifications">Call Notifications object.</param>
+        public CreatePhoneNumberParams(Object PhoneNumber = default(Object), Object Route = default(Object), string Name = default(string), bool? BlockIncoming = default(bool?), bool? BlockAnonymous = default(bool?), CallerIdPhoneNumber CallerId = default(CallerIdPhoneNumber), SmsForwardingParams SmsForwarding = default(SmsForwardingParams), CallNotifications CallNotifications = default(CallNotifications))
         {
             this.PhoneNumber = PhoneNumber;
             this.Route = Route;
             this.Name = Name;
             this.BlockIncoming = BlockIncoming;
             this.BlockAnonymous = BlockAnonymous;
-            this.CallerIdName = CallerIdName;
-            this.CallerIdType = CallerIdType;
-            this.SmsForwardingType = SmsForwardingType;
-            this.SmsForwardingApplication = SmsForwardingApplication;
-            this.SmsForwardingExtension = SmsForwardingExtension;
-            this.CallNotificationsEmails = CallNotificationsEmails;
-            this.CallNotificationsSms = CallNotificationsSms;
+            this.CallerId = CallerId;
+            this.SmsForwarding = SmsForwarding;
+            this.CallNotifications = CallNotifications;
         }
         
         /// <summary>
@@ -91,47 +83,23 @@ namespace IO.Swagger.Model
         [DataMember(Name="block_anonymous", EmitDefaultValue=false)]
         public bool? BlockAnonymous { get; set; }
         /// <summary>
-        /// Caller ID name
+        /// Caller ID object
         /// </summary>
-        /// <value>Caller ID name</value>
-        [DataMember(Name="caller_id[name]", EmitDefaultValue=false)]
-        public string CallerIdName { get; set; }
+        /// <value>Caller ID object</value>
+        [DataMember(Name="caller_id", EmitDefaultValue=false)]
+        public CallerIdPhoneNumber CallerId { get; set; }
         /// <summary>
-        /// Caller ID type
+        /// SMS Forwarding Object, or NULL
         /// </summary>
-        /// <value>Caller ID type</value>
-        [DataMember(Name="caller_id[type]", EmitDefaultValue=false)]
-        public string CallerIdType { get; set; }
+        /// <value>SMS Forwarding Object, or NULL</value>
+        [DataMember(Name="sms_forwarding", EmitDefaultValue=false)]
+        public SmsForwardingParams SmsForwarding { get; set; }
         /// <summary>
-        /// &#39;application&#39; or &#39;extension&#39;
+        /// Call Notifications object
         /// </summary>
-        /// <value>&#39;application&#39; or &#39;extension&#39;</value>
-        [DataMember(Name="sms_forwarding[type]", EmitDefaultValue=false)]
-        public string SmsForwardingType { get; set; }
-        /// <summary>
-        /// Application lookup object
-        /// </summary>
-        /// <value>Application lookup object</value>
-        [DataMember(Name="sms_forwarding[application]", EmitDefaultValue=false)]
-        public Object SmsForwardingApplication { get; set; }
-        /// <summary>
-        /// Extension lookup object
-        /// </summary>
-        /// <value>Extension lookup object</value>
-        [DataMember(Name="sms_forwarding[extension]", EmitDefaultValue=false)]
-        public Object SmsForwardingExtension { get; set; }
-        /// <summary>
-        /// Call notifications for emails. Can be a single email or an array of emails
-        /// </summary>
-        /// <value>Call notifications for emails. Can be a single email or an array of emails</value>
-        [DataMember(Name="call_notifications[emails]", EmitDefaultValue=false)]
-        public List<string> CallNotificationsEmails { get; set; }
-        /// <summary>
-        /// Call notification for SMS
-        /// </summary>
-        /// <value>Call notification for SMS</value>
-        [DataMember(Name="call_notifications[sms]", EmitDefaultValue=false)]
-        public string CallNotificationsSms { get; set; }
+        /// <value>Call Notifications object</value>
+        [DataMember(Name="call_notifications", EmitDefaultValue=false)]
+        public CallNotifications CallNotifications { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -145,13 +113,9 @@ namespace IO.Swagger.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  BlockIncoming: ").Append(BlockIncoming).Append("\n");
             sb.Append("  BlockAnonymous: ").Append(BlockAnonymous).Append("\n");
-            sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
-            sb.Append("  CallerIdType: ").Append(CallerIdType).Append("\n");
-            sb.Append("  SmsForwardingType: ").Append(SmsForwardingType).Append("\n");
-            sb.Append("  SmsForwardingApplication: ").Append(SmsForwardingApplication).Append("\n");
-            sb.Append("  SmsForwardingExtension: ").Append(SmsForwardingExtension).Append("\n");
-            sb.Append("  CallNotificationsEmails: ").Append(CallNotificationsEmails).Append("\n");
-            sb.Append("  CallNotificationsSms: ").Append(CallNotificationsSms).Append("\n");
+            sb.Append("  CallerId: ").Append(CallerId).Append("\n");
+            sb.Append("  SmsForwarding: ").Append(SmsForwarding).Append("\n");
+            sb.Append("  CallNotifications: ").Append(CallNotifications).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -214,39 +178,19 @@ namespace IO.Swagger.Model
                     this.BlockAnonymous.Equals(other.BlockAnonymous)
                 ) && 
                 (
-                    this.CallerIdName == other.CallerIdName ||
-                    this.CallerIdName != null &&
-                    this.CallerIdName.Equals(other.CallerIdName)
+                    this.CallerId == other.CallerId ||
+                    this.CallerId != null &&
+                    this.CallerId.Equals(other.CallerId)
                 ) && 
                 (
-                    this.CallerIdType == other.CallerIdType ||
-                    this.CallerIdType != null &&
-                    this.CallerIdType.Equals(other.CallerIdType)
+                    this.SmsForwarding == other.SmsForwarding ||
+                    this.SmsForwarding != null &&
+                    this.SmsForwarding.Equals(other.SmsForwarding)
                 ) && 
                 (
-                    this.SmsForwardingType == other.SmsForwardingType ||
-                    this.SmsForwardingType != null &&
-                    this.SmsForwardingType.Equals(other.SmsForwardingType)
-                ) && 
-                (
-                    this.SmsForwardingApplication == other.SmsForwardingApplication ||
-                    this.SmsForwardingApplication != null &&
-                    this.SmsForwardingApplication.Equals(other.SmsForwardingApplication)
-                ) && 
-                (
-                    this.SmsForwardingExtension == other.SmsForwardingExtension ||
-                    this.SmsForwardingExtension != null &&
-                    this.SmsForwardingExtension.Equals(other.SmsForwardingExtension)
-                ) && 
-                (
-                    this.CallNotificationsEmails == other.CallNotificationsEmails ||
-                    this.CallNotificationsEmails != null &&
-                    this.CallNotificationsEmails.SequenceEqual(other.CallNotificationsEmails)
-                ) && 
-                (
-                    this.CallNotificationsSms == other.CallNotificationsSms ||
-                    this.CallNotificationsSms != null &&
-                    this.CallNotificationsSms.Equals(other.CallNotificationsSms)
+                    this.CallNotifications == other.CallNotifications ||
+                    this.CallNotifications != null &&
+                    this.CallNotifications.Equals(other.CallNotifications)
                 );
         }
 
@@ -271,20 +215,12 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.BlockIncoming.GetHashCode();
                 if (this.BlockAnonymous != null)
                     hash = hash * 59 + this.BlockAnonymous.GetHashCode();
-                if (this.CallerIdName != null)
-                    hash = hash * 59 + this.CallerIdName.GetHashCode();
-                if (this.CallerIdType != null)
-                    hash = hash * 59 + this.CallerIdType.GetHashCode();
-                if (this.SmsForwardingType != null)
-                    hash = hash * 59 + this.SmsForwardingType.GetHashCode();
-                if (this.SmsForwardingApplication != null)
-                    hash = hash * 59 + this.SmsForwardingApplication.GetHashCode();
-                if (this.SmsForwardingExtension != null)
-                    hash = hash * 59 + this.SmsForwardingExtension.GetHashCode();
-                if (this.CallNotificationsEmails != null)
-                    hash = hash * 59 + this.CallNotificationsEmails.GetHashCode();
-                if (this.CallNotificationsSms != null)
-                    hash = hash * 59 + this.CallNotificationsSms.GetHashCode();
+                if (this.CallerId != null)
+                    hash = hash * 59 + this.CallerId.GetHashCode();
+                if (this.SmsForwarding != null)
+                    hash = hash * 59 + this.SmsForwarding.GetHashCode();
+                if (this.CallNotifications != null)
+                    hash = hash * 59 + this.CallNotifications.GetHashCode();
                 return hash;
             }
         }

@@ -132,10 +132,10 @@ namespace IO.Swagger.Model
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         { 
             // Type (string) pattern
-            Regex regexType = new Regex(@"extension|application", RegexOptions.CultureInvariant);
+            Regex regexType = new Regex(@"business|personal", RegexOptions.CultureInvariant);
             if (false == regexType.Match(this.Type).Success)
             {
-                yield return new ValidationResult("Invalid value for Type, must match a pattern of /extension|application/.", new [] { "Type" });
+                yield return new ValidationResult("Invalid value for Type, must match a pattern of /business|personal/.", new [] { "Type" });
             }
 
             yield break;

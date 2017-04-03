@@ -97,44 +97,20 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'BlockAnonymous'
         }
         /// <summary>
-        /// Test the property 'CallerIdName'
+        /// Test the property 'CallerId'
         /// </summary>
         [Test]
-        public void CallerIdNameTest()
+        public void CallerIdTest()
         {
-            // TODO unit test for the property 'CallerIdName'
+            // TODO unit test for the property 'CallerId'
         }
         /// <summary>
-        /// Test the property 'CallerIdType'
+        /// Test the property 'SmsForwarding'
         /// </summary>
         [Test]
-        public void CallerIdTypeTest()
+        public void SmsForwardingTest()
         {
-            // TODO unit test for the property 'CallerIdType'
-        }
-        /// <summary>
-        /// Test the property 'SmsForwardingType'
-        /// </summary>
-        [Test]
-        public void SmsForwardingTypeTest()
-        {
-            // TODO unit test for the property 'SmsForwardingType'
-        }
-        /// <summary>
-        /// Test the property 'SmsForwardingApplication'
-        /// </summary>
-        [Test]
-        public void SmsForwardingApplicationTest()
-        {
-            // TODO unit test for the property 'SmsForwardingApplication'
-        }
-        /// <summary>
-        /// Test the property 'SmsForwardingExtension'
-        /// </summary>
-        [Test]
-        public void SmsForwardingExtensionTest()
-        {
-            // TODO unit test for the property 'SmsForwardingExtension'
+            // TODO unit test for the property 'SmsForwarding'
         }
         /// <summary>
         /// Test the property 'PoolItem'
@@ -145,20 +121,12 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'PoolItem'
         }
         /// <summary>
-        /// Test the property 'CallNotificationsEmails'
+        /// Test the property 'CallNotifications'
         /// </summary>
         [Test]
-        public void CallNotificationsEmailsTest()
+        public void CallNotificationsTest()
         {
-            // TODO unit test for the property 'CallNotificationsEmails'
-        }
-        /// <summary>
-        /// Test the property 'CallNotificationsSms'
-        /// </summary>
-        [Test]
-        public void CallNotificationsSmsTest()
-        {
-            // TODO unit test for the property 'CallNotificationsSms'
+            // TODO unit test for the property 'CallNotifications'
         }
 
     }
