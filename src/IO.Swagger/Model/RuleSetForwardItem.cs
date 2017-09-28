@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -72,42 +73,49 @@ namespace IO.Swagger.Model
         /// <value>Required. Must equal phone_number or extension.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+
         /// <summary>
         /// Required if type &#x3D; \&quot;extension\&quot;. Extension that callers should be directed to. Output is an Extension Summary Object. Input must be an Extension Lookup Object.
         /// </summary>
         /// <value>Required if type &#x3D; \&quot;extension\&quot;. Extension that callers should be directed to. Output is an Extension Summary Object. Input must be an Extension Lookup Object.</value>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public ExtensionSummary Extension { get; set; }
+
         /// <summary>
         /// Required if type &#x3D; \&quot;phone_number\&quot;. Phone number that callers should be directed to. Must be a string in E.164 format.
         /// </summary>
         /// <value>Required if type &#x3D; \&quot;phone_number\&quot;. Phone number that callers should be directed to. Must be a string in E.164 format.</value>
         [DataMember(Name="number", EmitDefaultValue=false)]
         public string Number { get; set; }
+
         /// <summary>
         /// Boolean. Optional. Default is FALSE. Use this to activate call screening. If TRUE, the timeout on the parent action should be at least 30 seconds.
         /// </summary>
         /// <value>Boolean. Optional. Default is FALSE. Use this to activate call screening. If TRUE, the timeout on the parent action should be at least 30 seconds.</value>
         [DataMember(Name="screening", EmitDefaultValue=false)]
         public bool? Screening { get; set; }
+
         /// <summary>
         /// Optional. Must equal calling_number or called_number. Defines which phone number should be used for Caller ID. Default is calling_number.
         /// </summary>
         /// <value>Optional. Must equal calling_number or called_number. Defines which phone number should be used for Caller ID. Default is calling_number.</value>
         [DataMember(Name="caller_id", EmitDefaultValue=false)]
         public string CallerId { get; set; }
+
         /// <summary>
         /// Optional string. If screening &#x3D; TRUE, this value will be passed into our Text-To-Speech engine and used to inform the caller of who they have reached.
         /// </summary>
         /// <value>Optional string. If screening &#x3D; TRUE, this value will be passed into our Text-To-Speech engine and used to inform the caller of who they have reached.</value>
         [DataMember(Name="voice_tag", EmitDefaultValue=false)]
         public string VoiceTag { get; set; }
+
         /// <summary>
         /// Optional. Must equal one of: DEFAULT, STYLE_2, STYLE_3, STYLE_4, STYLE_5, STYLE_6, STYLE_7, STYLE_8, or STYLE_9. Identifies the style of ring tone you will hear when an incoming call is waiting.
         /// </summary>
         /// <value>Optional. Must equal one of: DEFAULT, STYLE_2, STYLE_3, STYLE_4, STYLE_5, STYLE_6, STYLE_7, STYLE_8, or STYLE_9. Identifies the style of ring tone you will hear when an incoming call is waiting.</value>
         [DataMember(Name="distinctive_ring", EmitDefaultValue=false)]
         public string DistinctiveRing { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -225,27 +233,32 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             // Type (string) pattern
             Regex regexType = new Regex(@"phone_number|extension", RegexOptions.CultureInvariant);
             if (false == regexType.Match(this.Type).Success)
             {
-                yield return new ValidationResult("Invalid value for Type, must match a pattern of /phone_number|extension/.", new [] { "Type" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Type, must match a pattern of " + regexType, new [] { "Type" });
             }
 
             // CallerId (string) pattern
             Regex regexCallerId = new Regex(@"calling_number|called_number", RegexOptions.CultureInvariant);
             if (false == regexCallerId.Match(this.CallerId).Success)
             {
-                yield return new ValidationResult("Invalid value for CallerId, must match a pattern of /calling_number|called_number/.", new [] { "CallerId" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CallerId, must match a pattern of " + regexCallerId, new [] { "CallerId" });
             }
 
             // DistinctiveRing (string) pattern
             Regex regexDistinctiveRing = new Regex(@"DEFAULT|STYLE_2|STYLE_3|STYLE_4|STYLE_5|STYLE_6|STYLE_7|STYLE_8|STYLE_9", RegexOptions.CultureInvariant);
             if (false == regexDistinctiveRing.Match(this.DistinctiveRing).Success)
             {
-                yield return new ValidationResult("Invalid value for DistinctiveRing, must match a pattern of /DEFAULT|STYLE_2|STYLE_3|STYLE_4|STYLE_5|STYLE_6|STYLE_7|STYLE_8|STYLE_9/.", new [] { "DistinctiveRing" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DistinctiveRing, must match a pattern of " + regexDistinctiveRing, new [] { "DistinctiveRing" });
             }
 
             yield break;

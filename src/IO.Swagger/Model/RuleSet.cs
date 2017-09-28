@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -45,12 +46,14 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public RuleSetFilter Filter { get; set; }
+
         /// <summary>
         /// Array of Action Objects. Required. Routes have rule sets, and rule sets have one or more actions. The supported actions are described below:
         /// </summary>
         /// <value>Array of Action Objects. Required. Routes have rule sets, and rule sets have one or more actions. The supported actions are described below:</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<RuleSetAction> Actions { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,8 +131,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

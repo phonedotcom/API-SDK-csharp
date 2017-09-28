@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -56,42 +57,49 @@ namespace IO.Swagger.Model
         /// <value>Name of Trunk</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// URI of Trunk (in the form of SIP/user@host.com:port)
         /// </summary>
         /// <value>URI of Trunk (in the form of SIP/user@host.com:port)</value>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
+
         /// <summary>
         /// Max concurrent calls
         /// </summary>
         /// <value>Max concurrent calls</value>
         [DataMember(Name="max_concurrent_calls", EmitDefaultValue=false)]
         public int? MaxConcurrentCalls { get; set; }
+
         /// <summary>
         /// Max minutes per month
         /// </summary>
         /// <value>Max minutes per month</value>
         [DataMember(Name="max_minutes_per_month", EmitDefaultValue=false)]
         public int? MaxMinutesPerMonth { get; set; }
+
         /// <summary>
         /// Recording lookup object
         /// </summary>
         /// <value>Recording lookup object</value>
         [DataMember(Name="greeting", EmitDefaultValue=false)]
         public Object Greeting { get; set; }
+
         /// <summary>
         /// Recording lookup object
         /// </summary>
         /// <value>Recording lookup object</value>
         [DataMember(Name="error_message", EmitDefaultValue=false)]
         public Object ErrorMessage { get; set; }
+
         /// <summary>
         /// Custom audio codec configuration
         /// </summary>
         /// <value>Custom audio codec configuration</value>
         [DataMember(Name="codecs", EmitDefaultValue=false)]
         public List<Object> Codecs { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -209,8 +217,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

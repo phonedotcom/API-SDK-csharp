@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -54,35 +55,41 @@ namespace IO.Swagger.Model
         /// <value>Whether voicemail is enabled. Boolean.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+
         /// <summary>
         /// Password for accessing voicemail box. Must be digits only.
         /// </summary>
         /// <value>Password for accessing voicemail box. Must be digits only.</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
+
         /// <summary>
         /// Gets or Sets Greeting
         /// </summary>
         [DataMember(Name="greeting", EmitDefaultValue=false)]
         public Greeting Greeting { get; set; }
+
         /// <summary>
         /// If notification emails are being used, this defines the format of the audio attachments. Can be \&quot;wav\&quot; for WAV format, \&quot;mp3\&quot; for MP3 format, or NULL to disable attachments.
         /// </summary>
         /// <value>If notification emails are being used, this defines the format of the audio attachments. Can be \&quot;wav\&quot; for WAV format, \&quot;mp3\&quot; for MP3 format, or NULL to disable attachments.</value>
         [DataMember(Name="attachments", EmitDefaultValue=false)]
         public string Attachments { get; set; }
+
         /// <summary>
         /// Voicemail Notifications Object. See below for details. Can be set to NULL to disable notifications.
         /// </summary>
         /// <value>Voicemail Notifications Object. See below for details. Can be set to NULL to disable notifications.</value>
         [DataMember(Name="notifications", EmitDefaultValue=false)]
         public Notification Notifications { get; set; }
+
         /// <summary>
         /// Type of voicemail transcription to use. Can be \&quot;human\&quot; for high-quality manual transcriptions by human operators, \&quot;automated\&quot; for machine-generated transcriptions, or NULL to omit trancriptions. Changing this option will affect your monthly bill. Please see our Control Panel or contact Customer Service for details.
         /// </summary>
         /// <value>Type of voicemail transcription to use. Can be \&quot;human\&quot; for high-quality manual transcriptions by human operators, \&quot;automated\&quot; for machine-generated transcriptions, or NULL to omit trancriptions. Changing this option will affect your monthly bill. Please see our Control Panel or contact Customer Service for details.</value>
         [DataMember(Name="transcription", EmitDefaultValue=false)]
         public string Transcription { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,8 +199,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

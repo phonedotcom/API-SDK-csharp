@@ -4,20 +4,20 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountMenu**](MenusApi.md#createaccountmenu) | **POST** /accounts/{account_id}/menus | Create an individual menu
-[**DeleteAccountMenu**](MenusApi.md#deleteaccountmenu) | **DELETE** /accounts/{account_id}/menus/{menu_id} | Delete an individual menu
-[**GetAccountMenu**](MenusApi.md#getaccountmenu) | **GET** /accounts/{account_id}/menus/{menu_id} | Show details of an individual menu
-[**ListAccountMenus**](MenusApi.md#listaccountmenus) | **GET** /accounts/{account_id}/menus | Get a list of menus for an account
-[**ReplaceAccountMenu**](MenusApi.md#replaceaccountmenu) | **PUT** /accounts/{account_id}/menus/{menu_id} | Replace an individual menu
+[**CreateAccountMenu**](MenusApi.md#createaccountmenu) | **POST** /accounts/{account_id}/menus | Create an individual menu.
+[**DeleteAccountMenu**](MenusApi.md#deleteaccountmenu) | **DELETE** /accounts/{account_id}/menus/{menu_id} | Delete an individual menu.
+[**GetAccountMenu**](MenusApi.md#getaccountmenu) | **GET** /accounts/{account_id}/menus/{menu_id} | Show details of an individual menu.
+[**ListAccountMenus**](MenusApi.md#listaccountmenus) | **GET** /accounts/{account_id}/menus | Get a list of menus for an account.
+[**ReplaceAccountMenu**](MenusApi.md#replaceaccountmenu) | **PUT** /accounts/{account_id}/menus/{menu_id} | Replace an individual menu.
 
 
 <a name="createaccountmenu"></a>
 # **CreateAccountMenu**
 > MenuFull CreateAccountMenu (int? accountId, CreateMenuParams data = null)
 
-Create an individual menu
+Create an individual menu.
 
-This service creates an individual menu. See Account Menus for more info on the properties.
+Create an individual menu. See Account Menus for more info on the properties.
 
 ### Example
 ```csharp
@@ -33,7 +33,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -45,7 +44,7 @@ namespace Example
 
             try
             {
-                // Create an individual menu
+                // Create an individual menu.
                 MenuFull result = apiInstance.CreateAccountMenu(accountId, data);
                 Debug.WriteLine(result);
             }
@@ -82,11 +81,11 @@ Name | Type | Description  | Notes
 
 <a name="deleteaccountmenu"></a>
 # **DeleteAccountMenu**
-> DeleteMenu DeleteAccountMenu (int? accountId, int? menuId)
+> DeleteEntry DeleteAccountMenu (int? accountId, int? menuId)
 
-Delete an individual menu
+Delete an individual menu.
 
-See Account Menus for more info on the properties.
+Delete an individual menu. See Account Menus for more info on the properties.
 
 ### Example
 ```csharp
@@ -102,7 +101,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -114,8 +112,8 @@ namespace Example
 
             try
             {
-                // Delete an individual menu
-                DeleteMenu result = apiInstance.DeleteAccountMenu(accountId, menuId);
+                // Delete an individual menu.
+                DeleteEntry result = apiInstance.DeleteAccountMenu(accountId, menuId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -136,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteMenu**](DeleteMenu.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -153,9 +151,9 @@ Name | Type | Description  | Notes
 # **GetAccountMenu**
 > MenuFull GetAccountMenu (int? accountId, int? menuId)
 
-Show details of an individual menu
+Show details of an individual menu.
 
-This service shows the details of an individual Menu.
+Show details of an individual menu. See Account Menus for more info on the properties.
 
 ### Example
 ```csharp
@@ -171,7 +169,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -183,7 +180,7 @@ namespace Example
 
             try
             {
-                // Show details of an individual menu
+                // Show details of an individual menu.
                 MenuFull result = apiInstance.GetAccountMenu(accountId, menuId);
                 Debug.WriteLine(result);
             }
@@ -222,9 +219,9 @@ Name | Type | Description  | Notes
 # **ListAccountMenus**
 > ListMenus ListAccountMenus (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null)
 
-Get a list of menus for an account
+Get a list of menus for an account.
 
-See Account Menus for more info on the properties.
+Get a list of menus for an account. See Account Menus for more info on the properties.
 
 ### Example
 ```csharp
@@ -240,7 +237,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -258,7 +254,7 @@ namespace Example
 
             try
             {
-                // Get a list of menus for an account
+                // Get a list of menus for an account.
                 ListMenus result = apiInstance.ListAccountMenus(accountId, filtersId, filtersName, sortId, sortName, limit, offset, fields);
                 Debug.WriteLine(result);
             }
@@ -303,9 +299,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountMenu**
 > MenuFull ReplaceAccountMenu (int? accountId, int? menuId, ReplaceMenuParams data = null)
 
-Replace an individual menu
+Replace an individual menu.
 
-See Account Menus for more info on the properties.
+Replace an individual menu. See Account Menus for more info on the properties.
 
 ### Example
 ```csharp
@@ -321,7 +317,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -334,7 +329,7 @@ namespace Example
 
             try
             {
-                // Replace an individual menu
+                // Replace an individual menu.
                 MenuFull result = apiInstance.ReplaceAccountMenu(accountId, menuId, data);
                 Debug.WriteLine(result);
             }

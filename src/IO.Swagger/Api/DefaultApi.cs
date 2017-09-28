@@ -217,9 +217,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -244,7 +241,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<PingResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PingResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PingResponse)));
-            
         }
 
         /// <summary>
@@ -289,9 +285,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -315,7 +308,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<PingResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PingResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PingResponse)));
-            
         }
 
     }

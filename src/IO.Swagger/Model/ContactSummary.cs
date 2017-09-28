@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -58,48 +59,56 @@ namespace IO.Swagger.Model
         /// <value>Integer ID. Read-only.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// Salutation, such as Mr, Mrs, or Dr
         /// </summary>
         /// <value>Salutation, such as Mr, Mrs, or Dr</value>
         [DataMember(Name="prefix", EmitDefaultValue=false)]
         public string Prefix { get; set; }
+
         /// <summary>
         /// First name or given name
         /// </summary>
         /// <value>First name or given name</value>
         [DataMember(Name="first_name", EmitDefaultValue=false)]
         public string FirstName { get; set; }
+
         /// <summary>
         /// Middle or second name
         /// </summary>
         /// <value>Middle or second name</value>
         [DataMember(Name="middle_name", EmitDefaultValue=false)]
         public string MiddleName { get; set; }
+
         /// <summary>
         /// Last name or surname
         /// </summary>
         /// <value>Last name or surname</value>
         [DataMember(Name="last_name", EmitDefaultValue=false)]
         public string LastName { get; set; }
+
         /// <summary>
         /// Suffix, such as &#39;Jr.&#39;, &#39;Sr.&#39;, &#39;II&#39;, or &#39;III&#39;
         /// </summary>
         /// <value>Suffix, such as &#39;Jr.&#39;, &#39;Sr.&#39;, &#39;II&#39;, or &#39;III&#39;</value>
         [DataMember(Name="suffix", EmitDefaultValue=false)]
         public string Suffix { get; set; }
+
         /// <summary>
         /// Nickname, or a shortened informal version of the contact&#39;s name
         /// </summary>
         /// <value>Nickname, or a shortened informal version of the contact&#39;s name</value>
         [DataMember(Name="nickname", EmitDefaultValue=false)]
         public string Nickname { get; set; }
+
         /// <summary>
         /// Name of the contact&#39;s company
         /// </summary>
         /// <value>Name of the contact&#39;s company</value>
         [DataMember(Name="company", EmitDefaultValue=false)]
         public string Company { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -225,8 +234,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

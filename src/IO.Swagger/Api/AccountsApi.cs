@@ -28,7 +28,7 @@ namespace IO.Swagger.Api
         /// Retrieve details of an individual account
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual account. See Accounts for more info on the properties.
+        /// Retrieve details of an individual account. See Accounts for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -39,17 +39,17 @@ namespace IO.Swagger.Api
         /// Retrieve details of an individual account
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual account. See Accounts for more info on the properties.
+        /// Retrieve details of an individual account. See Accounts for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <returns>ApiResponse of AccountFull</returns>
         ApiResponse<AccountFull> GetAccountWithHttpInfo (int? accountId);
         /// <summary>
-        /// Get a list of accounts visible to the authenticated user or client
+        /// Get a list of accounts visible to the authenticated user or client.
         /// </summary>
         /// <remarks>
-        /// This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+        /// Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filtersId">ID filter (optional)</param>
@@ -61,10 +61,10 @@ namespace IO.Swagger.Api
         ListAccounts ListAccounts (List<string> filtersId = null, string sortId = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of accounts visible to the authenticated user or client
+        /// Get a list of accounts visible to the authenticated user or client.
         /// </summary>
         /// <remarks>
-        /// This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+        /// Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filtersId">ID filter (optional)</param>
@@ -80,7 +80,7 @@ namespace IO.Swagger.Api
         /// Retrieve details of an individual account
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual account. See Accounts for more info on the properties.
+        /// Retrieve details of an individual account. See Accounts for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -91,17 +91,17 @@ namespace IO.Swagger.Api
         /// Retrieve details of an individual account
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual account. See Accounts for more info on the properties.
+        /// Retrieve details of an individual account. See Accounts for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <returns>Task of ApiResponse (AccountFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<AccountFull>> GetAccountAsyncWithHttpInfo (int? accountId);
         /// <summary>
-        /// Get a list of accounts visible to the authenticated user or client
+        /// Get a list of accounts visible to the authenticated user or client.
         /// </summary>
         /// <remarks>
-        /// This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+        /// Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filtersId">ID filter (optional)</param>
@@ -113,10 +113,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListAccounts> ListAccountsAsync (List<string> filtersId = null, string sortId = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of accounts visible to the authenticated user or client
+        /// Get a list of accounts visible to the authenticated user or client.
         /// </summary>
         /// <remarks>
-        /// This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+        /// Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filtersId">ID filter (optional)</param>
@@ -239,7 +239,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Retrieve details of an individual account This service shows the details of an individual account. See Accounts for more info on the properties.
+        /// Retrieve details of an individual account Retrieve details of an individual account. See Accounts for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -251,7 +251,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Retrieve details of an individual account This service shows the details of an individual account. See Accounts for more info on the properties.
+        /// Retrieve details of an individual account Retrieve details of an individual account. See Accounts for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -284,9 +284,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
 
             // authentication (apiKey) required
@@ -312,11 +309,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<AccountFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AccountFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountFull)));
-            
         }
 
         /// <summary>
-        /// Retrieve details of an individual account This service shows the details of an individual account. See Accounts for more info on the properties.
+        /// Retrieve details of an individual account Retrieve details of an individual account. See Accounts for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -329,7 +325,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Retrieve details of an individual account This service shows the details of an individual account. See Accounts for more info on the properties.
+        /// Retrieve details of an individual account Retrieve details of an individual account. See Accounts for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -362,9 +358,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
 
             // authentication (apiKey) required
@@ -389,11 +382,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<AccountFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AccountFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of accounts visible to the authenticated user or client This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+        /// Get a list of accounts visible to the authenticated user or client. Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filtersId">ID filter (optional)</param>
@@ -409,7 +401,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of accounts visible to the authenticated user or client This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+        /// Get a list of accounts visible to the authenticated user or client. Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filtersId">ID filter (optional)</param>
@@ -443,9 +435,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (sortId != null) localVarQueryParams.Add("sort[id]", Configuration.ApiClient.ParameterToString(sortId)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
@@ -475,11 +464,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListAccounts>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListAccounts) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListAccounts)));
-            
         }
 
         /// <summary>
-        /// Get a list of accounts visible to the authenticated user or client This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+        /// Get a list of accounts visible to the authenticated user or client. Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filtersId">ID filter (optional)</param>
@@ -496,7 +484,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of accounts visible to the authenticated user or client This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+        /// Get a list of accounts visible to the authenticated user or client. Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filtersId">ID filter (optional)</param>
@@ -530,9 +518,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (sortId != null) localVarQueryParams.Add("sort[id]", Configuration.ApiClient.ParameterToString(sortId)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
@@ -561,7 +546,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListAccounts>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListAccounts) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListAccounts)));
-            
         }
 
     }

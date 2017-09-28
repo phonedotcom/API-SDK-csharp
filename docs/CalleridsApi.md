@@ -4,16 +4,16 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetCallerIds**](CalleridsApi.md#getcallerids) | **GET** /accounts/{account_id}/extensions/{extension_id}/caller-ids | Show the Caller ID options a given extension can use
+[**GetCallerIds**](CalleridsApi.md#getcallerids) | **GET** /accounts/{account_id}/extensions/{extension_id}/caller-ids | Show the Caller ID options a given extension can use.
 
 
 <a name="getcallerids"></a>
 # **GetCallerIds**
 > ListCallerIds GetCallerIds (int? accountId, int? extensionId, List<string> filtersNumber = null, List<string> filtersName = null, string sortNumber = null, string sortName = null, int? limit = null, int? offset = null, string fields = null)
 
-Show the Caller ID options a given extension can use
+Show the Caller ID options a given extension can use.
 
-Get Caller ID
+Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
 
 ### Example
 ```csharp
@@ -29,7 +29,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -48,7 +47,7 @@ namespace Example
 
             try
             {
-                // Show the Caller ID options a given extension can use
+                // Show the Caller ID options a given extension can use.
                 ListCallerIds result = apiInstance.GetCallerIds(accountId, extensionId, filtersNumber, filtersName, sortNumber, sortName, limit, offset, fields);
                 Debug.WriteLine(result);
             }

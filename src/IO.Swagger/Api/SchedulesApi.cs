@@ -28,7 +28,7 @@ namespace IO.Swagger.Api
         /// Show details of an individual schedule
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual schedule.
+        /// Show details of an individual schedule
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// Show details of an individual schedule
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual schedule.
+        /// Show details of an individual schedule
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -51,7 +51,7 @@ namespace IO.Swagger.Api
         /// Get a list of schedules for an account
         /// </summary>
         /// <remarks>
-        /// See Intro to Schedules for more info on the properties.
+        /// Get a list of schedules for an account
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -69,7 +69,7 @@ namespace IO.Swagger.Api
         /// Get a list of schedules for an account
         /// </summary>
         /// <remarks>
-        /// See Intro to Schedules for more info on the properties.
+        /// Get a list of schedules for an account
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -88,7 +88,7 @@ namespace IO.Swagger.Api
         /// Show details of an individual schedule
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual schedule.
+        /// Show details of an individual schedule
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -100,7 +100,7 @@ namespace IO.Swagger.Api
         /// Show details of an individual schedule
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual schedule.
+        /// Show details of an individual schedule
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -111,7 +111,7 @@ namespace IO.Swagger.Api
         /// Get a list of schedules for an account
         /// </summary>
         /// <remarks>
-        /// See Intro to Schedules for more info on the properties.
+        /// Get a list of schedules for an account
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -129,7 +129,7 @@ namespace IO.Swagger.Api
         /// Get a list of schedules for an account
         /// </summary>
         /// <remarks>
-        /// See Intro to Schedules for more info on the properties.
+        /// Get a list of schedules for an account
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -255,7 +255,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual schedule This service shows the details of an individual schedule.
+        /// Show details of an individual schedule Show details of an individual schedule
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -268,7 +268,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual schedule This service shows the details of an individual schedule.
+        /// Show details of an individual schedule Show details of an individual schedule
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -305,9 +305,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (scheduleId != null) localVarPathParams.Add("schedule_id", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
 
@@ -334,11 +331,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ScheduleFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ScheduleFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual schedule This service shows the details of an individual schedule.
+        /// Show details of an individual schedule Show details of an individual schedule
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -352,7 +348,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual schedule This service shows the details of an individual schedule.
+        /// Show details of an individual schedule Show details of an individual schedule
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -389,9 +385,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (scheduleId != null) localVarPathParams.Add("schedule_id", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
 
@@ -417,11 +410,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ScheduleFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ScheduleFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of schedules for an account See Intro to Schedules for more info on the properties.
+        /// Get a list of schedules for an account Get a list of schedules for an account
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -440,7 +432,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of schedules for an account See Intro to Schedules for more info on the properties.
+        /// Get a list of schedules for an account Get a list of schedules for an account
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -480,9 +472,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -515,11 +504,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListSchedules>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListSchedules) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListSchedules)));
-            
         }
 
         /// <summary>
-        /// Get a list of schedules for an account See Intro to Schedules for more info on the properties.
+        /// Get a list of schedules for an account Get a list of schedules for an account
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -539,7 +527,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of schedules for an account See Intro to Schedules for more info on the properties.
+        /// Get a list of schedules for an account Get a list of schedules for an account
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -579,9 +567,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -613,7 +598,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListSchedules>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListSchedules) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListSchedules)));
-            
         }
 
     }

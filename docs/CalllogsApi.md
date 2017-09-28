@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Show details of an individual Call Log entry
 
-See Call Logs for more detail.
+Show details of an individual Call Log entry. See Call Logs for more detail.
 
 ### Example
 ```csharp
@@ -30,7 +30,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -83,7 +82,7 @@ Name | Type | Description  | Notes
 
 Get a list of call details associated with your account
 
-See Call Logs for more detail.
+Get a list of call details associated with your account. See Call Logs for more detail.
 
 ### Example
 ```csharp
@@ -99,7 +98,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

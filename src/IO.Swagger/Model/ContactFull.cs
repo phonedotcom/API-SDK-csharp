@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -80,113 +81,132 @@ namespace IO.Swagger.Model
         /// <value>Integer ID. Read-only.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// Salutation, such as Mr, Mrs, or Dr
         /// </summary>
         /// <value>Salutation, such as Mr, Mrs, or Dr</value>
         [DataMember(Name="prefix", EmitDefaultValue=false)]
         public string Prefix { get; set; }
+
         /// <summary>
         /// First name or given name
         /// </summary>
         /// <value>First name or given name</value>
         [DataMember(Name="first_name", EmitDefaultValue=false)]
         public string FirstName { get; set; }
+
         /// <summary>
         /// Middle or second name
         /// </summary>
         /// <value>Middle or second name</value>
         [DataMember(Name="middle_name", EmitDefaultValue=false)]
         public string MiddleName { get; set; }
+
         /// <summary>
         /// Last name or surname
         /// </summary>
         /// <value>Last name or surname</value>
         [DataMember(Name="last_name", EmitDefaultValue=false)]
         public string LastName { get; set; }
+
         /// <summary>
         /// Suffix, such as \&quot;Jr.\&quot;, \&quot;Sr.\&quot;, \&quot;II\&quot;, or \&quot;III\&quot;
         /// </summary>
         /// <value>Suffix, such as \&quot;Jr.\&quot;, \&quot;Sr.\&quot;, \&quot;II\&quot;, or \&quot;III\&quot;</value>
         [DataMember(Name="suffix", EmitDefaultValue=false)]
         public string Suffix { get; set; }
+
         /// <summary>
         /// Nickname, or a shortened informal version of the contact&#39;s name
         /// </summary>
         /// <value>Nickname, or a shortened informal version of the contact&#39;s name</value>
         [DataMember(Name="nickname", EmitDefaultValue=false)]
         public string Nickname { get; set; }
+
         /// <summary>
         /// Name of the contact&#39;s company
         /// </summary>
         /// <value>Name of the contact&#39;s company</value>
         [DataMember(Name="company", EmitDefaultValue=false)]
         public string Company { get; set; }
+
         /// <summary>
         /// Phonetic first name. Useful for remembering how to pronounce the contact&#39;s name.
         /// </summary>
         /// <value>Phonetic first name. Useful for remembering how to pronounce the contact&#39;s name.</value>
         [DataMember(Name="phonetic_first_name", EmitDefaultValue=false)]
         public string PhoneticFirstName { get; set; }
+
         /// <summary>
         /// Phonetic middle name. Useful for remembering how to pronounce the contact&#39;s name.
         /// </summary>
         /// <value>Phonetic middle name. Useful for remembering how to pronounce the contact&#39;s name.</value>
         [DataMember(Name="phonetic_middle_name", EmitDefaultValue=false)]
         public string PhoneticMiddleName { get; set; }
+
         /// <summary>
         /// Phonetic last name. Useful for remembering how to pronounce the contact&#39;s name.
         /// </summary>
         /// <value>Phonetic last name. Useful for remembering how to pronounce the contact&#39;s name.</value>
         [DataMember(Name="phonetic_last_name", EmitDefaultValue=false)]
         public string PhoneticLastName { get; set; }
+
         /// <summary>
         /// Name of the contact&#39;s department
         /// </summary>
         /// <value>Name of the contact&#39;s department</value>
         [DataMember(Name="department", EmitDefaultValue=false)]
         public string Department { get; set; }
+
         /// <summary>
         /// Contact&#39;s job title
         /// </summary>
         /// <value>Contact&#39;s job title</value>
         [DataMember(Name="job_title", EmitDefaultValue=false)]
         public string JobTitle { get; set; }
+
         /// <summary>
         /// Array of Contact Email Objects. See below for details.
         /// </summary>
         /// <value>Array of Contact Email Objects. See below for details.</value>
         [DataMember(Name="emails", EmitDefaultValue=false)]
         public List<Email> Emails { get; set; }
+
         /// <summary>
         /// Array of Contact Phone Number Objects. See below for details.
         /// </summary>
         /// <value>Array of Contact Phone Number Objects. See below for details.</value>
         [DataMember(Name="phone_numbers", EmitDefaultValue=false)]
         public List<PhoneNumberContact> PhoneNumbers { get; set; }
+
         /// <summary>
         /// Array of Contact Address Objects. See below for details.
         /// </summary>
         /// <value>Array of Contact Address Objects. See below for details.</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<AddressListContacts> Addresses { get; set; }
+
         /// <summary>
         /// Gets or Sets Group
         /// </summary>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public GroupListContacts Group { get; set; }
+
         /// <summary>
         /// Integer UNIX timestamp when the contact was created. Read-only.
         /// </summary>
         /// <value>Integer UNIX timestamp when the contact was created. Read-only.</value>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
         public int? CreatedAt { get; set; }
+
         /// <summary>
         /// Integer UNIX timestamp when the contact was created. Read-only.
         /// </summary>
         /// <value>Integer UNIX timestamp when the contact was created. Read-only.</value>
         [DataMember(Name="updated_at", EmitDefaultValue=false)]
         public int? UpdatedAt { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -400,8 +420,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

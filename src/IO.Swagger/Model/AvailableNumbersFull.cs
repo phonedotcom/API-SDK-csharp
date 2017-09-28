@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -64,66 +65,77 @@ namespace IO.Swagger.Model
         /// <value>Phone number, in E.164 format</value>
         [DataMember(Name="phone_number", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
+
         /// <summary>
         /// Human-readable formatted version of the phone number
         /// </summary>
         /// <value>Human-readable formatted version of the phone number</value>
         [DataMember(Name="formatted", EmitDefaultValue=false)]
         public string Formatted { get; set; }
+
         /// <summary>
         /// The one-time initial price for this number, in USD. Some numbers show REQUEST_QUOTE here. Please contact our sales department if you are interested in these numbers.
         /// </summary>
         /// <value>The one-time initial price for this number, in USD. Some numbers show REQUEST_QUOTE here. Please contact our sales department if you are interested in these numbers.</value>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public int? Price { get; set; }
+
         /// <summary>
         /// Whether the number is toll-free
         /// </summary>
         /// <value>Whether the number is toll-free</value>
         [DataMember(Name="is_toll_free", EmitDefaultValue=false)]
         public bool? IsTollFree { get; set; }
+
         /// <summary>
         /// The international dialing prefix for this number. For US and Canadian numbers, for example, this will be \&quot;1\&quot;.
         /// </summary>
         /// <value>The international dialing prefix for this number. For US and Canadian numbers, for example, this will be \&quot;1\&quot;.</value>
         [DataMember(Name="country_code", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
+
         /// <summary>
         /// Area code (a.k.a. NPA). Included for North American numbers only.
         /// </summary>
         /// <value>Area code (a.k.a. NPA). Included for North American numbers only.</value>
         [DataMember(Name="npa", EmitDefaultValue=false)]
         public string Npa { get; set; }
+
         /// <summary>
         /// Second 3 digits (a.k.a. NXX). Included for North American numbers only.
         /// </summary>
         /// <value>Second 3 digits (a.k.a. NXX). Included for North American numbers only.</value>
         [DataMember(Name="nxx", EmitDefaultValue=false)]
         public string Nxx { get; set; }
+
         /// <summary>
         /// Last 4 digits (a.k.a. XXXX). Included for North American numbers only.
         /// </summary>
         /// <value>Last 4 digits (a.k.a. XXXX). Included for North American numbers only.</value>
         [DataMember(Name="xxxx", EmitDefaultValue=false)]
         public string Xxxx { get; set; }
+
         /// <summary>
         /// City with which this number is associated, if known. Otherwise NULL.
         /// </summary>
         /// <value>City with which this number is associated, if known. Otherwise NULL.</value>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
+
         /// <summary>
         /// State or Province with which this number is associated, if known. Postal Code. Otherwise NULL.
         /// </summary>
         /// <value>State or Province with which this number is associated, if known. Postal Code. Otherwise NULL.</value>
         [DataMember(Name="province", EmitDefaultValue=false)]
         public string Province { get; set; }
+
         /// <summary>
         /// Country with which this number is associated, if known. Otherwise NULL.
         /// </summary>
         /// <value>Country with which this number is associated, if known. Otherwise NULL.</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -273,8 +285,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

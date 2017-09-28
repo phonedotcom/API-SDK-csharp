@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -36,11 +37,11 @@ namespace IO.Swagger.Model
         /// <param name="Name">Phone Name.</param>
         /// <param name="BlockIncoming">Block incoming calls.</param>
         /// <param name="BlockAnonymous">Block anonymous calls.</param>
-        /// <param name="CallerId">Caller ID object.</param>
-        /// <param name="SmsForwarding">SMS Forwarding Object, or NULL.</param>
+        /// <param name="CallerId">CallerId.</param>
+        /// <param name="SmsForwarding">SmsForwarding.</param>
         /// <param name="PoolItem">Pool lookup object.</param>
-        /// <param name="CallNotifications">Call Notifications object.</param>
-        public ReplacePhoneNumberParams(Object Route = default(Object), string Name = default(string), bool? BlockIncoming = default(bool?), bool? BlockAnonymous = default(bool?), CallerIdPhoneNumber CallerId = default(CallerIdPhoneNumber), SmsForwardingParams SmsForwarding = default(SmsForwardingParams), Object PoolItem = default(Object), CallNotifications CallNotifications = default(CallNotifications))
+        /// <param name="CallNotifications">CallNotifications.</param>
+        public ReplacePhoneNumberParams(Object Route = default(Object), string Name = default(string), string BlockIncoming = default(string), string BlockAnonymous = default(string), CallerIdPhoneNumber CallerId = default(CallerIdPhoneNumber), SmsForwardingParams SmsForwarding = default(SmsForwardingParams), Object PoolItem = default(Object), CallNotifications CallNotifications = default(CallNotifications))
         {
             this.Route = Route;
             this.Name = Name;
@@ -58,48 +59,53 @@ namespace IO.Swagger.Model
         /// <value>Route lookup object</value>
         [DataMember(Name="route", EmitDefaultValue=false)]
         public Object Route { get; set; }
+
         /// <summary>
         /// Phone Name
         /// </summary>
         /// <value>Phone Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Block incoming calls
         /// </summary>
         /// <value>Block incoming calls</value>
         [DataMember(Name="block_incoming", EmitDefaultValue=false)]
-        public bool? BlockIncoming { get; set; }
+        public string BlockIncoming { get; set; }
+
         /// <summary>
         /// Block anonymous calls
         /// </summary>
         /// <value>Block anonymous calls</value>
         [DataMember(Name="block_anonymous", EmitDefaultValue=false)]
-        public bool? BlockAnonymous { get; set; }
+        public string BlockAnonymous { get; set; }
+
         /// <summary>
-        /// Caller ID object
+        /// Gets or Sets CallerId
         /// </summary>
-        /// <value>Caller ID object</value>
         [DataMember(Name="caller_id", EmitDefaultValue=false)]
         public CallerIdPhoneNumber CallerId { get; set; }
+
         /// <summary>
-        /// SMS Forwarding Object, or NULL
+        /// Gets or Sets SmsForwarding
         /// </summary>
-        /// <value>SMS Forwarding Object, or NULL</value>
         [DataMember(Name="sms_forwarding", EmitDefaultValue=false)]
         public SmsForwardingParams SmsForwarding { get; set; }
+
         /// <summary>
         /// Pool lookup object
         /// </summary>
         /// <value>Pool lookup object</value>
         [DataMember(Name="pool_item", EmitDefaultValue=false)]
         public Object PoolItem { get; set; }
+
         /// <summary>
-        /// Call Notifications object
+        /// Gets or Sets CallNotifications
         /// </summary>
-        /// <value>Call Notifications object</value>
         [DataMember(Name="call_notifications", EmitDefaultValue=false)]
         public CallNotifications CallNotifications { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -225,8 +231,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

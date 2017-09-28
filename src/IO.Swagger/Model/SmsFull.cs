@@ -20,11 +20,12 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// The Full SMS Object is identical to the SMS Summary Object. See above for details.
+    /// The Full SMS Object includes all of the properties in the SMS Summary Object.
     /// </summary>
     [DataContract]
     public partial class SmsFull :  IEquatable<SmsFull>, IValidatableObject
@@ -32,83 +33,24 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsFull" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SmsFull() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SmsFull" /> class.
-        /// </summary>
-        /// <param name="Id">Unique SMS ID. Read-only. (required).</param>
-        /// <param name="From">Caller ID number to display on the incoming/outgoing SMS message. For an outgoing message, it must be a phone number associated with your Phone.com account. (required).</param>
-        /// <param name="To">An array of SMS recipients. (required).</param>
-        /// <param name="Direction">Direction of SMS. &#39;in&#39; for Incoming messages, &#39;out&#39; for Outgoing messages. (required).</param>
-        /// <param name="CreatedEpoch">Unix time stamp representing the UTC time that the object was created in the Phone.com API system. (required).</param>
-        /// <param name="CreatedAt">Date string representing the UTC time that the object was created in the Phone.com API system. (required).</param>
-        /// <param name="Text">Body of the SMS text (required).</param>
-        public SmsFull(string Id = default(string), string From = default(string), List<Recipient> To = default(List<Recipient>), string Direction = default(string), int? CreatedEpoch = default(int?), DateTime? CreatedAt = default(DateTime?), string Text = default(string))
+        /// <param name="Id">Unique SMS ID. Read-only..</param>
+        /// <param name="From">Caller ID number to display on the incoming/outgoing SMS message. For an outgoing message, it must be a phone number associated with your Phone.com account..</param>
+        /// <param name="To">An array of SMS recipients..</param>
+        /// <param name="Direction">Direction of SMS. &#39;in&#39; for Incoming messages, &#39;out&#39; for Outgoing messages..</param>
+        /// <param name="CreatedEpoch">Unix time stamp representing the UTC time that the object was created in the Phone.com API system..</param>
+        /// <param name="CreatedAt">Date string representing the UTC time that the object was created in the Phone.com API system..</param>
+        /// <param name="Text">Body of the SMS text.</param>
+        /// <param name="IsNew">True when SMS is new; False when SMS has been read..</param>
+        public SmsFull(string Id = default(string), string From = default(string), List<Recipient> To = default(List<Recipient>), string Direction = default(string), int? CreatedEpoch = default(int?), DateTime? CreatedAt = default(DateTime?), string Text = default(string), bool? IsNew = default(bool?))
         {
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for SmsFull and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            // to ensure "From" is required (not null)
-            if (From == null)
-            {
-                throw new InvalidDataException("From is a required property for SmsFull and cannot be null");
-            }
-            else
-            {
-                this.From = From;
-            }
-            // to ensure "To" is required (not null)
-            if (To == null)
-            {
-                throw new InvalidDataException("To is a required property for SmsFull and cannot be null");
-            }
-            else
-            {
-                this.To = To;
-            }
-            // to ensure "Direction" is required (not null)
-            if (Direction == null)
-            {
-                throw new InvalidDataException("Direction is a required property for SmsFull and cannot be null");
-            }
-            else
-            {
-                this.Direction = Direction;
-            }
-            // to ensure "CreatedEpoch" is required (not null)
-            if (CreatedEpoch == null)
-            {
-                throw new InvalidDataException("CreatedEpoch is a required property for SmsFull and cannot be null");
-            }
-            else
-            {
-                this.CreatedEpoch = CreatedEpoch;
-            }
-            // to ensure "CreatedAt" is required (not null)
-            if (CreatedAt == null)
-            {
-                throw new InvalidDataException("CreatedAt is a required property for SmsFull and cannot be null");
-            }
-            else
-            {
-                this.CreatedAt = CreatedAt;
-            }
-            // to ensure "Text" is required (not null)
-            if (Text == null)
-            {
-                throw new InvalidDataException("Text is a required property for SmsFull and cannot be null");
-            }
-            else
-            {
-                this.Text = Text;
-            }
+            this.Id = Id;
+            this.From = From;
+            this.To = To;
+            this.Direction = Direction;
+            this.CreatedEpoch = CreatedEpoch;
+            this.CreatedAt = CreatedAt;
+            this.Text = Text;
+            this.IsNew = IsNew;
         }
         
         /// <summary>
@@ -117,42 +59,56 @@ namespace IO.Swagger.Model
         /// <value>Unique SMS ID. Read-only.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
         /// <summary>
         /// Caller ID number to display on the incoming/outgoing SMS message. For an outgoing message, it must be a phone number associated with your Phone.com account.
         /// </summary>
         /// <value>Caller ID number to display on the incoming/outgoing SMS message. For an outgoing message, it must be a phone number associated with your Phone.com account.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
+
         /// <summary>
         /// An array of SMS recipients.
         /// </summary>
         /// <value>An array of SMS recipients.</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public List<Recipient> To { get; set; }
+
         /// <summary>
         /// Direction of SMS. &#39;in&#39; for Incoming messages, &#39;out&#39; for Outgoing messages.
         /// </summary>
         /// <value>Direction of SMS. &#39;in&#39; for Incoming messages, &#39;out&#39; for Outgoing messages.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public string Direction { get; set; }
+
         /// <summary>
         /// Unix time stamp representing the UTC time that the object was created in the Phone.com API system.
         /// </summary>
         /// <value>Unix time stamp representing the UTC time that the object was created in the Phone.com API system.</value>
         [DataMember(Name="created_epoch", EmitDefaultValue=false)]
         public int? CreatedEpoch { get; set; }
+
         /// <summary>
         /// Date string representing the UTC time that the object was created in the Phone.com API system.
         /// </summary>
         /// <value>Date string representing the UTC time that the object was created in the Phone.com API system.</value>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
         public DateTime? CreatedAt { get; set; }
+
         /// <summary>
         /// Body of the SMS text
         /// </summary>
         /// <value>Body of the SMS text</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
+
+        /// <summary>
+        /// True when SMS is new; False when SMS has been read.
+        /// </summary>
+        /// <value>True when SMS is new; False when SMS has been read.</value>
+        [DataMember(Name="is_new", EmitDefaultValue=false)]
+        public bool? IsNew { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -168,6 +124,7 @@ namespace IO.Swagger.Model
             sb.Append("  CreatedEpoch: ").Append(CreatedEpoch).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  IsNew: ").Append(IsNew).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -238,6 +195,11 @@ namespace IO.Swagger.Model
                     this.Text == other.Text ||
                     this.Text != null &&
                     this.Text.Equals(other.Text)
+                ) && 
+                (
+                    this.IsNew == other.IsNew ||
+                    this.IsNew != null &&
+                    this.IsNew.Equals(other.IsNew)
                 );
         }
 
@@ -266,12 +228,19 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.CreatedAt.GetHashCode();
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
+                if (this.IsNew != null)
+                    hash = hash * 59 + this.IsNew.GetHashCode();
                 return hash;
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

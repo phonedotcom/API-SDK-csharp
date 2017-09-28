@@ -25,60 +25,60 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Add a new contact group to an account extension.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>GroupFull</returns>
         GroupFull CreateAccountExtensionContactGroup (int? accountId, int? extensionId, CreateGroupParams data);
 
         /// <summary>
-        /// 
+        /// Add a new contact group to an account extension.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>ApiResponse of GroupFull</returns>
         ApiResponse<GroupFull> CreateAccountExtensionContactGroupWithHttpInfo (int? accountId, int? extensionId, CreateGroupParams data);
         /// <summary>
-        /// Delete an addressbook group
+        /// Delete a contact group from the address book.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a contact group from the address book. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <returns>DeleteGroup</returns>
-        DeleteGroup DeleteAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId);
+        /// <returns>DeleteEntry</returns>
+        DeleteEntry DeleteAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId);
 
         /// <summary>
-        /// Delete an addressbook group
+        /// Delete a contact group from the address book.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a contact group from the address book. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <returns>ApiResponse of DeleteGroup</returns>
-        ApiResponse<DeleteGroup> DeleteAccountExtensionContactGroupWithHttpInfo (int? accountId, int? extensionId, int? groupId);
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        ApiResponse<DeleteEntry> DeleteAccountExtensionContactGroupWithHttpInfo (int? accountId, int? extensionId, int? groupId);
         /// <summary>
-        /// 
+        /// Retrieve the information of a contact group.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -88,10 +88,10 @@ namespace IO.Swagger.Api
         GroupFull GetAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId);
 
         /// <summary>
-        /// 
+        /// Retrieve the information of a contact group.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -100,10 +100,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of GroupFull</returns>
         ApiResponse<GroupFull> GetAccountExtensionContactGroupWithHttpInfo (int? accountId, int? extensionId, int? groupId);
         /// <summary>
-        /// Show a list of contact groups belonging to an extension
+        /// Show a list of contact groups belonging to an extension.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for details on the properties.
+        /// Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -119,10 +119,10 @@ namespace IO.Swagger.Api
         ListGroups ListAccountExtensionContactGroups (int? accountId, int? extensionId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Show a list of contact groups belonging to an extension
+        /// Show a list of contact groups belonging to an extension.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for details on the properties.
+        /// Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -137,89 +137,89 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ListGroups</returns>
         ApiResponse<ListGroups> ListAccountExtensionContactGroupsWithHttpInfo (int? accountId, int? extensionId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// 
+        /// Update the information of a contact group.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Update the information of a contact group. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>GroupFull</returns>
         GroupFull ReplaceAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId, CreateGroupParams data);
 
         /// <summary>
-        /// 
+        /// Update the information of a contact group.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Update the information of a contact group. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>ApiResponse of GroupFull</returns>
         ApiResponse<GroupFull> ReplaceAccountExtensionContactGroupWithHttpInfo (int? accountId, int? extensionId, int? groupId, CreateGroupParams data);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Add a new contact group to an account extension.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>Task of GroupFull</returns>
         System.Threading.Tasks.Task<GroupFull> CreateAccountExtensionContactGroupAsync (int? accountId, int? extensionId, CreateGroupParams data);
 
         /// <summary>
-        /// 
+        /// Add a new contact group to an account extension.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>Task of ApiResponse (GroupFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupFull>> CreateAccountExtensionContactGroupAsyncWithHttpInfo (int? accountId, int? extensionId, CreateGroupParams data);
         /// <summary>
-        /// Delete an addressbook group
+        /// Delete a contact group from the address book.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a contact group from the address book. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <returns>Task of DeleteGroup</returns>
-        System.Threading.Tasks.Task<DeleteGroup> DeleteAccountExtensionContactGroupAsync (int? accountId, int? extensionId, int? groupId);
+        /// <returns>Task of DeleteEntry</returns>
+        System.Threading.Tasks.Task<DeleteEntry> DeleteAccountExtensionContactGroupAsync (int? accountId, int? extensionId, int? groupId);
 
         /// <summary>
-        /// Delete an addressbook group
+        /// Delete a contact group from the address book.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a contact group from the address book. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <returns>Task of ApiResponse (DeleteGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteGroup>> DeleteAccountExtensionContactGroupAsyncWithHttpInfo (int? accountId, int? extensionId, int? groupId);
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountExtensionContactGroupAsyncWithHttpInfo (int? accountId, int? extensionId, int? groupId);
         /// <summary>
-        /// 
+        /// Retrieve the information of a contact group.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -229,10 +229,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<GroupFull> GetAccountExtensionContactGroupAsync (int? accountId, int? extensionId, int? groupId);
 
         /// <summary>
-        /// 
+        /// Retrieve the information of a contact group.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -241,10 +241,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (GroupFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupFull>> GetAccountExtensionContactGroupAsyncWithHttpInfo (int? accountId, int? extensionId, int? groupId);
         /// <summary>
-        /// Show a list of contact groups belonging to an extension
+        /// Show a list of contact groups belonging to an extension.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for details on the properties.
+        /// Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -260,10 +260,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListGroups> ListAccountExtensionContactGroupsAsync (int? accountId, int? extensionId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Show a list of contact groups belonging to an extension
+        /// Show a list of contact groups belonging to an extension.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for details on the properties.
+        /// Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -278,30 +278,30 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ListGroups)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListGroups>> ListAccountExtensionContactGroupsAsyncWithHttpInfo (int? accountId, int? extensionId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// 
+        /// Update the information of a contact group.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Update the information of a contact group. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>Task of GroupFull</returns>
         System.Threading.Tasks.Task<GroupFull> ReplaceAccountExtensionContactGroupAsync (int? accountId, int? extensionId, int? groupId, CreateGroupParams data);
 
         /// <summary>
-        /// 
+        /// Update the information of a contact group.
         /// </summary>
         /// <remarks>
-        /// See Account Contact Groups for more info on the properties.
+        /// Update the information of a contact group. See Account Contact Groups for details on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>Task of ApiResponse (GroupFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupFull>> ReplaceAccountExtensionContactGroupAsyncWithHttpInfo (int? accountId, int? extensionId, int? groupId, CreateGroupParams data);
         #endregion Asynchronous Operations
@@ -417,12 +417,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Add a new contact group to an account extension. Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>GroupFull</returns>
         public GroupFull CreateAccountExtensionContactGroup (int? accountId, int? extensionId, CreateGroupParams data)
         {
@@ -431,12 +431,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Add a new contact group to an account extension. Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>ApiResponse of GroupFull</returns>
         public ApiResponse< GroupFull > CreateAccountExtensionContactGroupWithHttpInfo (int? accountId, int? extensionId, CreateGroupParams data)
         {
@@ -472,9 +472,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -509,16 +506,15 @@ namespace IO.Swagger.Api
             return new ApiResponse<GroupFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupFull)));
-            
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Add a new contact group to an account extension. Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>Task of GroupFull</returns>
         public async System.Threading.Tasks.Task<GroupFull> CreateAccountExtensionContactGroupAsync (int? accountId, int? extensionId, CreateGroupParams data)
         {
@@ -528,12 +524,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Add a new contact group to an account extension. Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>Task of ApiResponse (GroupFull)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GroupFull>> CreateAccountExtensionContactGroupAsyncWithHttpInfo (int? accountId, int? extensionId, CreateGroupParams data)
         {
@@ -569,9 +565,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -605,32 +598,31 @@ namespace IO.Swagger.Api
             return new ApiResponse<GroupFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupFull)));
-            
         }
 
         /// <summary>
-        /// Delete an addressbook group 
+        /// Delete a contact group from the address book. Delete a contact group from the address book. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <returns>DeleteGroup</returns>
-        public DeleteGroup DeleteAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId)
+        /// <returns>DeleteEntry</returns>
+        public DeleteEntry DeleteAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId)
         {
-             ApiResponse<DeleteGroup> localVarResponse = DeleteAccountExtensionContactGroupWithHttpInfo(accountId, extensionId, groupId);
+             ApiResponse<DeleteEntry> localVarResponse = DeleteAccountExtensionContactGroupWithHttpInfo(accountId, extensionId, groupId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete an addressbook group 
+        /// Delete a contact group from the address book. Delete a contact group from the address book. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <returns>ApiResponse of DeleteGroup</returns>
-        public ApiResponse< DeleteGroup > DeleteAccountExtensionContactGroupWithHttpInfo (int? accountId, int? extensionId, int? groupId)
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        public ApiResponse< DeleteEntry > DeleteAccountExtensionContactGroupWithHttpInfo (int? accountId, int? extensionId, int? groupId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -664,9 +656,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (groupId != null) localVarPathParams.Add("group_id", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
@@ -691,36 +680,35 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteGroup>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteGroup)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        /// Delete an addressbook group 
+        /// Delete a contact group from the address book. Delete a contact group from the address book. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <returns>Task of DeleteGroup</returns>
-        public async System.Threading.Tasks.Task<DeleteGroup> DeleteAccountExtensionContactGroupAsync (int? accountId, int? extensionId, int? groupId)
+        /// <returns>Task of DeleteEntry</returns>
+        public async System.Threading.Tasks.Task<DeleteEntry> DeleteAccountExtensionContactGroupAsync (int? accountId, int? extensionId, int? groupId)
         {
-             ApiResponse<DeleteGroup> localVarResponse = await DeleteAccountExtensionContactGroupAsyncWithHttpInfo(accountId, extensionId, groupId);
+             ApiResponse<DeleteEntry> localVarResponse = await DeleteAccountExtensionContactGroupAsyncWithHttpInfo(accountId, extensionId, groupId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Delete an addressbook group 
+        /// Delete a contact group from the address book. Delete a contact group from the address book. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <returns>Task of ApiResponse (DeleteGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DeleteGroup>> DeleteAccountExtensionContactGroupAsyncWithHttpInfo (int? accountId, int? extensionId, int? groupId)
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountExtensionContactGroupAsyncWithHttpInfo (int? accountId, int? extensionId, int? groupId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -754,9 +742,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (groupId != null) localVarPathParams.Add("group_id", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
@@ -780,14 +765,13 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteGroup>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteGroup)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Retrieve the information of a contact group. Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -801,7 +785,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Retrieve the information of a contact group. Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -842,9 +826,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (groupId != null) localVarPathParams.Add("group_id", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
@@ -872,11 +853,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<GroupFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupFull)));
-            
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Retrieve the information of a contact group. Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -891,7 +871,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Retrieve the information of a contact group. Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -932,9 +912,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (groupId != null) localVarPathParams.Add("group_id", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
@@ -961,11 +938,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<GroupFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupFull)));
-            
         }
 
         /// <summary>
-        /// Show a list of contact groups belonging to an extension See Account Contact Groups for details on the properties.
+        /// Show a list of contact groups belonging to an extension. Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -985,7 +961,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show a list of contact groups belonging to an extension See Account Contact Groups for details on the properties.
+        /// Show a list of contact groups belonging to an extension. Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1029,9 +1005,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
@@ -1065,11 +1038,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListGroups>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListGroups) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListGroups)));
-            
         }
 
         /// <summary>
-        /// Show a list of contact groups belonging to an extension See Account Contact Groups for details on the properties.
+        /// Show a list of contact groups belonging to an extension. Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1090,7 +1062,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show a list of contact groups belonging to an extension See Account Contact Groups for details on the properties.
+        /// Show a list of contact groups belonging to an extension. Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1134,9 +1106,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
@@ -1169,17 +1138,16 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListGroups>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListGroups) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListGroups)));
-            
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Update the information of a contact group. Update the information of a contact group. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>GroupFull</returns>
         public GroupFull ReplaceAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId, CreateGroupParams data)
         {
@@ -1188,13 +1156,13 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Update the information of a contact group. Update the information of a contact group. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>ApiResponse of GroupFull</returns>
         public ApiResponse< GroupFull > ReplaceAccountExtensionContactGroupWithHttpInfo (int? accountId, int? extensionId, int? groupId, CreateGroupParams data)
         {
@@ -1233,9 +1201,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (groupId != null) localVarPathParams.Add("group_id", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
@@ -1271,17 +1236,16 @@ namespace IO.Swagger.Api
             return new ApiResponse<GroupFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupFull)));
-            
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Update the information of a contact group. Update the information of a contact group. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>Task of GroupFull</returns>
         public async System.Threading.Tasks.Task<GroupFull> ReplaceAccountExtensionContactGroupAsync (int? accountId, int? extensionId, int? groupId, CreateGroupParams data)
         {
@@ -1291,13 +1255,13 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  See Account Contact Groups for more info on the properties.
+        /// Update the information of a contact group. Update the information of a contact group. See Account Contact Groups for details on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="groupId">Group ID</param>
-        /// <param name="data">Group name</param>
+        /// <param name="data">Group data</param>
         /// <returns>Task of ApiResponse (GroupFull)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GroupFull>> ReplaceAccountExtensionContactGroupAsyncWithHttpInfo (int? accountId, int? extensionId, int? groupId, CreateGroupParams data)
         {
@@ -1336,9 +1300,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (groupId != null) localVarPathParams.Add("group_id", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
@@ -1373,7 +1334,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<GroupFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupFull)));
-            
         }
 
     }

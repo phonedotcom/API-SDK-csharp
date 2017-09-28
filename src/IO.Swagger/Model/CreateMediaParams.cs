@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -62,60 +63,70 @@ namespace IO.Swagger.Model
         /// <value>Name of media</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// &#39;tts&#39;, &#39;file&#39;
         /// </summary>
         /// <value>&#39;tts&#39;, &#39;file&#39;</value>
         [DataMember(Name="origin", EmitDefaultValue=false)]
         public string Origin { get; set; }
+
         /// <summary>
         /// &#39;hold_music&#39;, &#39;greeting&#39;
         /// </summary>
         /// <value>&#39;hold_music&#39;, &#39;greeting&#39;</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+
         /// <summary>
         /// &#39;allison&#39;, &#39;amy&#39;, &#39;belle&#39;, &#39;callie&#39;, &#39;callieq&#39;, &#39;dallas&#39;, &#39;damien&#39;, &#39;david&#39;, &#39;designerdave&#39;, &#39;diane&#39;, &#39;diesel&#39;, &#39;dog&#39;, &#39;duchess&#39;, &#39;duncan&#39;, &#39;emily&#39;, &#39;evilgenius&#39;, &#39;frank&#39;, &#39;french-fry&#39;, &#39;gregory&#39;, &#39;isabelle&#39;, &#39;jean-pierre&#39;, &#39;jerkface&#39;, &#39;katrin&#39;, &#39;kayla&#39;, &#39;kidaroo&#39;, &#39;lawrence&#39;, &#39;layo&#39;, &#39;linda&#39;, &#39;marta&#39;, &#39;matthias&#39;, &#39;miguel&#39;, &#39;millie&#39;, &#39;princess&#39;, &#39;ransomnote&#39;, &#39;robin&#39;, &#39;shouty&#39;, &#39;shygirl&#39;, &#39;tamika&#39;, &#39;tophat&#39;, &#39;vittoria&#39;, &#39;vixen&#39;, &#39;vlad&#39;, &#39;walter&#39;, &#39;whispery&#39;, &#39;william&#39;, &#39;wiseguy&#39;, &#39;zach&#39;
         /// </summary>
         /// <value>&#39;allison&#39;, &#39;amy&#39;, &#39;belle&#39;, &#39;callie&#39;, &#39;callieq&#39;, &#39;dallas&#39;, &#39;damien&#39;, &#39;david&#39;, &#39;designerdave&#39;, &#39;diane&#39;, &#39;diesel&#39;, &#39;dog&#39;, &#39;duchess&#39;, &#39;duncan&#39;, &#39;emily&#39;, &#39;evilgenius&#39;, &#39;frank&#39;, &#39;french-fry&#39;, &#39;gregory&#39;, &#39;isabelle&#39;, &#39;jean-pierre&#39;, &#39;jerkface&#39;, &#39;katrin&#39;, &#39;kayla&#39;, &#39;kidaroo&#39;, &#39;lawrence&#39;, &#39;layo&#39;, &#39;linda&#39;, &#39;marta&#39;, &#39;matthias&#39;, &#39;miguel&#39;, &#39;millie&#39;, &#39;princess&#39;, &#39;ransomnote&#39;, &#39;robin&#39;, &#39;shouty&#39;, &#39;shygirl&#39;, &#39;tamika&#39;, &#39;tophat&#39;, &#39;vittoria&#39;, &#39;vixen&#39;, &#39;vlad&#39;, &#39;walter&#39;, &#39;whispery&#39;, &#39;william&#39;, &#39;wiseguy&#39;, &#39;zach&#39;</value>
         [DataMember(Name="tts_voice", EmitDefaultValue=false)]
         public string TtsVoice { get; set; }
+
         /// <summary>
         /// Text used for text-to-speech conversion, maximum 800 characters
         /// </summary>
         /// <value>Text used for text-to-speech conversion, maximum 800 characters</value>
         [DataMember(Name="tts_text", EmitDefaultValue=false)]
         public string TtsText { get; set; }
+
         /// <summary>
         /// &#39;Y&#39;, &#39;N&#39;. Media file is temporary, will be deleted after a specified period.
         /// </summary>
         /// <value>&#39;Y&#39;, &#39;N&#39;. Media file is temporary, will be deleted after a specified period.</value>
         [DataMember(Name="is_temparary", EmitDefaultValue=false)]
         public string IsTemparary { get; set; }
+
         /// <summary>
         /// If is_temporary is &#39;Y&#39;, media will be deleted after the specified time in seconds
         /// </summary>
         /// <value>If is_temporary is &#39;Y&#39;, media will be deleted after the specified time in seconds</value>
         [DataMember(Name="expiration_date", EmitDefaultValue=false)]
         public int? ExpirationDate { get; set; }
+
         /// <summary>
         /// Length of media in seconds
         /// </summary>
         /// <value>Length of media in seconds</value>
         [DataMember(Name="duration", EmitDefaultValue=false)]
         public int? Duration { get; set; }
+
         /// <summary>
         /// Notes about the media object
         /// </summary>
         /// <value>Notes about the media object</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
+
         /// <summary>
         /// &#39;Y&#39;, &#39;N&#39;. Start playing the media file in random location, instead of from the beginning
         /// </summary>
         /// <value>&#39;Y&#39;, &#39;N&#39;. Start playing the media file in random location, instead of from the beginning</value>
         [DataMember(Name="randomized", EmitDefaultValue=false)]
         public string Randomized { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -257,8 +268,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | [optional] 
-**MainMessage** | **Object** |  | [optional] 
-**InvalidKeypressMessage** | **Object** |  | [optional] 
-**AllowExtensionDial** | **bool?** |  | [optional] 
+**Greeting** | **Object** |  | [optional] 
+**KeypressError** | **Object** |  | [optional] 
+**AllowExtensionDial** | **string** |  | [optional] 
 **KeypressWaitTime** | **int?** |  | [optional] 
 **TimeoutHandler** | **Object** |  | [optional] 
 **Options** | **List&lt;Object&gt;** |  | [optional] 

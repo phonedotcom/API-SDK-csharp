@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -50,24 +51,28 @@ namespace IO.Swagger.Model
         /// <value>Required.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+
         /// <summary>
         /// Schedule that this filter refers to. Output is a Schedule Summary Object. Input must be a Schedule Lookup Object. Required.
         /// </summary>
         /// <value>Schedule that this filter refers to. Output is a Schedule Summary Object. Input must be a Schedule Lookup Object. Required.</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public ScheduleSummary Schedule { get; set; }
+
         /// <summary>
         /// Address Book Contact that this filter refers to. Output is a Contact Summary Object. Input must be a Contact Lookup Object. Required.
         /// </summary>
         /// <value>Address Book Contact that this filter refers to. Output is a Contact Summary Object. Input must be a Contact Lookup Object. Required.</value>
         [DataMember(Name="contact", EmitDefaultValue=false)]
         public ContactSummary Contact { get; set; }
+
         /// <summary>
         /// Address Book Group that this filter refers to. Output is a Contact Group Summary Object. Input must be a Contact Group Lookup Object. Required.
         /// </summary>
         /// <value>Address Book Group that this filter refers to. Output is a Contact Group Summary Object. Input must be a Contact Group Lookup Object. Required.</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public GroupSummary Group { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -161,13 +166,18 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             // Type (string) pattern
             Regex regexType = new Regex(@"schedule|contact|contact_group", RegexOptions.CultureInvariant);
             if (false == regexType.Match(this.Type).Success)
             {
-                yield return new ValidationResult("Invalid value for Type, must match a pattern of /schedule|contact|contact_group/.", new [] { "Type" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Type, must match a pattern of " + regexType, new [] { "Type" });
             }
 
             yield break;

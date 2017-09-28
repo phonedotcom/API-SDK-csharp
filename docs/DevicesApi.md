@@ -4,19 +4,20 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountDevice**](DevicesApi.md#createaccountdevice) | **POST** /accounts/{account_id}/devices | Register a generic VoIP device
-[**GetAccountDevice**](DevicesApi.md#getaccountdevice) | **GET** /accounts/{account_id}/devices/{device_id} | Show details of an individual VoIP device
-[**ListAccountDevices**](DevicesApi.md#listaccountdevices) | **GET** /accounts/{account_id}/devices | Get a list of VoIP devices associated with your account
-[**ReplaceAccountDevice**](DevicesApi.md#replaceaccountdevice) | **PUT** /accounts/{account_id}/devices/{device_id} | Update the settings for an individual VoIP device
+[**CreateAccountDevice**](DevicesApi.md#createaccountdevice) | **POST** /accounts/{account_id}/devices | Register a generic VoIP device.
+[**DeleteAccountDevice**](DevicesApi.md#deleteaccountdevice) | **DELETE** /accounts/{account_id}/devices/{device_id} | Delete a VoIP device.
+[**GetAccountDevice**](DevicesApi.md#getaccountdevice) | **GET** /accounts/{account_id}/devices/{device_id} | Show details of an individual VoIP device.
+[**ListAccountDevices**](DevicesApi.md#listaccountdevices) | **GET** /accounts/{account_id}/devices | Get a list of VoIP devices associated with your account.
+[**ReplaceAccountDevice**](DevicesApi.md#replaceaccountdevice) | **PUT** /accounts/{account_id}/devices/{device_id} | Update the details of an individual VoIP device.
 
 
 <a name="createaccountdevice"></a>
 # **CreateAccountDevice**
 > DeviceFull CreateAccountDevice (int? accountId, CreateDeviceParams data = null)
 
-Register a generic VoIP device
+Register a generic VoIP device.
 
-
+Register a generic VoIP device. See Devices for more detail.
 
 ### Example
 ```csharp
@@ -32,7 +33,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -44,7 +44,7 @@ namespace Example
 
             try
             {
-                // Register a generic VoIP device
+                // Register a generic VoIP device.
                 DeviceFull result = apiInstance.CreateAccountDevice(accountId, data);
                 Debug.WriteLine(result);
             }
@@ -79,13 +79,81 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="deleteaccountdevice"></a>
+# **DeleteAccountDevice**
+> DeleteEntry DeleteAccountDevice (int? accountId, int? deviceId)
+
+Delete a VoIP device.
+
+Delete a VoIP device. See Devices for more detail.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class DeleteAccountDeviceExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: apiKey
+            Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("Authorization", "Bearer");
+
+            var apiInstance = new DevicesApi();
+            var accountId = 56;  // int? | Account ID
+            var deviceId = 56;  // int? | Device ID
+
+            try
+            {
+                // Delete a VoIP device.
+                DeleteEntry result = apiInstance.DeleteAccountDevice(accountId, deviceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DevicesApi.DeleteAccountDevice: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | **int?**| Account ID | 
+ **deviceId** | **int?**| Device ID | 
+
+### Return type
+
+[**DeleteEntry**](DeleteEntry.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getaccountdevice"></a>
 # **GetAccountDevice**
 > DeviceFull GetAccountDevice (int? accountId, int? deviceId)
 
-Show details of an individual VoIP device
+Show details of an individual VoIP device.
 
-
+Show details of an individual VoIP device. See Devices for more detail.
 
 ### Example
 ```csharp
@@ -101,7 +169,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -113,7 +180,7 @@ namespace Example
 
             try
             {
-                // Show details of an individual VoIP device
+                // Show details of an individual VoIP device.
                 DeviceFull result = apiInstance.GetAccountDevice(accountId, deviceId);
                 Debug.WriteLine(result);
             }
@@ -152,9 +219,9 @@ Name | Type | Description  | Notes
 # **ListAccountDevices**
 > ListDevices ListAccountDevices (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null)
 
-Get a list of VoIP devices associated with your account
+Get a list of VoIP devices associated with your account.
 
-
+Get a list of VoIP devices associated with your account. See Devices for more detail.
 
 ### Example
 ```csharp
@@ -170,7 +237,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -188,7 +254,7 @@ namespace Example
 
             try
             {
-                // Get a list of VoIP devices associated with your account
+                // Get a list of VoIP devices associated with your account.
                 ListDevices result = apiInstance.ListAccountDevices(accountId, filtersId, filtersName, sortId, sortName, limit, offset, fields);
                 Debug.WriteLine(result);
             }
@@ -233,9 +299,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountDevice**
 > DeviceFull ReplaceAccountDevice (int? accountId, int? deviceId, CreateDeviceParams data = null)
 
-Update the settings for an individual VoIP device
+Update the details of an individual VoIP device.
 
-
+Update the details of an individual VoIP device. See Devices for more detail.
 
 ### Example
 ```csharp
@@ -251,7 +317,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -264,7 +329,7 @@ namespace Example
 
             try
             {
-                // Update the settings for an individual VoIP device
+                // Update the details of an individual VoIP device.
                 DeviceFull result = apiInstance.ReplaceAccountDevice(accountId, deviceId, data);
                 Debug.WriteLine(result);
             }

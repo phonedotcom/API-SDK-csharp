@@ -97,14 +97,6 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'UsageType'
         }
         /// <summary>
-        /// Test the property 'AllowsCallWaiting'
-        /// </summary>
-        [Test]
-        public void AllowsCallWaitingTest()
-        {
-            // TODO unit test for the property 'AllowsCallWaiting'
-        }
-        /// <summary>
         /// Test the property 'Extension'
         /// </summary>
         [Test]

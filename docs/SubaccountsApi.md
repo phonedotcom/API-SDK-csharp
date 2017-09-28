@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Add a subaccount for the authenticated user or client
 
-This service shows the details of an individual Subaccount.
+Add a subaccount for the authenticated user or client
 
 ### Example
 ```csharp
@@ -30,7 +30,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -38,7 +37,7 @@ namespace Example
 
             var apiInstance = new SubaccountsApi();
             var accountId = 56;  // int? | Account ID
-            var data = new CreateSubaccountParams(); // CreateSubaccountParams | SMS data
+            var data = new CreateSubaccountParams(); // CreateSubaccountParams | Subaccount data
 
             try
             {
@@ -60,7 +59,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountId** | **int?**| Account ID | 
- **data** | [**CreateSubaccountParams**](CreateSubaccountParams.md)| SMS data | 
+ **data** | [**CreateSubaccountParams**](CreateSubaccountParams.md)| Subaccount data | 
 
 ### Return type
 
@@ -83,7 +82,7 @@ Name | Type | Description  | Notes
 
 Get a list of subaccounts for the authenticated user or client
 
-This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+Get a list of subaccounts for the authenticated user or client
 
 ### Example
 ```csharp
@@ -99,7 +98,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

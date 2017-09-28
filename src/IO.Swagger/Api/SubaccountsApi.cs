@@ -28,11 +28,11 @@ namespace IO.Swagger.Api
         /// Add a subaccount for the authenticated user or client
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Subaccount.
+        /// Add a subaccount for the authenticated user or client
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="data">SMS data</param>
+        /// <param name="data">Subaccount data</param>
         /// <returns>AccountFull</returns>
         AccountFull CreateAccountSubaccount (int? accountId, CreateSubaccountParams data);
 
@@ -40,18 +40,18 @@ namespace IO.Swagger.Api
         /// Add a subaccount for the authenticated user or client
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Subaccount.
+        /// Add a subaccount for the authenticated user or client
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="data">SMS data</param>
+        /// <param name="data">Subaccount data</param>
         /// <returns>ApiResponse of AccountFull</returns>
         ApiResponse<AccountFull> CreateAccountSubaccountWithHttpInfo (int? accountId, CreateSubaccountParams data);
         /// <summary>
         /// Get a list of subaccounts for the authenticated user or client
         /// </summary>
         /// <remarks>
-        /// This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+        /// Get a list of subaccounts for the authenticated user or client
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -67,7 +67,7 @@ namespace IO.Swagger.Api
         /// Get a list of subaccounts for the authenticated user or client
         /// </summary>
         /// <remarks>
-        /// This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+        /// Get a list of subaccounts for the authenticated user or client
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -84,11 +84,11 @@ namespace IO.Swagger.Api
         /// Add a subaccount for the authenticated user or client
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Subaccount.
+        /// Add a subaccount for the authenticated user or client
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="data">SMS data</param>
+        /// <param name="data">Subaccount data</param>
         /// <returns>Task of AccountFull</returns>
         System.Threading.Tasks.Task<AccountFull> CreateAccountSubaccountAsync (int? accountId, CreateSubaccountParams data);
 
@@ -96,18 +96,18 @@ namespace IO.Swagger.Api
         /// Add a subaccount for the authenticated user or client
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Subaccount.
+        /// Add a subaccount for the authenticated user or client
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="data">SMS data</param>
+        /// <param name="data">Subaccount data</param>
         /// <returns>Task of ApiResponse (AccountFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<AccountFull>> CreateAccountSubaccountAsyncWithHttpInfo (int? accountId, CreateSubaccountParams data);
         /// <summary>
         /// Get a list of subaccounts for the authenticated user or client
         /// </summary>
         /// <remarks>
-        /// This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+        /// Get a list of subaccounts for the authenticated user or client
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -123,7 +123,7 @@ namespace IO.Swagger.Api
         /// Get a list of subaccounts for the authenticated user or client
         /// </summary>
         /// <remarks>
-        /// This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+        /// Get a list of subaccounts for the authenticated user or client
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -247,11 +247,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a subaccount for the authenticated user or client This service shows the details of an individual Subaccount.
+        /// Add a subaccount for the authenticated user or client Add a subaccount for the authenticated user or client
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="data">SMS data</param>
+        /// <param name="data">Subaccount data</param>
         /// <returns>AccountFull</returns>
         public AccountFull CreateAccountSubaccount (int? accountId, CreateSubaccountParams data)
         {
@@ -260,11 +260,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a subaccount for the authenticated user or client This service shows the details of an individual Subaccount.
+        /// Add a subaccount for the authenticated user or client Add a subaccount for the authenticated user or client
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="data">SMS data</param>
+        /// <param name="data">Subaccount data</param>
         /// <returns>ApiResponse of AccountFull</returns>
         public ApiResponse< AccountFull > CreateAccountSubaccountWithHttpInfo (int? accountId, CreateSubaccountParams data)
         {
@@ -297,9 +297,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -333,15 +330,14 @@ namespace IO.Swagger.Api
             return new ApiResponse<AccountFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AccountFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountFull)));
-            
         }
 
         /// <summary>
-        /// Add a subaccount for the authenticated user or client This service shows the details of an individual Subaccount.
+        /// Add a subaccount for the authenticated user or client Add a subaccount for the authenticated user or client
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="data">SMS data</param>
+        /// <param name="data">Subaccount data</param>
         /// <returns>Task of AccountFull</returns>
         public async System.Threading.Tasks.Task<AccountFull> CreateAccountSubaccountAsync (int? accountId, CreateSubaccountParams data)
         {
@@ -351,11 +347,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a subaccount for the authenticated user or client This service shows the details of an individual Subaccount.
+        /// Add a subaccount for the authenticated user or client Add a subaccount for the authenticated user or client
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
-        /// <param name="data">SMS data</param>
+        /// <param name="data">Subaccount data</param>
         /// <returns>Task of ApiResponse (AccountFull)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AccountFull>> CreateAccountSubaccountAsyncWithHttpInfo (int? accountId, CreateSubaccountParams data)
         {
@@ -388,9 +384,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -423,11 +416,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<AccountFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AccountFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of subaccounts for the authenticated user or client This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+        /// Get a list of subaccounts for the authenticated user or client Get a list of subaccounts for the authenticated user or client
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -444,7 +436,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of subaccounts for the authenticated user or client This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+        /// Get a list of subaccounts for the authenticated user or client Get a list of subaccounts for the authenticated user or client
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -482,9 +474,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (sortId != null) localVarQueryParams.Add("sort[id]", Configuration.ApiClient.ParameterToString(sortId)); // query parameter
@@ -515,11 +504,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListAccounts>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListAccounts) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListAccounts)));
-            
         }
 
         /// <summary>
-        /// Get a list of subaccounts for the authenticated user or client This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+        /// Get a list of subaccounts for the authenticated user or client Get a list of subaccounts for the authenticated user or client
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -537,7 +525,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of subaccounts for the authenticated user or client This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+        /// Get a list of subaccounts for the authenticated user or client Get a list of subaccounts for the authenticated user or client
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -575,9 +563,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (sortId != null) localVarQueryParams.Add("sort[id]", Configuration.ApiClient.ParameterToString(sortId)); // query parameter
@@ -607,7 +592,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListAccounts>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListAccounts) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListAccounts)));
-            
         }
 
     }

@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -79,24 +80,28 @@ namespace IO.Swagger.Model
         /// <value>Phone number of sender</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
+
         /// <summary>
         /// Outgoing destination numbers
         /// </summary>
         /// <value>Outgoing destination numbers</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public string To { get; set; }
+
         /// <summary>
         /// Text body of the outgoing SMS message. Maximum 160 characters per message.
         /// </summary>
         /// <value>Text body of the outgoing SMS message. Maximum 160 characters per message.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
+
         /// <summary>
         /// ID of Extension where the sms is saved
         /// </summary>
         /// <value>ID of Extension where the sms is saved</value>
         [DataMember(Name="extension_id", EmitDefaultValue=false)]
         public int? ExtensionId { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -190,8 +195,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

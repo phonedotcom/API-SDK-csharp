@@ -87,7 +87,7 @@ namespace IO.Swagger.Test
             //int? accountId = null;
             //int? queueId = null;
             //var response = instance.DeleteAccountQueue(accountId, queueId);
-            //Assert.IsInstanceOf<DeleteQueue> (response, "response is DeleteQueue");
+            //Assert.IsInstanceOf<DeleteEntry> (response, "response is DeleteEntry");
         }
         
         /// <summary>

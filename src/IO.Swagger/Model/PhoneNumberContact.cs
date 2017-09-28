@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -48,18 +49,21 @@ namespace IO.Swagger.Model
         /// <value>Type of phone number, must be one of: home, business, mobile, fax, pager. Default is home.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+
         /// <summary>
         /// Phone number, as entered. Does not need to be formatted in any particular way. Required.
         /// </summary>
         /// <value>Phone number, as entered. Does not need to be formatted in any particular way. Required.</value>
         [DataMember(Name="number", EmitDefaultValue=false)]
         public string Number { get; set; }
+
         /// <summary>
         /// Phone number in E.164 format. Read-only.
         /// </summary>
         /// <value>Phone number in E.164 format. Read-only.</value>
         [DataMember(Name="normalized", EmitDefaultValue=false)]
         public string Normalized { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -145,8 +149,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

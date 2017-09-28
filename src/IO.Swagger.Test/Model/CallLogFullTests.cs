@@ -169,12 +169,44 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'FinalAction'
         }
         /// <summary>
-        /// Test the property 'CallRecording'
+        /// Test the property 'VoicemailUrl'
         /// </summary>
         [Test]
-        public void CallRecordingTest()
+        public void VoicemailUrlTest()
         {
-            // TODO unit test for the property 'CallRecording'
+            // TODO unit test for the property 'VoicemailUrl'
+        }
+        /// <summary>
+        /// Test the property 'VoicemailCpUrl'
+        /// </summary>
+        [Test]
+        public void VoicemailCpUrlTest()
+        {
+            // TODO unit test for the property 'VoicemailCpUrl'
+        }
+        /// <summary>
+        /// Test the property 'VoicemailTranscript'
+        /// </summary>
+        [Test]
+        public void VoicemailTranscriptTest()
+        {
+            // TODO unit test for the property 'VoicemailTranscript'
+        }
+        /// <summary>
+        /// Test the property 'CallRecordingUrl'
+        /// </summary>
+        [Test]
+        public void CallRecordingUrlTest()
+        {
+            // TODO unit test for the property 'CallRecordingUrl'
+        }
+        /// <summary>
+        /// Test the property 'CallRecordingCpUrl'
+        /// </summary>
+        [Test]
+        public void CallRecordingCpUrlTest()
+        {
+            // TODO unit test for the property 'CallRecordingCpUrl'
         }
         /// <summary>
         /// Test the property 'Details'

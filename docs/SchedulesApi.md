@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Show details of an individual schedule
 
-This service shows the details of an individual schedule.
+Show details of an individual schedule
 
 ### Example
 ```csharp
@@ -30,7 +30,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -83,7 +82,7 @@ Name | Type | Description  | Notes
 
 Get a list of schedules for an account
 
-See Intro to Schedules for more info on the properties.
+Get a list of schedules for an account
 
 ### Example
 ```csharp
@@ -99,7 +98,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

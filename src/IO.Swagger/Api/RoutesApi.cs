@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Add a new address book contact for an extension
+        /// Add a new route to the account.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to Routes.
+        /// Add a new route to the account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -37,10 +37,10 @@ namespace IO.Swagger.Api
         RouteFull CreateRoute (int? accountId, CreateRouteParams data = null);
 
         /// <summary>
-        /// Add a new address book contact for an extension
+        /// Add a new route to the account.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to Routes.
+        /// Add a new route to the account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -48,33 +48,33 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of RouteFull</returns>
         ApiResponse<RouteFull> CreateRouteWithHttpInfo (int? accountId, CreateRouteParams data = null);
         /// <summary>
-        /// 
+        /// Delete a route from the account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a route from the account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="routeId">Route ID</param>
-        /// <returns>DeleteRoute</returns>
-        DeleteRoute DeleteAccountRoute (int? accountId, int? routeId);
+        /// <returns>DeleteEntry</returns>
+        DeleteEntry DeleteAccountRoute (int? accountId, int? routeId);
 
         /// <summary>
-        /// 
+        /// Delete a route from the account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a route from the account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="routeId">Route ID</param>
-        /// <returns>ApiResponse of DeleteRoute</returns>
-        ApiResponse<DeleteRoute> DeleteAccountRouteWithHttpInfo (int? accountId, int? routeId);
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        ApiResponse<DeleteEntry> DeleteAccountRouteWithHttpInfo (int? accountId, int? routeId);
         /// <summary>
-        /// Show details of an individual route
+        /// Show details of an individual route.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual route.
+        /// Show details of an individual route. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -83,10 +83,10 @@ namespace IO.Swagger.Api
         RouteFull GetAccountRoute (int? accountId, int? routeId);
 
         /// <summary>
-        /// Show details of an individual route
+        /// Show details of an individual route.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual route.
+        /// Show details of an individual route. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -94,10 +94,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of RouteFull</returns>
         ApiResponse<RouteFull> GetAccountRouteWithHttpInfo (int? accountId, int? routeId);
         /// <summary>
-        /// Get a list of routes for an account
+        /// Get a list of routes for an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Routes for more info on the properties.
+        /// Get a list of routes for an account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -112,10 +112,10 @@ namespace IO.Swagger.Api
         ListRoutes ListAccountRoutes (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of routes for an account
+        /// Get a list of routes for an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Routes for more info on the properties.
+        /// Get a list of routes for an account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -129,10 +129,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ListRoutes</returns>
         ApiResponse<ListRoutes> ListAccountRoutesWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// 
+        /// Update the information of a route.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to Routes.
+        /// Update the information of a route. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -142,10 +142,10 @@ namespace IO.Swagger.Api
         RouteFull ReplaceAccountRoute (int? accountId, int? routeId, CreateRouteParams data = null);
 
         /// <summary>
-        /// 
+        /// Update the information of a route.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to Routes.
+        /// Update the information of a route. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -156,10 +156,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Add a new address book contact for an extension
+        /// Add a new route to the account.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to Routes.
+        /// Add a new route to the account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -168,10 +168,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<RouteFull> CreateRouteAsync (int? accountId, CreateRouteParams data = null);
 
         /// <summary>
-        /// Add a new address book contact for an extension
+        /// Add a new route to the account.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to Routes.
+        /// Add a new route to the account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -179,33 +179,33 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (RouteFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<RouteFull>> CreateRouteAsyncWithHttpInfo (int? accountId, CreateRouteParams data = null);
         /// <summary>
-        /// 
+        /// Delete a route from the account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a route from the account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="routeId">Route ID</param>
-        /// <returns>Task of DeleteRoute</returns>
-        System.Threading.Tasks.Task<DeleteRoute> DeleteAccountRouteAsync (int? accountId, int? routeId);
+        /// <returns>Task of DeleteEntry</returns>
+        System.Threading.Tasks.Task<DeleteEntry> DeleteAccountRouteAsync (int? accountId, int? routeId);
 
         /// <summary>
-        /// 
+        /// Delete a route from the account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a route from the account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="routeId">Route ID</param>
-        /// <returns>Task of ApiResponse (DeleteRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteRoute>> DeleteAccountRouteAsyncWithHttpInfo (int? accountId, int? routeId);
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountRouteAsyncWithHttpInfo (int? accountId, int? routeId);
         /// <summary>
-        /// Show details of an individual route
+        /// Show details of an individual route.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual route.
+        /// Show details of an individual route. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -214,10 +214,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<RouteFull> GetAccountRouteAsync (int? accountId, int? routeId);
 
         /// <summary>
-        /// Show details of an individual route
+        /// Show details of an individual route.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual route.
+        /// Show details of an individual route. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -225,10 +225,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (RouteFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<RouteFull>> GetAccountRouteAsyncWithHttpInfo (int? accountId, int? routeId);
         /// <summary>
-        /// Get a list of routes for an account
+        /// Get a list of routes for an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Routes for more info on the properties.
+        /// Get a list of routes for an account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -243,10 +243,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListRoutes> ListAccountRoutesAsync (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of routes for an account
+        /// Get a list of routes for an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Routes for more info on the properties.
+        /// Get a list of routes for an account. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -260,10 +260,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ListRoutes)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListRoutes>> ListAccountRoutesAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// 
+        /// Update the information of a route.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to Routes.
+        /// Update the information of a route. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -273,10 +273,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<RouteFull> ReplaceAccountRouteAsync (int? accountId, int? routeId, CreateRouteParams data = null);
 
         /// <summary>
-        /// 
+        /// Update the information of a route.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to Routes.
+        /// Update the information of a route. See Intro to Routes for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -397,7 +397,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a new address book contact for an extension For more on the input fields, see Intro to Routes.
+        /// Add a new route to the account. Add a new route to the account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -410,7 +410,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a new address book contact for an extension For more on the input fields, see Intro to Routes.
+        /// Add a new route to the account. Add a new route to the account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -444,9 +444,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -480,11 +477,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<RouteFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RouteFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RouteFull)));
-            
         }
 
         /// <summary>
-        /// Add a new address book contact for an extension For more on the input fields, see Intro to Routes.
+        /// Add a new route to the account. Add a new route to the account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -498,7 +494,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a new address book contact for an extension For more on the input fields, see Intro to Routes.
+        /// Add a new route to the account. Add a new route to the account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -532,9 +528,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -567,30 +560,29 @@ namespace IO.Swagger.Api
             return new ApiResponse<RouteFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RouteFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RouteFull)));
-            
         }
 
         /// <summary>
-        ///  
+        /// Delete a route from the account. Delete a route from the account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="routeId">Route ID</param>
-        /// <returns>DeleteRoute</returns>
-        public DeleteRoute DeleteAccountRoute (int? accountId, int? routeId)
+        /// <returns>DeleteEntry</returns>
+        public DeleteEntry DeleteAccountRoute (int? accountId, int? routeId)
         {
-             ApiResponse<DeleteRoute> localVarResponse = DeleteAccountRouteWithHttpInfo(accountId, routeId);
+             ApiResponse<DeleteEntry> localVarResponse = DeleteAccountRouteWithHttpInfo(accountId, routeId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// Delete a route from the account. Delete a route from the account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="routeId">Route ID</param>
-        /// <returns>ApiResponse of DeleteRoute</returns>
-        public ApiResponse< DeleteRoute > DeleteAccountRouteWithHttpInfo (int? accountId, int? routeId)
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        public ApiResponse< DeleteEntry > DeleteAccountRouteWithHttpInfo (int? accountId, int? routeId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -621,9 +613,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (routeId != null) localVarPathParams.Add("route_id", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
 
@@ -647,34 +636,33 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteRoute>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteRoute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteRoute)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        ///  
+        /// Delete a route from the account. Delete a route from the account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="routeId">Route ID</param>
-        /// <returns>Task of DeleteRoute</returns>
-        public async System.Threading.Tasks.Task<DeleteRoute> DeleteAccountRouteAsync (int? accountId, int? routeId)
+        /// <returns>Task of DeleteEntry</returns>
+        public async System.Threading.Tasks.Task<DeleteEntry> DeleteAccountRouteAsync (int? accountId, int? routeId)
         {
-             ApiResponse<DeleteRoute> localVarResponse = await DeleteAccountRouteAsyncWithHttpInfo(accountId, routeId);
+             ApiResponse<DeleteEntry> localVarResponse = await DeleteAccountRouteAsyncWithHttpInfo(accountId, routeId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// Delete a route from the account. Delete a route from the account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="routeId">Route ID</param>
-        /// <returns>Task of ApiResponse (DeleteRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DeleteRoute>> DeleteAccountRouteAsyncWithHttpInfo (int? accountId, int? routeId)
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountRouteAsyncWithHttpInfo (int? accountId, int? routeId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -705,9 +693,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (routeId != null) localVarPathParams.Add("route_id", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
 
@@ -730,14 +715,13 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteRoute>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteRoute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteRoute)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        /// Show details of an individual route This service shows the details of an individual route.
+        /// Show details of an individual route. Show details of an individual route. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -750,7 +734,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual route This service shows the details of an individual route.
+        /// Show details of an individual route. Show details of an individual route. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -787,9 +771,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (routeId != null) localVarPathParams.Add("route_id", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
 
@@ -816,11 +797,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<RouteFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RouteFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RouteFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual route This service shows the details of an individual route.
+        /// Show details of an individual route. Show details of an individual route. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -834,7 +814,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual route This service shows the details of an individual route.
+        /// Show details of an individual route. Show details of an individual route. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -871,9 +851,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (routeId != null) localVarPathParams.Add("route_id", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
 
@@ -899,11 +876,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<RouteFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RouteFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RouteFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of routes for an account See Intro to Routes for more info on the properties.
+        /// Get a list of routes for an account. Get a list of routes for an account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -922,7 +898,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of routes for an account See Intro to Routes for more info on the properties.
+        /// Get a list of routes for an account. Get a list of routes for an account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -962,9 +938,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -997,11 +970,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListRoutes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListRoutes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListRoutes)));
-            
         }
 
         /// <summary>
-        /// Get a list of routes for an account See Intro to Routes for more info on the properties.
+        /// Get a list of routes for an account. Get a list of routes for an account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1021,7 +993,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of routes for an account See Intro to Routes for more info on the properties.
+        /// Get a list of routes for an account. Get a list of routes for an account. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1061,9 +1033,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -1095,11 +1064,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListRoutes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListRoutes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListRoutes)));
-            
         }
 
         /// <summary>
-        ///  For more on the input fields, see Intro to Routes.
+        /// Update the information of a route. Update the information of a route. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1113,7 +1081,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  For more on the input fields, see Intro to Routes.
+        /// Update the information of a route. Update the information of a route. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1151,9 +1119,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (routeId != null) localVarPathParams.Add("route_id", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1188,11 +1153,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<RouteFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RouteFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RouteFull)));
-            
         }
 
         /// <summary>
-        ///  For more on the input fields, see Intro to Routes.
+        /// Update the information of a route. Update the information of a route. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1207,7 +1171,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  For more on the input fields, see Intro to Routes.
+        /// Update the information of a route. Update the information of a route. See Intro to Routes for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1245,9 +1209,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (routeId != null) localVarPathParams.Add("route_id", Configuration.ApiClient.ParameterToString(routeId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1281,7 +1242,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<RouteFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RouteFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RouteFull)));
-            
         }
 
     }

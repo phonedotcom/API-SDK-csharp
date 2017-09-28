@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -32,11 +33,10 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateExtensionParams" /> class.
         /// </summary>
-        /// <param name="Voicemail">Voicemail object.</param>
-        /// <param name="CallNotifications">Call Notifications object.</param>
+        /// <param name="Voicemail">Voicemail.</param>
+        /// <param name="CallNotifications">CallNotifications.</param>
         /// <param name="CallerId">Caller ID.</param>
         /// <param name="UsageType">Extension type.</param>
-        /// <param name="AllowsCallWaiting">Allows call waiting.</param>
         /// <param name="Extension">Extension number (auto-generated if empty).</param>
         /// <param name="IncludeInDirectory">Include in dial-by-name directory.</param>
         /// <param name="Name">Name (auto-generated if empty).</param>
@@ -46,13 +46,12 @@ namespace IO.Swagger.Model
         /// <param name="LocalAreaCode">Local area code.</param>
         /// <param name="EnableOutboundCalls">Enable outgoing calls.</param>
         /// <param name="EnableCallWaiting">Enable Call Waiting.</param>
-        public CreateExtensionParams(Voicemail Voicemail = default(Voicemail), CallNotifications CallNotifications = default(CallNotifications), string CallerId = default(string), string UsageType = default(string), bool? AllowsCallWaiting = default(bool?), int? Extension = default(int?), bool? IncludeInDirectory = default(bool?), string Name = default(string), string FullName = default(string), string Timezone = default(string), Object NameGreeting = default(Object), int? LocalAreaCode = default(int?), bool? EnableOutboundCalls = default(bool?), bool? EnableCallWaiting = default(bool?))
+        public CreateExtensionParams(VoicemailInput Voicemail = default(VoicemailInput), CallNotifications CallNotifications = default(CallNotifications), string CallerId = default(string), string UsageType = default(string), int? Extension = default(int?), string IncludeInDirectory = default(string), string Name = default(string), string FullName = default(string), string Timezone = default(string), Object NameGreeting = default(Object), string LocalAreaCode = default(string), string EnableOutboundCalls = default(string), string EnableCallWaiting = default(string))
         {
             this.Voicemail = Voicemail;
             this.CallNotifications = CallNotifications;
             this.CallerId = CallerId;
             this.UsageType = UsageType;
-            this.AllowsCallWaiting = AllowsCallWaiting;
             this.Extension = Extension;
             this.IncludeInDirectory = IncludeInDirectory;
             this.Name = Name;
@@ -65,89 +64,94 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Voicemail object
+        /// Gets or Sets Voicemail
         /// </summary>
-        /// <value>Voicemail object</value>
         [DataMember(Name="voicemail", EmitDefaultValue=false)]
-        public Voicemail Voicemail { get; set; }
+        public VoicemailInput Voicemail { get; set; }
+
         /// <summary>
-        /// Call Notifications object
+        /// Gets or Sets CallNotifications
         /// </summary>
-        /// <value>Call Notifications object</value>
         [DataMember(Name="call_notifications", EmitDefaultValue=false)]
         public CallNotifications CallNotifications { get; set; }
+
         /// <summary>
         /// Caller ID
         /// </summary>
         /// <value>Caller ID</value>
         [DataMember(Name="caller_id", EmitDefaultValue=false)]
         public string CallerId { get; set; }
+
         /// <summary>
         /// Extension type
         /// </summary>
         /// <value>Extension type</value>
         [DataMember(Name="usage_type", EmitDefaultValue=false)]
         public string UsageType { get; set; }
-        /// <summary>
-        /// Allows call waiting
-        /// </summary>
-        /// <value>Allows call waiting</value>
-        [DataMember(Name="allows_call_waiting", EmitDefaultValue=false)]
-        public bool? AllowsCallWaiting { get; set; }
+
         /// <summary>
         /// Extension number (auto-generated if empty)
         /// </summary>
         /// <value>Extension number (auto-generated if empty)</value>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public int? Extension { get; set; }
+
         /// <summary>
         /// Include in dial-by-name directory
         /// </summary>
         /// <value>Include in dial-by-name directory</value>
         [DataMember(Name="include_in_directory", EmitDefaultValue=false)]
-        public bool? IncludeInDirectory { get; set; }
+        public string IncludeInDirectory { get; set; }
+
         /// <summary>
         /// Name (auto-generated if empty)
         /// </summary>
         /// <value>Name (auto-generated if empty)</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Contact name
         /// </summary>
         /// <value>Contact name</value>
         [DataMember(Name="full_name", EmitDefaultValue=false)]
         public string FullName { get; set; }
+
         /// <summary>
         /// Timezone
         /// </summary>
         /// <value>Timezone</value>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string Timezone { get; set; }
+
         /// <summary>
         /// Recording lookup object
         /// </summary>
         /// <value>Recording lookup object</value>
         [DataMember(Name="name_greeting", EmitDefaultValue=false)]
         public Object NameGreeting { get; set; }
+
         /// <summary>
         /// Local area code
         /// </summary>
         /// <value>Local area code</value>
         [DataMember(Name="local_area_code", EmitDefaultValue=false)]
-        public int? LocalAreaCode { get; set; }
+        public string LocalAreaCode { get; set; }
+
         /// <summary>
         /// Enable outgoing calls
         /// </summary>
         /// <value>Enable outgoing calls</value>
         [DataMember(Name="enable_outbound_calls", EmitDefaultValue=false)]
-        public bool? EnableOutboundCalls { get; set; }
+        public string EnableOutboundCalls { get; set; }
+
         /// <summary>
         /// Enable Call Waiting
         /// </summary>
         /// <value>Enable Call Waiting</value>
         [DataMember(Name="enable_call_waiting", EmitDefaultValue=false)]
-        public bool? EnableCallWaiting { get; set; }
+        public string EnableCallWaiting { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -160,7 +164,6 @@ namespace IO.Swagger.Model
             sb.Append("  CallNotifications: ").Append(CallNotifications).Append("\n");
             sb.Append("  CallerId: ").Append(CallerId).Append("\n");
             sb.Append("  UsageType: ").Append(UsageType).Append("\n");
-            sb.Append("  AllowsCallWaiting: ").Append(AllowsCallWaiting).Append("\n");
             sb.Append("  Extension: ").Append(Extension).Append("\n");
             sb.Append("  IncludeInDirectory: ").Append(IncludeInDirectory).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -225,11 +228,6 @@ namespace IO.Swagger.Model
                     this.UsageType == other.UsageType ||
                     this.UsageType != null &&
                     this.UsageType.Equals(other.UsageType)
-                ) && 
-                (
-                    this.AllowsCallWaiting == other.AllowsCallWaiting ||
-                    this.AllowsCallWaiting != null &&
-                    this.AllowsCallWaiting.Equals(other.AllowsCallWaiting)
                 ) && 
                 (
                     this.Extension == other.Extension ||
@@ -297,8 +295,6 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.CallerId.GetHashCode();
                 if (this.UsageType != null)
                     hash = hash * 59 + this.UsageType.GetHashCode();
-                if (this.AllowsCallWaiting != null)
-                    hash = hash * 59 + this.AllowsCallWaiting.GetHashCode();
                 if (this.Extension != null)
                     hash = hash * 59 + this.Extension.GetHashCode();
                 if (this.IncludeInDirectory != null)
@@ -321,8 +317,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

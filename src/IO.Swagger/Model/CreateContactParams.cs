@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -48,7 +49,7 @@ namespace IO.Swagger.Model
         /// <param name="PhoneNumbers">Phone Numbers.</param>
         /// <param name="Addresses">Addresses.</param>
         /// <param name="Group">Contact Group.</param>
-        public CreateContactParams(string FirstName = default(string), string MiddleName = default(string), string LastName = default(string), string Prefix = default(string), string PhoneticFirstName = default(string), string PhoneticMiddleName = default(string), string PhoneticLastName = default(string), string Suffix = default(string), string Nickname = default(string), string Company = default(string), string Department = default(string), string JobTitle = default(string), List<Object> Emails = default(List<Object>), List<Object> PhoneNumbers = default(List<Object>), List<Object> Addresses = default(List<Object>), Object Group = default(Object))
+        public CreateContactParams(string FirstName = default(string), string MiddleName = default(string), string LastName = default(string), string Prefix = default(string), string PhoneticFirstName = default(string), string PhoneticMiddleName = default(string), string PhoneticLastName = default(string), string Suffix = default(string), string Nickname = default(string), string Company = default(string), string Department = default(string), string JobTitle = default(string), List<Email> Emails = default(List<Email>), List<PhoneNumberContact> PhoneNumbers = default(List<PhoneNumberContact>), List<AddressListContacts> Addresses = default(List<AddressListContacts>), Object Group = default(Object))
         {
             this.FirstName = FirstName;
             this.MiddleName = MiddleName;
@@ -74,96 +75,112 @@ namespace IO.Swagger.Model
         /// <value>First Name</value>
         [DataMember(Name="first_name", EmitDefaultValue=false)]
         public string FirstName { get; set; }
+
         /// <summary>
         /// Middle Name
         /// </summary>
         /// <value>Middle Name</value>
         [DataMember(Name="middle_name", EmitDefaultValue=false)]
         public string MiddleName { get; set; }
+
         /// <summary>
         /// Last Name
         /// </summary>
         /// <value>Last Name</value>
         [DataMember(Name="last_name", EmitDefaultValue=false)]
         public string LastName { get; set; }
+
         /// <summary>
         /// Prefix
         /// </summary>
         /// <value>Prefix</value>
         [DataMember(Name="prefix", EmitDefaultValue=false)]
         public string Prefix { get; set; }
+
         /// <summary>
         /// Phonetic First Name
         /// </summary>
         /// <value>Phonetic First Name</value>
         [DataMember(Name="phonetic_first_name", EmitDefaultValue=false)]
         public string PhoneticFirstName { get; set; }
+
         /// <summary>
         /// Phonetic Middle Name
         /// </summary>
         /// <value>Phonetic Middle Name</value>
         [DataMember(Name="phonetic_middle_name", EmitDefaultValue=false)]
         public string PhoneticMiddleName { get; set; }
+
         /// <summary>
         /// Phonetic Last Name
         /// </summary>
         /// <value>Phonetic Last Name</value>
         [DataMember(Name="phonetic_last_name", EmitDefaultValue=false)]
         public string PhoneticLastName { get; set; }
+
         /// <summary>
         /// Suffix
         /// </summary>
         /// <value>Suffix</value>
         [DataMember(Name="suffix", EmitDefaultValue=false)]
         public string Suffix { get; set; }
+
         /// <summary>
         /// Nickname
         /// </summary>
         /// <value>Nickname</value>
         [DataMember(Name="nickname", EmitDefaultValue=false)]
         public string Nickname { get; set; }
+
         /// <summary>
         /// Company Name
         /// </summary>
         /// <value>Company Name</value>
         [DataMember(Name="company", EmitDefaultValue=false)]
         public string Company { get; set; }
+
         /// <summary>
         /// Department Name
         /// </summary>
         /// <value>Department Name</value>
         [DataMember(Name="department", EmitDefaultValue=false)]
         public string Department { get; set; }
+
         /// <summary>
         /// Job Title
         /// </summary>
         /// <value>Job Title</value>
         [DataMember(Name="job_title", EmitDefaultValue=false)]
         public string JobTitle { get; set; }
+
         /// <summary>
         /// Email Addresses
         /// </summary>
         /// <value>Email Addresses</value>
         [DataMember(Name="emails", EmitDefaultValue=false)]
-        public List<Object> Emails { get; set; }
+        public List<Email> Emails { get; set; }
+
         /// <summary>
         /// Phone Numbers
         /// </summary>
         /// <value>Phone Numbers</value>
         [DataMember(Name="phone_numbers", EmitDefaultValue=false)]
-        public List<Object> PhoneNumbers { get; set; }
+        public List<PhoneNumberContact> PhoneNumbers { get; set; }
+
         /// <summary>
         /// Addresses
         /// </summary>
         /// <value>Addresses</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
-        public List<Object> Addresses { get; set; }
+        public List<AddressListContacts> Addresses { get; set; }
+
         /// <summary>
         /// Contact Group
         /// </summary>
         /// <value>Contact Group</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public Object Group { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -353,8 +370,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

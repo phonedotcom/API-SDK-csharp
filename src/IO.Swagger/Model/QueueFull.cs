@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -79,47 +80,55 @@ namespace IO.Swagger.Model
         /// <value>Integer ID. Read-only.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// Name. Required.
         /// </summary>
         /// <value>Name. Required.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Greeting to be played when caller first connects. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE. Can be set to NULL to disable the greeting.
         /// </summary>
         /// <value>Greeting to be played when caller first connects. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE. Can be set to NULL to disable the greeting.</value>
         [DataMember(Name="greeting", EmitDefaultValue=false)]
         public MediaSummary Greeting { get; set; }
+
         /// <summary>
         /// Gets or Sets HoldMusic
         /// </summary>
         [DataMember(Name="hold_music", EmitDefaultValue=false)]
         public HoldMusic HoldMusic { get; set; }
+
         /// <summary>
         /// Maximum hold time in seconds. If provided, must equal one of: 60, 120, 180, 240, 300, 600, 900, 1200, 1800, 2700, 3600. Default is 300.
         /// </summary>
         /// <value>Maximum hold time in seconds. If provided, must equal one of: 60, 120, 180, 240, 300, 600, 900, 1200, 1800, 2700, 3600. Default is 300.</value>
         [DataMember(Name="max_hold_time", EmitDefaultValue=false)]
         public int? MaxHoldTime { get; set; }
+
         /// <summary>
         /// Caller id type to show members. If provided, must equal one of: &#39;called_number&#39;, &#39;calling_number&#39;. Default is &#39;calling_number&#39;.
         /// </summary>
         /// <value>Caller id type to show members. If provided, must equal one of: &#39;called_number&#39;, &#39;calling_number&#39;. Default is &#39;calling_number&#39;.</value>
         [DataMember(Name="caller_id_type", EmitDefaultValue=false)]
         public string CallerIdType { get; set; }
+
         /// <summary>
         /// Number of seconds to ring a member before cycling to the next member. If provided, must equal one of: 5, 10, 15, 20, 25, 30. Default is 5.
         /// </summary>
         /// <value>Number of seconds to ring a member before cycling to the next member. If provided, must equal one of: 5, 10, 15, 20, 25, 30. Default is 5.</value>
         [DataMember(Name="ring_time", EmitDefaultValue=false)]
         public int? RingTime { get; set; }
+
         /// <summary>
         /// Array of Member Objects. Non-virtual account extensions or phone numbers. See below for details.
         /// </summary>
         /// <value>Array of Member Objects. Non-virtual account extensions or phone numbers. See below for details.</value>
         [DataMember(Name="members", EmitDefaultValue=false)]
         public List<Member> Members { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -245,8 +254,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

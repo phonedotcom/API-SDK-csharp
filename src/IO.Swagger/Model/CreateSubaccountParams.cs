@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -41,7 +42,7 @@ namespace IO.Swagger.Model
         /// <param name="Password">Sub account password (required).</param>
         /// <param name="Contact">Contact Object. See below for details..</param>
         /// <param name="BillingContact">Contact Object for billing purposes. See below for details..</param>
-        public CreateSubaccountParams(string Username = default(string), string Password = default(string), ContactSubaccount Contact = default(ContactSubaccount), ContactSubaccount BillingContact = default(ContactSubaccount))
+        public CreateSubaccountParams(string Username = default(string), string Password = default(string), ContactResponse Contact = default(ContactResponse), ContactResponse BillingContact = default(ContactResponse))
         {
             // to ensure "Username" is required (not null)
             if (Username == null)
@@ -71,24 +72,28 @@ namespace IO.Swagger.Model
         /// <value>Sub account password</value>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
+
         /// <summary>
         /// Sub account password
         /// </summary>
         /// <value>Sub account password</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
+
         /// <summary>
         /// Contact Object. See below for details.
         /// </summary>
         /// <value>Contact Object. See below for details.</value>
         [DataMember(Name="contact", EmitDefaultValue=false)]
-        public ContactSubaccount Contact { get; set; }
+        public ContactResponse Contact { get; set; }
+
         /// <summary>
         /// Contact Object for billing purposes. See below for details.
         /// </summary>
         /// <value>Contact Object for billing purposes. See below for details.</value>
         [DataMember(Name="billing_contact", EmitDefaultValue=false)]
-        public ContactSubaccount BillingContact { get; set; }
+        public ContactResponse BillingContact { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -182,8 +187,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

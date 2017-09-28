@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create an individual extension
+        /// Create an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows how to create a virtual extension.
+        /// Create an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -37,10 +37,10 @@ namespace IO.Swagger.Api
         ExtensionFull CreateAccountExtension (int? accountId, CreateExtensionParams data = null);
 
         /// <summary>
-        /// Create an individual extension
+        /// Create an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows how to create a virtual extension.
+        /// Create an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -48,10 +48,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ExtensionFull</returns>
         ApiResponse<ExtensionFull> CreateAccountExtensionWithHttpInfo (int? accountId, CreateExtensionParams data = null);
         /// <summary>
-        /// Show details of an individual extension
+        /// Show details of an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Extension.
+        /// Show details of an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -60,10 +60,10 @@ namespace IO.Swagger.Api
         ExtensionFull GetAccountExtension (int? accountId, int? extensionId);
 
         /// <summary>
-        /// Show details of an individual extension
+        /// Show details of an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Extension.
+        /// Show details of an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -71,10 +71,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ExtensionFull</returns>
         ApiResponse<ExtensionFull> GetAccountExtensionWithHttpInfo (int? accountId, int? extensionId);
         /// <summary>
-        /// Get a list of extensions visible to the authenticated user or client
+        /// Get a list of extensions visible to the authenticated user or client.
         /// </summary>
         /// <remarks>
-        /// This service lists the visible extensions on a given account.
+        /// Get a list of extensions visible to the authenticated user or client. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -91,10 +91,10 @@ namespace IO.Swagger.Api
         ListExtensions ListAccountExtensions (int? accountId, List<string> filtersId = null, List<string> filtersExtension = null, List<string> filtersName = null, string sortId = null, string sortExtension = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of extensions visible to the authenticated user or client
+        /// Get a list of extensions visible to the authenticated user or client.
         /// </summary>
         /// <remarks>
-        /// This service lists the visible extensions on a given account.
+        /// Get a list of extensions visible to the authenticated user or client. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -110,10 +110,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ListExtensions</returns>
         ApiResponse<ListExtensions> ListAccountExtensionsWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersExtension = null, List<string> filtersName = null, string sortId = null, string sortExtension = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Replace an individual extension
+        /// Replace an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows how to update an individual extension.
+        /// Replace an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -123,10 +123,10 @@ namespace IO.Swagger.Api
         ExtensionFull ReplaceAccountExtension (int? accountId, int? extensionId, ReplaceExtensionParams data = null);
 
         /// <summary>
-        /// Replace an individual extension
+        /// Replace an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows how to update an individual extension.
+        /// Replace an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -137,10 +137,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create an individual extension
+        /// Create an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows how to create a virtual extension.
+        /// Create an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -149,10 +149,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ExtensionFull> CreateAccountExtensionAsync (int? accountId, CreateExtensionParams data = null);
 
         /// <summary>
-        /// Create an individual extension
+        /// Create an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows how to create a virtual extension.
+        /// Create an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -160,10 +160,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ExtensionFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExtensionFull>> CreateAccountExtensionAsyncWithHttpInfo (int? accountId, CreateExtensionParams data = null);
         /// <summary>
-        /// Show details of an individual extension
+        /// Show details of an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Extension.
+        /// Show details of an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -172,10 +172,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ExtensionFull> GetAccountExtensionAsync (int? accountId, int? extensionId);
 
         /// <summary>
-        /// Show details of an individual extension
+        /// Show details of an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Extension.
+        /// Show details of an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -183,10 +183,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ExtensionFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExtensionFull>> GetAccountExtensionAsyncWithHttpInfo (int? accountId, int? extensionId);
         /// <summary>
-        /// Get a list of extensions visible to the authenticated user or client
+        /// Get a list of extensions visible to the authenticated user or client.
         /// </summary>
         /// <remarks>
-        /// This service lists the visible extensions on a given account.
+        /// Get a list of extensions visible to the authenticated user or client. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -203,10 +203,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListExtensions> ListAccountExtensionsAsync (int? accountId, List<string> filtersId = null, List<string> filtersExtension = null, List<string> filtersName = null, string sortId = null, string sortExtension = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of extensions visible to the authenticated user or client
+        /// Get a list of extensions visible to the authenticated user or client.
         /// </summary>
         /// <remarks>
-        /// This service lists the visible extensions on a given account.
+        /// Get a list of extensions visible to the authenticated user or client. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -222,10 +222,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ListExtensions)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListExtensions>> ListAccountExtensionsAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersExtension = null, List<string> filtersName = null, string sortId = null, string sortExtension = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Replace an individual extension
+        /// Replace an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows how to update an individual extension.
+        /// Replace an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -235,10 +235,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ExtensionFull> ReplaceAccountExtensionAsync (int? accountId, int? extensionId, ReplaceExtensionParams data = null);
 
         /// <summary>
-        /// Replace an individual extension
+        /// Replace an individual extension.
         /// </summary>
         /// <remarks>
-        /// This service shows how to update an individual extension.
+        /// Replace an individual extension. See extension for more details.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -359,7 +359,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Create an individual extension This service shows how to create a virtual extension.
+        /// Create an individual extension. Create an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -372,7 +372,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Create an individual extension This service shows how to create a virtual extension.
+        /// Create an individual extension. Create an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -406,9 +406,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -442,11 +439,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ExtensionFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExtensionFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionFull)));
-            
         }
 
         /// <summary>
-        /// Create an individual extension This service shows how to create a virtual extension.
+        /// Create an individual extension. Create an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -460,7 +456,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Create an individual extension This service shows how to create a virtual extension.
+        /// Create an individual extension. Create an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -494,9 +490,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -529,11 +522,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ExtensionFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExtensionFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual extension This service shows the details of an individual Extension.
+        /// Show details of an individual extension. Show details of an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -546,7 +538,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual extension This service shows the details of an individual Extension.
+        /// Show details of an individual extension. Show details of an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -583,9 +575,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
 
@@ -612,11 +601,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ExtensionFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExtensionFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual extension This service shows the details of an individual Extension.
+        /// Show details of an individual extension. Show details of an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -630,7 +618,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual extension This service shows the details of an individual Extension.
+        /// Show details of an individual extension. Show details of an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -667,9 +655,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
 
@@ -695,11 +680,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ExtensionFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExtensionFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of extensions visible to the authenticated user or client This service lists the visible extensions on a given account.
+        /// Get a list of extensions visible to the authenticated user or client. Get a list of extensions visible to the authenticated user or client. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -720,7 +704,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of extensions visible to the authenticated user or client This service lists the visible extensions on a given account.
+        /// Get a list of extensions visible to the authenticated user or client. Get a list of extensions visible to the authenticated user or client. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -762,9 +746,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersExtension != null) localVarQueryParams.Add("filters[extension]", Configuration.ApiClient.ParameterToString(filtersExtension)); // query parameter
@@ -799,11 +780,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListExtensions>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListExtensions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListExtensions)));
-            
         }
 
         /// <summary>
-        /// Get a list of extensions visible to the authenticated user or client This service lists the visible extensions on a given account.
+        /// Get a list of extensions visible to the authenticated user or client. Get a list of extensions visible to the authenticated user or client. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -825,7 +805,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of extensions visible to the authenticated user or client This service lists the visible extensions on a given account.
+        /// Get a list of extensions visible to the authenticated user or client. Get a list of extensions visible to the authenticated user or client. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -867,9 +847,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersExtension != null) localVarQueryParams.Add("filters[extension]", Configuration.ApiClient.ParameterToString(filtersExtension)); // query parameter
@@ -903,11 +880,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListExtensions>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListExtensions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListExtensions)));
-            
         }
 
         /// <summary>
-        /// Replace an individual extension This service shows how to update an individual extension.
+        /// Replace an individual extension. Replace an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -921,7 +897,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace an individual extension This service shows how to update an individual extension.
+        /// Replace an individual extension. Replace an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -959,9 +935,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -996,11 +969,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ExtensionFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExtensionFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionFull)));
-            
         }
 
         /// <summary>
-        /// Replace an individual extension This service shows how to update an individual extension.
+        /// Replace an individual extension. Replace an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1015,7 +987,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace an individual extension This service shows how to update an individual extension.
+        /// Replace an individual extension. Replace an individual extension. See extension for more details.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1053,9 +1025,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1089,7 +1058,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ExtensionFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExtensionFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionFull)));
-            
         }
 
     }

@@ -120,6 +120,14 @@ namespace IO.Swagger.Test
         {
             // TODO unit test for the property 'Text'
         }
+        /// <summary>
+        /// Test the property 'IsNew'
+        /// </summary>
+        [Test]
+        public void IsNewTest()
+        {
+            // TODO unit test for the property 'IsNew'
+        }
 
     }
 

@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -50,23 +51,27 @@ namespace IO.Swagger.Model
         /// <value>ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// User-supplied name, otherwise NULL
         /// </summary>
         /// <value>User-supplied name, otherwise NULL</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Gets or Sets SipAuthentication
         /// </summary>
         [DataMember(Name="sip_authentication", EmitDefaultValue=false)]
         public SipAuthentication SipAuthentication { get; set; }
+
         /// <summary>
         /// Array of Line Objects showing which extensions are attached to this device, and their assigned line numbers. See below for details.
         /// </summary>
         /// <value>Array of Line Objects showing which extensions are attached to this device, and their assigned line numbers. See below for details.</value>
         [DataMember(Name="lines", EmitDefaultValue=false)]
         public List<Line> Lines { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -160,8 +165,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

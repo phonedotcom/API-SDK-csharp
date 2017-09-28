@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Register a generic VoIP device
+        /// Register a generic VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Register a generic VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -37,10 +37,10 @@ namespace IO.Swagger.Api
         DeviceFull CreateAccountDevice (int? accountId, CreateDeviceParams data = null);
 
         /// <summary>
-        /// Register a generic VoIP device
+        /// Register a generic VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Register a generic VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -48,10 +48,33 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of DeviceFull</returns>
         ApiResponse<DeviceFull> CreateAccountDeviceWithHttpInfo (int? accountId, CreateDeviceParams data = null);
         /// <summary>
-        /// Show details of an individual VoIP device
+        /// Delete a VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a VoIP device. See Devices for more detail.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="deviceId">Device ID</param>
+        /// <returns>DeleteEntry</returns>
+        DeleteEntry DeleteAccountDevice (int? accountId, int? deviceId);
+
+        /// <summary>
+        /// Delete a VoIP device.
+        /// </summary>
+        /// <remarks>
+        /// Delete a VoIP device. See Devices for more detail.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="deviceId">Device ID</param>
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        ApiResponse<DeleteEntry> DeleteAccountDeviceWithHttpInfo (int? accountId, int? deviceId);
+        /// <summary>
+        /// Show details of an individual VoIP device.
+        /// </summary>
+        /// <remarks>
+        /// Show details of an individual VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -60,10 +83,10 @@ namespace IO.Swagger.Api
         DeviceFull GetAccountDevice (int? accountId, int? deviceId);
 
         /// <summary>
-        /// Show details of an individual VoIP device
+        /// Show details of an individual VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Show details of an individual VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -71,10 +94,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of DeviceFull</returns>
         ApiResponse<DeviceFull> GetAccountDeviceWithHttpInfo (int? accountId, int? deviceId);
         /// <summary>
-        /// Get a list of VoIP devices associated with your account
+        /// Get a list of VoIP devices associated with your account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a list of VoIP devices associated with your account. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -89,10 +112,10 @@ namespace IO.Swagger.Api
         ListDevices ListAccountDevices (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of VoIP devices associated with your account
+        /// Get a list of VoIP devices associated with your account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a list of VoIP devices associated with your account. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -106,10 +129,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ListDevices</returns>
         ApiResponse<ListDevices> ListAccountDevicesWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Update the settings for an individual VoIP device
+        /// Update the details of an individual VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Update the details of an individual VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -119,10 +142,10 @@ namespace IO.Swagger.Api
         DeviceFull ReplaceAccountDevice (int? accountId, int? deviceId, CreateDeviceParams data = null);
 
         /// <summary>
-        /// Update the settings for an individual VoIP device
+        /// Update the details of an individual VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Update the details of an individual VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -133,10 +156,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Register a generic VoIP device
+        /// Register a generic VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Register a generic VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -145,10 +168,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<DeviceFull> CreateAccountDeviceAsync (int? accountId, CreateDeviceParams data = null);
 
         /// <summary>
-        /// Register a generic VoIP device
+        /// Register a generic VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Register a generic VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -156,10 +179,33 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (DeviceFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<DeviceFull>> CreateAccountDeviceAsyncWithHttpInfo (int? accountId, CreateDeviceParams data = null);
         /// <summary>
-        /// Show details of an individual VoIP device
+        /// Delete a VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a VoIP device. See Devices for more detail.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="deviceId">Device ID</param>
+        /// <returns>Task of DeleteEntry</returns>
+        System.Threading.Tasks.Task<DeleteEntry> DeleteAccountDeviceAsync (int? accountId, int? deviceId);
+
+        /// <summary>
+        /// Delete a VoIP device.
+        /// </summary>
+        /// <remarks>
+        /// Delete a VoIP device. See Devices for more detail.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="deviceId">Device ID</param>
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountDeviceAsyncWithHttpInfo (int? accountId, int? deviceId);
+        /// <summary>
+        /// Show details of an individual VoIP device.
+        /// </summary>
+        /// <remarks>
+        /// Show details of an individual VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -168,10 +214,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<DeviceFull> GetAccountDeviceAsync (int? accountId, int? deviceId);
 
         /// <summary>
-        /// Show details of an individual VoIP device
+        /// Show details of an individual VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Show details of an individual VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -179,10 +225,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (DeviceFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<DeviceFull>> GetAccountDeviceAsyncWithHttpInfo (int? accountId, int? deviceId);
         /// <summary>
-        /// Get a list of VoIP devices associated with your account
+        /// Get a list of VoIP devices associated with your account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a list of VoIP devices associated with your account. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -197,10 +243,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListDevices> ListAccountDevicesAsync (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of VoIP devices associated with your account
+        /// Get a list of VoIP devices associated with your account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Get a list of VoIP devices associated with your account. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -214,10 +260,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ListDevices)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListDevices>> ListAccountDevicesAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Update the settings for an individual VoIP device
+        /// Update the details of an individual VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Update the details of an individual VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -227,10 +273,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<DeviceFull> ReplaceAccountDeviceAsync (int? accountId, int? deviceId, CreateDeviceParams data = null);
 
         /// <summary>
-        /// Update the settings for an individual VoIP device
+        /// Update the details of an individual VoIP device.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Update the details of an individual VoIP device. See Devices for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -351,7 +397,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Register a generic VoIP device 
+        /// Register a generic VoIP device. Register a generic VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -364,7 +410,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Register a generic VoIP device 
+        /// Register a generic VoIP device. Register a generic VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -398,9 +444,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -434,11 +477,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<DeviceFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DeviceFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeviceFull)));
-            
         }
 
         /// <summary>
-        /// Register a generic VoIP device 
+        /// Register a generic VoIP device. Register a generic VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -452,7 +494,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Register a generic VoIP device 
+        /// Register a generic VoIP device. Register a generic VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -486,9 +528,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -521,11 +560,168 @@ namespace IO.Swagger.Api
             return new ApiResponse<DeviceFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DeviceFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeviceFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual VoIP device 
+        /// Delete a VoIP device. Delete a VoIP device. See Devices for more detail.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="deviceId">Device ID</param>
+        /// <returns>DeleteEntry</returns>
+        public DeleteEntry DeleteAccountDevice (int? accountId, int? deviceId)
+        {
+             ApiResponse<DeleteEntry> localVarResponse = DeleteAccountDeviceWithHttpInfo(accountId, deviceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete a VoIP device. Delete a VoIP device. See Devices for more detail.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="deviceId">Device ID</param>
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        public ApiResponse< DeleteEntry > DeleteAccountDeviceWithHttpInfo (int? accountId, int? deviceId)
+        {
+            // verify the required parameter 'accountId' is set
+            if (accountId == null)
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling DevicesApi->DeleteAccountDevice");
+            // verify the required parameter 'deviceId' is set
+            if (deviceId == null)
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling DevicesApi->DeleteAccountDevice");
+
+            var localVarPath = "/accounts/{account_id}/devices/{device_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
+            if (deviceId != null) localVarPathParams.Add("device_id", Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteAccountDevice", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
+        }
+
+        /// <summary>
+        /// Delete a VoIP device. Delete a VoIP device. See Devices for more detail.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="deviceId">Device ID</param>
+        /// <returns>Task of DeleteEntry</returns>
+        public async System.Threading.Tasks.Task<DeleteEntry> DeleteAccountDeviceAsync (int? accountId, int? deviceId)
+        {
+             ApiResponse<DeleteEntry> localVarResponse = await DeleteAccountDeviceAsyncWithHttpInfo(accountId, deviceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete a VoIP device. Delete a VoIP device. See Devices for more detail.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="deviceId">Device ID</param>
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountDeviceAsyncWithHttpInfo (int? accountId, int? deviceId)
+        {
+            // verify the required parameter 'accountId' is set
+            if (accountId == null)
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling DevicesApi->DeleteAccountDevice");
+            // verify the required parameter 'deviceId' is set
+            if (deviceId == null)
+                throw new ApiException(400, "Missing required parameter 'deviceId' when calling DevicesApi->DeleteAccountDevice");
+
+            var localVarPath = "/accounts/{account_id}/devices/{device_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
+            if (deviceId != null) localVarPathParams.Add("device_id", Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteAccountDevice", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
+        }
+
+        /// <summary>
+        /// Show details of an individual VoIP device. Show details of an individual VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -538,7 +734,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual VoIP device 
+        /// Show details of an individual VoIP device. Show details of an individual VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -575,9 +771,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (deviceId != null) localVarPathParams.Add("device_id", Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
 
@@ -604,11 +797,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<DeviceFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DeviceFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeviceFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual VoIP device 
+        /// Show details of an individual VoIP device. Show details of an individual VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -622,7 +814,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual VoIP device 
+        /// Show details of an individual VoIP device. Show details of an individual VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -659,9 +851,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (deviceId != null) localVarPathParams.Add("device_id", Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
 
@@ -687,11 +876,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<DeviceFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DeviceFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeviceFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of VoIP devices associated with your account 
+        /// Get a list of VoIP devices associated with your account. Get a list of VoIP devices associated with your account. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -710,7 +898,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of VoIP devices associated with your account 
+        /// Get a list of VoIP devices associated with your account. Get a list of VoIP devices associated with your account. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -750,9 +938,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -785,11 +970,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListDevices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListDevices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListDevices)));
-            
         }
 
         /// <summary>
-        /// Get a list of VoIP devices associated with your account 
+        /// Get a list of VoIP devices associated with your account. Get a list of VoIP devices associated with your account. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -809,7 +993,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of VoIP devices associated with your account 
+        /// Get a list of VoIP devices associated with your account. Get a list of VoIP devices associated with your account. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -849,9 +1033,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -883,11 +1064,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListDevices>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListDevices) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListDevices)));
-            
         }
 
         /// <summary>
-        /// Update the settings for an individual VoIP device 
+        /// Update the details of an individual VoIP device. Update the details of an individual VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -901,7 +1081,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Update the settings for an individual VoIP device 
+        /// Update the details of an individual VoIP device. Update the details of an individual VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -939,9 +1119,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (deviceId != null) localVarPathParams.Add("device_id", Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -976,11 +1153,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<DeviceFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DeviceFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeviceFull)));
-            
         }
 
         /// <summary>
-        /// Update the settings for an individual VoIP device 
+        /// Update the details of an individual VoIP device. Update the details of an individual VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -995,7 +1171,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Update the settings for an individual VoIP device 
+        /// Update the details of an individual VoIP device. Update the details of an individual VoIP device. See Devices for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1033,9 +1209,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (deviceId != null) localVarPathParams.Add("device_id", Configuration.ApiClient.ParameterToString(deviceId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1069,7 +1242,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<DeviceFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DeviceFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeviceFull)));
-            
         }
 
     }

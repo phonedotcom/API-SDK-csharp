@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -35,7 +36,7 @@ namespace IO.Swagger.Model
         /// <param name="Id">Integer Menu ID. Read-only..</param>
         /// <param name="Name">Name. Required. Unique..</param>
         /// <param name="AllowExtensionDial">Boolean. Determines whether a caller can enter an extension number to bypass the menu..</param>
-        /// <param name="KeypressWaitTime">Boolean. Determines whether a caller can enter an extension number to bypass the menu..</param>
+        /// <param name="KeypressWaitTime">Number of seconds to wait for the caller to choose a menu option. Must be between 1 and 5 seconds..</param>
         /// <param name="Greeting">Greeting that is played when a caller enters a menu. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE..</param>
         /// <param name="KeypressError">Message that is played when the caller makes a keypress error. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE..</param>
         /// <param name="TimeoutHandler">Route that will be entered when the caller fails to choose a menu option within the allotted time. Output is a Route Summary Object if the route is named, otherwise the Full Route Object will be shown. Input must be a Route Lookup Object pointing to a named route..</param>
@@ -58,48 +59,56 @@ namespace IO.Swagger.Model
         /// <value>Integer Menu ID. Read-only.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// Name. Required. Unique.
         /// </summary>
         /// <value>Name. Required. Unique.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Boolean. Determines whether a caller can enter an extension number to bypass the menu.
         /// </summary>
         /// <value>Boolean. Determines whether a caller can enter an extension number to bypass the menu.</value>
         [DataMember(Name="allow_extension_dial", EmitDefaultValue=false)]
         public bool? AllowExtensionDial { get; set; }
+
         /// <summary>
-        /// Boolean. Determines whether a caller can enter an extension number to bypass the menu.
+        /// Number of seconds to wait for the caller to choose a menu option. Must be between 1 and 5 seconds.
         /// </summary>
-        /// <value>Boolean. Determines whether a caller can enter an extension number to bypass the menu.</value>
+        /// <value>Number of seconds to wait for the caller to choose a menu option. Must be between 1 and 5 seconds.</value>
         [DataMember(Name="keypress_wait_time", EmitDefaultValue=false)]
         public int? KeypressWaitTime { get; set; }
+
         /// <summary>
         /// Greeting that is played when a caller enters a menu. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE.
         /// </summary>
         /// <value>Greeting that is played when a caller enters a menu. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE.</value>
         [DataMember(Name="greeting", EmitDefaultValue=false)]
         public MediaSummary Greeting { get; set; }
+
         /// <summary>
         /// Message that is played when the caller makes a keypress error. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE.
         /// </summary>
         /// <value>Message that is played when the caller makes a keypress error. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE.</value>
         [DataMember(Name="keypress_error", EmitDefaultValue=false)]
         public MediaSummary KeypressError { get; set; }
+
         /// <summary>
         /// Route that will be entered when the caller fails to choose a menu option within the allotted time. Output is a Route Summary Object if the route is named, otherwise the Full Route Object will be shown. Input must be a Route Lookup Object pointing to a named route.
         /// </summary>
         /// <value>Route that will be entered when the caller fails to choose a menu option within the allotted time. Output is a Route Summary Object if the route is named, otherwise the Full Route Object will be shown. Input must be a Route Lookup Object pointing to a named route.</value>
         [DataMember(Name="timeout_handler", EmitDefaultValue=false)]
         public RouteSummary TimeoutHandler { get; set; }
+
         /// <summary>
         /// Array of menu option objects. See below for details.
         /// </summary>
         /// <value>Array of menu option objects. See below for details.</value>
         [DataMember(Name="options", EmitDefaultValue=false)]
         public List<Option> Options { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -225,8 +234,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

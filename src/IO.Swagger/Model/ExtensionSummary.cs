@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -48,18 +49,21 @@ namespace IO.Swagger.Model
         /// <value>ID of the extension. This is the internal Phone.com ID, not the extension number callers may dial.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// User-supplied name for the extension. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required.
         /// </summary>
         /// <value>User-supplied name for the extension. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Extension number that callers may dial. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required.
         /// </summary>
         /// <value>Extension number that callers may dial. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required.</value>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public int? Extension { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -145,8 +149,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

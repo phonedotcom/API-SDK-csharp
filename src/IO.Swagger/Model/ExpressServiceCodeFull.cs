@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -35,7 +36,7 @@ namespace IO.Swagger.Model
         /// <param name="Id">ID.</param>
         /// <param name="ExpressServiceCode">An 8-digit number in string format.</param>
         /// <param name="ExpireDate">UNIX time stamp representing the UTC time that the Express Service Code expires. Please note that every time this service is executed, the expire_date is set to now + 24 hours..</param>
-        public ExpressServiceCodeFull(int? Id = default(int?), string ExpressServiceCode = default(string), int? ExpireDate = default(int?))
+        public ExpressServiceCodeFull(int? Id = default(int?), string ExpressServiceCode = default(string), List<int?> ExpireDate = default(List<int?>))
         {
             this.Id = Id;
             this.ExpressServiceCode = ExpressServiceCode;
@@ -48,18 +49,21 @@ namespace IO.Swagger.Model
         /// <value>ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// An 8-digit number in string format
         /// </summary>
         /// <value>An 8-digit number in string format</value>
         [DataMember(Name="express_service_code", EmitDefaultValue=false)]
         public string ExpressServiceCode { get; set; }
+
         /// <summary>
         /// UNIX time stamp representing the UTC time that the Express Service Code expires. Please note that every time this service is executed, the expire_date is set to now + 24 hours.
         /// </summary>
         /// <value>UNIX time stamp representing the UTC time that the Express Service Code expires. Please note that every time this service is executed, the expire_date is set to now + 24 hours.</value>
         [DataMember(Name="expire_date", EmitDefaultValue=false)]
-        public int? ExpireDate { get; set; }
+        public List<int?> ExpireDate { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -120,7 +124,7 @@ namespace IO.Swagger.Model
                 (
                     this.ExpireDate == other.ExpireDate ||
                     this.ExpireDate != null &&
-                    this.ExpireDate.Equals(other.ExpireDate)
+                    this.ExpireDate.SequenceEqual(other.ExpireDate)
                 );
         }
 
@@ -145,8 +149,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

@@ -87,7 +87,7 @@ namespace IO.Swagger.Test
             //int? accountId = null;
             //int? menuId = null;
             //var response = instance.DeleteAccountMenu(accountId, menuId);
-            //Assert.IsInstanceOf<DeleteMenu> (response, "response is DeleteMenu");
+            //Assert.IsInstanceOf<DeleteEntry> (response, "response is DeleteEntry");
         }
         
         /// <summary>

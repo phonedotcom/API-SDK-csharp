@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -46,12 +47,14 @@ namespace IO.Swagger.Model
         /// <value>Name that this number will be associated with. Must be no longer than 15 characters, and can only contain English letters, numbers, spaces, and commas.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Can be \&quot;business\&quot; or \&quot;personal\&quot;
         /// </summary>
         /// <value>Can be \&quot;business\&quot; or \&quot;personal\&quot;</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -129,13 +132,18 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             // Type (string) pattern
             Regex regexType = new Regex(@"business|personal", RegexOptions.CultureInvariant);
             if (false == regexType.Match(this.Type).Success)
             {
-                yield return new ValidationResult("Invalid value for Type, must match a pattern of /business|personal/.", new [] { "Type" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Type, must match a pattern of " + regexType, new [] { "Type" });
             }
 
             yield break;

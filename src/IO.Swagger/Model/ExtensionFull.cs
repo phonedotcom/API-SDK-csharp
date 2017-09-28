@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -35,6 +36,7 @@ namespace IO.Swagger.Model
         /// <param name="Id">ID of the extension. This is the internal Phone.com ID, not the extension number callers may dial..</param>
         /// <param name="Name">User-supplied name for the extension. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required..</param>
         /// <param name="Extension">Extension number that callers may dial. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required..</param>
+        /// <param name="VoipId">API Account ID. Optional, object may return the voip_id..</param>
         /// <param name="FullName">Full name of the individual or department to which this extension is assigned.</param>
         /// <param name="UsageType">Can be \&quot;limited\&quot; or \&quot;unlimited\&quot;. In most cases, changing this will affect your monthly bill. Please see our Control Panel or contact Customer Service for pricing..</param>
         /// <param name="DeviceMembership">DeviceMembership.</param>
@@ -46,13 +48,14 @@ namespace IO.Swagger.Model
         /// <param name="EnableCallWaiting">Whether Call Waiting is enabled. Boolean. Default is TRUE..</param>
         /// <param name="EnableOutboundCalls">Whether outgoing calls are enabled. Boolean. Default is TRUE..</param>
         /// <param name="Voicemail">Voicemail.</param>
-        /// <param name="CallNotifications">Call Notifications Object. See below for details..</param>
+        /// <param name="CallNotifications">CallNotifications.</param>
         /// <param name="Route">Route which will handle incoming voice and fax calls. Only valid on PUT requests, not POST. Output is a Route Summary Object if the route is named, otherwise the Full Route Object will be shown. Input must be a Route Lookup Object pointing to a named route. Route must belong to this extension already..</param>
-        public ExtensionFull(int? Id = default(int?), string Name = default(string), int? Extension = default(int?), string FullName = default(string), string UsageType = default(string), DeviceMembership DeviceMembership = default(DeviceMembership), string Timezone = default(string), MediaSummary NameGreeting = default(MediaSummary), bool? IncludeInDirectory = default(bool?), string CallerId = default(string), string LocalAreaCode = default(string), bool? EnableCallWaiting = default(bool?), bool? EnableOutboundCalls = default(bool?), Voicemail Voicemail = default(Voicemail), Notification CallNotifications = default(Notification), RouteSummary Route = default(RouteSummary))
+        public ExtensionFull(int? Id = default(int?), string Name = default(string), int? Extension = default(int?), int? VoipId = default(int?), string FullName = default(string), string UsageType = default(string), DeviceMembership DeviceMembership = default(DeviceMembership), string Timezone = default(string), MediaSummary NameGreeting = default(MediaSummary), bool? IncludeInDirectory = default(bool?), string CallerId = default(string), string LocalAreaCode = default(string), bool? EnableCallWaiting = default(bool?), bool? EnableOutboundCalls = default(bool?), Voicemail Voicemail = default(Voicemail), Notification CallNotifications = default(Notification), RouteSummary Route = default(RouteSummary))
         {
             this.Id = Id;
             this.Name = Name;
             this.Extension = Extension;
+            this.VoipId = VoipId;
             this.FullName = FullName;
             this.UsageType = UsageType;
             this.DeviceMembership = DeviceMembership;
@@ -74,94 +77,116 @@ namespace IO.Swagger.Model
         /// <value>ID of the extension. This is the internal Phone.com ID, not the extension number callers may dial.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// User-supplied name for the extension. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required.
         /// </summary>
         /// <value>User-supplied name for the extension. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Extension number that callers may dial. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required.
         /// </summary>
         /// <value>Extension number that callers may dial. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required.</value>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public int? Extension { get; set; }
+
+        /// <summary>
+        /// API Account ID. Optional, object may return the voip_id.
+        /// </summary>
+        /// <value>API Account ID. Optional, object may return the voip_id.</value>
+        [DataMember(Name="voip_id", EmitDefaultValue=false)]
+        public int? VoipId { get; set; }
+
         /// <summary>
         /// Full name of the individual or department to which this extension is assigned
         /// </summary>
         /// <value>Full name of the individual or department to which this extension is assigned</value>
         [DataMember(Name="full_name", EmitDefaultValue=false)]
         public string FullName { get; set; }
+
         /// <summary>
         /// Can be \&quot;limited\&quot; or \&quot;unlimited\&quot;. In most cases, changing this will affect your monthly bill. Please see our Control Panel or contact Customer Service for pricing.
         /// </summary>
         /// <value>Can be \&quot;limited\&quot; or \&quot;unlimited\&quot;. In most cases, changing this will affect your monthly bill. Please see our Control Panel or contact Customer Service for pricing.</value>
         [DataMember(Name="usage_type", EmitDefaultValue=false)]
         public string UsageType { get; set; }
+
         /// <summary>
         /// Gets or Sets DeviceMembership
         /// </summary>
         [DataMember(Name="device_membership", EmitDefaultValue=false)]
         public DeviceMembership DeviceMembership { get; set; }
+
         /// <summary>
         /// Time zone. Can be in any commonly recognized format, such as \&quot;America/Los_Angeles\&quot;.
         /// </summary>
         /// <value>Time zone. Can be in any commonly recognized format, such as \&quot;America/Los_Angeles\&quot;.</value>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string Timezone { get; set; }
+
         /// <summary>
         /// Greeting that communicates the extension&#39;s name. Output is a Greeting Summary Object. Input must be a Greeting Lookup Object.
         /// </summary>
         /// <value>Greeting that communicates the extension&#39;s name. Output is a Greeting Summary Object. Input must be a Greeting Lookup Object.</value>
         [DataMember(Name="name_greeting", EmitDefaultValue=false)]
         public MediaSummary NameGreeting { get; set; }
+
         /// <summary>
         /// Whether this extension should be included in the dial-by-name directory for this account. Boolean.
         /// </summary>
         /// <value>Whether this extension should be included in the dial-by-name directory for this account. Boolean.</value>
         [DataMember(Name="include_in_directory", EmitDefaultValue=false)]
         public bool? IncludeInDirectory { get; set; }
+
         /// <summary>
         /// Phone number to use as Caller ID for outgoing calls. Must be a phone number belonging to this account, or one of any additional authorized phone numbers. You can use our List Caller Ids service to see a current list. To unassign, you may set this to \&quot;private\&quot;, NULL, or an empty string.
         /// </summary>
         /// <value>Phone number to use as Caller ID for outgoing calls. Must be a phone number belonging to this account, or one of any additional authorized phone numbers. You can use our List Caller Ids service to see a current list. To unassign, you may set this to \&quot;private\&quot;, NULL, or an empty string.</value>
         [DataMember(Name="caller_id", EmitDefaultValue=false)]
         public string CallerId { get; set; }
+
         /// <summary>
         /// For outbound calls, this is the North American area code that this extension is calling from.
         /// </summary>
         /// <value>For outbound calls, this is the North American area code that this extension is calling from.</value>
         [DataMember(Name="local_area_code", EmitDefaultValue=false)]
         public string LocalAreaCode { get; set; }
+
         /// <summary>
         /// Whether Call Waiting is enabled. Boolean. Default is TRUE.
         /// </summary>
         /// <value>Whether Call Waiting is enabled. Boolean. Default is TRUE.</value>
         [DataMember(Name="enable_call_waiting", EmitDefaultValue=false)]
         public bool? EnableCallWaiting { get; set; }
+
         /// <summary>
         /// Whether outgoing calls are enabled. Boolean. Default is TRUE.
         /// </summary>
         /// <value>Whether outgoing calls are enabled. Boolean. Default is TRUE.</value>
         [DataMember(Name="enable_outbound_calls", EmitDefaultValue=false)]
         public bool? EnableOutboundCalls { get; set; }
+
         /// <summary>
         /// Gets or Sets Voicemail
         /// </summary>
         [DataMember(Name="voicemail", EmitDefaultValue=false)]
         public Voicemail Voicemail { get; set; }
+
         /// <summary>
-        /// Call Notifications Object. See below for details.
+        /// Gets or Sets CallNotifications
         /// </summary>
-        /// <value>Call Notifications Object. See below for details.</value>
         [DataMember(Name="call_notifications", EmitDefaultValue=false)]
         public Notification CallNotifications { get; set; }
+
         /// <summary>
         /// Route which will handle incoming voice and fax calls. Only valid on PUT requests, not POST. Output is a Route Summary Object if the route is named, otherwise the Full Route Object will be shown. Input must be a Route Lookup Object pointing to a named route. Route must belong to this extension already.
         /// </summary>
         /// <value>Route which will handle incoming voice and fax calls. Only valid on PUT requests, not POST. Output is a Route Summary Object if the route is named, otherwise the Full Route Object will be shown. Input must be a Route Lookup Object pointing to a named route. Route must belong to this extension already.</value>
         [DataMember(Name="route", EmitDefaultValue=false)]
         public RouteSummary Route { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -173,6 +198,7 @@ namespace IO.Swagger.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Extension: ").Append(Extension).Append("\n");
+            sb.Append("  VoipId: ").Append(VoipId).Append("\n");
             sb.Append("  FullName: ").Append(FullName).Append("\n");
             sb.Append("  UsageType: ").Append(UsageType).Append("\n");
             sb.Append("  DeviceMembership: ").Append(DeviceMembership).Append("\n");
@@ -236,6 +262,11 @@ namespace IO.Swagger.Model
                     this.Extension == other.Extension ||
                     this.Extension != null &&
                     this.Extension.Equals(other.Extension)
+                ) && 
+                (
+                    this.VoipId == other.VoipId ||
+                    this.VoipId != null &&
+                    this.VoipId.Equals(other.VoipId)
                 ) && 
                 (
                     this.FullName == other.FullName ||
@@ -321,6 +352,8 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Extension != null)
                     hash = hash * 59 + this.Extension.GetHashCode();
+                if (this.VoipId != null)
+                    hash = hash * 59 + this.VoipId.GetHashCode();
                 if (this.FullName != null)
                     hash = hash * 59 + this.FullName.GetHashCode();
                 if (this.UsageType != null)
@@ -351,8 +384,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

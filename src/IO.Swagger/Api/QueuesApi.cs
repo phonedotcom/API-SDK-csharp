@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a queue
+        /// Create a queue.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Queues.
+        /// Create a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -37,10 +37,10 @@ namespace IO.Swagger.Api
         QueueFull CreateAccountQueue (int? accountId, CreateQueueParams data = null);
 
         /// <summary>
-        /// Create a queue
+        /// Create a queue.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Queues.
+        /// Create a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -48,33 +48,33 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of QueueFull</returns>
         ApiResponse<QueueFull> CreateAccountQueueWithHttpInfo (int? accountId, CreateQueueParams data = null);
         /// <summary>
-        /// Delete a queue
+        /// Delete a queue.
         /// </summary>
         /// <remarks>
-        /// This service a queue from the account. For more information on queue properties, see Account Queues.
+        /// Delete a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="queueId">Queue ID</param>
-        /// <returns>DeleteQueue</returns>
-        DeleteQueue DeleteAccountQueue (int? accountId, int? queueId);
+        /// <returns>DeleteEntry</returns>
+        DeleteEntry DeleteAccountQueue (int? accountId, int? queueId);
 
         /// <summary>
-        /// Delete a queue
+        /// Delete a queue.
         /// </summary>
         /// <remarks>
-        /// This service a queue from the account. For more information on queue properties, see Account Queues.
+        /// Delete a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="queueId">Queue ID</param>
-        /// <returns>ApiResponse of DeleteQueue</returns>
-        ApiResponse<DeleteQueue> DeleteAccountQueueWithHttpInfo (int? accountId, int? queueId);
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        ApiResponse<DeleteEntry> DeleteAccountQueueWithHttpInfo (int? accountId, int? queueId);
         /// <summary>
-        /// Show details of an individual queue
+        /// Show details of an individual queue.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+        /// Show details of an individual queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -83,10 +83,10 @@ namespace IO.Swagger.Api
         QueueFull GetAccountQueue (int? accountId, int? queueId);
 
         /// <summary>
-        /// Show details of an individual queue
+        /// Show details of an individual queue.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+        /// Show details of an individual queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -94,10 +94,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of QueueFull</returns>
         ApiResponse<QueueFull> GetAccountQueueWithHttpInfo (int? accountId, int? queueId);
         /// <summary>
-        /// Get a list of queues for an account
+        /// Get a list of queues for an account.
         /// </summary>
         /// <remarks>
-        /// The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+        /// Get a list of queues for an account. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -112,10 +112,10 @@ namespace IO.Swagger.Api
         ListQueues ListAccountQueues (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of queues for an account
+        /// Get a list of queues for an account.
         /// </summary>
         /// <remarks>
-        /// The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+        /// Get a list of queues for an account. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -129,10 +129,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ListQueues</returns>
         ApiResponse<ListQueues> ListAccountQueuesWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Replace a queue
+        /// Replace a queue.
         /// </summary>
         /// <remarks>
-        /// The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+        /// Replace a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -142,10 +142,10 @@ namespace IO.Swagger.Api
         QueueFull ReplaceAccountQueue (int? accountId, int? queueId, CreateQueueParams data = null);
 
         /// <summary>
-        /// Replace a queue
+        /// Replace a queue.
         /// </summary>
         /// <remarks>
-        /// The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+        /// Replace a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -156,10 +156,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a queue
+        /// Create a queue.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Queues.
+        /// Create a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -168,10 +168,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<QueueFull> CreateAccountQueueAsync (int? accountId, CreateQueueParams data = null);
 
         /// <summary>
-        /// Create a queue
+        /// Create a queue.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Queues.
+        /// Create a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -179,33 +179,33 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (QueueFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueueFull>> CreateAccountQueueAsyncWithHttpInfo (int? accountId, CreateQueueParams data = null);
         /// <summary>
-        /// Delete a queue
+        /// Delete a queue.
         /// </summary>
         /// <remarks>
-        /// This service a queue from the account. For more information on queue properties, see Account Queues.
+        /// Delete a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="queueId">Queue ID</param>
-        /// <returns>Task of DeleteQueue</returns>
-        System.Threading.Tasks.Task<DeleteQueue> DeleteAccountQueueAsync (int? accountId, int? queueId);
+        /// <returns>Task of DeleteEntry</returns>
+        System.Threading.Tasks.Task<DeleteEntry> DeleteAccountQueueAsync (int? accountId, int? queueId);
 
         /// <summary>
-        /// Delete a queue
+        /// Delete a queue.
         /// </summary>
         /// <remarks>
-        /// This service a queue from the account. For more information on queue properties, see Account Queues.
+        /// Delete a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="queueId">Queue ID</param>
-        /// <returns>Task of ApiResponse (DeleteQueue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteQueue>> DeleteAccountQueueAsyncWithHttpInfo (int? accountId, int? queueId);
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountQueueAsyncWithHttpInfo (int? accountId, int? queueId);
         /// <summary>
-        /// Show details of an individual queue
+        /// Show details of an individual queue.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+        /// Show details of an individual queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -214,10 +214,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<QueueFull> GetAccountQueueAsync (int? accountId, int? queueId);
 
         /// <summary>
-        /// Show details of an individual queue
+        /// Show details of an individual queue.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+        /// Show details of an individual queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -225,10 +225,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (QueueFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueueFull>> GetAccountQueueAsyncWithHttpInfo (int? accountId, int? queueId);
         /// <summary>
-        /// Get a list of queues for an account
+        /// Get a list of queues for an account.
         /// </summary>
         /// <remarks>
-        /// The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+        /// Get a list of queues for an account. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -243,10 +243,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListQueues> ListAccountQueuesAsync (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of queues for an account
+        /// Get a list of queues for an account.
         /// </summary>
         /// <remarks>
-        /// The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+        /// Get a list of queues for an account. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -260,10 +260,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ListQueues)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListQueues>> ListAccountQueuesAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Replace a queue
+        /// Replace a queue.
         /// </summary>
         /// <remarks>
-        /// The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+        /// Replace a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -273,10 +273,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<QueueFull> ReplaceAccountQueueAsync (int? accountId, int? queueId, CreateQueueParams data = null);
 
         /// <summary>
-        /// Replace a queue
+        /// Replace a queue.
         /// </summary>
         /// <remarks>
-        /// The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+        /// Replace a queue. See Account Queues for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -397,7 +397,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Create a queue For more on the input fields, see Account Queues.
+        /// Create a queue. Create a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -410,7 +410,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Create a queue For more on the input fields, see Account Queues.
+        /// Create a queue. Create a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -444,9 +444,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -480,11 +477,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<QueueFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QueueFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueFull)));
-            
         }
 
         /// <summary>
-        /// Create a queue For more on the input fields, see Account Queues.
+        /// Create a queue. Create a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -498,7 +494,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Create a queue For more on the input fields, see Account Queues.
+        /// Create a queue. Create a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -532,9 +528,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -567,30 +560,29 @@ namespace IO.Swagger.Api
             return new ApiResponse<QueueFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QueueFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueFull)));
-            
         }
 
         /// <summary>
-        /// Delete a queue This service a queue from the account. For more information on queue properties, see Account Queues.
+        /// Delete a queue. Delete a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="queueId">Queue ID</param>
-        /// <returns>DeleteQueue</returns>
-        public DeleteQueue DeleteAccountQueue (int? accountId, int? queueId)
+        /// <returns>DeleteEntry</returns>
+        public DeleteEntry DeleteAccountQueue (int? accountId, int? queueId)
         {
-             ApiResponse<DeleteQueue> localVarResponse = DeleteAccountQueueWithHttpInfo(accountId, queueId);
+             ApiResponse<DeleteEntry> localVarResponse = DeleteAccountQueueWithHttpInfo(accountId, queueId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete a queue This service a queue from the account. For more information on queue properties, see Account Queues.
+        /// Delete a queue. Delete a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="queueId">Queue ID</param>
-        /// <returns>ApiResponse of DeleteQueue</returns>
-        public ApiResponse< DeleteQueue > DeleteAccountQueueWithHttpInfo (int? accountId, int? queueId)
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        public ApiResponse< DeleteEntry > DeleteAccountQueueWithHttpInfo (int? accountId, int? queueId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -621,9 +613,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (queueId != null) localVarPathParams.Add("queue_id", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
 
@@ -647,34 +636,33 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteQueue>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteQueue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteQueue)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        /// Delete a queue This service a queue from the account. For more information on queue properties, see Account Queues.
+        /// Delete a queue. Delete a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="queueId">Queue ID</param>
-        /// <returns>Task of DeleteQueue</returns>
-        public async System.Threading.Tasks.Task<DeleteQueue> DeleteAccountQueueAsync (int? accountId, int? queueId)
+        /// <returns>Task of DeleteEntry</returns>
+        public async System.Threading.Tasks.Task<DeleteEntry> DeleteAccountQueueAsync (int? accountId, int? queueId)
         {
-             ApiResponse<DeleteQueue> localVarResponse = await DeleteAccountQueueAsyncWithHttpInfo(accountId, queueId);
+             ApiResponse<DeleteEntry> localVarResponse = await DeleteAccountQueueAsyncWithHttpInfo(accountId, queueId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Delete a queue This service a queue from the account. For more information on queue properties, see Account Queues.
+        /// Delete a queue. Delete a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="queueId">Queue ID</param>
-        /// <returns>Task of ApiResponse (DeleteQueue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DeleteQueue>> DeleteAccountQueueAsyncWithHttpInfo (int? accountId, int? queueId)
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountQueueAsyncWithHttpInfo (int? accountId, int? queueId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -705,9 +693,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (queueId != null) localVarPathParams.Add("queue_id", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
 
@@ -730,14 +715,13 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteQueue>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteQueue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteQueue)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        /// Show details of an individual queue This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+        /// Show details of an individual queue. Show details of an individual queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -750,7 +734,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual queue This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+        /// Show details of an individual queue. Show details of an individual queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -787,9 +771,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (queueId != null) localVarPathParams.Add("queue_id", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
 
@@ -816,11 +797,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<QueueFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QueueFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual queue This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+        /// Show details of an individual queue. Show details of an individual queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -834,7 +814,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual queue This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+        /// Show details of an individual queue. Show details of an individual queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -871,9 +851,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (queueId != null) localVarPathParams.Add("queue_id", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
 
@@ -899,11 +876,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<QueueFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QueueFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of queues for an account The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+        /// Get a list of queues for an account. Get a list of queues for an account. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -922,7 +898,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of queues for an account The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+        /// Get a list of queues for an account. Get a list of queues for an account. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -962,9 +938,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -997,11 +970,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListQueues>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListQueues) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListQueues)));
-            
         }
 
         /// <summary>
-        /// Get a list of queues for an account The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+        /// Get a list of queues for an account. Get a list of queues for an account. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1021,7 +993,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of queues for an account The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+        /// Get a list of queues for an account. Get a list of queues for an account. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1061,9 +1033,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -1095,11 +1064,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListQueues>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListQueues) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListQueues)));
-            
         }
 
         /// <summary>
-        /// Replace a queue The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+        /// Replace a queue. Replace a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1113,7 +1081,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace a queue The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+        /// Replace a queue. Replace a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1151,9 +1119,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (queueId != null) localVarPathParams.Add("queue_id", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1188,11 +1153,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<QueueFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QueueFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueFull)));
-            
         }
 
         /// <summary>
-        /// Replace a queue The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+        /// Replace a queue. Replace a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1207,7 +1171,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace a queue The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+        /// Replace a queue. Replace a queue. See Account Queues for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1245,9 +1209,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (queueId != null) localVarPathParams.Add("queue_id", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1281,7 +1242,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<QueueFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QueueFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueFull)));
-            
         }
 
     }

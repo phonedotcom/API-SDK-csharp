@@ -8,9 +8,9 @@ Method | HTTP request | Description
 [**CreateAccountMediaTts**](MediaApi.md#createaccountmediatts) | **POST** /accounts/{account_id}/media/tts | Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
 [**DeleteAccountMedia**](MediaApi.md#deleteaccountmedia) | **DELETE** /accounts/{account_id}/media/{media_id} | Delete an individual media record
 [**GetAccountMedia**](MediaApi.md#getaccountmedia) | **GET** /accounts/{account_id}/media/{media_id} | Show details of an individual media recording (Greeting or Hold Music)
-[**ListAccountMedia**](MediaApi.md#listaccountmedia) | **GET** /accounts/{account_id}/media | Get a list of media recordings for an account
+[**ListAccountMedia**](MediaApi.md#listaccountmedia) | **GET** /accounts/{account_id}/media | Get a list of media recordings for an account.
 [**ReplaceAccountMediaFiles**](MediaApi.md#replaceaccountmediafiles) | **PUT** /accounts/{account_id}/media/files/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
-[**ReplaceAccountMediaTts**](MediaApi.md#replaceaccountmediatts) | **PUT** /accounts/{account_id}/media/tts/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+[**ReplaceAccountMediaTts**](MediaApi.md#replaceaccountmediatts) | **PUT** /accounts/{account_id}/media/tts/{media_id} | Update a media object to your account.
 
 
 <a name="createaccountmediafiles"></a>
@@ -35,7 +35,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -106,7 +105,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -155,7 +153,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteaccountmedia"></a>
 # **DeleteAccountMedia**
-> DeleteMedia DeleteAccountMedia (int? accountId, int? mediaId)
+> DeleteEntry DeleteAccountMedia (int? accountId, int? mediaId)
 
 Delete an individual media record
 
@@ -175,7 +173,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -188,7 +185,7 @@ namespace Example
             try
             {
                 // Delete an individual media record
-                DeleteMedia result = apiInstance.DeleteAccountMedia(accountId, mediaId);
+                DeleteEntry result = apiInstance.DeleteAccountMedia(accountId, mediaId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -209,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteMedia**](DeleteMedia.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -244,7 +241,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -295,9 +291,9 @@ Name | Type | Description  | Notes
 # **ListAccountMedia**
 > ListMedia ListAccountMedia (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null)
 
-Get a list of media recordings for an account
+Get a list of media recordings for an account.
 
-See Account Menus for more info on the properties.
+Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
 
 ### Example
 ```csharp
@@ -313,7 +309,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -331,7 +326,7 @@ namespace Example
 
             try
             {
-                // Get a list of media recordings for an account
+                // Get a list of media recordings for an account.
                 ListMedia result = apiInstance.ListAccountMedia(accountId, filtersId, filtersName, sortId, sortName, limit, offset, fields);
                 Debug.WriteLine(result);
             }
@@ -394,7 +389,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -440,7 +434,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -449,9 +443,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountMediaTts**
 > MediaFull ReplaceAccountMediaTts (int? accountId, int? mediaId, CreateMediaParams data = null)
 
-Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+Update a media object to your account.
 
-See Account Media for more info on the properties.
+Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
 
 ### Example
 ```csharp
@@ -467,7 +461,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -480,7 +473,7 @@ namespace Example
 
             try
             {
-                // Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+                // Update a media object to your account.
                 MediaFull result = apiInstance.ReplaceAccountMediaTts(accountId, mediaId, data);
                 Debug.WriteLine(result);
             }

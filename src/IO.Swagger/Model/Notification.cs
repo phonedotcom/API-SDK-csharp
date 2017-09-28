@@ -20,11 +20,12 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Notification
+    /// The Call Notifications object configures the recipient(s) of notifications when calls are received to this extension.
     /// </summary>
     [DataContract]
     public partial class Notification :  IEquatable<Notification>, IValidatableObject
@@ -46,12 +47,14 @@ namespace IO.Swagger.Model
         /// <value>Array of email addresses</value>
         [DataMember(Name="emails", EmitDefaultValue=false)]
         public List<string> Emails { get; set; }
+
         /// <summary>
         /// Phone number capable of receiving SMS messages
         /// </summary>
         /// <value>Phone number capable of receiving SMS messages</value>
         [DataMember(Name="sms", EmitDefaultValue=false)]
         public string Sms { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -129,8 +132,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

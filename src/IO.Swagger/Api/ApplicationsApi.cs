@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Show details of an individual application
+        /// Show details of an individual Application on a given account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Show details of an individual Application on a given account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -37,10 +37,10 @@ namespace IO.Swagger.Api
         ApplicationFull GetAccountApplication (int? accountId, int? applicationId);
 
         /// <summary>
-        /// Show details of an individual application
+        /// Show details of an individual Application on a given account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Show details of an individual Application on a given account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -48,10 +48,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ApplicationFull</returns>
         ApiResponse<ApplicationFull> GetAccountApplicationWithHttpInfo (int? accountId, int? applicationId);
         /// <summary>
-        /// Get a list of applications you have defined
+        /// This service lists the Applications on a given account
         /// </summary>
         /// <remarks>
-        /// Get a list of an account available applications
+        /// Show details of an individual Application on a given account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -66,10 +66,10 @@ namespace IO.Swagger.Api
         ListApplications ListAccountApplications (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of applications you have defined
+        /// This service lists the Applications on a given account
         /// </summary>
         /// <remarks>
-        /// Get a list of an account available applications
+        /// Show details of an individual Application on a given account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -85,10 +85,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Show details of an individual application
+        /// Show details of an individual Application on a given account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Show details of an individual Application on a given account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -97,10 +97,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ApplicationFull> GetAccountApplicationAsync (int? accountId, int? applicationId);
 
         /// <summary>
-        /// Show details of an individual application
+        /// Show details of an individual Application on a given account.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Show details of an individual Application on a given account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -108,10 +108,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ApplicationFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApplicationFull>> GetAccountApplicationAsyncWithHttpInfo (int? accountId, int? applicationId);
         /// <summary>
-        /// Get a list of applications you have defined
+        /// This service lists the Applications on a given account
         /// </summary>
         /// <remarks>
-        /// Get a list of an account available applications
+        /// Show details of an individual Application on a given account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -126,10 +126,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListApplications> ListAccountApplicationsAsync (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of applications you have defined
+        /// This service lists the Applications on a given account
         /// </summary>
         /// <remarks>
-        /// Get a list of an account available applications
+        /// Show details of an individual Application on a given account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -255,7 +255,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual application 
+        /// Show details of an individual Application on a given account. Show details of an individual Application on a given account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -268,7 +268,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual application 
+        /// Show details of an individual Application on a given account. Show details of an individual Application on a given account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -305,9 +305,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (applicationId != null) localVarPathParams.Add("application_id", Configuration.ApiClient.ParameterToString(applicationId)); // path parameter
 
@@ -334,11 +331,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ApplicationFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApplicationFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApplicationFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual application 
+        /// Show details of an individual Application on a given account. Show details of an individual Application on a given account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -352,7 +348,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual application 
+        /// Show details of an individual Application on a given account. Show details of an individual Application on a given account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -389,9 +385,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (applicationId != null) localVarPathParams.Add("application_id", Configuration.ApiClient.ParameterToString(applicationId)); // path parameter
 
@@ -417,11 +410,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ApplicationFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ApplicationFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApplicationFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of applications you have defined Get a list of an account available applications
+        /// This service lists the Applications on a given account Show details of an individual Application on a given account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -440,7 +432,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of applications you have defined Get a list of an account available applications
+        /// This service lists the Applications on a given account Show details of an individual Application on a given account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -480,9 +472,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -515,11 +504,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListApplications>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListApplications) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListApplications)));
-            
         }
 
         /// <summary>
-        /// Get a list of applications you have defined Get a list of an account available applications
+        /// This service lists the Applications on a given account Show details of an individual Application on a given account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -539,7 +527,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of applications you have defined Get a list of an account available applications
+        /// This service lists the Applications on a given account Show details of an individual Application on a given account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -579,9 +567,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -613,7 +598,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListApplications>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListApplications) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListApplications)));
-            
         }
 
     }

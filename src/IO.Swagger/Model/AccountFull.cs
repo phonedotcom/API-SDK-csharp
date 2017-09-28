@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -56,42 +57,49 @@ namespace IO.Swagger.Model
         /// <value>Account ID. Sometimes referred to as \&quot;Voip ID\&quot; or \&quot;voip_id\&quot;.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// Name on the account. Read-only.
         /// </summary>
         /// <value>Name on the account. Read-only.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Account user name
         /// </summary>
         /// <value>Account user name</value>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
+
         /// <summary>
         /// Account password. For security reason, this is masked as \&quot;**\&quot;
         /// </summary>
         /// <value>Account password. For security reason, this is masked as \&quot;**\&quot;</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
+
         /// <summary>
         /// If this account is a subaccount, this property shows the master account that it belongs to. Otherwise it is NULL. Read-only. Output is an Account Summary Object.
         /// </summary>
         /// <value>If this account is a subaccount, this property shows the master account that it belongs to. Otherwise it is NULL. Read-only. Output is an Account Summary Object.</value>
         [DataMember(Name="master_account", EmitDefaultValue=false)]
         public AccountSummary MasterAccount { get; set; }
+
         /// <summary>
         /// Contact Object. See below for details.
         /// </summary>
         /// <value>Contact Object. See below for details.</value>
         [DataMember(Name="contact", EmitDefaultValue=false)]
         public ContactAccount Contact { get; set; }
+
         /// <summary>
         /// Contact Object for billing purposes. See below for details.
         /// </summary>
         /// <value>Contact Object for billing purposes. See below for details.</value>
         [DataMember(Name="billing_contact", EmitDefaultValue=false)]
         public ContactAccount BillingContact { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -209,8 +217,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

@@ -89,7 +89,7 @@ namespace IO.Swagger.Test
             //int? extensionId = null;
             //int? contactId = null;
             //var response = instance.DeleteAccountExtensionContact(accountId, extensionId, contactId);
-            //Assert.IsInstanceOf<DeleteContact> (response, "response is DeleteContact");
+            //Assert.IsInstanceOf<DeleteEntry> (response, "response is DeleteEntry");
         }
         
         /// <summary>

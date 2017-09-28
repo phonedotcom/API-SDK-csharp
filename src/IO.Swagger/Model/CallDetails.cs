@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -52,30 +53,35 @@ namespace IO.Swagger.Model
         /// <value>UNIX time stamp representing the UTC time that this call item starts</value>
         [DataMember(Name="start_time", EmitDefaultValue=false)]
         public int? StartTime { get; set; }
+
         /// <summary>
         /// Endpoint for this call item, such as call, voicemail, fax, menu, menu item, queue ...
         /// </summary>
         /// <value>Endpoint for this call item, such as call, voicemail, fax, menu, menu item, queue ...</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+
         /// <summary>
         /// ID associated with this call item endpoint (type)
         /// </summary>
         /// <value>ID associated with this call item endpoint (type)</value>
         [DataMember(Name="id_value", EmitDefaultValue=false)]
         public int? IdValue { get; set; }
+
         /// <summary>
         /// Same as account id
         /// </summary>
         /// <value>Same as account id</value>
         [DataMember(Name="voip_id", EmitDefaultValue=false)]
         public int? VoipId { get; set; }
+
         /// <summary>
         /// Same as account extension id
         /// </summary>
         /// <value>Same as account extension id</value>
         [DataMember(Name="voip_phone_id", EmitDefaultValue=false)]
         public int? VoipPhoneId { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -177,8 +183,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

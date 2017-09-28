@@ -5,7 +5,7 @@ All URIs are relative to *https://api.phone.com/v4*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAccountExpressSrvCode**](ExpressservicecodesApi.md#getaccountexpresssrvcode) | **GET** /accounts/{account_id}/express-service-codes/{code_id} | Show details of an account Express Service Code
-[**ListAccountExpressSrvCodes**](ExpressservicecodesApi.md#listaccountexpresssrvcodes) | **GET** /accounts/{account_id}/express-service-codes | Get the Express Service Code associated with your account in list format
+[**ListAccountExpressSrvCodes**](ExpressservicecodesApi.md#listaccountexpresssrvcodes) | **GET** /accounts/{account_id}/express-service-codes | Get the Express Service Code associated with your account in list format.
 
 
 <a name="getaccountexpresssrvcode"></a>
@@ -30,7 +30,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -81,9 +80,9 @@ Name | Type | Description  | Notes
 # **ListAccountExpressSrvCodes**
 > ListExpressServiceCodes ListAccountExpressSrvCodes (int? accountId, List<string> filtersId = null)
 
-Get the Express Service Code associated with your account in list format
+Get the Express Service Code associated with your account in list format.
 
-See Express Service Codes for more detail.
+Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
 
 ### Example
 ```csharp
@@ -99,7 +98,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -111,7 +109,7 @@ namespace Example
 
             try
             {
-                // Get the Express Service Code associated with your account in list format
+                // Get the Express Service Code associated with your account in list format.
                 ListExpressServiceCodes result = apiInstance.ListAccountExpressSrvCodes(accountId, filtersId);
                 Debug.WriteLine(result);
             }

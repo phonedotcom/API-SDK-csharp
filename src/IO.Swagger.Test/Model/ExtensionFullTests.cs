@@ -89,6 +89,14 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'Extension'
         }
         /// <summary>
+        /// Test the property 'VoipId'
+        /// </summary>
+        [Test]
+        public void VoipIdTest()
+        {
+            // TODO unit test for the property 'VoipId'
+        }
+        /// <summary>
         /// Test the property 'FullName'
         /// </summary>
         [Test]

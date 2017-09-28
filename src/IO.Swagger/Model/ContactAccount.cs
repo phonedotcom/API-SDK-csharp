@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -56,41 +57,48 @@ namespace IO.Swagger.Model
         /// <value>Name. Required.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Company name
         /// </summary>
         /// <value>Company name</value>
         [DataMember(Name="company", EmitDefaultValue=false)]
         public string Company { get; set; }
+
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public Address Address { get; set; }
+
         /// <summary>
         /// Phone number. Required.
         /// </summary>
         /// <value>Phone number. Required.</value>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
+
         /// <summary>
         /// Fax number
         /// </summary>
         /// <value>Fax number</value>
         [DataMember(Name="fax", EmitDefaultValue=false)]
         public string Fax { get; set; }
+
         /// <summary>
         /// Primary email address. Required.
         /// </summary>
         /// <value>Primary email address. Required.</value>
         [DataMember(Name="primary_email", EmitDefaultValue=false)]
         public string PrimaryEmail { get; set; }
+
         /// <summary>
         /// Alternate email address
         /// </summary>
         /// <value>Alternate email address</value>
         [DataMember(Name="alternate_email", EmitDefaultValue=false)]
         public string AlternateEmail { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -208,8 +216,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

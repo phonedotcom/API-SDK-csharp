@@ -4,19 +4,19 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountPhoneNumber**](PhonenumbersApi.md#createaccountphonenumber) | **POST** /accounts/{account_id}/phone-numbers | Add a phone number to an account
-[**GetAccountPhoneNumber**](PhonenumbersApi.md#getaccountphonenumber) | **GET** /accounts/{account_id}/phone-numbers/{number_id} | Show details of an individual phone number
-[**ListAccountPhoneNumbers**](PhonenumbersApi.md#listaccountphonenumbers) | **GET** /accounts/{account_id}/phone-numbers | Get a list of phone numbers registered to an account
-[**ReplaceAccountPhoneNumber**](PhonenumbersApi.md#replaceaccountphonenumber) | **PUT** /accounts/{account_id}/phone-numbers/{number_id} | Update the settings for an existing phone number on your account
+[**CreateAccountPhoneNumber**](PhonenumbersApi.md#createaccountphonenumber) | **POST** /accounts/{account_id}/phone-numbers | Add a phone number to an account.
+[**GetAccountPhoneNumber**](PhonenumbersApi.md#getaccountphonenumber) | **GET** /accounts/{account_id}/phone-numbers/{number_id} | Show details of an individual phone number.
+[**ListAccountPhoneNumbers**](PhonenumbersApi.md#listaccountphonenumbers) | **GET** /accounts/{account_id}/phone-numbers | Get a list of phone numbers registered to an account.
+[**ReplaceAccountPhoneNumber**](PhonenumbersApi.md#replaceaccountphonenumber) | **PUT** /accounts/{account_id}/phone-numbers/{number_id} | Update the settings for an existing phone number on your account.
 
 
 <a name="createaccountphonenumber"></a>
 # **CreateAccountPhoneNumber**
 > PhoneNumberFull CreateAccountPhoneNumber (int? accountId, CreatePhoneNumberParams data = null)
 
-Add a phone number to an account
+Add a phone number to an account.
 
-See Intro to Account Phone Numbers for more info on the properties to use.
+Add a phone number to an account. See Account Phone Numbers for more info on the properties.
 
 ### Example
 ```csharp
@@ -32,7 +32,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -44,7 +43,7 @@ namespace Example
 
             try
             {
-                // Add a phone number to an account
+                // Add a phone number to an account.
                 PhoneNumberFull result = apiInstance.CreateAccountPhoneNumber(accountId, data);
                 Debug.WriteLine(result);
             }
@@ -83,9 +82,9 @@ Name | Type | Description  | Notes
 # **GetAccountPhoneNumber**
 > PhoneNumberFull GetAccountPhoneNumber (int? accountId, int? numberId)
 
-Show details of an individual phone number
+Show details of an individual phone number.
 
-See Intro to Account Phone Numbers for more info on the properties.
+Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
 
 ### Example
 ```csharp
@@ -101,7 +100,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -113,7 +111,7 @@ namespace Example
 
             try
             {
-                // Show details of an individual phone number
+                // Show details of an individual phone number.
                 PhoneNumberFull result = apiInstance.GetAccountPhoneNumber(accountId, numberId);
                 Debug.WriteLine(result);
             }
@@ -152,9 +150,9 @@ Name | Type | Description  | Notes
 # **ListAccountPhoneNumbers**
 > ListPhoneNumbers ListAccountPhoneNumbers (int? accountId, List<string> filtersId = null, List<string> filtersName = null, List<string> filtersPhoneNumber = null, string sortId = null, string sortName = null, string sortPhoneNumber = null, int? limit = null, int? offset = null, string fields = null)
 
-Get a list of phone numbers registered to an account
+Get a list of phone numbers registered to an account.
 
-See Intro to Account Phone Numbers for more info on the properties.
+Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
 
 ### Example
 ```csharp
@@ -170,7 +168,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -190,7 +187,7 @@ namespace Example
 
             try
             {
-                // Get a list of phone numbers registered to an account
+                // Get a list of phone numbers registered to an account.
                 ListPhoneNumbers result = apiInstance.ListAccountPhoneNumbers(accountId, filtersId, filtersName, filtersPhoneNumber, sortId, sortName, sortPhoneNumber, limit, offset, fields);
                 Debug.WriteLine(result);
             }
@@ -237,9 +234,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountPhoneNumber**
 > PhoneNumberFull ReplaceAccountPhoneNumber (int? accountId, int? numberId, ReplacePhoneNumberParams data = null)
 
-Update the settings for an existing phone number on your account
+Update the settings for an existing phone number on your account.
 
-See Intro to Account Phone Numbers for more info on the properties.
+Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
 
 ### Example
 ```csharp
@@ -255,7 +252,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -268,7 +264,7 @@ namespace Example
 
             try
             {
-                // Update the settings for an existing phone number on your account
+                // Update the settings for an existing phone number on your account.
                 PhoneNumberFull result = apiInstance.ReplaceAccountPhoneNumber(accountId, numberId, data);
                 Debug.WriteLine(result);
             }

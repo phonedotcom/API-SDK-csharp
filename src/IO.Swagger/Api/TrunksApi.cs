@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Add a trunk record with SIP information
+        /// Add a trunk record with SIP information.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Trunks.
+        /// Add a trunk record with SIP information. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -37,10 +37,10 @@ namespace IO.Swagger.Api
         TrunkFull CreateAccountTrunk (int? accountId, CreateTrunkParams data);
 
         /// <summary>
-        /// Add a trunk record with SIP information
+        /// Add a trunk record with SIP information.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Trunks.
+        /// Add a trunk record with SIP information. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -48,33 +48,33 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of TrunkFull</returns>
         ApiResponse<TrunkFull> CreateAccountTrunkWithHttpInfo (int? accountId, CreateTrunkParams data);
         /// <summary>
-        /// Delete a trunk from account
+        /// Delete a trunk from account.
         /// </summary>
         /// <remarks>
-        /// This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+        /// Delete a trunk from account. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="trunkId">Trunk ID</param>
-        /// <returns>DeleteTrunk</returns>
-        DeleteTrunk DeleteAccountTrunk (int? accountId, int? trunkId);
+        /// <returns>DeleteEntry</returns>
+        DeleteEntry DeleteAccountTrunk (int? accountId, int? trunkId);
 
         /// <summary>
-        /// Delete a trunk from account
+        /// Delete a trunk from account.
         /// </summary>
         /// <remarks>
-        /// This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+        /// Delete a trunk from account. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="trunkId">Trunk ID</param>
-        /// <returns>ApiResponse of DeleteTrunk</returns>
-        ApiResponse<DeleteTrunk> DeleteAccountTrunkWithHttpInfo (int? accountId, int? trunkId);
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        ApiResponse<DeleteEntry> DeleteAccountTrunkWithHttpInfo (int? accountId, int? trunkId);
         /// <summary>
-        /// Show details of an individual trunk
+        /// Show details of an individual trunk.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Trunk.
+        /// Show details of an individual trunk. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -83,10 +83,10 @@ namespace IO.Swagger.Api
         TrunkFull GetAccountTrunk (int? accountId, int? trunkId);
 
         /// <summary>
-        /// Show details of an individual trunk
+        /// Show details of an individual trunk.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Trunk.
+        /// Show details of an individual trunk. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -94,10 +94,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of TrunkFull</returns>
         ApiResponse<TrunkFull> GetAccountTrunkWithHttpInfo (int? accountId, int? trunkId);
         /// <summary>
-        /// Get a list of trunks for an account
+        /// Get a list of trunks for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Trunks for more info on the properties.
+        /// Get a list of trunks for an account. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -112,10 +112,10 @@ namespace IO.Swagger.Api
         ListTrunks ListAccountTrunks (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of trunks for an account
+        /// Get a list of trunks for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Trunks for more info on the properties.
+        /// Get a list of trunks for an account. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -129,10 +129,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ListTrunks</returns>
         ApiResponse<ListTrunks> ListAccountTrunksWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Replace parameters in a trunk
+        /// Replace parameters in a trunk.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Trunks.
+        /// Replace parameters in a trunk. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -142,10 +142,10 @@ namespace IO.Swagger.Api
         TrunkFull ReplaceAccountTrunk (int? accountId, int? trunkId, CreateTrunkParams data);
 
         /// <summary>
-        /// Replace parameters in a trunk
+        /// Replace parameters in a trunk.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Trunks.
+        /// Replace parameters in a trunk. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -156,10 +156,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Add a trunk record with SIP information
+        /// Add a trunk record with SIP information.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Trunks.
+        /// Add a trunk record with SIP information. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -168,10 +168,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<TrunkFull> CreateAccountTrunkAsync (int? accountId, CreateTrunkParams data);
 
         /// <summary>
-        /// Add a trunk record with SIP information
+        /// Add a trunk record with SIP information.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Trunks.
+        /// Add a trunk record with SIP information. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -179,33 +179,33 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (TrunkFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrunkFull>> CreateAccountTrunkAsyncWithHttpInfo (int? accountId, CreateTrunkParams data);
         /// <summary>
-        /// Delete a trunk from account
+        /// Delete a trunk from account.
         /// </summary>
         /// <remarks>
-        /// This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+        /// Delete a trunk from account. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="trunkId">Trunk ID</param>
-        /// <returns>Task of DeleteTrunk</returns>
-        System.Threading.Tasks.Task<DeleteTrunk> DeleteAccountTrunkAsync (int? accountId, int? trunkId);
+        /// <returns>Task of DeleteEntry</returns>
+        System.Threading.Tasks.Task<DeleteEntry> DeleteAccountTrunkAsync (int? accountId, int? trunkId);
 
         /// <summary>
-        /// Delete a trunk from account
+        /// Delete a trunk from account.
         /// </summary>
         /// <remarks>
-        /// This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+        /// Delete a trunk from account. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="trunkId">Trunk ID</param>
-        /// <returns>Task of ApiResponse (DeleteTrunk)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteTrunk>> DeleteAccountTrunkAsyncWithHttpInfo (int? accountId, int? trunkId);
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountTrunkAsyncWithHttpInfo (int? accountId, int? trunkId);
         /// <summary>
-        /// Show details of an individual trunk
+        /// Show details of an individual trunk.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Trunk.
+        /// Show details of an individual trunk. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -214,10 +214,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<TrunkFull> GetAccountTrunkAsync (int? accountId, int? trunkId);
 
         /// <summary>
-        /// Show details of an individual trunk
+        /// Show details of an individual trunk.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Trunk.
+        /// Show details of an individual trunk. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -225,10 +225,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (TrunkFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrunkFull>> GetAccountTrunkAsyncWithHttpInfo (int? accountId, int? trunkId);
         /// <summary>
-        /// Get a list of trunks for an account
+        /// Get a list of trunks for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Trunks for more info on the properties.
+        /// Get a list of trunks for an account. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -243,10 +243,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListTrunks> ListAccountTrunksAsync (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of trunks for an account
+        /// Get a list of trunks for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Trunks for more info on the properties.
+        /// Get a list of trunks for an account. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -260,10 +260,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ListTrunks)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListTrunks>> ListAccountTrunksAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Replace parameters in a trunk
+        /// Replace parameters in a trunk.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Trunks.
+        /// Replace parameters in a trunk. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -273,10 +273,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<TrunkFull> ReplaceAccountTrunkAsync (int? accountId, int? trunkId, CreateTrunkParams data);
 
         /// <summary>
-        /// Replace parameters in a trunk
+        /// Replace parameters in a trunk.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Trunks.
+        /// Replace parameters in a trunk. See Account Trunks for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -397,7 +397,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a trunk record with SIP information For more on the input fields, see Account Trunks.
+        /// Add a trunk record with SIP information. Add a trunk record with SIP information. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -410,7 +410,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a trunk record with SIP information For more on the input fields, see Account Trunks.
+        /// Add a trunk record with SIP information. Add a trunk record with SIP information. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -447,9 +447,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -483,11 +480,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<TrunkFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TrunkFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkFull)));
-            
         }
 
         /// <summary>
-        /// Add a trunk record with SIP information For more on the input fields, see Account Trunks.
+        /// Add a trunk record with SIP information. Add a trunk record with SIP information. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -501,7 +497,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a trunk record with SIP information For more on the input fields, see Account Trunks.
+        /// Add a trunk record with SIP information. Add a trunk record with SIP information. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -538,9 +534,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -573,30 +566,29 @@ namespace IO.Swagger.Api
             return new ApiResponse<TrunkFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TrunkFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkFull)));
-            
         }
 
         /// <summary>
-        /// Delete a trunk from account This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+        /// Delete a trunk from account. Delete a trunk from account. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="trunkId">Trunk ID</param>
-        /// <returns>DeleteTrunk</returns>
-        public DeleteTrunk DeleteAccountTrunk (int? accountId, int? trunkId)
+        /// <returns>DeleteEntry</returns>
+        public DeleteEntry DeleteAccountTrunk (int? accountId, int? trunkId)
         {
-             ApiResponse<DeleteTrunk> localVarResponse = DeleteAccountTrunkWithHttpInfo(accountId, trunkId);
+             ApiResponse<DeleteEntry> localVarResponse = DeleteAccountTrunkWithHttpInfo(accountId, trunkId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete a trunk from account This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+        /// Delete a trunk from account. Delete a trunk from account. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="trunkId">Trunk ID</param>
-        /// <returns>ApiResponse of DeleteTrunk</returns>
-        public ApiResponse< DeleteTrunk > DeleteAccountTrunkWithHttpInfo (int? accountId, int? trunkId)
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        public ApiResponse< DeleteEntry > DeleteAccountTrunkWithHttpInfo (int? accountId, int? trunkId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -627,9 +619,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (trunkId != null) localVarPathParams.Add("trunk_id", Configuration.ApiClient.ParameterToString(trunkId)); // path parameter
 
@@ -653,34 +642,33 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteTrunk>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteTrunk) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteTrunk)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        /// Delete a trunk from account This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+        /// Delete a trunk from account. Delete a trunk from account. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="trunkId">Trunk ID</param>
-        /// <returns>Task of DeleteTrunk</returns>
-        public async System.Threading.Tasks.Task<DeleteTrunk> DeleteAccountTrunkAsync (int? accountId, int? trunkId)
+        /// <returns>Task of DeleteEntry</returns>
+        public async System.Threading.Tasks.Task<DeleteEntry> DeleteAccountTrunkAsync (int? accountId, int? trunkId)
         {
-             ApiResponse<DeleteTrunk> localVarResponse = await DeleteAccountTrunkAsyncWithHttpInfo(accountId, trunkId);
+             ApiResponse<DeleteEntry> localVarResponse = await DeleteAccountTrunkAsyncWithHttpInfo(accountId, trunkId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Delete a trunk from account This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+        /// Delete a trunk from account. Delete a trunk from account. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="trunkId">Trunk ID</param>
-        /// <returns>Task of ApiResponse (DeleteTrunk)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DeleteTrunk>> DeleteAccountTrunkAsyncWithHttpInfo (int? accountId, int? trunkId)
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountTrunkAsyncWithHttpInfo (int? accountId, int? trunkId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -711,9 +699,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (trunkId != null) localVarPathParams.Add("trunk_id", Configuration.ApiClient.ParameterToString(trunkId)); // path parameter
 
@@ -736,14 +721,13 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteTrunk>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteTrunk) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteTrunk)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        /// Show details of an individual trunk This service shows the details of an individual Trunk.
+        /// Show details of an individual trunk. Show details of an individual trunk. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -756,7 +740,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual trunk This service shows the details of an individual Trunk.
+        /// Show details of an individual trunk. Show details of an individual trunk. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -793,9 +777,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (trunkId != null) localVarPathParams.Add("trunk_id", Configuration.ApiClient.ParameterToString(trunkId)); // path parameter
 
@@ -822,11 +803,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<TrunkFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TrunkFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual trunk This service shows the details of an individual Trunk.
+        /// Show details of an individual trunk. Show details of an individual trunk. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -840,7 +820,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual trunk This service shows the details of an individual Trunk.
+        /// Show details of an individual trunk. Show details of an individual trunk. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -877,9 +857,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (trunkId != null) localVarPathParams.Add("trunk_id", Configuration.ApiClient.ParameterToString(trunkId)); // path parameter
 
@@ -905,11 +882,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<TrunkFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TrunkFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of trunks for an account See Account Trunks for more info on the properties.
+        /// Get a list of trunks for an account. Get a list of trunks for an account. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -928,7 +904,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of trunks for an account See Account Trunks for more info on the properties.
+        /// Get a list of trunks for an account. Get a list of trunks for an account. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -968,9 +944,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -1003,11 +976,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListTrunks>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListTrunks) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListTrunks)));
-            
         }
 
         /// <summary>
-        /// Get a list of trunks for an account See Account Trunks for more info on the properties.
+        /// Get a list of trunks for an account. Get a list of trunks for an account. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1027,7 +999,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of trunks for an account See Account Trunks for more info on the properties.
+        /// Get a list of trunks for an account. Get a list of trunks for an account. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1067,9 +1039,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -1101,11 +1070,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListTrunks>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListTrunks) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListTrunks)));
-            
         }
 
         /// <summary>
-        /// Replace parameters in a trunk For more on the input fields, see Account Trunks.
+        /// Replace parameters in a trunk. Replace parameters in a trunk. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1119,7 +1087,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace parameters in a trunk For more on the input fields, see Account Trunks.
+        /// Replace parameters in a trunk. Replace parameters in a trunk. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1160,9 +1128,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (trunkId != null) localVarPathParams.Add("trunk_id", Configuration.ApiClient.ParameterToString(trunkId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1197,11 +1162,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<TrunkFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TrunkFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkFull)));
-            
         }
 
         /// <summary>
-        /// Replace parameters in a trunk For more on the input fields, see Account Trunks.
+        /// Replace parameters in a trunk. Replace parameters in a trunk. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1216,7 +1180,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace parameters in a trunk For more on the input fields, see Account Trunks.
+        /// Replace parameters in a trunk. Replace parameters in a trunk. See Account Trunks for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1257,9 +1221,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (trunkId != null) localVarPathParams.Add("trunk_id", Configuration.ApiClient.ParameterToString(trunkId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1293,7 +1254,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<TrunkFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TrunkFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkFull)));
-            
         }
 
     }

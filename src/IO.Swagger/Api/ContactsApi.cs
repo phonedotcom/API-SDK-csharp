@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Add a new address book contact for an extension
+        /// Add a new address book contact for an extension.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Contacts.
+        /// Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -38,10 +38,10 @@ namespace IO.Swagger.Api
         ContactFull CreateAccountExtensionContact (int? accountId, int? extensionId, CreateContactParams data = null);
 
         /// <summary>
-        /// Add a new address book contact for an extension
+        /// Add a new address book contact for an extension.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Contacts.
+        /// Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -50,35 +50,35 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ContactFull</returns>
         ApiResponse<ContactFull> CreateAccountExtensionContactWithHttpInfo (int? accountId, int? extensionId, CreateContactParams data = null);
         /// <summary>
-        /// 
+        /// Delete a contact from the address book.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>DeleteContact</returns>
-        DeleteContact DeleteAccountExtensionContact (int? accountId, int? extensionId, int? contactId);
+        /// <returns>DeleteEntry</returns>
+        DeleteEntry DeleteAccountExtensionContact (int? accountId, int? extensionId, int? contactId);
 
         /// <summary>
-        /// 
+        /// Delete a contact from the address book.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>ApiResponse of DeleteContact</returns>
-        ApiResponse<DeleteContact> DeleteAccountExtensionContactWithHttpInfo (int? accountId, int? extensionId, int? contactId);
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        ApiResponse<DeleteEntry> DeleteAccountExtensionContactWithHttpInfo (int? accountId, int? extensionId, int? contactId);
         /// <summary>
-        /// Retrieve the details of an address book contact
+        /// Retrieve the details of an address book contact.
         /// </summary>
         /// <remarks>
-        /// For more info on the fields shown, see Account Contacts.
+        /// Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -88,10 +88,10 @@ namespace IO.Swagger.Api
         ContactFull GetAccountExtensionContact (int? accountId, int? extensionId, int? contactId);
 
         /// <summary>
-        /// Retrieve the details of an address book contact
+        /// Retrieve the details of an address book contact.
         /// </summary>
         /// <remarks>
-        /// For more info on the fields shown, see Account Contacts.
+        /// Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -100,10 +100,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ContactFull</returns>
         ApiResponse<ContactFull> GetAccountExtensionContactWithHttpInfo (int? accountId, int? extensionId, int? contactId);
         /// <summary>
-        /// Show a list of address book contacts
+        /// Show the Caller ID options a given extension can use.
         /// </summary>
         /// <remarks>
-        /// See Account Contacts for more info on the fields in each item.
+        /// Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -120,10 +120,10 @@ namespace IO.Swagger.Api
         ListContacts ListAccountExtensionContacts (int? accountId, int? extensionId, List<string> filtersId = null, List<string> filtersGroupId = null, List<string> filtersUpdatedAt = null, string sortId = null, string sortUpdatedAt = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Show a list of address book contacts
+        /// Show the Caller ID options a given extension can use.
         /// </summary>
         /// <remarks>
-        /// See Account Contacts for more info on the fields in each item.
+        /// Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -139,10 +139,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ListContacts</returns>
         ApiResponse<ListContacts> ListAccountExtensionContactsWithHttpInfo (int? accountId, int? extensionId, List<string> filtersId = null, List<string> filtersGroupId = null, List<string> filtersUpdatedAt = null, string sortId = null, string sortUpdatedAt = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// 
+        /// Update the info of a contact in the address book.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Contacts.
+        /// Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -153,10 +153,10 @@ namespace IO.Swagger.Api
         ContactFull ReplaceAccountExtensionContact (int? accountId, int? extensionId, int? contactId, CreateContactParams data = null);
 
         /// <summary>
-        /// 
+        /// Update the info of a contact in the address book.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Contacts.
+        /// Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -168,10 +168,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Add a new address book contact for an extension
+        /// Add a new address book contact for an extension.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Contacts.
+        /// Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -181,10 +181,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ContactFull> CreateAccountExtensionContactAsync (int? accountId, int? extensionId, CreateContactParams data = null);
 
         /// <summary>
-        /// Add a new address book contact for an extension
+        /// Add a new address book contact for an extension.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Contacts.
+        /// Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -193,35 +193,35 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ContactFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactFull>> CreateAccountExtensionContactAsyncWithHttpInfo (int? accountId, int? extensionId, CreateContactParams data = null);
         /// <summary>
-        /// 
+        /// Delete a contact from the address book.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>Task of DeleteContact</returns>
-        System.Threading.Tasks.Task<DeleteContact> DeleteAccountExtensionContactAsync (int? accountId, int? extensionId, int? contactId);
+        /// <returns>Task of DeleteEntry</returns>
+        System.Threading.Tasks.Task<DeleteEntry> DeleteAccountExtensionContactAsync (int? accountId, int? extensionId, int? contactId);
 
         /// <summary>
-        /// 
+        /// Delete a contact from the address book.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>Task of ApiResponse (DeleteContact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteContact>> DeleteAccountExtensionContactAsyncWithHttpInfo (int? accountId, int? extensionId, int? contactId);
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountExtensionContactAsyncWithHttpInfo (int? accountId, int? extensionId, int? contactId);
         /// <summary>
-        /// Retrieve the details of an address book contact
+        /// Retrieve the details of an address book contact.
         /// </summary>
         /// <remarks>
-        /// For more info on the fields shown, see Account Contacts.
+        /// Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -231,10 +231,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ContactFull> GetAccountExtensionContactAsync (int? accountId, int? extensionId, int? contactId);
 
         /// <summary>
-        /// Retrieve the details of an address book contact
+        /// Retrieve the details of an address book contact.
         /// </summary>
         /// <remarks>
-        /// For more info on the fields shown, see Account Contacts.
+        /// Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -243,10 +243,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ContactFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactFull>> GetAccountExtensionContactAsyncWithHttpInfo (int? accountId, int? extensionId, int? contactId);
         /// <summary>
-        /// Show a list of address book contacts
+        /// Show the Caller ID options a given extension can use.
         /// </summary>
         /// <remarks>
-        /// See Account Contacts for more info on the fields in each item.
+        /// Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -263,10 +263,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListContacts> ListAccountExtensionContactsAsync (int? accountId, int? extensionId, List<string> filtersId = null, List<string> filtersGroupId = null, List<string> filtersUpdatedAt = null, string sortId = null, string sortUpdatedAt = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Show a list of address book contacts
+        /// Show the Caller ID options a given extension can use.
         /// </summary>
         /// <remarks>
-        /// See Account Contacts for more info on the fields in each item.
+        /// Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -282,10 +282,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ListContacts)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListContacts>> ListAccountExtensionContactsAsyncWithHttpInfo (int? accountId, int? extensionId, List<string> filtersId = null, List<string> filtersGroupId = null, List<string> filtersUpdatedAt = null, string sortId = null, string sortUpdatedAt = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// 
+        /// Update the info of a contact in the address book.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Contacts.
+        /// Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -296,10 +296,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ContactFull> ReplaceAccountExtensionContactAsync (int? accountId, int? extensionId, int? contactId, CreateContactParams data = null);
 
         /// <summary>
-        /// 
+        /// Update the info of a contact in the address book.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Account Contacts.
+        /// Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -421,7 +421,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a new address book contact for an extension For more on the input fields, see Account Contacts.
+        /// Add a new address book contact for an extension. Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -435,7 +435,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a new address book contact for an extension For more on the input fields, see Account Contacts.
+        /// Add a new address book contact for an extension. Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -473,9 +473,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -510,11 +507,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ContactFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactFull)));
-            
         }
 
         /// <summary>
-        /// Add a new address book contact for an extension For more on the input fields, see Account Contacts.
+        /// Add a new address book contact for an extension. Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -529,7 +525,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a new address book contact for an extension For more on the input fields, see Account Contacts.
+        /// Add a new address book contact for an extension. Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -567,9 +563,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -603,32 +596,31 @@ namespace IO.Swagger.Api
             return new ApiResponse<ContactFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactFull)));
-            
         }
 
         /// <summary>
-        ///  
+        /// Delete a contact from the address book. Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>DeleteContact</returns>
-        public DeleteContact DeleteAccountExtensionContact (int? accountId, int? extensionId, int? contactId)
+        /// <returns>DeleteEntry</returns>
+        public DeleteEntry DeleteAccountExtensionContact (int? accountId, int? extensionId, int? contactId)
         {
-             ApiResponse<DeleteContact> localVarResponse = DeleteAccountExtensionContactWithHttpInfo(accountId, extensionId, contactId);
+             ApiResponse<DeleteEntry> localVarResponse = DeleteAccountExtensionContactWithHttpInfo(accountId, extensionId, contactId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// Delete a contact from the address book. Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>ApiResponse of DeleteContact</returns>
-        public ApiResponse< DeleteContact > DeleteAccountExtensionContactWithHttpInfo (int? accountId, int? extensionId, int? contactId)
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        public ApiResponse< DeleteEntry > DeleteAccountExtensionContactWithHttpInfo (int? accountId, int? extensionId, int? contactId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -662,9 +654,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (contactId != null) localVarPathParams.Add("contact_id", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
@@ -689,36 +678,35 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteContact>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteContact)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        ///  
+        /// Delete a contact from the address book. Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>Task of DeleteContact</returns>
-        public async System.Threading.Tasks.Task<DeleteContact> DeleteAccountExtensionContactAsync (int? accountId, int? extensionId, int? contactId)
+        /// <returns>Task of DeleteEntry</returns>
+        public async System.Threading.Tasks.Task<DeleteEntry> DeleteAccountExtensionContactAsync (int? accountId, int? extensionId, int? contactId)
         {
-             ApiResponse<DeleteContact> localVarResponse = await DeleteAccountExtensionContactAsyncWithHttpInfo(accountId, extensionId, contactId);
+             ApiResponse<DeleteEntry> localVarResponse = await DeleteAccountExtensionContactAsyncWithHttpInfo(accountId, extensionId, contactId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// Delete a contact from the address book. Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="extensionId">Extension ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>Task of ApiResponse (DeleteContact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DeleteContact>> DeleteAccountExtensionContactAsyncWithHttpInfo (int? accountId, int? extensionId, int? contactId)
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountExtensionContactAsyncWithHttpInfo (int? accountId, int? extensionId, int? contactId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -752,9 +740,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (contactId != null) localVarPathParams.Add("contact_id", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
@@ -778,14 +763,13 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteContact>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteContact)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        /// Retrieve the details of an address book contact For more info on the fields shown, see Account Contacts.
+        /// Retrieve the details of an address book contact. Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -799,7 +783,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Retrieve the details of an address book contact For more info on the fields shown, see Account Contacts.
+        /// Retrieve the details of an address book contact. Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -840,9 +824,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (contactId != null) localVarPathParams.Add("contact_id", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
@@ -870,11 +851,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ContactFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactFull)));
-            
         }
 
         /// <summary>
-        /// Retrieve the details of an address book contact For more info on the fields shown, see Account Contacts.
+        /// Retrieve the details of an address book contact. Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -889,7 +869,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Retrieve the details of an address book contact For more info on the fields shown, see Account Contacts.
+        /// Retrieve the details of an address book contact. Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -930,9 +910,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (contactId != null) localVarPathParams.Add("contact_id", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
@@ -959,11 +936,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ContactFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactFull)));
-            
         }
 
         /// <summary>
-        /// Show a list of address book contacts See Account Contacts for more info on the fields in each item.
+        /// Show the Caller ID options a given extension can use. Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -984,7 +960,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show a list of address book contacts See Account Contacts for more info on the fields in each item.
+        /// Show the Caller ID options a given extension can use. Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1029,9 +1005,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
@@ -1066,11 +1039,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListContacts>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListContacts) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListContacts)));
-            
         }
 
         /// <summary>
-        /// Show a list of address book contacts See Account Contacts for more info on the fields in each item.
+        /// Show the Caller ID options a given extension can use. Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1092,7 +1064,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show a list of address book contacts See Account Contacts for more info on the fields in each item.
+        /// Show the Caller ID options a given extension can use. Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1137,9 +1109,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
@@ -1173,11 +1142,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListContacts>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListContacts) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListContacts)));
-            
         }
 
         /// <summary>
-        ///  For more on the input fields, see Account Contacts.
+        /// Update the info of a contact in the address book. Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1192,7 +1160,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  For more on the input fields, see Account Contacts.
+        /// Update the info of a contact in the address book. Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1234,9 +1202,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (contactId != null) localVarPathParams.Add("contact_id", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
@@ -1272,11 +1237,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ContactFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactFull)));
-            
         }
 
         /// <summary>
-        ///  For more on the input fields, see Account Contacts.
+        /// Update the info of a contact in the address book. Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1292,7 +1256,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  For more on the input fields, see Account Contacts.
+        /// Update the info of a contact in the address book. Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1334,9 +1298,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (contactId != null) localVarPathParams.Add("contact_id", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
@@ -1371,7 +1332,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ContactFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactFull)));
-            
         }
 
     }

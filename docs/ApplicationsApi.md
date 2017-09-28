@@ -4,17 +4,17 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAccountApplication**](ApplicationsApi.md#getaccountapplication) | **GET** /accounts/{account_id}/applications/{application_id} | Show details of an individual application
-[**ListAccountApplications**](ApplicationsApi.md#listaccountapplications) | **GET** /accounts/{account_id}/applications | Get a list of applications you have defined
+[**GetAccountApplication**](ApplicationsApi.md#getaccountapplication) | **GET** /accounts/{account_id}/applications/{application_id} | Show details of an individual Application on a given account.
+[**ListAccountApplications**](ApplicationsApi.md#listaccountapplications) | **GET** /accounts/{account_id}/applications | This service lists the Applications on a given account
 
 
 <a name="getaccountapplication"></a>
 # **GetAccountApplication**
 > ApplicationFull GetAccountApplication (int? accountId, int? applicationId)
 
-Show details of an individual application
+Show details of an individual Application on a given account.
 
-
+Show details of an individual Application on a given account.
 
 ### Example
 ```csharp
@@ -30,7 +30,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -42,7 +41,7 @@ namespace Example
 
             try
             {
-                // Show details of an individual application
+                // Show details of an individual Application on a given account.
                 ApplicationFull result = apiInstance.GetAccountApplication(accountId, applicationId);
                 Debug.WriteLine(result);
             }
@@ -81,9 +80,9 @@ Name | Type | Description  | Notes
 # **ListAccountApplications**
 > ListApplications ListAccountApplications (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null)
 
-Get a list of applications you have defined
+This service lists the Applications on a given account
 
-Get a list of an account available applications
+Show details of an individual Application on a given account.
 
 ### Example
 ```csharp
@@ -99,7 +98,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -117,7 +115,7 @@ namespace Example
 
             try
             {
-                // Get a list of applications you have defined
+                // This service lists the Applications on a given account
                 ListApplications result = apiInstance.ListAccountApplications(accountId, filtersId, filtersName, sortId, sortName, limit, offset, fields);
                 Debug.WriteLine(result);
             }

@@ -4,19 +4,19 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountExtension**](ExtensionsApi.md#createaccountextension) | **POST** /accounts/{account_id}/extensions | Create an individual extension
-[**GetAccountExtension**](ExtensionsApi.md#getaccountextension) | **GET** /accounts/{account_id}/extensions/{extension_id} | Show details of an individual extension
-[**ListAccountExtensions**](ExtensionsApi.md#listaccountextensions) | **GET** /accounts/{account_id}/extensions | Get a list of extensions visible to the authenticated user or client
-[**ReplaceAccountExtension**](ExtensionsApi.md#replaceaccountextension) | **PUT** /accounts/{account_id}/extensions/{extension_id} | Replace an individual extension
+[**CreateAccountExtension**](ExtensionsApi.md#createaccountextension) | **POST** /accounts/{account_id}/extensions | Create an individual extension.
+[**GetAccountExtension**](ExtensionsApi.md#getaccountextension) | **GET** /accounts/{account_id}/extensions/{extension_id} | Show details of an individual extension.
+[**ListAccountExtensions**](ExtensionsApi.md#listaccountextensions) | **GET** /accounts/{account_id}/extensions | Get a list of extensions visible to the authenticated user or client.
+[**ReplaceAccountExtension**](ExtensionsApi.md#replaceaccountextension) | **PUT** /accounts/{account_id}/extensions/{extension_id} | Replace an individual extension.
 
 
 <a name="createaccountextension"></a>
 # **CreateAccountExtension**
 > ExtensionFull CreateAccountExtension (int? accountId, CreateExtensionParams data = null)
 
-Create an individual extension
+Create an individual extension.
 
-This service shows how to create a virtual extension.
+Create an individual extension. See extension for more details.
 
 ### Example
 ```csharp
@@ -32,7 +32,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -44,7 +43,7 @@ namespace Example
 
             try
             {
-                // Create an individual extension
+                // Create an individual extension.
                 ExtensionFull result = apiInstance.CreateAccountExtension(accountId, data);
                 Debug.WriteLine(result);
             }
@@ -83,9 +82,9 @@ Name | Type | Description  | Notes
 # **GetAccountExtension**
 > ExtensionFull GetAccountExtension (int? accountId, int? extensionId)
 
-Show details of an individual extension
+Show details of an individual extension.
 
-This service shows the details of an individual Extension.
+Show details of an individual extension. See extension for more details.
 
 ### Example
 ```csharp
@@ -101,7 +100,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -113,7 +111,7 @@ namespace Example
 
             try
             {
-                // Show details of an individual extension
+                // Show details of an individual extension.
                 ExtensionFull result = apiInstance.GetAccountExtension(accountId, extensionId);
                 Debug.WriteLine(result);
             }
@@ -152,9 +150,9 @@ Name | Type | Description  | Notes
 # **ListAccountExtensions**
 > ListExtensions ListAccountExtensions (int? accountId, List<string> filtersId = null, List<string> filtersExtension = null, List<string> filtersName = null, string sortId = null, string sortExtension = null, string sortName = null, int? limit = null, int? offset = null, string fields = null)
 
-Get a list of extensions visible to the authenticated user or client
+Get a list of extensions visible to the authenticated user or client.
 
-This service lists the visible extensions on a given account.
+Get a list of extensions visible to the authenticated user or client. See extension for more details.
 
 ### Example
 ```csharp
@@ -170,7 +168,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -190,7 +187,7 @@ namespace Example
 
             try
             {
-                // Get a list of extensions visible to the authenticated user or client
+                // Get a list of extensions visible to the authenticated user or client.
                 ListExtensions result = apiInstance.ListAccountExtensions(accountId, filtersId, filtersExtension, filtersName, sortId, sortExtension, sortName, limit, offset, fields);
                 Debug.WriteLine(result);
             }
@@ -237,9 +234,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountExtension**
 > ExtensionFull ReplaceAccountExtension (int? accountId, int? extensionId, ReplaceExtensionParams data = null)
 
-Replace an individual extension
+Replace an individual extension.
 
-This service shows how to update an individual extension.
+Replace an individual extension. See extension for more details.
 
 ### Example
 ```csharp
@@ -255,7 +252,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -268,7 +264,7 @@ namespace Example
 
             try
             {
-                // Replace an individual extension
+                // Replace an individual extension.
                 ExtensionFull result = apiInstance.ReplaceAccountExtension(accountId, extensionId, data);
                 Debug.WriteLine(result);
             }

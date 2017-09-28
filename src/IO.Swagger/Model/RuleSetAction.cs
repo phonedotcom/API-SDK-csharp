@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -62,60 +63,70 @@ namespace IO.Swagger.Model
         /// <value>Required.</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
+
         /// <summary>
         /// Extension that this action refers to. Output is an Extension Summary Object. Input must be an Extension Lookup Object. Required.
         /// </summary>
         /// <value>Extension that this action refers to. Output is an Extension Summary Object. Input must be an Extension Lookup Object. Required.</value>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public ExtensionSummary Extension { get; set; }
+
         /// <summary>
         /// This action is for forwarding calls to any number of extensions or phone numbers. The forwarding is handled in parallel, meaning that all phone numbers and/or extensions will ring simultaneously. When the call is answered by any single phone number or extension, ringing will stop for all of them. Subsequent actions in this rule set will be performed if the call is not answered before the timeout period is reached, or if it is forwarded to an extension that has its own route and that route does not result in any actions that disconnect the call or take over call handling.
         /// </summary>
         /// <value>This action is for forwarding calls to any number of extensions or phone numbers. The forwarding is handled in parallel, meaning that all phone numbers and/or extensions will ring simultaneously. When the call is answered by any single phone number or extension, ringing will stop for all of them. Subsequent actions in this rule set will be performed if the call is not answered before the timeout period is reached, or if it is forwarded to an extension that has its own route and that route does not result in any actions that disconnect the call or take over call handling.</value>
         [DataMember(Name="items", EmitDefaultValue=false)]
         public List<RuleSetForwardItem> Items { get; set; }
+
         /// <summary>
         /// Seconds that our routing engine should wait until moving on. Optional. Must be an integer between 5 and 90. Default is 5 seconds.
         /// </summary>
         /// <value>Seconds that our routing engine should wait until moving on. Optional. Must be an integer between 5 and 90. Default is 5 seconds.</value>
         [DataMember(Name="timeout", EmitDefaultValue=false)]
         public int? Timeout { get; set; }
+
         /// <summary>
         /// Hold Music to be played while callers are waiting. Output is a Media Summary Object. Input must be a Media Lookup Object. Optional. Must refer to a media recording that has is_hold_music set to TRUE. Default is to play a standard ring tone.
         /// </summary>
         /// <value>Hold Music to be played while callers are waiting. Output is a Media Summary Object. Input must be a Media Lookup Object. Optional. Must refer to a media recording that has is_hold_music set to TRUE. Default is to play a standard ring tone.</value>
         [DataMember(Name="hold_music", EmitDefaultValue=false)]
         public MediaSummary HoldMusic { get; set; }
+
         /// <summary>
         /// Greeting that this action refers to. Output is a Media Summary Object. Input must be a Media Lookup Object. Required. Must refer to a media recording that has is_hold_music set to FALSE.
         /// </summary>
         /// <value>Greeting that this action refers to. Output is a Media Summary Object. Input must be a Media Lookup Object. Required. Must refer to a media recording that has is_hold_music set to FALSE.</value>
         [DataMember(Name="greeting", EmitDefaultValue=false)]
         public MediaSummary Greeting { get; set; }
+
         /// <summary>
         /// Required. Seconds that the caller should be placed on hold before being moved onto the next action. Must be an integer between 1 and 60 seconds.
         /// </summary>
         /// <value>Required. Seconds that the caller should be placed on hold before being moved onto the next action. Must be an integer between 1 and 60 seconds.</value>
         [DataMember(Name="duration", EmitDefaultValue=false)]
         public int? Duration { get; set; }
+
         /// <summary>
         /// Menu that this action refers to. Required. Output is a Menu Summary Object. Input must be a Menu Lookup Object.
         /// </summary>
         /// <value>Menu that this action refers to. Required. Output is a Menu Summary Object. Input must be a Menu Lookup Object.</value>
         [DataMember(Name="menu", EmitDefaultValue=false)]
         public MenuSummary Menu { get; set; }
+
         /// <summary>
         /// Queue that this action refers to. Required. Output is a Queue Summary Object. Input must be a Queue Lookup Object.
         /// </summary>
         /// <value>Queue that this action refers to. Required. Output is a Queue Summary Object. Input must be a Queue Lookup Object.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public QueueSummary Queue { get; set; }
+
         /// <summary>
         /// Trunk that this action refers to. Required. Output is a Trunk Summary Object. Input must be a Trunk Lookup Object.
         /// </summary>
         /// <value>Trunk that this action refers to. Required. Output is a Trunk Summary Object. Input must be a Trunk Lookup Object.</value>
         [DataMember(Name="trunk", EmitDefaultValue=false)]
         public TrunkSummary Trunk { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -257,13 +268,18 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             // Action (string) pattern
             Regex regexAction = new Regex(@"directory|disconnect|fax|forward|greeting|hold|menu|queue|trunk|voicemail", RegexOptions.CultureInvariant);
             if (false == regexAction.Match(this.Action).Success)
             {
-                yield return new ValidationResult("Invalid value for Action, must match a pattern of /directory|disconnect|fax|forward|greeting|hold|menu|queue|trunk|voicemail/.", new [] { "Action" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Action, must match a pattern of " + regexAction, new [] { "Action" });
             }
 
             yield break;

@@ -99,15 +99,32 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //int? accountId = null;
             //List<string> filtersId = null;
-            //string filtersDirection = null;
             //string filtersFrom = null;
+            //string filtersTo = null;
+            //string filtersDirection = null;
+            //List<string> filtersExtension = null;
+            //string filtersCreatedAt = null;
             //string sortId = null;
             //string sortCreatedAt = null;
             //int? limit = null;
             //int? offset = null;
             //string fields = null;
-            //var response = instance.ListAccountSms(accountId, filtersId, filtersDirection, filtersFrom, sortId, sortCreatedAt, limit, offset, fields);
+            //var response = instance.ListAccountSms(accountId, filtersId, filtersFrom, filtersTo, filtersDirection, filtersExtension, filtersCreatedAt, sortId, sortCreatedAt, limit, offset, fields);
             //Assert.IsInstanceOf<ListSms> (response, "response is ListSms");
+        }
+        
+        /// <summary>
+        /// Test PatchAccountSms
+        /// </summary>
+        [Test]
+        public void PatchAccountSmsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? accountId = null;
+            //string smsId = null;
+            //PatchSmsParams data = null;
+            //var response = instance.PatchAccountSms(accountId, smsId, data);
+            //Assert.IsInstanceOf<SmsFull> (response, "response is SmsFull");
         }
         
     }

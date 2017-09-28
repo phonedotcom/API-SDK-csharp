@@ -28,7 +28,7 @@ namespace IO.Swagger.Api
         /// Show details of an individual Call Log entry
         /// </summary>
         /// <remarks>
-        /// See Call Logs for more detail.
+        /// Show details of an individual Call Log entry. See Call Logs for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// Show details of an individual Call Log entry
         /// </summary>
         /// <remarks>
-        /// See Call Logs for more detail.
+        /// Show details of an individual Call Log entry. See Call Logs for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -51,7 +51,7 @@ namespace IO.Swagger.Api
         /// Get a list of call details associated with your account
         /// </summary>
         /// <remarks>
-        /// See Call Logs for more detail.
+        /// Get a list of call details associated with your account. See Call Logs for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -75,7 +75,7 @@ namespace IO.Swagger.Api
         /// Get a list of call details associated with your account
         /// </summary>
         /// <remarks>
-        /// See Call Logs for more detail.
+        /// Get a list of call details associated with your account. See Call Logs for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -100,7 +100,7 @@ namespace IO.Swagger.Api
         /// Show details of an individual Call Log entry
         /// </summary>
         /// <remarks>
-        /// See Call Logs for more detail.
+        /// Show details of an individual Call Log entry. See Call Logs for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -112,7 +112,7 @@ namespace IO.Swagger.Api
         /// Show details of an individual Call Log entry
         /// </summary>
         /// <remarks>
-        /// See Call Logs for more detail.
+        /// Show details of an individual Call Log entry. See Call Logs for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -123,7 +123,7 @@ namespace IO.Swagger.Api
         /// Get a list of call details associated with your account
         /// </summary>
         /// <remarks>
-        /// See Call Logs for more detail.
+        /// Get a list of call details associated with your account. See Call Logs for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -147,7 +147,7 @@ namespace IO.Swagger.Api
         /// Get a list of call details associated with your account
         /// </summary>
         /// <remarks>
-        /// See Call Logs for more detail.
+        /// Get a list of call details associated with your account. See Call Logs for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -279,7 +279,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual Call Log entry See Call Logs for more detail.
+        /// Show details of an individual Call Log entry Show details of an individual Call Log entry. See Call Logs for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -292,7 +292,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual Call Log entry See Call Logs for more detail.
+        /// Show details of an individual Call Log entry Show details of an individual Call Log entry. See Call Logs for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -329,9 +329,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (callId != null) localVarPathParams.Add("call_id", Configuration.ApiClient.ParameterToString(callId)); // path parameter
 
@@ -358,11 +355,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<CallLogFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallLogFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallLogFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual Call Log entry See Call Logs for more detail.
+        /// Show details of an individual Call Log entry Show details of an individual Call Log entry. See Call Logs for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -376,7 +372,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual Call Log entry See Call Logs for more detail.
+        /// Show details of an individual Call Log entry Show details of an individual Call Log entry. See Call Logs for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -413,9 +409,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (callId != null) localVarPathParams.Add("call_id", Configuration.ApiClient.ParameterToString(callId)); // path parameter
 
@@ -441,11 +434,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<CallLogFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallLogFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallLogFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of call details associated with your account See Call Logs for more detail.
+        /// Get a list of call details associated with your account Get a list of call details associated with your account. See Call Logs for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -470,7 +462,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of call details associated with your account See Call Logs for more detail.
+        /// Get a list of call details associated with your account Get a list of call details associated with your account. See Call Logs for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -516,9 +508,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersStartTime != null) localVarQueryParams.Add("filters[start_time]", Configuration.ApiClient.ParameterToString(filtersStartTime)); // query parameter
@@ -557,11 +546,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListCallLogs>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListCallLogs) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListCallLogs)));
-            
         }
 
         /// <summary>
-        /// Get a list of call details associated with your account See Call Logs for more detail.
+        /// Get a list of call details associated with your account Get a list of call details associated with your account. See Call Logs for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -587,7 +575,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of call details associated with your account See Call Logs for more detail.
+        /// Get a list of call details associated with your account Get a list of call details associated with your account. See Call Logs for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -633,9 +621,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersStartTime != null) localVarQueryParams.Add("filters[start_time]", Configuration.ApiClient.ParameterToString(filtersStartTime)); // query parameter
@@ -673,7 +658,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListCallLogs>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListCallLogs) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListCallLogs)));
-            
         }
 
     }

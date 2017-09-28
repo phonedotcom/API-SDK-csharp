@@ -101,7 +101,7 @@ namespace IO.Swagger.Test
             //int? accountId = null;
             //int? mediaId = null;
             //var response = instance.DeleteAccountMedia(accountId, mediaId);
-            //Assert.IsInstanceOf<DeleteMedia> (response, "response is DeleteMedia");
+            //Assert.IsInstanceOf<DeleteEntry> (response, "response is DeleteEntry");
         }
         
         /// <summary>

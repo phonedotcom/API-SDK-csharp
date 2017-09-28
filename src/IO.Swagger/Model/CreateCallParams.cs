@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -40,7 +41,7 @@ namespace IO.Swagger.Model
         /// <param name="CalleeExtension">Callee Extension ID.</param>
         /// <param name="CalleeCallerId">Callee caller ID in E.164 format.</param>
         /// <param name="CalleePrivate">Flag to set callee ID to private.</param>
-        public CreateCallParams(string CallerPhoneNumber = default(string), int? CallerExtension = default(int?), string CallerCallerId = default(string), bool? CallerPrivate = default(bool?), string CalleePhoneNumber = default(string), int? CalleeExtension = default(int?), string CalleeCallerId = default(string), bool? CalleePrivate = default(bool?))
+        public CreateCallParams(string CallerPhoneNumber = default(string), int? CallerExtension = default(int?), string CallerCallerId = default(string), string CallerPrivate = default(string), string CalleePhoneNumber = default(string), int? CalleeExtension = default(int?), string CalleeCallerId = default(string), string CalleePrivate = default(string))
         {
             this.CallerPhoneNumber = CallerPhoneNumber;
             this.CallerExtension = CallerExtension;
@@ -58,48 +59,56 @@ namespace IO.Swagger.Model
         /// <value>Caller phone number in E.164 format</value>
         [DataMember(Name="caller_phone_number", EmitDefaultValue=false)]
         public string CallerPhoneNumber { get; set; }
+
         /// <summary>
         /// Caller Extension ID
         /// </summary>
         /// <value>Caller Extension ID</value>
         [DataMember(Name="caller_extension", EmitDefaultValue=false)]
         public int? CallerExtension { get; set; }
+
         /// <summary>
         /// Caller caller ID in E.164 format
         /// </summary>
         /// <value>Caller caller ID in E.164 format</value>
         [DataMember(Name="caller_caller_id", EmitDefaultValue=false)]
         public string CallerCallerId { get; set; }
+
         /// <summary>
         /// Flag to set caller ID to private
         /// </summary>
         /// <value>Flag to set caller ID to private</value>
         [DataMember(Name="caller_private", EmitDefaultValue=false)]
-        public bool? CallerPrivate { get; set; }
+        public string CallerPrivate { get; set; }
+
         /// <summary>
         /// Callee phone number in E.164 format
         /// </summary>
         /// <value>Callee phone number in E.164 format</value>
         [DataMember(Name="callee_phone_number", EmitDefaultValue=false)]
         public string CalleePhoneNumber { get; set; }
+
         /// <summary>
         /// Callee Extension ID
         /// </summary>
         /// <value>Callee Extension ID</value>
         [DataMember(Name="callee_extension", EmitDefaultValue=false)]
         public int? CalleeExtension { get; set; }
+
         /// <summary>
         /// Callee caller ID in E.164 format
         /// </summary>
         /// <value>Callee caller ID in E.164 format</value>
         [DataMember(Name="callee_caller_id", EmitDefaultValue=false)]
         public string CalleeCallerId { get; set; }
+
         /// <summary>
         /// Flag to set callee ID to private
         /// </summary>
         /// <value>Flag to set callee ID to private</value>
         [DataMember(Name="callee_private", EmitDefaultValue=false)]
-        public bool? CalleePrivate { get; set; }
+        public string CalleePrivate { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -225,8 +234,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

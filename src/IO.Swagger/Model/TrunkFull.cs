@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -127,48 +128,56 @@ namespace IO.Swagger.Model
         /// <value>Integer Trunk ID. Read-only.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// Name. Required.
         /// </summary>
         /// <value>Name. Required.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Fully-qualified SIP URI. Required.
         /// </summary>
         /// <value>Fully-qualified SIP URI. Required.</value>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
+
         /// <summary>
         /// Max concurrent calls. Default is 10.
         /// </summary>
         /// <value>Max concurrent calls. Default is 10.</value>
         [DataMember(Name="max_concurrent_calls", EmitDefaultValue=false)]
         public int? MaxConcurrentCalls { get; set; }
+
         /// <summary>
         /// Max minutes per month. Default is 750.
         /// </summary>
         /// <value>Max minutes per month. Default is 750.</value>
         [DataMember(Name="max_minutes_per_month", EmitDefaultValue=false)]
         public int? MaxMinutesPerMonth { get; set; }
+
         /// <summary>
         /// Greeting. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE.
         /// </summary>
         /// <value>Greeting. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE.</value>
         [DataMember(Name="greeting", EmitDefaultValue=false)]
         public MediaSummary Greeting { get; set; }
+
         /// <summary>
         /// Error Message. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE.
         /// </summary>
         /// <value>Error Message. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE.</value>
         [DataMember(Name="error_message", EmitDefaultValue=false)]
         public MediaSummary ErrorMessage { get; set; }
+
         /// <summary>
         /// Custom audio codec configuration, if any is needed. If provided, must be a simple array containing the prioritized list of desired codecs. Supported codecs are: g711u 64k, g711u 56k, g711a 64k, g711a 56k, g7231, g728, g729, g729A, g729B, g729AB, gms full, rfc2833, t38, ilbc, h263, g722, g722_1, g729D, g729E, amr, amr_wb, efr, evrc, h264, mpeg4, red, cng, SIP Info to 2833
         /// </summary>
         /// <value>Custom audio codec configuration, if any is needed. If provided, must be a simple array containing the prioritized list of desired codecs. Supported codecs are: g711u 64k, g711u 56k, g711a 64k, g711a 56k, g7231, g728, g729, g729A, g729B, g729AB, gms full, rfc2833, t38, ilbc, h263, g722, g722_1, g729D, g729E, amr, amr_wb, efr, evrc, h264, mpeg4, red, cng, SIP Info to 2833</value>
         [DataMember(Name="codecs", EmitDefaultValue=false)]
         public List<string> Codecs { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -294,8 +303,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

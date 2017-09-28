@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -45,10 +46,14 @@ namespace IO.Swagger.Model
         /// <param name="IsMonitored">Was call being monitored?.</param>
         /// <param name="CallNumber">Internal system call reference number.</param>
         /// <param name="FinalAction">Last action of call flow.</param>
-        /// <param name="CallRecording">URL of call recording if available. Empty string if call recording does not exist.</param>
+        /// <param name="VoicemailUrl">URL of voicemail if available. User may download the audio via this URL. Empty string if voicemail does not exist.</param>
+        /// <param name="VoicemailCpUrl">URL of voicemail if available. User may listen to the audio online via this URL. Empty string if voicemail does not exist.</param>
+        /// <param name="VoicemailTranscript">Transcript of voicemail if enabled and available.</param>
+        /// <param name="CallRecordingUrl">URL of call recording if available. User may download the audio via this URL. Empty string if call recording does not exist.</param>
+        /// <param name="CallRecordingCpUrl">URL of call recording if available. User may listen to the audio online via this URL. Empty string if call recording does not exist.</param>
         /// <param name="Details">A list of call flows from beginning of call to end of call..</param>
         /// <param name="CallerCnam">Internal system caller id / name.</param>
-        public CallLogFull(string Id = default(string), string Uuid = default(string), ExtensionSummary Extension = default(ExtensionSummary), string CallerId = default(string), string CalledNumber = default(string), string StartTime = default(string), string CreatedAt = default(string), string Direction = default(string), string Type = default(string), int? CallDuration = default(int?), string IsMonitored = default(string), string CallNumber = default(string), string FinalAction = default(string), string CallRecording = default(string), List<CallDetails> Details = default(List<CallDetails>), string CallerCnam = default(string))
+        public CallLogFull(string Id = default(string), string Uuid = default(string), ExtensionSummary Extension = default(ExtensionSummary), string CallerId = default(string), string CalledNumber = default(string), string StartTime = default(string), string CreatedAt = default(string), string Direction = default(string), string Type = default(string), int? CallDuration = default(int?), string IsMonitored = default(string), string CallNumber = default(string), string FinalAction = default(string), string VoicemailUrl = default(string), string VoicemailCpUrl = default(string), string VoicemailTranscript = default(string), string CallRecordingUrl = default(string), string CallRecordingCpUrl = default(string), List<CallDetails> Details = default(List<CallDetails>), string CallerCnam = default(string))
         {
             this.Id = Id;
             this.Uuid = Uuid;
@@ -63,7 +68,11 @@ namespace IO.Swagger.Model
             this.IsMonitored = IsMonitored;
             this.CallNumber = CallNumber;
             this.FinalAction = FinalAction;
-            this.CallRecording = CallRecording;
+            this.VoicemailUrl = VoicemailUrl;
+            this.VoicemailCpUrl = VoicemailCpUrl;
+            this.VoicemailTranscript = VoicemailTranscript;
+            this.CallRecordingUrl = CallRecordingUrl;
+            this.CallRecordingCpUrl = CallRecordingCpUrl;
             this.Details = Details;
             this.CallerCnam = CallerCnam;
         }
@@ -74,96 +83,140 @@ namespace IO.Swagger.Model
         /// <value>ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
         /// <summary>
         /// Internal system id, may be null
         /// </summary>
         /// <value>Internal system id, may be null</value>
         [DataMember(Name="uuid", EmitDefaultValue=false)]
         public string Uuid { get; set; }
+
         /// <summary>
         /// Account extension
         /// </summary>
         /// <value>Account extension</value>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public ExtensionSummary Extension { get; set; }
+
         /// <summary>
         /// Call made from this phone number
         /// </summary>
         /// <value>Call made from this phone number</value>
         [DataMember(Name="caller_id", EmitDefaultValue=false)]
         public string CallerId { get; set; }
+
         /// <summary>
         /// Call made to this phone number
         /// </summary>
         /// <value>Call made to this phone number</value>
         [DataMember(Name="called_number", EmitDefaultValue=false)]
         public string CalledNumber { get; set; }
+
         /// <summary>
         /// Call start time
         /// </summary>
         /// <value>Call start time</value>
         [DataMember(Name="start_time", EmitDefaultValue=false)]
         public string StartTime { get; set; }
+
         /// <summary>
         /// Call log creation time. Same as call end time + time needed to create call log
         /// </summary>
         /// <value>Call log creation time. Same as call end time + time needed to create call log</value>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
         public string CreatedAt { get; set; }
+
         /// <summary>
         /// Call direction: in or out
         /// </summary>
         /// <value>Call direction: in or out</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public string Direction { get; set; }
+
         /// <summary>
         /// Call type: call, fax, audiogram ...
         /// </summary>
         /// <value>Call type: call, fax, audiogram ...</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+
         /// <summary>
         /// Call duration in seconds
         /// </summary>
         /// <value>Call duration in seconds</value>
         [DataMember(Name="call_duration", EmitDefaultValue=false)]
         public int? CallDuration { get; set; }
+
         /// <summary>
         /// Was call being monitored?
         /// </summary>
         /// <value>Was call being monitored?</value>
         [DataMember(Name="is_monitored", EmitDefaultValue=false)]
         public string IsMonitored { get; set; }
+
         /// <summary>
         /// Internal system call reference number
         /// </summary>
         /// <value>Internal system call reference number</value>
         [DataMember(Name="call_number", EmitDefaultValue=false)]
         public string CallNumber { get; set; }
+
         /// <summary>
         /// Last action of call flow
         /// </summary>
         /// <value>Last action of call flow</value>
         [DataMember(Name="final_action", EmitDefaultValue=false)]
         public string FinalAction { get; set; }
+
         /// <summary>
-        /// URL of call recording if available. Empty string if call recording does not exist
+        /// URL of voicemail if available. User may download the audio via this URL. Empty string if voicemail does not exist
         /// </summary>
-        /// <value>URL of call recording if available. Empty string if call recording does not exist</value>
-        [DataMember(Name="call_recording", EmitDefaultValue=false)]
-        public string CallRecording { get; set; }
+        /// <value>URL of voicemail if available. User may download the audio via this URL. Empty string if voicemail does not exist</value>
+        [DataMember(Name="voicemail_url", EmitDefaultValue=false)]
+        public string VoicemailUrl { get; set; }
+
+        /// <summary>
+        /// URL of voicemail if available. User may listen to the audio online via this URL. Empty string if voicemail does not exist
+        /// </summary>
+        /// <value>URL of voicemail if available. User may listen to the audio online via this URL. Empty string if voicemail does not exist</value>
+        [DataMember(Name="voicemail_cp_url", EmitDefaultValue=false)]
+        public string VoicemailCpUrl { get; set; }
+
+        /// <summary>
+        /// Transcript of voicemail if enabled and available
+        /// </summary>
+        /// <value>Transcript of voicemail if enabled and available</value>
+        [DataMember(Name="voicemail_transcript", EmitDefaultValue=false)]
+        public string VoicemailTranscript { get; set; }
+
+        /// <summary>
+        /// URL of call recording if available. User may download the audio via this URL. Empty string if call recording does not exist
+        /// </summary>
+        /// <value>URL of call recording if available. User may download the audio via this URL. Empty string if call recording does not exist</value>
+        [DataMember(Name="call_recording_url", EmitDefaultValue=false)]
+        public string CallRecordingUrl { get; set; }
+
+        /// <summary>
+        /// URL of call recording if available. User may listen to the audio online via this URL. Empty string if call recording does not exist
+        /// </summary>
+        /// <value>URL of call recording if available. User may listen to the audio online via this URL. Empty string if call recording does not exist</value>
+        [DataMember(Name="call_recording_cp_url", EmitDefaultValue=false)]
+        public string CallRecordingCpUrl { get; set; }
+
         /// <summary>
         /// A list of call flows from beginning of call to end of call.
         /// </summary>
         /// <value>A list of call flows from beginning of call to end of call.</value>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public List<CallDetails> Details { get; set; }
+
         /// <summary>
         /// Internal system caller id / name
         /// </summary>
         /// <value>Internal system caller id / name</value>
         [DataMember(Name="caller_cnam", EmitDefaultValue=false)]
         public string CallerCnam { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -185,7 +238,11 @@ namespace IO.Swagger.Model
             sb.Append("  IsMonitored: ").Append(IsMonitored).Append("\n");
             sb.Append("  CallNumber: ").Append(CallNumber).Append("\n");
             sb.Append("  FinalAction: ").Append(FinalAction).Append("\n");
-            sb.Append("  CallRecording: ").Append(CallRecording).Append("\n");
+            sb.Append("  VoicemailUrl: ").Append(VoicemailUrl).Append("\n");
+            sb.Append("  VoicemailCpUrl: ").Append(VoicemailCpUrl).Append("\n");
+            sb.Append("  VoicemailTranscript: ").Append(VoicemailTranscript).Append("\n");
+            sb.Append("  CallRecordingUrl: ").Append(CallRecordingUrl).Append("\n");
+            sb.Append("  CallRecordingCpUrl: ").Append(CallRecordingCpUrl).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("  CallerCnam: ").Append(CallerCnam).Append("\n");
             sb.Append("}\n");
@@ -290,9 +347,29 @@ namespace IO.Swagger.Model
                     this.FinalAction.Equals(other.FinalAction)
                 ) && 
                 (
-                    this.CallRecording == other.CallRecording ||
-                    this.CallRecording != null &&
-                    this.CallRecording.Equals(other.CallRecording)
+                    this.VoicemailUrl == other.VoicemailUrl ||
+                    this.VoicemailUrl != null &&
+                    this.VoicemailUrl.Equals(other.VoicemailUrl)
+                ) && 
+                (
+                    this.VoicemailCpUrl == other.VoicemailCpUrl ||
+                    this.VoicemailCpUrl != null &&
+                    this.VoicemailCpUrl.Equals(other.VoicemailCpUrl)
+                ) && 
+                (
+                    this.VoicemailTranscript == other.VoicemailTranscript ||
+                    this.VoicemailTranscript != null &&
+                    this.VoicemailTranscript.Equals(other.VoicemailTranscript)
+                ) && 
+                (
+                    this.CallRecordingUrl == other.CallRecordingUrl ||
+                    this.CallRecordingUrl != null &&
+                    this.CallRecordingUrl.Equals(other.CallRecordingUrl)
+                ) && 
+                (
+                    this.CallRecordingCpUrl == other.CallRecordingCpUrl ||
+                    this.CallRecordingCpUrl != null &&
+                    this.CallRecordingCpUrl.Equals(other.CallRecordingCpUrl)
                 ) && 
                 (
                     this.Details == other.Details ||
@@ -343,8 +420,16 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.CallNumber.GetHashCode();
                 if (this.FinalAction != null)
                     hash = hash * 59 + this.FinalAction.GetHashCode();
-                if (this.CallRecording != null)
-                    hash = hash * 59 + this.CallRecording.GetHashCode();
+                if (this.VoicemailUrl != null)
+                    hash = hash * 59 + this.VoicemailUrl.GetHashCode();
+                if (this.VoicemailCpUrl != null)
+                    hash = hash * 59 + this.VoicemailCpUrl.GetHashCode();
+                if (this.VoicemailTranscript != null)
+                    hash = hash * 59 + this.VoicemailTranscript.GetHashCode();
+                if (this.CallRecordingUrl != null)
+                    hash = hash * 59 + this.CallRecordingUrl.GetHashCode();
+                if (this.CallRecordingCpUrl != null)
+                    hash = hash * 59 + this.CallRecordingCpUrl.GetHashCode();
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
                 if (this.CallerCnam != null)
@@ -353,8 +438,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

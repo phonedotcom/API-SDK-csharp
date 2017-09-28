@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -50,24 +51,28 @@ namespace IO.Swagger.Model
         /// <value>Hostname</value>
         [DataMember(Name="host", EmitDefaultValue=false)]
         public string Host { get; set; }
+
         /// <summary>
         /// Port number
         /// </summary>
         /// <value>Port number</value>
         [DataMember(Name="port", EmitDefaultValue=false)]
         public int? Port { get; set; }
+
         /// <summary>
         /// Username. This is the ID of the device.
         /// </summary>
         /// <value>Username. This is the ID of the device.</value>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
+
         /// <summary>
         /// Password.
         /// </summary>
         /// <value>Password.</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -161,8 +166,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

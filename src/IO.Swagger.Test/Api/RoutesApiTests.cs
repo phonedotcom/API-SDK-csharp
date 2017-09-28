@@ -87,7 +87,7 @@ namespace IO.Swagger.Test
             //int? accountId = null;
             //int? routeId = null;
             //var response = instance.DeleteAccountRoute(accountId, routeId);
-            //Assert.IsInstanceOf<DeleteRoute> (response, "response is DeleteRoute");
+            //Assert.IsInstanceOf<DeleteEntry> (response, "response is DeleteEntry");
         }
         
         /// <summary>

@@ -81,8 +81,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="mediaId">Media ID</param>
-        /// <returns>DeleteMedia</returns>
-        DeleteMedia DeleteAccountMedia (int? accountId, int? mediaId);
+        /// <returns>DeleteEntry</returns>
+        DeleteEntry DeleteAccountMedia (int? accountId, int? mediaId);
 
         /// <summary>
         /// Delete an individual media record
@@ -93,8 +93,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="mediaId">Media ID</param>
-        /// <returns>ApiResponse of DeleteMedia</returns>
-        ApiResponse<DeleteMedia> DeleteAccountMediaWithHttpInfo (int? accountId, int? mediaId);
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        ApiResponse<DeleteEntry> DeleteAccountMediaWithHttpInfo (int? accountId, int? mediaId);
         /// <summary>
         /// Show details of an individual media recording (Greeting or Hold Music)
         /// </summary>
@@ -119,10 +119,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of MediaFull</returns>
         ApiResponse<MediaFull> GetAccountMediaWithHttpInfo (int? accountId, int? mediaId);
         /// <summary>
-        /// Get a list of media recordings for an account
+        /// Get a list of media recordings for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -137,10 +137,10 @@ namespace IO.Swagger.Api
         ListMedia ListAccountMedia (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of media recordings for an account
+        /// Get a list of media recordings for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -181,10 +181,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of MediaFull</returns>
         ApiResponse<MediaFull> ReplaceAccountMediaFilesWithHttpInfo (int? accountId, int? mediaId, string json = null, System.IO.Stream file = null);
         /// <summary>
-        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        /// Update a media object to your account.
         /// </summary>
         /// <remarks>
-        /// See Account Media for more info on the properties.
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -194,10 +194,10 @@ namespace IO.Swagger.Api
         MediaFull ReplaceAccountMediaTts (int? accountId, int? mediaId, CreateMediaParams data = null);
 
         /// <summary>
-        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        /// Update a media object to your account.
         /// </summary>
         /// <remarks>
-        /// See Account Media for more info on the properties.
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -264,8 +264,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="mediaId">Media ID</param>
-        /// <returns>Task of DeleteMedia</returns>
-        System.Threading.Tasks.Task<DeleteMedia> DeleteAccountMediaAsync (int? accountId, int? mediaId);
+        /// <returns>Task of DeleteEntry</returns>
+        System.Threading.Tasks.Task<DeleteEntry> DeleteAccountMediaAsync (int? accountId, int? mediaId);
 
         /// <summary>
         /// Delete an individual media record
@@ -276,8 +276,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="mediaId">Media ID</param>
-        /// <returns>Task of ApiResponse (DeleteMedia)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteMedia>> DeleteAccountMediaAsyncWithHttpInfo (int? accountId, int? mediaId);
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountMediaAsyncWithHttpInfo (int? accountId, int? mediaId);
         /// <summary>
         /// Show details of an individual media recording (Greeting or Hold Music)
         /// </summary>
@@ -302,10 +302,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (MediaFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<MediaFull>> GetAccountMediaAsyncWithHttpInfo (int? accountId, int? mediaId);
         /// <summary>
-        /// Get a list of media recordings for an account
+        /// Get a list of media recordings for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -320,10 +320,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListMedia> ListAccountMediaAsync (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of media recordings for an account
+        /// Get a list of media recordings for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -364,10 +364,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (MediaFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<MediaFull>> ReplaceAccountMediaFilesAsyncWithHttpInfo (int? accountId, int? mediaId, string json = null, System.IO.Stream file = null);
         /// <summary>
-        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        /// Update a media object to your account.
         /// </summary>
         /// <remarks>
-        /// See Account Media for more info on the properties.
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -377,10 +377,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<MediaFull> ReplaceAccountMediaTtsAsync (int? accountId, int? mediaId, CreateMediaParams data = null);
 
         /// <summary>
-        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        /// Update a media object to your account.
         /// </summary>
         /// <remarks>
-        /// See Account Media for more info on the properties.
+        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -550,9 +550,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (json != null) localVarFormParams.Add("json", Configuration.ApiClient.ParameterToString(json)); // form parameter
             if (file != null) localVarFileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
@@ -580,7 +577,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<MediaFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
-            
         }
 
         /// <summary>
@@ -634,9 +630,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (json != null) localVarFormParams.Add("json", Configuration.ApiClient.ParameterToString(json)); // form parameter
             if (file != null) localVarFileParams.Add("file", Configuration.ApiClient.ParameterToFile("file", file));
@@ -663,7 +656,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<MediaFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
-            
         }
 
         /// <summary>
@@ -714,9 +706,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -750,7 +739,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<MediaFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
-            
         }
 
         /// <summary>
@@ -802,9 +790,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -837,7 +822,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<MediaFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
-            
         }
 
         /// <summary>
@@ -846,10 +830,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="mediaId">Media ID</param>
-        /// <returns>DeleteMedia</returns>
-        public DeleteMedia DeleteAccountMedia (int? accountId, int? mediaId)
+        /// <returns>DeleteEntry</returns>
+        public DeleteEntry DeleteAccountMedia (int? accountId, int? mediaId)
         {
-             ApiResponse<DeleteMedia> localVarResponse = DeleteAccountMediaWithHttpInfo(accountId, mediaId);
+             ApiResponse<DeleteEntry> localVarResponse = DeleteAccountMediaWithHttpInfo(accountId, mediaId);
              return localVarResponse.Data;
         }
 
@@ -859,8 +843,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="mediaId">Media ID</param>
-        /// <returns>ApiResponse of DeleteMedia</returns>
-        public ApiResponse< DeleteMedia > DeleteAccountMediaWithHttpInfo (int? accountId, int? mediaId)
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        public ApiResponse< DeleteEntry > DeleteAccountMediaWithHttpInfo (int? accountId, int? mediaId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -891,9 +875,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
 
@@ -917,10 +898,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteMedia>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteMedia) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteMedia)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
@@ -929,10 +909,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="mediaId">Media ID</param>
-        /// <returns>Task of DeleteMedia</returns>
-        public async System.Threading.Tasks.Task<DeleteMedia> DeleteAccountMediaAsync (int? accountId, int? mediaId)
+        /// <returns>Task of DeleteEntry</returns>
+        public async System.Threading.Tasks.Task<DeleteEntry> DeleteAccountMediaAsync (int? accountId, int? mediaId)
         {
-             ApiResponse<DeleteMedia> localVarResponse = await DeleteAccountMediaAsyncWithHttpInfo(accountId, mediaId);
+             ApiResponse<DeleteEntry> localVarResponse = await DeleteAccountMediaAsyncWithHttpInfo(accountId, mediaId);
              return localVarResponse.Data;
 
         }
@@ -943,8 +923,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="mediaId">Media ID</param>
-        /// <returns>Task of ApiResponse (DeleteMedia)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DeleteMedia>> DeleteAccountMediaAsyncWithHttpInfo (int? accountId, int? mediaId)
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountMediaAsyncWithHttpInfo (int? accountId, int? mediaId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -975,9 +955,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
 
@@ -1000,10 +977,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteMedia>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteMedia) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteMedia)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
@@ -1057,9 +1033,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
 
@@ -1086,7 +1059,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<MediaFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
-            
         }
 
         /// <summary>
@@ -1141,9 +1113,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
 
@@ -1169,11 +1138,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<MediaFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of media recordings for an account See Account Menus for more info on the properties.
+        /// Get a list of media recordings for an account. Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1192,7 +1160,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of media recordings for an account See Account Menus for more info on the properties.
+        /// Get a list of media recordings for an account. Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1232,9 +1200,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -1267,11 +1232,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListMedia>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListMedia) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListMedia)));
-            
         }
 
         /// <summary>
-        /// Get a list of media recordings for an account See Account Menus for more info on the properties.
+        /// Get a list of media recordings for an account. Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1291,7 +1255,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of media recordings for an account See Account Menus for more info on the properties.
+        /// Get a list of media recordings for an account. Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1331,9 +1295,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -1365,7 +1326,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListMedia>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListMedia) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListMedia)));
-            
         }
 
         /// <summary>
@@ -1411,7 +1371,7 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "multipart/form-data"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1423,9 +1383,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
             if (json != null) localVarFormParams.Add("json", Configuration.ApiClient.ParameterToString(json)); // form parameter
@@ -1454,7 +1411,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<MediaFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
-            
         }
 
         /// <summary>
@@ -1501,7 +1457,7 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "multipart/form-data"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1513,9 +1469,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
             if (json != null) localVarFormParams.Add("json", Configuration.ApiClient.ParameterToString(json)); // form parameter
@@ -1543,11 +1496,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<MediaFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
-            
         }
 
         /// <summary>
-        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties.
+        /// Update a media object to your account. Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1561,7 +1513,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties.
+        /// Update a media object to your account. Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1599,9 +1551,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1636,11 +1585,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<MediaFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
-            
         }
 
         /// <summary>
-        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties.
+        /// Update a media object to your account. Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1655,7 +1603,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties.
+        /// Update a media object to your account. Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1693,9 +1641,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (mediaId != null) localVarPathParams.Add("media_id", Configuration.ApiClient.ParameterToString(mediaId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1729,7 +1674,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<MediaFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MediaFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaFull)));
-            
         }
 
     }

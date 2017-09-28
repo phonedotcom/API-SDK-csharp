@@ -78,6 +78,19 @@ namespace IO.Swagger.Test
         }
         
         /// <summary>
+        /// Test DeleteAccountDevice
+        /// </summary>
+        [Test]
+        public void DeleteAccountDeviceTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? accountId = null;
+            //int? deviceId = null;
+            //var response = instance.DeleteAccountDevice(accountId, deviceId);
+            //Assert.IsInstanceOf<DeleteEntry> (response, "response is DeleteEntry");
+        }
+        
+        /// <summary>
         /// Test GetAccountDevice
         /// </summary>
         [Test]

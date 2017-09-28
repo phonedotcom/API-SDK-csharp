@@ -325,9 +325,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (filtersCountryCode != null) localVarQueryParams.Add("filters[country_code]", Configuration.ApiClient.ParameterToString(filtersCountryCode)); // query parameter
             if (filtersNpa != null) localVarQueryParams.Add("filters[npa]", Configuration.ApiClient.ParameterToString(filtersNpa)); // query parameter
             if (filtersNxx != null) localVarQueryParams.Add("filters[nxx]", Configuration.ApiClient.ParameterToString(filtersNxx)); // query parameter
@@ -370,7 +367,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListPhoneNumbersRegions>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListPhoneNumbersRegions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListPhoneNumbersRegions)));
-            
         }
 
         /// <summary>
@@ -451,9 +447,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (filtersCountryCode != null) localVarQueryParams.Add("filters[country_code]", Configuration.ApiClient.ParameterToString(filtersCountryCode)); // query parameter
             if (filtersNpa != null) localVarQueryParams.Add("filters[npa]", Configuration.ApiClient.ParameterToString(filtersNpa)); // query parameter
             if (filtersNxx != null) localVarQueryParams.Add("filters[nxx]", Configuration.ApiClient.ParameterToString(filtersNxx)); // query parameter
@@ -495,7 +488,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListPhoneNumbersRegions>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListPhoneNumbersRegions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListPhoneNumbersRegions)));
-            
         }
 
     }

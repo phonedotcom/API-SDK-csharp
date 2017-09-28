@@ -4,20 +4,20 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateRoute**](RoutesApi.md#createroute) | **POST** /accounts/{account_id}/routes | Add a new address book contact for an extension
-[**DeleteAccountRoute**](RoutesApi.md#deleteaccountroute) | **DELETE** /accounts/{account_id}/routes/{route_id} | 
-[**GetAccountRoute**](RoutesApi.md#getaccountroute) | **GET** /accounts/{account_id}/routes/{route_id} | Show details of an individual route
-[**ListAccountRoutes**](RoutesApi.md#listaccountroutes) | **GET** /accounts/{account_id}/routes | Get a list of routes for an account
-[**ReplaceAccountRoute**](RoutesApi.md#replaceaccountroute) | **PUT** /accounts/{account_id}/routes/{route_id} | 
+[**CreateRoute**](RoutesApi.md#createroute) | **POST** /accounts/{account_id}/routes | Add a new route to the account.
+[**DeleteAccountRoute**](RoutesApi.md#deleteaccountroute) | **DELETE** /accounts/{account_id}/routes/{route_id} | Delete a route from the account.
+[**GetAccountRoute**](RoutesApi.md#getaccountroute) | **GET** /accounts/{account_id}/routes/{route_id} | Show details of an individual route.
+[**ListAccountRoutes**](RoutesApi.md#listaccountroutes) | **GET** /accounts/{account_id}/routes | Get a list of routes for an account.
+[**ReplaceAccountRoute**](RoutesApi.md#replaceaccountroute) | **PUT** /accounts/{account_id}/routes/{route_id} | Update the information of a route.
 
 
 <a name="createroute"></a>
 # **CreateRoute**
 > RouteFull CreateRoute (int? accountId, CreateRouteParams data = null)
 
-Add a new address book contact for an extension
+Add a new route to the account.
 
-For more on the input fields, see Intro to Routes.
+Add a new route to the account. See Intro to Routes for more info on the properties.
 
 ### Example
 ```csharp
@@ -33,7 +33,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -45,7 +44,7 @@ namespace Example
 
             try
             {
-                // Add a new address book contact for an extension
+                // Add a new route to the account.
                 RouteFull result = apiInstance.CreateRoute(accountId, data);
                 Debug.WriteLine(result);
             }
@@ -82,11 +81,11 @@ Name | Type | Description  | Notes
 
 <a name="deleteaccountroute"></a>
 # **DeleteAccountRoute**
-> DeleteRoute DeleteAccountRoute (int? accountId, int? routeId)
+> DeleteEntry DeleteAccountRoute (int? accountId, int? routeId)
 
+Delete a route from the account.
 
-
-
+Delete a route from the account. See Intro to Routes for more info on the properties.
 
 ### Example
 ```csharp
@@ -102,7 +101,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -114,8 +112,8 @@ namespace Example
 
             try
             {
-                // 
-                DeleteRoute result = apiInstance.DeleteAccountRoute(accountId, routeId);
+                // Delete a route from the account.
+                DeleteEntry result = apiInstance.DeleteAccountRoute(accountId, routeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -136,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteRoute**](DeleteRoute.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -153,9 +151,9 @@ Name | Type | Description  | Notes
 # **GetAccountRoute**
 > RouteFull GetAccountRoute (int? accountId, int? routeId)
 
-Show details of an individual route
+Show details of an individual route.
 
-This service shows the details of an individual route.
+Show details of an individual route. See Intro to Routes for more info on the properties.
 
 ### Example
 ```csharp
@@ -171,7 +169,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -183,7 +180,7 @@ namespace Example
 
             try
             {
-                // Show details of an individual route
+                // Show details of an individual route.
                 RouteFull result = apiInstance.GetAccountRoute(accountId, routeId);
                 Debug.WriteLine(result);
             }
@@ -222,9 +219,9 @@ Name | Type | Description  | Notes
 # **ListAccountRoutes**
 > ListRoutes ListAccountRoutes (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null)
 
-Get a list of routes for an account
+Get a list of routes for an account.
 
-See Intro to Routes for more info on the properties.
+Get a list of routes for an account. See Intro to Routes for more info on the properties.
 
 ### Example
 ```csharp
@@ -240,7 +237,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -258,7 +254,7 @@ namespace Example
 
             try
             {
-                // Get a list of routes for an account
+                // Get a list of routes for an account.
                 ListRoutes result = apiInstance.ListAccountRoutes(accountId, filtersId, filtersName, sortId, sortName, limit, offset, fields);
                 Debug.WriteLine(result);
             }
@@ -303,9 +299,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountRoute**
 > RouteFull ReplaceAccountRoute (int? accountId, int? routeId, CreateRouteParams data = null)
 
+Update the information of a route.
 
-
-For more on the input fields, see Intro to Routes.
+Update the information of a route. See Intro to Routes for more info on the properties.
 
 ### Example
 ```csharp
@@ -321,7 +317,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -334,7 +329,7 @@ namespace Example
 
             try
             {
-                // 
+                // Update the information of a route.
                 RouteFull result = apiInstance.ReplaceAccountRoute(accountId, routeId, data);
                 Debug.WriteLine(result);
             }

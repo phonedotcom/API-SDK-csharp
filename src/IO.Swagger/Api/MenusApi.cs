@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create an individual menu
+        /// Create an individual menu.
         /// </summary>
         /// <remarks>
-        /// This service creates an individual menu. See Account Menus for more info on the properties.
+        /// Create an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -37,10 +37,10 @@ namespace IO.Swagger.Api
         MenuFull CreateAccountMenu (int? accountId, CreateMenuParams data = null);
 
         /// <summary>
-        /// Create an individual menu
+        /// Create an individual menu.
         /// </summary>
         /// <remarks>
-        /// This service creates an individual menu. See Account Menus for more info on the properties.
+        /// Create an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -48,33 +48,33 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of MenuFull</returns>
         ApiResponse<MenuFull> CreateAccountMenuWithHttpInfo (int? accountId, CreateMenuParams data = null);
         /// <summary>
-        /// Delete an individual menu
+        /// Delete an individual menu.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Delete an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="menuId">Menu ID</param>
-        /// <returns>DeleteMenu</returns>
-        DeleteMenu DeleteAccountMenu (int? accountId, int? menuId);
+        /// <returns>DeleteEntry</returns>
+        DeleteEntry DeleteAccountMenu (int? accountId, int? menuId);
 
         /// <summary>
-        /// Delete an individual menu
+        /// Delete an individual menu.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Delete an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="menuId">Menu ID</param>
-        /// <returns>ApiResponse of DeleteMenu</returns>
-        ApiResponse<DeleteMenu> DeleteAccountMenuWithHttpInfo (int? accountId, int? menuId);
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        ApiResponse<DeleteEntry> DeleteAccountMenuWithHttpInfo (int? accountId, int? menuId);
         /// <summary>
-        /// Show details of an individual menu
+        /// Show details of an individual menu.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Menu.
+        /// Show details of an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -83,10 +83,10 @@ namespace IO.Swagger.Api
         MenuFull GetAccountMenu (int? accountId, int? menuId);
 
         /// <summary>
-        /// Show details of an individual menu
+        /// Show details of an individual menu.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Menu.
+        /// Show details of an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -94,10 +94,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of MenuFull</returns>
         ApiResponse<MenuFull> GetAccountMenuWithHttpInfo (int? accountId, int? menuId);
         /// <summary>
-        /// Get a list of menus for an account
+        /// Get a list of menus for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Get a list of menus for an account. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -112,10 +112,10 @@ namespace IO.Swagger.Api
         ListMenus ListAccountMenus (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of menus for an account
+        /// Get a list of menus for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Get a list of menus for an account. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -129,10 +129,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ListMenus</returns>
         ApiResponse<ListMenus> ListAccountMenusWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Replace an individual menu
+        /// Replace an individual menu.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Replace an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -142,10 +142,10 @@ namespace IO.Swagger.Api
         MenuFull ReplaceAccountMenu (int? accountId, int? menuId, ReplaceMenuParams data = null);
 
         /// <summary>
-        /// Replace an individual menu
+        /// Replace an individual menu.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Replace an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -156,10 +156,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create an individual menu
+        /// Create an individual menu.
         /// </summary>
         /// <remarks>
-        /// This service creates an individual menu. See Account Menus for more info on the properties.
+        /// Create an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -168,10 +168,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<MenuFull> CreateAccountMenuAsync (int? accountId, CreateMenuParams data = null);
 
         /// <summary>
-        /// Create an individual menu
+        /// Create an individual menu.
         /// </summary>
         /// <remarks>
-        /// This service creates an individual menu. See Account Menus for more info on the properties.
+        /// Create an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -179,33 +179,33 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (MenuFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<MenuFull>> CreateAccountMenuAsyncWithHttpInfo (int? accountId, CreateMenuParams data = null);
         /// <summary>
-        /// Delete an individual menu
+        /// Delete an individual menu.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Delete an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="menuId">Menu ID</param>
-        /// <returns>Task of DeleteMenu</returns>
-        System.Threading.Tasks.Task<DeleteMenu> DeleteAccountMenuAsync (int? accountId, int? menuId);
+        /// <returns>Task of DeleteEntry</returns>
+        System.Threading.Tasks.Task<DeleteEntry> DeleteAccountMenuAsync (int? accountId, int? menuId);
 
         /// <summary>
-        /// Delete an individual menu
+        /// Delete an individual menu.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Delete an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="menuId">Menu ID</param>
-        /// <returns>Task of ApiResponse (DeleteMenu)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteMenu>> DeleteAccountMenuAsyncWithHttpInfo (int? accountId, int? menuId);
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountMenuAsyncWithHttpInfo (int? accountId, int? menuId);
         /// <summary>
-        /// Show details of an individual menu
+        /// Show details of an individual menu.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Menu.
+        /// Show details of an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -214,10 +214,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<MenuFull> GetAccountMenuAsync (int? accountId, int? menuId);
 
         /// <summary>
-        /// Show details of an individual menu
+        /// Show details of an individual menu.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual Menu.
+        /// Show details of an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -225,10 +225,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (MenuFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<MenuFull>> GetAccountMenuAsyncWithHttpInfo (int? accountId, int? menuId);
         /// <summary>
-        /// Get a list of menus for an account
+        /// Get a list of menus for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Get a list of menus for an account. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -243,10 +243,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListMenus> ListAccountMenusAsync (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of menus for an account
+        /// Get a list of menus for an account.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Get a list of menus for an account. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -260,10 +260,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ListMenus)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListMenus>> ListAccountMenusAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Replace an individual menu
+        /// Replace an individual menu.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Replace an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -273,10 +273,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<MenuFull> ReplaceAccountMenuAsync (int? accountId, int? menuId, ReplaceMenuParams data = null);
 
         /// <summary>
-        /// Replace an individual menu
+        /// Replace an individual menu.
         /// </summary>
         /// <remarks>
-        /// See Account Menus for more info on the properties.
+        /// Replace an individual menu. See Account Menus for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -397,7 +397,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Create an individual menu This service creates an individual menu. See Account Menus for more info on the properties.
+        /// Create an individual menu. Create an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -410,7 +410,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Create an individual menu This service creates an individual menu. See Account Menus for more info on the properties.
+        /// Create an individual menu. Create an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -444,9 +444,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -480,11 +477,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<MenuFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MenuFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MenuFull)));
-            
         }
 
         /// <summary>
-        /// Create an individual menu This service creates an individual menu. See Account Menus for more info on the properties.
+        /// Create an individual menu. Create an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -498,7 +494,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Create an individual menu This service creates an individual menu. See Account Menus for more info on the properties.
+        /// Create an individual menu. Create an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -532,9 +528,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -567,30 +560,29 @@ namespace IO.Swagger.Api
             return new ApiResponse<MenuFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MenuFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MenuFull)));
-            
         }
 
         /// <summary>
-        /// Delete an individual menu See Account Menus for more info on the properties.
+        /// Delete an individual menu. Delete an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="menuId">Menu ID</param>
-        /// <returns>DeleteMenu</returns>
-        public DeleteMenu DeleteAccountMenu (int? accountId, int? menuId)
+        /// <returns>DeleteEntry</returns>
+        public DeleteEntry DeleteAccountMenu (int? accountId, int? menuId)
         {
-             ApiResponse<DeleteMenu> localVarResponse = DeleteAccountMenuWithHttpInfo(accountId, menuId);
+             ApiResponse<DeleteEntry> localVarResponse = DeleteAccountMenuWithHttpInfo(accountId, menuId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete an individual menu See Account Menus for more info on the properties.
+        /// Delete an individual menu. Delete an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="menuId">Menu ID</param>
-        /// <returns>ApiResponse of DeleteMenu</returns>
-        public ApiResponse< DeleteMenu > DeleteAccountMenuWithHttpInfo (int? accountId, int? menuId)
+        /// <returns>ApiResponse of DeleteEntry</returns>
+        public ApiResponse< DeleteEntry > DeleteAccountMenuWithHttpInfo (int? accountId, int? menuId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -621,9 +613,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menu_id", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
 
@@ -647,34 +636,33 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteMenu>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteMenu) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteMenu)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        /// Delete an individual menu See Account Menus for more info on the properties.
+        /// Delete an individual menu. Delete an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="menuId">Menu ID</param>
-        /// <returns>Task of DeleteMenu</returns>
-        public async System.Threading.Tasks.Task<DeleteMenu> DeleteAccountMenuAsync (int? accountId, int? menuId)
+        /// <returns>Task of DeleteEntry</returns>
+        public async System.Threading.Tasks.Task<DeleteEntry> DeleteAccountMenuAsync (int? accountId, int? menuId)
         {
-             ApiResponse<DeleteMenu> localVarResponse = await DeleteAccountMenuAsyncWithHttpInfo(accountId, menuId);
+             ApiResponse<DeleteEntry> localVarResponse = await DeleteAccountMenuAsyncWithHttpInfo(accountId, menuId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Delete an individual menu See Account Menus for more info on the properties.
+        /// Delete an individual menu. Delete an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="menuId">Menu ID</param>
-        /// <returns>Task of ApiResponse (DeleteMenu)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DeleteMenu>> DeleteAccountMenuAsyncWithHttpInfo (int? accountId, int? menuId)
+        /// <returns>Task of ApiResponse (DeleteEntry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteEntry>> DeleteAccountMenuAsyncWithHttpInfo (int? accountId, int? menuId)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -705,9 +693,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menu_id", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
 
@@ -730,14 +715,13 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<DeleteMenu>(localVarStatusCode,
+            return new ApiResponse<DeleteEntry>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DeleteMenu) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteMenu)));
-            
+                (DeleteEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteEntry)));
         }
 
         /// <summary>
-        /// Show details of an individual menu This service shows the details of an individual Menu.
+        /// Show details of an individual menu. Show details of an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -750,7 +734,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual menu This service shows the details of an individual Menu.
+        /// Show details of an individual menu. Show details of an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -787,9 +771,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menu_id", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
 
@@ -816,11 +797,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<MenuFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MenuFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MenuFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual menu This service shows the details of an individual Menu.
+        /// Show details of an individual menu. Show details of an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -834,7 +814,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual menu This service shows the details of an individual Menu.
+        /// Show details of an individual menu. Show details of an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -871,9 +851,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menu_id", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
 
@@ -899,11 +876,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<MenuFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MenuFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MenuFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of menus for an account See Account Menus for more info on the properties.
+        /// Get a list of menus for an account. Get a list of menus for an account. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -922,7 +898,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of menus for an account See Account Menus for more info on the properties.
+        /// Get a list of menus for an account. Get a list of menus for an account. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -962,9 +938,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -997,11 +970,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListMenus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListMenus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListMenus)));
-            
         }
 
         /// <summary>
-        /// Get a list of menus for an account See Account Menus for more info on the properties.
+        /// Get a list of menus for an account. Get a list of menus for an account. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1021,7 +993,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of menus for an account See Account Menus for more info on the properties.
+        /// Get a list of menus for an account. Get a list of menus for an account. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1061,9 +1033,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -1095,11 +1064,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListMenus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListMenus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListMenus)));
-            
         }
 
         /// <summary>
-        /// Replace an individual menu See Account Menus for more info on the properties.
+        /// Replace an individual menu. Replace an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1113,7 +1081,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace an individual menu See Account Menus for more info on the properties.
+        /// Replace an individual menu. Replace an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1151,9 +1119,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menu_id", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1188,11 +1153,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<MenuFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MenuFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MenuFull)));
-            
         }
 
         /// <summary>
-        /// Replace an individual menu See Account Menus for more info on the properties.
+        /// Replace an individual menu. Replace an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1207,7 +1171,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Replace an individual menu See Account Menus for more info on the properties.
+        /// Replace an individual menu. Replace an individual menu. See Account Menus for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1245,9 +1209,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (menuId != null) localVarPathParams.Add("menu_id", Configuration.ApiClient.ParameterToString(menuId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1281,7 +1242,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<MenuFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MenuFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MenuFull)));
-            
         }
 
     }

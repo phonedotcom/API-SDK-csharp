@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -48,18 +49,21 @@ namespace IO.Swagger.Model
         /// <value>Can be \&quot;extension\&quot; or \&quot;application\&quot;</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+
         /// <summary>
         /// Required if type &#x3D; \&quot;extension\&quot;. Extension that messages should be directed to. Output is an Extension Summary Object. Input must be an Extension Lookup Object.
         /// </summary>
         /// <value>Required if type &#x3D; \&quot;extension\&quot;. Extension that messages should be directed to. Output is an Extension Summary Object. Input must be an Extension Lookup Object.</value>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public ExtensionSummary Extension { get; set; }
+
         /// <summary>
         /// Required if type &#x3D; \&quot;application\&quot;. Application that messages should be directed to. Output is an Application Summary Object. Input must be an Application Lookup Object.
         /// </summary>
         /// <value>Required if type &#x3D; \&quot;application\&quot;. Application that messages should be directed to. Output is an Application Summary Object. Input must be an Application Lookup Object.</value>
         [DataMember(Name="application", EmitDefaultValue=false)]
         public ApplicationSummary Application { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -145,13 +149,18 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             // Type (string) pattern
             Regex regexType = new Regex(@"extension|application", RegexOptions.CultureInvariant);
             if (false == regexType.Match(this.Type).Success)
             {
-                yield return new ValidationResult("Invalid value for Type, must match a pattern of /extension|application/.", new [] { "Type" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Type, must match a pattern of " + regexType, new [] { "Type" });
             }
 
             yield break;

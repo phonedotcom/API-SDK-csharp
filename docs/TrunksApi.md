@@ -4,20 +4,20 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountTrunk**](TrunksApi.md#createaccounttrunk) | **POST** /accounts/{account_id}/trunks | Add a trunk record with SIP information
-[**DeleteAccountTrunk**](TrunksApi.md#deleteaccounttrunk) | **DELETE** /accounts/{account_id}/trunks/{trunk_id} | Delete a trunk from account
-[**GetAccountTrunk**](TrunksApi.md#getaccounttrunk) | **GET** /accounts/{account_id}/trunks/{trunk_id} | Show details of an individual trunk
-[**ListAccountTrunks**](TrunksApi.md#listaccounttrunks) | **GET** /accounts/{account_id}/trunks | Get a list of trunks for an account
-[**ReplaceAccountTrunk**](TrunksApi.md#replaceaccounttrunk) | **PUT** /accounts/{account_id}/trunks/{trunk_id} | Replace parameters in a trunk
+[**CreateAccountTrunk**](TrunksApi.md#createaccounttrunk) | **POST** /accounts/{account_id}/trunks | Add a trunk record with SIP information.
+[**DeleteAccountTrunk**](TrunksApi.md#deleteaccounttrunk) | **DELETE** /accounts/{account_id}/trunks/{trunk_id} | Delete a trunk from account.
+[**GetAccountTrunk**](TrunksApi.md#getaccounttrunk) | **GET** /accounts/{account_id}/trunks/{trunk_id} | Show details of an individual trunk.
+[**ListAccountTrunks**](TrunksApi.md#listaccounttrunks) | **GET** /accounts/{account_id}/trunks | Get a list of trunks for an account.
+[**ReplaceAccountTrunk**](TrunksApi.md#replaceaccounttrunk) | **PUT** /accounts/{account_id}/trunks/{trunk_id} | Replace parameters in a trunk.
 
 
 <a name="createaccounttrunk"></a>
 # **CreateAccountTrunk**
 > TrunkFull CreateAccountTrunk (int? accountId, CreateTrunkParams data)
 
-Add a trunk record with SIP information
+Add a trunk record with SIP information.
 
-For more on the input fields, see Account Trunks.
+Add a trunk record with SIP information. See Account Trunks for more info on the properties.
 
 ### Example
 ```csharp
@@ -33,7 +33,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -45,7 +44,7 @@ namespace Example
 
             try
             {
-                // Add a trunk record with SIP information
+                // Add a trunk record with SIP information.
                 TrunkFull result = apiInstance.CreateAccountTrunk(accountId, data);
                 Debug.WriteLine(result);
             }
@@ -82,11 +81,11 @@ Name | Type | Description  | Notes
 
 <a name="deleteaccounttrunk"></a>
 # **DeleteAccountTrunk**
-> DeleteTrunk DeleteAccountTrunk (int? accountId, int? trunkId)
+> DeleteEntry DeleteAccountTrunk (int? accountId, int? trunkId)
 
-Delete a trunk from account
+Delete a trunk from account.
 
-This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+Delete a trunk from account. See Account Trunks for more info on the properties.
 
 ### Example
 ```csharp
@@ -102,7 +101,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -114,8 +112,8 @@ namespace Example
 
             try
             {
-                // Delete a trunk from account
-                DeleteTrunk result = apiInstance.DeleteAccountTrunk(accountId, trunkId);
+                // Delete a trunk from account.
+                DeleteEntry result = apiInstance.DeleteAccountTrunk(accountId, trunkId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -136,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteTrunk**](DeleteTrunk.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -153,9 +151,9 @@ Name | Type | Description  | Notes
 # **GetAccountTrunk**
 > TrunkFull GetAccountTrunk (int? accountId, int? trunkId)
 
-Show details of an individual trunk
+Show details of an individual trunk.
 
-This service shows the details of an individual Trunk.
+Show details of an individual trunk. See Account Trunks for more info on the properties.
 
 ### Example
 ```csharp
@@ -171,7 +169,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -183,7 +180,7 @@ namespace Example
 
             try
             {
-                // Show details of an individual trunk
+                // Show details of an individual trunk.
                 TrunkFull result = apiInstance.GetAccountTrunk(accountId, trunkId);
                 Debug.WriteLine(result);
             }
@@ -222,9 +219,9 @@ Name | Type | Description  | Notes
 # **ListAccountTrunks**
 > ListTrunks ListAccountTrunks (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null)
 
-Get a list of trunks for an account
+Get a list of trunks for an account.
 
-See Account Trunks for more info on the properties.
+Get a list of trunks for an account. See Account Trunks for more info on the properties.
 
 ### Example
 ```csharp
@@ -240,7 +237,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -258,7 +254,7 @@ namespace Example
 
             try
             {
-                // Get a list of trunks for an account
+                // Get a list of trunks for an account.
                 ListTrunks result = apiInstance.ListAccountTrunks(accountId, filtersId, filtersName, sortId, sortName, limit, offset, fields);
                 Debug.WriteLine(result);
             }
@@ -303,9 +299,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountTrunk**
 > TrunkFull ReplaceAccountTrunk (int? accountId, int? trunkId, CreateTrunkParams data)
 
-Replace parameters in a trunk
+Replace parameters in a trunk.
 
-For more on the input fields, see Account Trunks.
+Replace parameters in a trunk. See Account Trunks for more info on the properties.
 
 ### Example
 ```csharp
@@ -321,7 +317,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -334,7 +329,7 @@ namespace Example
 
             try
             {
-                // Replace parameters in a trunk
+                // Replace parameters in a trunk.
                 TrunkFull result = apiInstance.ReplaceAccountTrunk(accountId, trunkId, data);
                 Debug.WriteLine(result);
             }

@@ -48,10 +48,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ExpressServiceCodeFull</returns>
         ApiResponse<ExpressServiceCodeFull> GetAccountExpressSrvCodeWithHttpInfo (int? accountId, int? codeId);
         /// <summary>
-        /// Get the Express Service Code associated with your account in list format
+        /// Get the Express Service Code associated with your account in list format.
         /// </summary>
         /// <remarks>
-        /// See Express Service Codes for more detail.
+        /// Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -60,10 +60,10 @@ namespace IO.Swagger.Api
         ListExpressServiceCodes ListAccountExpressSrvCodes (int? accountId, List<string> filtersId = null);
 
         /// <summary>
-        /// Get the Express Service Code associated with your account in list format
+        /// Get the Express Service Code associated with your account in list format.
         /// </summary>
         /// <remarks>
-        /// See Express Service Codes for more detail.
+        /// Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -96,10 +96,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ExpressServiceCodeFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExpressServiceCodeFull>> GetAccountExpressSrvCodeAsyncWithHttpInfo (int? accountId, int? codeId);
         /// <summary>
-        /// Get the Express Service Code associated with your account in list format
+        /// Get the Express Service Code associated with your account in list format.
         /// </summary>
         /// <remarks>
-        /// See Express Service Codes for more detail.
+        /// Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -108,10 +108,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListExpressServiceCodes> ListAccountExpressSrvCodesAsync (int? accountId, List<string> filtersId = null);
 
         /// <summary>
-        /// Get the Express Service Code associated with your account in list format
+        /// Get the Express Service Code associated with your account in list format.
         /// </summary>
         /// <remarks>
-        /// See Express Service Codes for more detail.
+        /// Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -281,9 +281,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (codeId != null) localVarPathParams.Add("code_id", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
 
@@ -310,7 +307,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ExpressServiceCodeFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExpressServiceCodeFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExpressServiceCodeFull)));
-            
         }
 
         /// <summary>
@@ -365,9 +361,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (codeId != null) localVarPathParams.Add("code_id", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
 
@@ -393,11 +386,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ExpressServiceCodeFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExpressServiceCodeFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExpressServiceCodeFull)));
-            
         }
 
         /// <summary>
-        /// Get the Express Service Code associated with your account in list format See Express Service Codes for more detail.
+        /// Get the Express Service Code associated with your account in list format. Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -410,7 +402,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get the Express Service Code associated with your account in list format See Express Service Codes for more detail.
+        /// Get the Express Service Code associated with your account in list format. Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -444,9 +436,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
 
@@ -473,11 +462,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListExpressServiceCodes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListExpressServiceCodes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListExpressServiceCodes)));
-            
         }
 
         /// <summary>
-        /// Get the Express Service Code associated with your account in list format See Express Service Codes for more detail.
+        /// Get the Express Service Code associated with your account in list format. Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -491,7 +479,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get the Express Service Code associated with your account in list format See Express Service Codes for more detail.
+        /// Get the Express Service Code associated with your account in list format. Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -525,9 +513,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
 
@@ -553,7 +538,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListExpressServiceCodes>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListExpressServiceCodes) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListExpressServiceCodes)));
-            
         }
 
     }

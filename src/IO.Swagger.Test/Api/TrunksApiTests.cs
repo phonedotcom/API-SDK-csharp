@@ -87,7 +87,7 @@ namespace IO.Swagger.Test
             //int? accountId = null;
             //int? trunkId = null;
             //var response = instance.DeleteAccountTrunk(accountId, trunkId);
-            //Assert.IsInstanceOf<DeleteTrunk> (response, "response is DeleteTrunk");
+            //Assert.IsInstanceOf<DeleteEntry> (response, "response is DeleteEntry");
         }
         
         /// <summary>

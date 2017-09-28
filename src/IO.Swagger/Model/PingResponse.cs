@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -49,21 +50,25 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="datetime", EmitDefaultValue=false)]
         public string Datetime { get; set; }
+
         /// <summary>
         /// Gets or Sets RemoteIp
         /// </summary>
         [DataMember(Name="remote_ip", EmitDefaultValue=false)]
         public string RemoteIp { get; set; }
+
         /// <summary>
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public int? Timestamp { get; set; }
+
         /// <summary>
         /// Gets or Sets UserAgent
         /// </summary>
         [DataMember(Name="user_agent", EmitDefaultValue=false)]
         public string UserAgent { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -157,8 +162,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

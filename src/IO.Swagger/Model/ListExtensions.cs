@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -53,31 +54,37 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public FilterIdExtensionNameArray Filters { get; set; }
+
         /// <summary>
         /// Gets or Sets Sort
         /// </summary>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public SortIdExtensionName Sort { get; set; }
+
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public int? Total { get; set; }
+
         /// <summary>
         /// Gets or Sets Offset
         /// </summary>
         [DataMember(Name="offset", EmitDefaultValue=false)]
         public int? Offset { get; set; }
+
         /// <summary>
         /// Gets or Sets Limit
         /// </summary>
         [DataMember(Name="limit", EmitDefaultValue=false)]
         public int? Limit { get; set; }
+
         /// <summary>
         /// Gets or Sets Items
         /// </summary>
         [DataMember(Name="items", EmitDefaultValue=false)]
         public List<ExtensionFull> Items { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -187,8 +194,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

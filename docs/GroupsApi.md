@@ -4,20 +4,20 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountExtensionContactGroup**](GroupsApi.md#createaccountextensioncontactgroup) | **POST** /accounts/{account_id}/extensions/{extension_id}/contact-groups | 
-[**DeleteAccountExtensionContactGroup**](GroupsApi.md#deleteaccountextensioncontactgroup) | **DELETE** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Delete an addressbook group
-[**GetAccountExtensionContactGroup**](GroupsApi.md#getaccountextensioncontactgroup) | **GET** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | 
-[**ListAccountExtensionContactGroups**](GroupsApi.md#listaccountextensioncontactgroups) | **GET** /accounts/{account_id}/extensions/{extension_id}/contact-groups | Show a list of contact groups belonging to an extension
-[**ReplaceAccountExtensionContactGroup**](GroupsApi.md#replaceaccountextensioncontactgroup) | **PUT** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | 
+[**CreateAccountExtensionContactGroup**](GroupsApi.md#createaccountextensioncontactgroup) | **POST** /accounts/{account_id}/extensions/{extension_id}/contact-groups | Add a new contact group to an account extension.
+[**DeleteAccountExtensionContactGroup**](GroupsApi.md#deleteaccountextensioncontactgroup) | **DELETE** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Delete a contact group from the address book.
+[**GetAccountExtensionContactGroup**](GroupsApi.md#getaccountextensioncontactgroup) | **GET** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Retrieve the information of a contact group.
+[**ListAccountExtensionContactGroups**](GroupsApi.md#listaccountextensioncontactgroups) | **GET** /accounts/{account_id}/extensions/{extension_id}/contact-groups | Show a list of contact groups belonging to an extension.
+[**ReplaceAccountExtensionContactGroup**](GroupsApi.md#replaceaccountextensioncontactgroup) | **PUT** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Update the information of a contact group.
 
 
 <a name="createaccountextensioncontactgroup"></a>
 # **CreateAccountExtensionContactGroup**
 > GroupFull CreateAccountExtensionContactGroup (int? accountId, int? extensionId, CreateGroupParams data)
 
+Add a new contact group to an account extension.
 
-
-See Account Contact Groups for more info on the properties.
+Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
 
 ### Example
 ```csharp
@@ -33,7 +33,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -42,11 +41,11 @@ namespace Example
             var apiInstance = new GroupsApi();
             var accountId = 56;  // int? | Account ID
             var extensionId = 56;  // int? | Extension ID
-            var data = new CreateGroupParams(); // CreateGroupParams | Group name
+            var data = new CreateGroupParams(); // CreateGroupParams | Group data
 
             try
             {
-                // 
+                // Add a new contact group to an account extension.
                 GroupFull result = apiInstance.CreateAccountExtensionContactGroup(accountId, extensionId, data);
                 Debug.WriteLine(result);
             }
@@ -65,7 +64,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountId** | **int?**| Account ID | 
  **extensionId** | **int?**| Extension ID | 
- **data** | [**CreateGroupParams**](CreateGroupParams.md)| Group name | 
+ **data** | [**CreateGroupParams**](CreateGroupParams.md)| Group data | 
 
 ### Return type
 
@@ -84,11 +83,11 @@ Name | Type | Description  | Notes
 
 <a name="deleteaccountextensioncontactgroup"></a>
 # **DeleteAccountExtensionContactGroup**
-> DeleteGroup DeleteAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId)
+> DeleteEntry DeleteAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId)
 
-Delete an addressbook group
+Delete a contact group from the address book.
 
-
+Delete a contact group from the address book. See Account Contact Groups for details on the properties.
 
 ### Example
 ```csharp
@@ -104,7 +103,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -117,8 +115,8 @@ namespace Example
 
             try
             {
-                // Delete an addressbook group
-                DeleteGroup result = apiInstance.DeleteAccountExtensionContactGroup(accountId, extensionId, groupId);
+                // Delete a contact group from the address book.
+                DeleteEntry result = apiInstance.DeleteAccountExtensionContactGroup(accountId, extensionId, groupId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -140,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteGroup**](DeleteGroup.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -157,9 +155,9 @@ Name | Type | Description  | Notes
 # **GetAccountExtensionContactGroup**
 > GroupFull GetAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId)
 
+Retrieve the information of a contact group.
 
-
-See Account Contact Groups for more info on the properties.
+Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
 
 ### Example
 ```csharp
@@ -175,7 +173,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -188,7 +185,7 @@ namespace Example
 
             try
             {
-                // 
+                // Retrieve the information of a contact group.
                 GroupFull result = apiInstance.GetAccountExtensionContactGroup(accountId, extensionId, groupId);
                 Debug.WriteLine(result);
             }
@@ -228,9 +225,9 @@ Name | Type | Description  | Notes
 # **ListAccountExtensionContactGroups**
 > ListGroups ListAccountExtensionContactGroups (int? accountId, int? extensionId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null)
 
-Show a list of contact groups belonging to an extension
+Show a list of contact groups belonging to an extension.
 
-See Account Contact Groups for details on the properties.
+Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
 
 ### Example
 ```csharp
@@ -246,7 +243,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -265,7 +261,7 @@ namespace Example
 
             try
             {
-                // Show a list of contact groups belonging to an extension
+                // Show a list of contact groups belonging to an extension.
                 ListGroups result = apiInstance.ListAccountExtensionContactGroups(accountId, extensionId, filtersId, filtersName, sortId, sortName, limit, offset, fields);
                 Debug.WriteLine(result);
             }
@@ -311,9 +307,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountExtensionContactGroup**
 > GroupFull ReplaceAccountExtensionContactGroup (int? accountId, int? extensionId, int? groupId, CreateGroupParams data)
 
+Update the information of a contact group.
 
-
-See Account Contact Groups for more info on the properties.
+Update the information of a contact group. See Account Contact Groups for details on the properties.
 
 ### Example
 ```csharp
@@ -329,7 +325,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -339,11 +334,11 @@ namespace Example
             var accountId = 56;  // int? | Account ID
             var extensionId = 56;  // int? | Extension ID
             var groupId = 56;  // int? | Group ID
-            var data = new CreateGroupParams(); // CreateGroupParams | Group name
+            var data = new CreateGroupParams(); // CreateGroupParams | Group data
 
             try
             {
-                // 
+                // Update the information of a contact group.
                 GroupFull result = apiInstance.ReplaceAccountExtensionContactGroup(accountId, extensionId, groupId, data);
                 Debug.WriteLine(result);
             }
@@ -363,7 +358,7 @@ Name | Type | Description  | Notes
  **accountId** | **int?**| Account ID | 
  **extensionId** | **int?**| Extension ID | 
  **groupId** | **int?**| Group ID | 
- **data** | [**CreateGroupParams**](CreateGroupParams.md)| Group name | 
+ **data** | [**CreateGroupParams**](CreateGroupParams.md)| Group data | 
 
 ### Return type
 

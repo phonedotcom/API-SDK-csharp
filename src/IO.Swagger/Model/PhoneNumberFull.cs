@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -38,8 +39,8 @@ namespace IO.Swagger.Model
         /// <param name="BlockIncoming">Whether to block incoming calls. Boolean..</param>
         /// <param name="BlockAnonymous">Whether to block anonymous calls. Boolean..</param>
         /// <param name="Route">The Route assigned to handle incoming calls for this number, if any. Output is a Route Summary Object, or NULL if not set. Input can be a Route Lookup Object or NULL to unset..</param>
-        /// <param name="CallerId">Caller ID Object, or NULL.</param>
-        /// <param name="SmsForwarding">SMS Forwarding Object, or NULL.</param>
+        /// <param name="CallerId">CallerId.</param>
+        /// <param name="SmsForwarding">SmsForwarding.</param>
         /// <param name="CallNotifications">CallNotifications.</param>
         public PhoneNumberFull(int? Id = default(int?), string Name = default(string), string PhoneNumber = default(string), bool? BlockIncoming = default(bool?), bool? BlockAnonymous = default(bool?), RouteSummary Route = default(RouteSummary), CallerIdPhoneNumber CallerId = default(CallerIdPhoneNumber), SmsForwarding SmsForwarding = default(SmsForwarding), CallNotifications CallNotifications = default(CallNotifications))
         {
@@ -60,53 +61,60 @@ namespace IO.Swagger.Model
         /// <value>Integer Phone number ID. This is the internal Phone.com ID for this number, not the phone number itself. Read-only.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Phone number, in E.164 format
         /// </summary>
         /// <value>Phone number, in E.164 format</value>
         [DataMember(Name="phone_number", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
+
         /// <summary>
         /// Whether to block incoming calls. Boolean.
         /// </summary>
         /// <value>Whether to block incoming calls. Boolean.</value>
         [DataMember(Name="block_incoming", EmitDefaultValue=false)]
         public bool? BlockIncoming { get; set; }
+
         /// <summary>
         /// Whether to block anonymous calls. Boolean.
         /// </summary>
         /// <value>Whether to block anonymous calls. Boolean.</value>
         [DataMember(Name="block_anonymous", EmitDefaultValue=false)]
         public bool? BlockAnonymous { get; set; }
+
         /// <summary>
         /// The Route assigned to handle incoming calls for this number, if any. Output is a Route Summary Object, or NULL if not set. Input can be a Route Lookup Object or NULL to unset.
         /// </summary>
         /// <value>The Route assigned to handle incoming calls for this number, if any. Output is a Route Summary Object, or NULL if not set. Input can be a Route Lookup Object or NULL to unset.</value>
         [DataMember(Name="route", EmitDefaultValue=false)]
         public RouteSummary Route { get; set; }
+
         /// <summary>
-        /// Caller ID Object, or NULL
+        /// Gets or Sets CallerId
         /// </summary>
-        /// <value>Caller ID Object, or NULL</value>
         [DataMember(Name="caller_id", EmitDefaultValue=false)]
         public CallerIdPhoneNumber CallerId { get; set; }
+
         /// <summary>
-        /// SMS Forwarding Object, or NULL
+        /// Gets or Sets SmsForwarding
         /// </summary>
-        /// <value>SMS Forwarding Object, or NULL</value>
         [DataMember(Name="sms_forwarding", EmitDefaultValue=false)]
         public SmsForwarding SmsForwarding { get; set; }
+
         /// <summary>
         /// Gets or Sets CallNotifications
         /// </summary>
         [DataMember(Name="call_notifications", EmitDefaultValue=false)]
         public CallNotifications CallNotifications { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -240,8 +248,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

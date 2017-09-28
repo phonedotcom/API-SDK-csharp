@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -54,36 +55,42 @@ namespace IO.Swagger.Model
         /// <value>Address type, one of: home or business. Default is home.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+
         /// <summary>
         /// House number and street name, including apartment, suite, etc.
         /// </summary>
         /// <value>House number and street name, including apartment, suite, etc.</value>
         [DataMember(Name="street", EmitDefaultValue=false)]
         public string Street { get; set; }
+
         /// <summary>
         /// City
         /// </summary>
         /// <value>City</value>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
+
         /// <summary>
         /// State or province
         /// </summary>
         /// <value>State or province</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public string State { get; set; }
+
         /// <summary>
         /// Zip code or postal code
         /// </summary>
         /// <value>Zip code or postal code</value>
         [DataMember(Name="zip", EmitDefaultValue=false)]
         public string Zip { get; set; }
+
         /// <summary>
         /// Country name
         /// </summary>
         /// <value>Country name</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -193,8 +200,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

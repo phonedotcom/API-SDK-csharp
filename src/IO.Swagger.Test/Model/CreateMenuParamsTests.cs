@@ -73,20 +73,20 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'MainMessage'
+        /// Test the property 'Greeting'
         /// </summary>
         [Test]
-        public void MainMessageTest()
+        public void GreetingTest()
         {
-            // TODO unit test for the property 'MainMessage'
+            // TODO unit test for the property 'Greeting'
         }
         /// <summary>
-        /// Test the property 'InvalidKeypressMessage'
+        /// Test the property 'KeypressError'
         /// </summary>
         [Test]
-        public void InvalidKeypressMessageTest()
+        public void KeypressErrorTest()
         {
-            // TODO unit test for the property 'InvalidKeypressMessage'
+            // TODO unit test for the property 'KeypressError'
         }
         /// <summary>
         /// Test the property 'AllowExtensionDial'

@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -58,48 +59,56 @@ namespace IO.Swagger.Model
         /// <value>Optional. Integer representing the international calling code for the phone number&#39;s country.</value>
         [DataMember(Name="country_code", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
+
         /// <summary>
         /// Optional. Area Code, for North American phone numbers.
         /// </summary>
         /// <value>Optional. Area Code, for North American phone numbers.</value>
         [DataMember(Name="npa", EmitDefaultValue=false)]
         public int? Npa { get; set; }
+
         /// <summary>
         /// Optional. Second set of 3 digits, for North American phone numbers.
         /// </summary>
         /// <value>Optional. Second set of 3 digits, for North American phone numbers.</value>
         [DataMember(Name="nxx", EmitDefaultValue=false)]
         public int? Nxx { get; set; }
+
         /// <summary>
         /// Optional. Boolean describing whether the phone numbers in this group are toll free.
         /// </summary>
         /// <value>Optional. Boolean describing whether the phone numbers in this group are toll free.</value>
         [DataMember(Name="is_toll_free", EmitDefaultValue=false)]
         public int? IsTollFree { get; set; }
+
         /// <summary>
         /// Optional. City name.
         /// </summary>
         /// <value>Optional. City name.</value>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
+
         /// <summary>
         /// Optional. Two-letter postal code for the state or province.
         /// </summary>
         /// <value>Optional. Two-letter postal code for the state or province.</value>
         [DataMember(Name="province_postal_code", EmitDefaultValue=false)]
         public string ProvincePostalCode { get; set; }
+
         /// <summary>
         /// Optional. Two-letter postal code for the country.
         /// </summary>
         /// <value>Optional. Two-letter postal code for the country.</value>
         [DataMember(Name="country_postal_code", EmitDefaultValue=false)]
         public string CountryPostalCode { get; set; }
+
         /// <summary>
         /// Integer. Quantity of phone numbers currently available in the given region.
         /// </summary>
         /// <value>Integer. Quantity of phone numbers currently available in the given region.</value>
         [DataMember(Name="quantity", EmitDefaultValue=false)]
         public int? Quantity { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -225,8 +234,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

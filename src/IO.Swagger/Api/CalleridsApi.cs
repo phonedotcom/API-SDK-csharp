@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Show the Caller ID options a given extension can use
+        /// Show the Caller ID options a given extension can use.
         /// </summary>
         /// <remarks>
-        /// Get Caller ID
+        /// Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -44,10 +44,10 @@ namespace IO.Swagger.Api
         ListCallerIds GetCallerIds (int? accountId, int? extensionId, List<string> filtersNumber = null, List<string> filtersName = null, string sortNumber = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Show the Caller ID options a given extension can use
+        /// Show the Caller ID options a given extension can use.
         /// </summary>
         /// <remarks>
-        /// Get Caller ID
+        /// Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -64,10 +64,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Show the Caller ID options a given extension can use
+        /// Show the Caller ID options a given extension can use.
         /// </summary>
         /// <remarks>
-        /// Get Caller ID
+        /// Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -83,10 +83,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListCallerIds> GetCallerIdsAsync (int? accountId, int? extensionId, List<string> filtersNumber = null, List<string> filtersName = null, string sortNumber = null, string sortName = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Show the Caller ID options a given extension can use
+        /// Show the Caller ID options a given extension can use.
         /// </summary>
         /// <remarks>
-        /// Get Caller ID
+        /// Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -213,7 +213,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show the Caller ID options a given extension can use Get Caller ID
+        /// Show the Caller ID options a given extension can use. Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -233,7 +233,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show the Caller ID options a given extension can use Get Caller ID
+        /// Show the Caller ID options a given extension can use. Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -277,9 +277,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (filtersNumber != null) localVarQueryParams.Add("filters[number]", Configuration.ApiClient.ParameterToString(filtersNumber)); // query parameter
@@ -313,11 +310,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListCallerIds>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListCallerIds) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListCallerIds)));
-            
         }
 
         /// <summary>
-        /// Show the Caller ID options a given extension can use Get Caller ID
+        /// Show the Caller ID options a given extension can use. Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -338,7 +334,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show the Caller ID options a given extension can use Get Caller ID
+        /// Show the Caller ID options a given extension can use. Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -382,9 +378,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (extensionId != null) localVarPathParams.Add("extension_id", Configuration.ApiClient.ParameterToString(extensionId)); // path parameter
             if (filtersNumber != null) localVarQueryParams.Add("filters[number]", Configuration.ApiClient.ParameterToString(filtersNumber)); // query parameter
@@ -417,7 +410,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListCallerIds>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListCallerIds) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListCallerIds)));
-            
         }
 
     }

@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -33,17 +34,17 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="CreateMenuParams" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="MainMessage">MainMessage.</param>
-        /// <param name="InvalidKeypressMessage">InvalidKeypressMessage.</param>
+        /// <param name="Greeting">Greeting.</param>
+        /// <param name="KeypressError">KeypressError.</param>
         /// <param name="AllowExtensionDial">AllowExtensionDial.</param>
         /// <param name="KeypressWaitTime">KeypressWaitTime.</param>
         /// <param name="TimeoutHandler">TimeoutHandler.</param>
         /// <param name="Options">Options.</param>
-        public CreateMenuParams(string Name = default(string), Object MainMessage = default(Object), Object InvalidKeypressMessage = default(Object), bool? AllowExtensionDial = default(bool?), int? KeypressWaitTime = default(int?), Object TimeoutHandler = default(Object), List<Object> Options = default(List<Object>))
+        public CreateMenuParams(string Name = default(string), Object Greeting = default(Object), Object KeypressError = default(Object), string AllowExtensionDial = default(string), int? KeypressWaitTime = default(int?), Object TimeoutHandler = default(Object), List<Object> Options = default(List<Object>))
         {
             this.Name = Name;
-            this.MainMessage = MainMessage;
-            this.InvalidKeypressMessage = InvalidKeypressMessage;
+            this.Greeting = Greeting;
+            this.KeypressError = KeypressError;
             this.AllowExtensionDial = AllowExtensionDial;
             this.KeypressWaitTime = KeypressWaitTime;
             this.TimeoutHandler = TimeoutHandler;
@@ -55,36 +56,43 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
-        /// Gets or Sets MainMessage
+        /// Gets or Sets Greeting
         /// </summary>
-        [DataMember(Name="main_message", EmitDefaultValue=false)]
-        public Object MainMessage { get; set; }
+        [DataMember(Name="greeting", EmitDefaultValue=false)]
+        public Object Greeting { get; set; }
+
         /// <summary>
-        /// Gets or Sets InvalidKeypressMessage
+        /// Gets or Sets KeypressError
         /// </summary>
-        [DataMember(Name="invalid_keypress_message", EmitDefaultValue=false)]
-        public Object InvalidKeypressMessage { get; set; }
+        [DataMember(Name="keypress_error", EmitDefaultValue=false)]
+        public Object KeypressError { get; set; }
+
         /// <summary>
         /// Gets or Sets AllowExtensionDial
         /// </summary>
         [DataMember(Name="allow_extension_dial", EmitDefaultValue=false)]
-        public bool? AllowExtensionDial { get; set; }
+        public string AllowExtensionDial { get; set; }
+
         /// <summary>
         /// Gets or Sets KeypressWaitTime
         /// </summary>
         [DataMember(Name="keypress_wait_time", EmitDefaultValue=false)]
         public int? KeypressWaitTime { get; set; }
+
         /// <summary>
         /// Gets or Sets TimeoutHandler
         /// </summary>
         [DataMember(Name="timeout_handler", EmitDefaultValue=false)]
         public Object TimeoutHandler { get; set; }
+
         /// <summary>
         /// Gets or Sets Options
         /// </summary>
         [DataMember(Name="options", EmitDefaultValue=false)]
         public List<Object> Options { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,8 +102,8 @@ namespace IO.Swagger.Model
             var sb = new StringBuilder();
             sb.Append("class CreateMenuParams {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  MainMessage: ").Append(MainMessage).Append("\n");
-            sb.Append("  InvalidKeypressMessage: ").Append(InvalidKeypressMessage).Append("\n");
+            sb.Append("  Greeting: ").Append(Greeting).Append("\n");
+            sb.Append("  KeypressError: ").Append(KeypressError).Append("\n");
             sb.Append("  AllowExtensionDial: ").Append(AllowExtensionDial).Append("\n");
             sb.Append("  KeypressWaitTime: ").Append(KeypressWaitTime).Append("\n");
             sb.Append("  TimeoutHandler: ").Append(TimeoutHandler).Append("\n");
@@ -142,14 +150,14 @@ namespace IO.Swagger.Model
                     this.Name.Equals(other.Name)
                 ) && 
                 (
-                    this.MainMessage == other.MainMessage ||
-                    this.MainMessage != null &&
-                    this.MainMessage.Equals(other.MainMessage)
+                    this.Greeting == other.Greeting ||
+                    this.Greeting != null &&
+                    this.Greeting.Equals(other.Greeting)
                 ) && 
                 (
-                    this.InvalidKeypressMessage == other.InvalidKeypressMessage ||
-                    this.InvalidKeypressMessage != null &&
-                    this.InvalidKeypressMessage.Equals(other.InvalidKeypressMessage)
+                    this.KeypressError == other.KeypressError ||
+                    this.KeypressError != null &&
+                    this.KeypressError.Equals(other.KeypressError)
                 ) && 
                 (
                     this.AllowExtensionDial == other.AllowExtensionDial ||
@@ -186,10 +194,10 @@ namespace IO.Swagger.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                if (this.MainMessage != null)
-                    hash = hash * 59 + this.MainMessage.GetHashCode();
-                if (this.InvalidKeypressMessage != null)
-                    hash = hash * 59 + this.InvalidKeypressMessage.GetHashCode();
+                if (this.Greeting != null)
+                    hash = hash * 59 + this.Greeting.GetHashCode();
+                if (this.KeypressError != null)
+                    hash = hash * 59 + this.KeypressError.GetHashCode();
                 if (this.AllowExtensionDial != null)
                     hash = hash * 59 + this.AllowExtensionDial.GetHashCode();
                 if (this.KeypressWaitTime != null)
@@ -202,8 +210,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

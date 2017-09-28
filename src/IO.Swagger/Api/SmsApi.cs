@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Send a SMS to one or a group of recipients
+        /// Send a SMS to one or a group of recipients.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to SMS.
+        /// Send a SMS to one or a group of recipients. For details on the input fields, see Intro to SMS. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Create SMS API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -37,10 +37,10 @@ namespace IO.Swagger.Api
         SmsFull CreateAccountSms (int? accountId, CreateSmsParams data);
 
         /// <summary>
-        /// Send a SMS to one or a group of recipients
+        /// Send a SMS to one or a group of recipients.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to SMS.
+        /// Send a SMS to one or a group of recipients. For details on the input fields, see Intro to SMS. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Create SMS API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -48,10 +48,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of SmsFull</returns>
         ApiResponse<SmsFull> CreateAccountSmsWithHttpInfo (int? accountId, CreateSmsParams data);
         /// <summary>
-        /// Show details of an individual SMS
+        /// This service shows the details of an individual SMS.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual sms. See Intro to SMS for more info on the properties.
+        /// This service shows the details of an individual SMS. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Get SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -60,10 +60,10 @@ namespace IO.Swagger.Api
         SmsFull GetAccountSms (int? accountId, string smsId);
 
         /// <summary>
-        /// Show details of an individual SMS
+        /// This service shows the details of an individual SMS.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual sms. See Intro to SMS for more info on the properties.
+        /// This service shows the details of an individual SMS. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Get SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -71,49 +71,80 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of SmsFull</returns>
         ApiResponse<SmsFull> GetAccountSmsWithHttpInfo (int? accountId, string smsId);
         /// <summary>
-        /// Get a list of SMS messages for an account
+        /// Get a list of SMS messages for an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to SMS for more info on the properties.
+        /// Get a list of SMS messages for an account. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="filtersId">ID filter (optional)</param>
-        /// <param name="filtersDirection">Direction filter (optional)</param>
         /// <param name="filtersFrom">Caller ID filter (optional)</param>
+        /// <param name="filtersTo">Callee ID filter, the E.164 phone number to send the SMS TO. Note you must encode the + as %2B (optional)</param>
+        /// <param name="filtersDirection">Direction filter (optional)</param>
+        /// <param name="filtersExtension">Extension filter (optional)</param>
+        /// <param name="filtersCreatedAt">Date string representing the UTC time that sms was created (optional)</param>
         /// <param name="sortId">ID sorting (optional)</param>
         /// <param name="sortCreatedAt">Sort by created time of message (optional)</param>
         /// <param name="limit">Max results (optional)</param>
         /// <param name="offset">Results to skip (optional)</param>
         /// <param name="fields">Field set (optional)</param>
         /// <returns>ListSms</returns>
-        ListSms ListAccountSms (int? accountId, List<string> filtersId = null, string filtersDirection = null, string filtersFrom = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null);
+        ListSms ListAccountSms (int? accountId, List<string> filtersId = null, string filtersFrom = null, string filtersTo = null, string filtersDirection = null, List<string> filtersExtension = null, string filtersCreatedAt = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of SMS messages for an account
+        /// Get a list of SMS messages for an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to SMS for more info on the properties.
+        /// Get a list of SMS messages for an account. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="filtersId">ID filter (optional)</param>
-        /// <param name="filtersDirection">Direction filter (optional)</param>
         /// <param name="filtersFrom">Caller ID filter (optional)</param>
+        /// <param name="filtersTo">Callee ID filter, the E.164 phone number to send the SMS TO. Note you must encode the + as %2B (optional)</param>
+        /// <param name="filtersDirection">Direction filter (optional)</param>
+        /// <param name="filtersExtension">Extension filter (optional)</param>
+        /// <param name="filtersCreatedAt">Date string representing the UTC time that sms was created (optional)</param>
         /// <param name="sortId">ID sorting (optional)</param>
         /// <param name="sortCreatedAt">Sort by created time of message (optional)</param>
         /// <param name="limit">Max results (optional)</param>
         /// <param name="offset">Results to skip (optional)</param>
         /// <param name="fields">Field set (optional)</param>
         /// <returns>ApiResponse of ListSms</returns>
-        ApiResponse<ListSms> ListAccountSmsWithHttpInfo (int? accountId, List<string> filtersId = null, string filtersDirection = null, string filtersFrom = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null);
+        ApiResponse<ListSms> ListAccountSmsWithHttpInfo (int? accountId, List<string> filtersId = null, string filtersFrom = null, string filtersTo = null, string filtersDirection = null, List<string> filtersExtension = null, string filtersCreatedAt = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null);
+        /// <summary>
+        /// Update the is_new parameter in a sms record.
+        /// </summary>
+        /// <remarks>
+        /// Update the is_new parameter in a sms record. See Account SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Patch SMS API with the following definition: PATCH https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="smsId">SMS ID</param>
+        /// <param name="data">Sms data (optional)</param>
+        /// <returns>SmsFull</returns>
+        SmsFull PatchAccountSms (int? accountId, string smsId, PatchSmsParams data = null);
+
+        /// <summary>
+        /// Update the is_new parameter in a sms record.
+        /// </summary>
+        /// <remarks>
+        /// Update the is_new parameter in a sms record. See Account SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Patch SMS API with the following definition: PATCH https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="smsId">SMS ID</param>
+        /// <param name="data">Sms data (optional)</param>
+        /// <returns>ApiResponse of SmsFull</returns>
+        ApiResponse<SmsFull> PatchAccountSmsWithHttpInfo (int? accountId, string smsId, PatchSmsParams data = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Send a SMS to one or a group of recipients
+        /// Send a SMS to one or a group of recipients.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to SMS.
+        /// Send a SMS to one or a group of recipients. For details on the input fields, see Intro to SMS. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Create SMS API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -122,10 +153,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<SmsFull> CreateAccountSmsAsync (int? accountId, CreateSmsParams data);
 
         /// <summary>
-        /// Send a SMS to one or a group of recipients
+        /// Send a SMS to one or a group of recipients.
         /// </summary>
         /// <remarks>
-        /// For more on the input fields, see Intro to SMS.
+        /// Send a SMS to one or a group of recipients. For details on the input fields, see Intro to SMS. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Create SMS API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -133,10 +164,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (SmsFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<SmsFull>> CreateAccountSmsAsyncWithHttpInfo (int? accountId, CreateSmsParams data);
         /// <summary>
-        /// Show details of an individual SMS
+        /// This service shows the details of an individual SMS.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual sms. See Intro to SMS for more info on the properties.
+        /// This service shows the details of an individual SMS. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Get SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -145,10 +176,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<SmsFull> GetAccountSmsAsync (int? accountId, string smsId);
 
         /// <summary>
-        /// Show details of an individual SMS
+        /// This service shows the details of an individual SMS.
         /// </summary>
         /// <remarks>
-        /// This service shows the details of an individual sms. See Intro to SMS for more info on the properties.
+        /// This service shows the details of an individual SMS. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Get SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -156,42 +187,73 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (SmsFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<SmsFull>> GetAccountSmsAsyncWithHttpInfo (int? accountId, string smsId);
         /// <summary>
-        /// Get a list of SMS messages for an account
+        /// Get a list of SMS messages for an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to SMS for more info on the properties.
+        /// Get a list of SMS messages for an account. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="filtersId">ID filter (optional)</param>
-        /// <param name="filtersDirection">Direction filter (optional)</param>
         /// <param name="filtersFrom">Caller ID filter (optional)</param>
+        /// <param name="filtersTo">Callee ID filter, the E.164 phone number to send the SMS TO. Note you must encode the + as %2B (optional)</param>
+        /// <param name="filtersDirection">Direction filter (optional)</param>
+        /// <param name="filtersExtension">Extension filter (optional)</param>
+        /// <param name="filtersCreatedAt">Date string representing the UTC time that sms was created (optional)</param>
         /// <param name="sortId">ID sorting (optional)</param>
         /// <param name="sortCreatedAt">Sort by created time of message (optional)</param>
         /// <param name="limit">Max results (optional)</param>
         /// <param name="offset">Results to skip (optional)</param>
         /// <param name="fields">Field set (optional)</param>
         /// <returns>Task of ListSms</returns>
-        System.Threading.Tasks.Task<ListSms> ListAccountSmsAsync (int? accountId, List<string> filtersId = null, string filtersDirection = null, string filtersFrom = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null);
+        System.Threading.Tasks.Task<ListSms> ListAccountSmsAsync (int? accountId, List<string> filtersId = null, string filtersFrom = null, string filtersTo = null, string filtersDirection = null, List<string> filtersExtension = null, string filtersCreatedAt = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of SMS messages for an account
+        /// Get a list of SMS messages for an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to SMS for more info on the properties.
+        /// Get a list of SMS messages for an account. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="filtersId">ID filter (optional)</param>
-        /// <param name="filtersDirection">Direction filter (optional)</param>
         /// <param name="filtersFrom">Caller ID filter (optional)</param>
+        /// <param name="filtersTo">Callee ID filter, the E.164 phone number to send the SMS TO. Note you must encode the + as %2B (optional)</param>
+        /// <param name="filtersDirection">Direction filter (optional)</param>
+        /// <param name="filtersExtension">Extension filter (optional)</param>
+        /// <param name="filtersCreatedAt">Date string representing the UTC time that sms was created (optional)</param>
         /// <param name="sortId">ID sorting (optional)</param>
         /// <param name="sortCreatedAt">Sort by created time of message (optional)</param>
         /// <param name="limit">Max results (optional)</param>
         /// <param name="offset">Results to skip (optional)</param>
         /// <param name="fields">Field set (optional)</param>
         /// <returns>Task of ApiResponse (ListSms)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ListSms>> ListAccountSmsAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, string filtersDirection = null, string filtersFrom = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null);
+        System.Threading.Tasks.Task<ApiResponse<ListSms>> ListAccountSmsAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, string filtersFrom = null, string filtersTo = null, string filtersDirection = null, List<string> filtersExtension = null, string filtersCreatedAt = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null);
+        /// <summary>
+        /// Update the is_new parameter in a sms record.
+        /// </summary>
+        /// <remarks>
+        /// Update the is_new parameter in a sms record. See Account SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Patch SMS API with the following definition: PATCH https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="smsId">SMS ID</param>
+        /// <param name="data">Sms data (optional)</param>
+        /// <returns>Task of SmsFull</returns>
+        System.Threading.Tasks.Task<SmsFull> PatchAccountSmsAsync (int? accountId, string smsId, PatchSmsParams data = null);
+
+        /// <summary>
+        /// Update the is_new parameter in a sms record.
+        /// </summary>
+        /// <remarks>
+        /// Update the is_new parameter in a sms record. See Account SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Patch SMS API with the following definition: PATCH https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="smsId">SMS ID</param>
+        /// <param name="data">Sms data (optional)</param>
+        /// <returns>Task of ApiResponse (SmsFull)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SmsFull>> PatchAccountSmsAsyncWithHttpInfo (int? accountId, string smsId, PatchSmsParams data = null);
         #endregion Asynchronous Operations
     }
 
@@ -305,7 +367,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Send a SMS to one or a group of recipients For more on the input fields, see Intro to SMS.
+        /// Send a SMS to one or a group of recipients. Send a SMS to one or a group of recipients. For details on the input fields, see Intro to SMS. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Create SMS API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -318,7 +380,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Send a SMS to one or a group of recipients For more on the input fields, see Intro to SMS.
+        /// Send a SMS to one or a group of recipients. Send a SMS to one or a group of recipients. For details on the input fields, see Intro to SMS. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Create SMS API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -355,9 +417,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -391,11 +450,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<SmsFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SmsFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsFull)));
-            
         }
 
         /// <summary>
-        /// Send a SMS to one or a group of recipients For more on the input fields, see Intro to SMS.
+        /// Send a SMS to one or a group of recipients. Send a SMS to one or a group of recipients. For details on the input fields, see Intro to SMS. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Create SMS API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -409,7 +467,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Send a SMS to one or a group of recipients For more on the input fields, see Intro to SMS.
+        /// Send a SMS to one or a group of recipients. Send a SMS to one or a group of recipients. For details on the input fields, see Intro to SMS. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Create SMS API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -446,9 +504,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -481,11 +536,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<SmsFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SmsFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual SMS This service shows the details of an individual sms. See Intro to SMS for more info on the properties.
+        /// This service shows the details of an individual SMS. This service shows the details of an individual SMS. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Get SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -498,7 +552,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual SMS This service shows the details of an individual sms. See Intro to SMS for more info on the properties.
+        /// This service shows the details of an individual SMS. This service shows the details of an individual SMS. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Get SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -535,9 +589,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (smsId != null) localVarPathParams.Add("sms_id", Configuration.ApiClient.ParameterToString(smsId)); // path parameter
 
@@ -564,11 +615,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<SmsFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SmsFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual SMS This service shows the details of an individual sms. See Intro to SMS for more info on the properties.
+        /// This service shows the details of an individual SMS. This service shows the details of an individual SMS. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Get SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -582,7 +632,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual SMS This service shows the details of an individual sms. See Intro to SMS for more info on the properties.
+        /// This service shows the details of an individual SMS. This service shows the details of an individual SMS. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Get SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -619,9 +669,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (smsId != null) localVarPathParams.Add("sms_id", Configuration.ApiClient.ParameterToString(smsId)); // path parameter
 
@@ -647,44 +694,49 @@ namespace IO.Swagger.Api
             return new ApiResponse<SmsFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SmsFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of SMS messages for an account See Intro to SMS for more info on the properties.
+        /// Get a list of SMS messages for an account. Get a list of SMS messages for an account. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="filtersId">ID filter (optional)</param>
-        /// <param name="filtersDirection">Direction filter (optional)</param>
         /// <param name="filtersFrom">Caller ID filter (optional)</param>
+        /// <param name="filtersTo">Callee ID filter, the E.164 phone number to send the SMS TO. Note you must encode the + as %2B (optional)</param>
+        /// <param name="filtersDirection">Direction filter (optional)</param>
+        /// <param name="filtersExtension">Extension filter (optional)</param>
+        /// <param name="filtersCreatedAt">Date string representing the UTC time that sms was created (optional)</param>
         /// <param name="sortId">ID sorting (optional)</param>
         /// <param name="sortCreatedAt">Sort by created time of message (optional)</param>
         /// <param name="limit">Max results (optional)</param>
         /// <param name="offset">Results to skip (optional)</param>
         /// <param name="fields">Field set (optional)</param>
         /// <returns>ListSms</returns>
-        public ListSms ListAccountSms (int? accountId, List<string> filtersId = null, string filtersDirection = null, string filtersFrom = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null)
+        public ListSms ListAccountSms (int? accountId, List<string> filtersId = null, string filtersFrom = null, string filtersTo = null, string filtersDirection = null, List<string> filtersExtension = null, string filtersCreatedAt = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null)
         {
-             ApiResponse<ListSms> localVarResponse = ListAccountSmsWithHttpInfo(accountId, filtersId, filtersDirection, filtersFrom, sortId, sortCreatedAt, limit, offset, fields);
+             ApiResponse<ListSms> localVarResponse = ListAccountSmsWithHttpInfo(accountId, filtersId, filtersFrom, filtersTo, filtersDirection, filtersExtension, filtersCreatedAt, sortId, sortCreatedAt, limit, offset, fields);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get a list of SMS messages for an account See Intro to SMS for more info on the properties.
+        /// Get a list of SMS messages for an account. Get a list of SMS messages for an account. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="filtersId">ID filter (optional)</param>
-        /// <param name="filtersDirection">Direction filter (optional)</param>
         /// <param name="filtersFrom">Caller ID filter (optional)</param>
+        /// <param name="filtersTo">Callee ID filter, the E.164 phone number to send the SMS TO. Note you must encode the + as %2B (optional)</param>
+        /// <param name="filtersDirection">Direction filter (optional)</param>
+        /// <param name="filtersExtension">Extension filter (optional)</param>
+        /// <param name="filtersCreatedAt">Date string representing the UTC time that sms was created (optional)</param>
         /// <param name="sortId">ID sorting (optional)</param>
         /// <param name="sortCreatedAt">Sort by created time of message (optional)</param>
         /// <param name="limit">Max results (optional)</param>
         /// <param name="offset">Results to skip (optional)</param>
         /// <param name="fields">Field set (optional)</param>
         /// <returns>ApiResponse of ListSms</returns>
-        public ApiResponse< ListSms > ListAccountSmsWithHttpInfo (int? accountId, List<string> filtersId = null, string filtersDirection = null, string filtersFrom = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null)
+        public ApiResponse< ListSms > ListAccountSmsWithHttpInfo (int? accountId, List<string> filtersId = null, string filtersFrom = null, string filtersTo = null, string filtersDirection = null, List<string> filtersExtension = null, string filtersCreatedAt = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -712,13 +764,13 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
-            if (filtersDirection != null) localVarQueryParams.Add("filters[direction]", Configuration.ApiClient.ParameterToString(filtersDirection)); // query parameter
             if (filtersFrom != null) localVarQueryParams.Add("filters[from]", Configuration.ApiClient.ParameterToString(filtersFrom)); // query parameter
+            if (filtersTo != null) localVarQueryParams.Add("filters[to]", Configuration.ApiClient.ParameterToString(filtersTo)); // query parameter
+            if (filtersDirection != null) localVarQueryParams.Add("filters[direction]", Configuration.ApiClient.ParameterToString(filtersDirection)); // query parameter
+            if (filtersExtension != null) localVarQueryParams.Add("filters[extension]", Configuration.ApiClient.ParameterToString(filtersExtension)); // query parameter
+            if (filtersCreatedAt != null) localVarQueryParams.Add("filters[created_at]", Configuration.ApiClient.ParameterToString(filtersCreatedAt)); // query parameter
             if (sortId != null) localVarQueryParams.Add("sort[id]", Configuration.ApiClient.ParameterToString(sortId)); // query parameter
             if (sortCreatedAt != null) localVarQueryParams.Add("sort[created_at]", Configuration.ApiClient.ParameterToString(sortCreatedAt)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
@@ -748,45 +800,50 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListSms>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListSms) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListSms)));
-            
         }
 
         /// <summary>
-        /// Get a list of SMS messages for an account See Intro to SMS for more info on the properties.
+        /// Get a list of SMS messages for an account. Get a list of SMS messages for an account. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="filtersId">ID filter (optional)</param>
-        /// <param name="filtersDirection">Direction filter (optional)</param>
         /// <param name="filtersFrom">Caller ID filter (optional)</param>
+        /// <param name="filtersTo">Callee ID filter, the E.164 phone number to send the SMS TO. Note you must encode the + as %2B (optional)</param>
+        /// <param name="filtersDirection">Direction filter (optional)</param>
+        /// <param name="filtersExtension">Extension filter (optional)</param>
+        /// <param name="filtersCreatedAt">Date string representing the UTC time that sms was created (optional)</param>
         /// <param name="sortId">ID sorting (optional)</param>
         /// <param name="sortCreatedAt">Sort by created time of message (optional)</param>
         /// <param name="limit">Max results (optional)</param>
         /// <param name="offset">Results to skip (optional)</param>
         /// <param name="fields">Field set (optional)</param>
         /// <returns>Task of ListSms</returns>
-        public async System.Threading.Tasks.Task<ListSms> ListAccountSmsAsync (int? accountId, List<string> filtersId = null, string filtersDirection = null, string filtersFrom = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null)
+        public async System.Threading.Tasks.Task<ListSms> ListAccountSmsAsync (int? accountId, List<string> filtersId = null, string filtersFrom = null, string filtersTo = null, string filtersDirection = null, List<string> filtersExtension = null, string filtersCreatedAt = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null)
         {
-             ApiResponse<ListSms> localVarResponse = await ListAccountSmsAsyncWithHttpInfo(accountId, filtersId, filtersDirection, filtersFrom, sortId, sortCreatedAt, limit, offset, fields);
+             ApiResponse<ListSms> localVarResponse = await ListAccountSmsAsyncWithHttpInfo(accountId, filtersId, filtersFrom, filtersTo, filtersDirection, filtersExtension, filtersCreatedAt, sortId, sortCreatedAt, limit, offset, fields);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get a list of SMS messages for an account See Intro to SMS for more info on the properties.
+        /// Get a list of SMS messages for an account. Get a list of SMS messages for an account. See Intro to SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List SMS API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
         /// <param name="filtersId">ID filter (optional)</param>
-        /// <param name="filtersDirection">Direction filter (optional)</param>
         /// <param name="filtersFrom">Caller ID filter (optional)</param>
+        /// <param name="filtersTo">Callee ID filter, the E.164 phone number to send the SMS TO. Note you must encode the + as %2B (optional)</param>
+        /// <param name="filtersDirection">Direction filter (optional)</param>
+        /// <param name="filtersExtension">Extension filter (optional)</param>
+        /// <param name="filtersCreatedAt">Date string representing the UTC time that sms was created (optional)</param>
         /// <param name="sortId">ID sorting (optional)</param>
         /// <param name="sortCreatedAt">Sort by created time of message (optional)</param>
         /// <param name="limit">Max results (optional)</param>
         /// <param name="offset">Results to skip (optional)</param>
         /// <param name="fields">Field set (optional)</param>
         /// <returns>Task of ApiResponse (ListSms)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ListSms>> ListAccountSmsAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, string filtersDirection = null, string filtersFrom = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ListSms>> ListAccountSmsAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, string filtersFrom = null, string filtersTo = null, string filtersDirection = null, List<string> filtersExtension = null, string filtersCreatedAt = null, string sortId = null, string sortCreatedAt = null, int? limit = null, int? offset = null, string fields = null)
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -814,13 +871,13 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
-            if (filtersDirection != null) localVarQueryParams.Add("filters[direction]", Configuration.ApiClient.ParameterToString(filtersDirection)); // query parameter
             if (filtersFrom != null) localVarQueryParams.Add("filters[from]", Configuration.ApiClient.ParameterToString(filtersFrom)); // query parameter
+            if (filtersTo != null) localVarQueryParams.Add("filters[to]", Configuration.ApiClient.ParameterToString(filtersTo)); // query parameter
+            if (filtersDirection != null) localVarQueryParams.Add("filters[direction]", Configuration.ApiClient.ParameterToString(filtersDirection)); // query parameter
+            if (filtersExtension != null) localVarQueryParams.Add("filters[extension]", Configuration.ApiClient.ParameterToString(filtersExtension)); // query parameter
+            if (filtersCreatedAt != null) localVarQueryParams.Add("filters[created_at]", Configuration.ApiClient.ParameterToString(filtersCreatedAt)); // query parameter
             if (sortId != null) localVarQueryParams.Add("sort[id]", Configuration.ApiClient.ParameterToString(sortId)); // query parameter
             if (sortCreatedAt != null) localVarQueryParams.Add("sort[created_at]", Configuration.ApiClient.ParameterToString(sortCreatedAt)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
@@ -849,7 +906,184 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListSms>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListSms) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListSms)));
-            
+        }
+
+        /// <summary>
+        /// Update the is_new parameter in a sms record. Update the is_new parameter in a sms record. See Account SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Patch SMS API with the following definition: PATCH https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="smsId">SMS ID</param>
+        /// <param name="data">Sms data (optional)</param>
+        /// <returns>SmsFull</returns>
+        public SmsFull PatchAccountSms (int? accountId, string smsId, PatchSmsParams data = null)
+        {
+             ApiResponse<SmsFull> localVarResponse = PatchAccountSmsWithHttpInfo(accountId, smsId, data);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the is_new parameter in a sms record. Update the is_new parameter in a sms record. See Account SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Patch SMS API with the following definition: PATCH https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="smsId">SMS ID</param>
+        /// <param name="data">Sms data (optional)</param>
+        /// <returns>ApiResponse of SmsFull</returns>
+        public ApiResponse< SmsFull > PatchAccountSmsWithHttpInfo (int? accountId, string smsId, PatchSmsParams data = null)
+        {
+            // verify the required parameter 'accountId' is set
+            if (accountId == null)
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling SmsApi->PatchAccountSms");
+            // verify the required parameter 'smsId' is set
+            if (smsId == null)
+                throw new ApiException(400, "Missing required parameter 'smsId' when calling SmsApi->PatchAccountSms");
+
+            var localVarPath = "/accounts/{account_id}/sms/{sms_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
+            if (smsId != null) localVarPathParams.Add("sms_id", Configuration.ApiClient.ParameterToString(smsId)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PatchAccountSms", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SmsFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SmsFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsFull)));
+        }
+
+        /// <summary>
+        /// Update the is_new parameter in a sms record. Update the is_new parameter in a sms record. See Account SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Patch SMS API with the following definition: PATCH https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="smsId">SMS ID</param>
+        /// <param name="data">Sms data (optional)</param>
+        /// <returns>Task of SmsFull</returns>
+        public async System.Threading.Tasks.Task<SmsFull> PatchAccountSmsAsync (int? accountId, string smsId, PatchSmsParams data = null)
+        {
+             ApiResponse<SmsFull> localVarResponse = await PatchAccountSmsAsyncWithHttpInfo(accountId, smsId, data);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the is_new parameter in a sms record. Update the is_new parameter in a sms record. See Account SMS for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Patch SMS API with the following definition: PATCH https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/sms/:sms_id
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountId">Account ID</param>
+        /// <param name="smsId">SMS ID</param>
+        /// <param name="data">Sms data (optional)</param>
+        /// <returns>Task of ApiResponse (SmsFull)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SmsFull>> PatchAccountSmsAsyncWithHttpInfo (int? accountId, string smsId, PatchSmsParams data = null)
+        {
+            // verify the required parameter 'accountId' is set
+            if (accountId == null)
+                throw new ApiException(400, "Missing required parameter 'accountId' when calling SmsApi->PatchAccountSms");
+            // verify the required parameter 'smsId' is set
+            if (smsId == null)
+                throw new ApiException(400, "Missing required parameter 'smsId' when calling SmsApi->PatchAccountSms");
+
+            var localVarPath = "/accounts/{account_id}/sms/{sms_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
+            if (smsId != null) localVarPathParams.Add("sms_id", Configuration.ApiClient.ParameterToString(smsId)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PatchAccountSms", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SmsFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SmsFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsFull)));
         }
 
     }

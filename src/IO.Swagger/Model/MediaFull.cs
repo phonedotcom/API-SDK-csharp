@@ -20,11 +20,12 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// The Full Recording Object includes all of the properties from the Recording Summary Object, along with the following:
+    /// The Full Recording Object and the Summary Recording Object are the same.
     /// </summary>
     [DataContract]
     public partial class MediaFull :  IEquatable<MediaFull>, IValidatableObject
@@ -48,18 +49,21 @@ namespace IO.Swagger.Model
         /// <value>Recording ID. Read-only.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
         /// <summary>
         /// Name of recording
         /// </summary>
         /// <value>Name of recording</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Can be hold_music or greeting. Indicates the purpose of this recording and where it can be used.
         /// </summary>
         /// <value>Can be hold_music or greeting. Indicates the purpose of this recording and where it can be used.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -145,13 +149,18 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             // Type (string) pattern
             Regex regexType = new Regex(@"hold_music|greeting", RegexOptions.CultureInvariant);
             if (false == regexType.Match(this.Type).Success)
             {
-                yield return new ValidationResult("Invalid value for Type, must match a pattern of /hold_music|greeting/.", new [] { "Type" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Type, must match a pattern of " + regexType, new [] { "Type" });
             }
 
             yield break;

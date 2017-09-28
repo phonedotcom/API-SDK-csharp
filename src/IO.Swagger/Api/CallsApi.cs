@@ -28,7 +28,7 @@ namespace IO.Swagger.Api
         /// Make a phone call
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make a phone call. See Calls for more details and how to setup caller id&#39;s. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -40,7 +40,7 @@ namespace IO.Swagger.Api
         /// Make a phone call
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make a phone call. See Calls for more details and how to setup caller id&#39;s. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -53,7 +53,7 @@ namespace IO.Swagger.Api
         /// Make a phone call
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make a phone call. See Calls for more details and how to setup caller id&#39;s. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -65,7 +65,7 @@ namespace IO.Swagger.Api
         /// Make a phone call
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make a phone call. See Calls for more details and how to setup caller id&#39;s. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -185,7 +185,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Make a phone call 
+        /// Make a phone call Make a phone call. See Calls for more details and how to setup caller id&#39;s. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -198,7 +198,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Make a phone call 
+        /// Make a phone call Make a phone call. See Calls for more details and how to setup caller id&#39;s. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -232,9 +232,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -268,11 +265,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<CallFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallFull)));
-            
         }
 
         /// <summary>
-        /// Make a phone call 
+        /// Make a phone call Make a phone call. See Calls for more details and how to setup caller id&#39;s. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -286,7 +282,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Make a phone call 
+        /// Make a phone call Make a phone call. See Calls for more details and how to setup caller id&#39;s. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -320,9 +316,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -355,7 +348,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<CallFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallFull)));
-            
         }
 
     }

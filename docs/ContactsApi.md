@@ -4,20 +4,20 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountExtensionContact**](ContactsApi.md#createaccountextensioncontact) | **POST** /accounts/{account_id}/extensions/{extension_id}/contacts | Add a new address book contact for an extension
-[**DeleteAccountExtensionContact**](ContactsApi.md#deleteaccountextensioncontact) | **DELETE** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | 
-[**GetAccountExtensionContact**](ContactsApi.md#getaccountextensioncontact) | **GET** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Retrieve the details of an address book contact
-[**ListAccountExtensionContacts**](ContactsApi.md#listaccountextensioncontacts) | **GET** /accounts/{account_id}/extensions/{extension_id}/contacts | Show a list of address book contacts
-[**ReplaceAccountExtensionContact**](ContactsApi.md#replaceaccountextensioncontact) | **PUT** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | 
+[**CreateAccountExtensionContact**](ContactsApi.md#createaccountextensioncontact) | **POST** /accounts/{account_id}/extensions/{extension_id}/contacts | Add a new address book contact for an extension.
+[**DeleteAccountExtensionContact**](ContactsApi.md#deleteaccountextensioncontact) | **DELETE** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Delete a contact from the address book.
+[**GetAccountExtensionContact**](ContactsApi.md#getaccountextensioncontact) | **GET** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Retrieve the details of an address book contact.
+[**ListAccountExtensionContacts**](ContactsApi.md#listaccountextensioncontacts) | **GET** /accounts/{account_id}/extensions/{extension_id}/contacts | Show the Caller ID options a given extension can use.
+[**ReplaceAccountExtensionContact**](ContactsApi.md#replaceaccountextensioncontact) | **PUT** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Update the info of a contact in the address book.
 
 
 <a name="createaccountextensioncontact"></a>
 # **CreateAccountExtensionContact**
 > ContactFull CreateAccountExtensionContact (int? accountId, int? extensionId, CreateContactParams data = null)
 
-Add a new address book contact for an extension
+Add a new address book contact for an extension.
 
-For more on the input fields, see Account Contacts.
+Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
 
 ### Example
 ```csharp
@@ -33,7 +33,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -46,7 +45,7 @@ namespace Example
 
             try
             {
-                // Add a new address book contact for an extension
+                // Add a new address book contact for an extension.
                 ContactFull result = apiInstance.CreateAccountExtensionContact(accountId, extensionId, data);
                 Debug.WriteLine(result);
             }
@@ -84,11 +83,11 @@ Name | Type | Description  | Notes
 
 <a name="deleteaccountextensioncontact"></a>
 # **DeleteAccountExtensionContact**
-> DeleteContact DeleteAccountExtensionContact (int? accountId, int? extensionId, int? contactId)
+> DeleteEntry DeleteAccountExtensionContact (int? accountId, int? extensionId, int? contactId)
 
+Delete a contact from the address book.
 
-
-
+Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
 
 ### Example
 ```csharp
@@ -104,7 +103,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -117,8 +115,8 @@ namespace Example
 
             try
             {
-                // 
-                DeleteContact result = apiInstance.DeleteAccountExtensionContact(accountId, extensionId, contactId);
+                // Delete a contact from the address book.
+                DeleteEntry result = apiInstance.DeleteAccountExtensionContact(accountId, extensionId, contactId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -140,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteContact**](DeleteContact.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -157,9 +155,9 @@ Name | Type | Description  | Notes
 # **GetAccountExtensionContact**
 > ContactFull GetAccountExtensionContact (int? accountId, int? extensionId, int? contactId)
 
-Retrieve the details of an address book contact
+Retrieve the details of an address book contact.
 
-For more info on the fields shown, see Account Contacts.
+Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
 
 ### Example
 ```csharp
@@ -175,7 +173,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -188,7 +185,7 @@ namespace Example
 
             try
             {
-                // Retrieve the details of an address book contact
+                // Retrieve the details of an address book contact.
                 ContactFull result = apiInstance.GetAccountExtensionContact(accountId, extensionId, contactId);
                 Debug.WriteLine(result);
             }
@@ -228,9 +225,9 @@ Name | Type | Description  | Notes
 # **ListAccountExtensionContacts**
 > ListContacts ListAccountExtensionContacts (int? accountId, int? extensionId, List<string> filtersId = null, List<string> filtersGroupId = null, List<string> filtersUpdatedAt = null, string sortId = null, string sortUpdatedAt = null, int? limit = null, int? offset = null, string fields = null)
 
-Show a list of address book contacts
+Show the Caller ID options a given extension can use.
 
-See Account Contacts for more info on the fields in each item.
+Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
 
 ### Example
 ```csharp
@@ -246,7 +243,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -266,7 +262,7 @@ namespace Example
 
             try
             {
-                // Show a list of address book contacts
+                // Show the Caller ID options a given extension can use.
                 ListContacts result = apiInstance.ListAccountExtensionContacts(accountId, extensionId, filtersId, filtersGroupId, filtersUpdatedAt, sortId, sortUpdatedAt, limit, offset, fields);
                 Debug.WriteLine(result);
             }
@@ -313,9 +309,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountExtensionContact**
 > ContactFull ReplaceAccountExtensionContact (int? accountId, int? extensionId, int? contactId, CreateContactParams data = null)
 
+Update the info of a contact in the address book.
 
-
-For more on the input fields, see Account Contacts.
+Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
 
 ### Example
 ```csharp
@@ -331,7 +327,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -345,7 +340,7 @@ namespace Example
 
             try
             {
-                // 
+                // Update the info of a contact in the address book.
                 ContactFull result = apiInstance.ReplaceAccountExtensionContact(accountId, extensionId, contactId, data);
                 Debug.WriteLine(result);
             }

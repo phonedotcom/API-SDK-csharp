@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Add a phone number to an account
+        /// Add a phone number to an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties to use.
+        /// Add a phone number to an account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -37,10 +37,10 @@ namespace IO.Swagger.Api
         PhoneNumberFull CreateAccountPhoneNumber (int? accountId, CreatePhoneNumberParams data = null);
 
         /// <summary>
-        /// Add a phone number to an account
+        /// Add a phone number to an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties to use.
+        /// Add a phone number to an account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -48,10 +48,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of PhoneNumberFull</returns>
         ApiResponse<PhoneNumberFull> CreateAccountPhoneNumberWithHttpInfo (int? accountId, CreatePhoneNumberParams data = null);
         /// <summary>
-        /// Show details of an individual phone number
+        /// Show details of an individual phone number.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -60,10 +60,10 @@ namespace IO.Swagger.Api
         PhoneNumberFull GetAccountPhoneNumber (int? accountId, int? numberId);
 
         /// <summary>
-        /// Show details of an individual phone number
+        /// Show details of an individual phone number.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -71,10 +71,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of PhoneNumberFull</returns>
         ApiResponse<PhoneNumberFull> GetAccountPhoneNumberWithHttpInfo (int? accountId, int? numberId);
         /// <summary>
-        /// Get a list of phone numbers registered to an account
+        /// Get a list of phone numbers registered to an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -91,10 +91,10 @@ namespace IO.Swagger.Api
         ListPhoneNumbers ListAccountPhoneNumbers (int? accountId, List<string> filtersId = null, List<string> filtersName = null, List<string> filtersPhoneNumber = null, string sortId = null, string sortName = null, string sortPhoneNumber = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of phone numbers registered to an account
+        /// Get a list of phone numbers registered to an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -110,10 +110,10 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ListPhoneNumbers</returns>
         ApiResponse<ListPhoneNumbers> ListAccountPhoneNumbersWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, List<string> filtersPhoneNumber = null, string sortId = null, string sortName = null, string sortPhoneNumber = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Update the settings for an existing phone number on your account
+        /// Update the settings for an existing phone number on your account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -123,10 +123,10 @@ namespace IO.Swagger.Api
         PhoneNumberFull ReplaceAccountPhoneNumber (int? accountId, int? numberId, ReplacePhoneNumberParams data = null);
 
         /// <summary>
-        /// Update the settings for an existing phone number on your account
+        /// Update the settings for an existing phone number on your account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -137,10 +137,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Add a phone number to an account
+        /// Add a phone number to an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties to use.
+        /// Add a phone number to an account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -149,10 +149,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<PhoneNumberFull> CreateAccountPhoneNumberAsync (int? accountId, CreatePhoneNumberParams data = null);
 
         /// <summary>
-        /// Add a phone number to an account
+        /// Add a phone number to an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties to use.
+        /// Add a phone number to an account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -160,10 +160,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (PhoneNumberFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<PhoneNumberFull>> CreateAccountPhoneNumberAsyncWithHttpInfo (int? accountId, CreatePhoneNumberParams data = null);
         /// <summary>
-        /// Show details of an individual phone number
+        /// Show details of an individual phone number.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -172,10 +172,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<PhoneNumberFull> GetAccountPhoneNumberAsync (int? accountId, int? numberId);
 
         /// <summary>
-        /// Show details of an individual phone number
+        /// Show details of an individual phone number.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -183,10 +183,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (PhoneNumberFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<PhoneNumberFull>> GetAccountPhoneNumberAsyncWithHttpInfo (int? accountId, int? numberId);
         /// <summary>
-        /// Get a list of phone numbers registered to an account
+        /// Get a list of phone numbers registered to an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -203,10 +203,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ListPhoneNumbers> ListAccountPhoneNumbersAsync (int? accountId, List<string> filtersId = null, List<string> filtersName = null, List<string> filtersPhoneNumber = null, string sortId = null, string sortName = null, string sortPhoneNumber = null, int? limit = null, int? offset = null, string fields = null);
 
         /// <summary>
-        /// Get a list of phone numbers registered to an account
+        /// Get a list of phone numbers registered to an account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -222,10 +222,10 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ListPhoneNumbers)</returns>
         System.Threading.Tasks.Task<ApiResponse<ListPhoneNumbers>> ListAccountPhoneNumbersAsyncWithHttpInfo (int? accountId, List<string> filtersId = null, List<string> filtersName = null, List<string> filtersPhoneNumber = null, string sortId = null, string sortName = null, string sortPhoneNumber = null, int? limit = null, int? offset = null, string fields = null);
         /// <summary>
-        /// Update the settings for an existing phone number on your account
+        /// Update the settings for an existing phone number on your account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -235,10 +235,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<PhoneNumberFull> ReplaceAccountPhoneNumberAsync (int? accountId, int? numberId, ReplacePhoneNumberParams data = null);
 
         /// <summary>
-        /// Update the settings for an existing phone number on your account
+        /// Update the settings for an existing phone number on your account.
         /// </summary>
         /// <remarks>
-        /// See Intro to Account Phone Numbers for more info on the properties.
+        /// Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -359,7 +359,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a phone number to an account See Intro to Account Phone Numbers for more info on the properties to use.
+        /// Add a phone number to an account. Add a phone number to an account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -372,7 +372,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a phone number to an account See Intro to Account Phone Numbers for more info on the properties to use.
+        /// Add a phone number to an account. Add a phone number to an account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -406,9 +406,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -442,11 +439,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<PhoneNumberFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PhoneNumberFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PhoneNumberFull)));
-            
         }
 
         /// <summary>
-        /// Add a phone number to an account See Intro to Account Phone Numbers for more info on the properties to use.
+        /// Add a phone number to an account. Add a phone number to an account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -460,7 +456,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Add a phone number to an account See Intro to Account Phone Numbers for more info on the properties to use.
+        /// Add a phone number to an account. Add a phone number to an account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -494,9 +490,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
             {
@@ -529,11 +522,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<PhoneNumberFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PhoneNumberFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PhoneNumberFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual phone number See Intro to Account Phone Numbers for more info on the properties.
+        /// Show details of an individual phone number. Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -546,7 +538,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual phone number See Intro to Account Phone Numbers for more info on the properties.
+        /// Show details of an individual phone number. Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -583,9 +575,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (numberId != null) localVarPathParams.Add("number_id", Configuration.ApiClient.ParameterToString(numberId)); // path parameter
 
@@ -612,11 +601,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<PhoneNumberFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PhoneNumberFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PhoneNumberFull)));
-            
         }
 
         /// <summary>
-        /// Show details of an individual phone number See Intro to Account Phone Numbers for more info on the properties.
+        /// Show details of an individual phone number. Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -630,7 +618,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Show details of an individual phone number See Intro to Account Phone Numbers for more info on the properties.
+        /// Show details of an individual phone number. Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -667,9 +655,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (numberId != null) localVarPathParams.Add("number_id", Configuration.ApiClient.ParameterToString(numberId)); // path parameter
 
@@ -695,11 +680,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<PhoneNumberFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PhoneNumberFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PhoneNumberFull)));
-            
         }
 
         /// <summary>
-        /// Get a list of phone numbers registered to an account See Intro to Account Phone Numbers for more info on the properties.
+        /// Get a list of phone numbers registered to an account. Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -720,7 +704,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of phone numbers registered to an account See Intro to Account Phone Numbers for more info on the properties.
+        /// Get a list of phone numbers registered to an account. Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -762,9 +746,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -799,11 +780,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListPhoneNumbers>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListPhoneNumbers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListPhoneNumbers)));
-            
         }
 
         /// <summary>
-        /// Get a list of phone numbers registered to an account See Intro to Account Phone Numbers for more info on the properties.
+        /// Get a list of phone numbers registered to an account. Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -825,7 +805,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Get a list of phone numbers registered to an account See Intro to Account Phone Numbers for more info on the properties.
+        /// Get a list of phone numbers registered to an account. Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -867,9 +847,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (filtersId != null) localVarQueryParams.Add("filters[id]", Configuration.ApiClient.ParameterToString(filtersId)); // query parameter
             if (filtersName != null) localVarQueryParams.Add("filters[name]", Configuration.ApiClient.ParameterToString(filtersName)); // query parameter
@@ -903,11 +880,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<ListPhoneNumbers>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ListPhoneNumbers) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ListPhoneNumbers)));
-            
         }
 
         /// <summary>
-        /// Update the settings for an existing phone number on your account See Intro to Account Phone Numbers for more info on the properties.
+        /// Update the settings for an existing phone number on your account. Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -921,7 +897,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Update the settings for an existing phone number on your account See Intro to Account Phone Numbers for more info on the properties.
+        /// Update the settings for an existing phone number on your account. Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -959,9 +935,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (numberId != null) localVarPathParams.Add("number_id", Configuration.ApiClient.ParameterToString(numberId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -996,11 +969,10 @@ namespace IO.Swagger.Api
             return new ApiResponse<PhoneNumberFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PhoneNumberFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PhoneNumberFull)));
-            
         }
 
         /// <summary>
-        /// Update the settings for an existing phone number on your account See Intro to Account Phone Numbers for more info on the properties.
+        /// Update the settings for an existing phone number on your account. Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1015,7 +987,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Update the settings for an existing phone number on your account See Intro to Account Phone Numbers for more info on the properties.
+        /// Update the settings for an existing phone number on your account. Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountId">Account ID</param>
@@ -1053,9 +1025,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (accountId != null) localVarPathParams.Add("account_id", Configuration.ApiClient.ParameterToString(accountId)); // path parameter
             if (numberId != null) localVarPathParams.Add("number_id", Configuration.ApiClient.ParameterToString(numberId)); // path parameter
             if (data != null && data.GetType() != typeof(byte[]))
@@ -1089,7 +1058,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<PhoneNumberFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PhoneNumberFull) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PhoneNumberFull)));
-            
         }
 
     }

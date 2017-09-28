@@ -4,20 +4,20 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountQueue**](QueuesApi.md#createaccountqueue) | **POST** /accounts/{account_id}/queues | Create a queue
-[**DeleteAccountQueue**](QueuesApi.md#deleteaccountqueue) | **DELETE** /accounts/{account_id}/queues/{queue_id} | Delete a queue
-[**GetAccountQueue**](QueuesApi.md#getaccountqueue) | **GET** /accounts/{account_id}/queues/{queue_id} | Show details of an individual queue
-[**ListAccountQueues**](QueuesApi.md#listaccountqueues) | **GET** /accounts/{account_id}/queues | Get a list of queues for an account
-[**ReplaceAccountQueue**](QueuesApi.md#replaceaccountqueue) | **PUT** /accounts/{account_id}/queues/{queue_id} | Replace a queue
+[**CreateAccountQueue**](QueuesApi.md#createaccountqueue) | **POST** /accounts/{account_id}/queues | Create a queue.
+[**DeleteAccountQueue**](QueuesApi.md#deleteaccountqueue) | **DELETE** /accounts/{account_id}/queues/{queue_id} | Delete a queue.
+[**GetAccountQueue**](QueuesApi.md#getaccountqueue) | **GET** /accounts/{account_id}/queues/{queue_id} | Show details of an individual queue.
+[**ListAccountQueues**](QueuesApi.md#listaccountqueues) | **GET** /accounts/{account_id}/queues | Get a list of queues for an account.
+[**ReplaceAccountQueue**](QueuesApi.md#replaceaccountqueue) | **PUT** /accounts/{account_id}/queues/{queue_id} | Replace a queue.
 
 
 <a name="createaccountqueue"></a>
 # **CreateAccountQueue**
 > QueueFull CreateAccountQueue (int? accountId, CreateQueueParams data = null)
 
-Create a queue
+Create a queue.
 
-For more on the input fields, see Account Queues.
+Create a queue. See Account Queues for more info on the properties.
 
 ### Example
 ```csharp
@@ -33,7 +33,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -45,7 +44,7 @@ namespace Example
 
             try
             {
-                // Create a queue
+                // Create a queue.
                 QueueFull result = apiInstance.CreateAccountQueue(accountId, data);
                 Debug.WriteLine(result);
             }
@@ -82,11 +81,11 @@ Name | Type | Description  | Notes
 
 <a name="deleteaccountqueue"></a>
 # **DeleteAccountQueue**
-> DeleteQueue DeleteAccountQueue (int? accountId, int? queueId)
+> DeleteEntry DeleteAccountQueue (int? accountId, int? queueId)
 
-Delete a queue
+Delete a queue.
 
-This service a queue from the account. For more information on queue properties, see Account Queues.
+Delete a queue. See Account Queues for more info on the properties.
 
 ### Example
 ```csharp
@@ -102,7 +101,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -114,8 +112,8 @@ namespace Example
 
             try
             {
-                // Delete a queue
-                DeleteQueue result = apiInstance.DeleteAccountQueue(accountId, queueId);
+                // Delete a queue.
+                DeleteEntry result = apiInstance.DeleteAccountQueue(accountId, queueId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -136,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteQueue**](DeleteQueue.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -153,9 +151,9 @@ Name | Type | Description  | Notes
 # **GetAccountQueue**
 > QueueFull GetAccountQueue (int? accountId, int? queueId)
 
-Show details of an individual queue
+Show details of an individual queue.
 
-This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+Show details of an individual queue. See Account Queues for more info on the properties.
 
 ### Example
 ```csharp
@@ -171,7 +169,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -183,7 +180,7 @@ namespace Example
 
             try
             {
-                // Show details of an individual queue
+                // Show details of an individual queue.
                 QueueFull result = apiInstance.GetAccountQueue(accountId, queueId);
                 Debug.WriteLine(result);
             }
@@ -222,9 +219,9 @@ Name | Type | Description  | Notes
 # **ListAccountQueues**
 > ListQueues ListAccountQueues (int? accountId, List<string> filtersId = null, List<string> filtersName = null, string sortId = null, string sortName = null, int? limit = null, int? offset = null, string fields = null)
 
-Get a list of queues for an account
+Get a list of queues for an account.
 
-The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+Get a list of queues for an account. See Account Queues for more info on the properties.
 
 ### Example
 ```csharp
@@ -240,7 +237,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -258,7 +254,7 @@ namespace Example
 
             try
             {
-                // Get a list of queues for an account
+                // Get a list of queues for an account.
                 ListQueues result = apiInstance.ListAccountQueues(accountId, filtersId, filtersName, sortId, sortName, limit, offset, fields);
                 Debug.WriteLine(result);
             }
@@ -303,9 +299,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountQueue**
 > QueueFull ReplaceAccountQueue (int? accountId, int? queueId, CreateQueueParams data = null)
 
-Replace a queue
+Replace a queue.
 
-The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+Replace a queue. See Account Queues for more info on the properties.
 
 ### Example
 ```csharp
@@ -321,7 +317,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -334,7 +329,7 @@ namespace Example
 
             try
             {
-                // Replace a queue
+                // Replace a queue.
                 QueueFull result = apiInstance.ReplaceAccountQueue(accountId, queueId, data);
                 Debug.WriteLine(result);
             }

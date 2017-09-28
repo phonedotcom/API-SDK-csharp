@@ -5,7 +5,7 @@ All URIs are relative to *https://api.phone.com/v4*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAccount**](AccountsApi.md#getaccount) | **GET** /accounts/{account_id} | Retrieve details of an individual account
-[**ListAccounts**](AccountsApi.md#listaccounts) | **GET** /accounts | Get a list of accounts visible to the authenticated user or client
+[**ListAccounts**](AccountsApi.md#listaccounts) | **GET** /accounts | Get a list of accounts visible to the authenticated user or client.
 
 
 <a name="getaccount"></a>
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Retrieve details of an individual account
 
-This service shows the details of an individual account. See Accounts for more info on the properties.
+Retrieve details of an individual account. See Accounts for more info on the properties.
 
 ### Example
 ```csharp
@@ -30,7 +30,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -79,9 +78,9 @@ Name | Type | Description  | Notes
 # **ListAccounts**
 > ListAccounts ListAccounts (List<string> filtersId = null, string sortId = null, int? limit = null, int? offset = null, string fields = null)
 
-Get a list of accounts visible to the authenticated user or client
+Get a list of accounts visible to the authenticated user or client.
 
-This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
 
 ### Example
 ```csharp
@@ -97,7 +96,6 @@ namespace Example
     {
         public void main()
         {
-            
             // Configure API key authorization: apiKey
             Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -112,7 +110,7 @@ namespace Example
 
             try
             {
-                // Get a list of accounts visible to the authenticated user or client
+                // Get a list of accounts visible to the authenticated user or client.
                 ListAccounts result = apiInstance.ListAccounts(filtersId, sortId, limit, offset, fields);
                 Debug.WriteLine(result);
             }
